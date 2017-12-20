@@ -692,7 +692,7 @@ footer .footer_copyright span:nth-child(2) {
 @media screen and (max-width: 960px) {
   body,
   html {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .header_logo {
@@ -790,6 +790,11 @@ footer .footer_copyright span:nth-child(2) {
 }
 
 @media screen and (max-width: 780px) {
+  body,
+  html {
+    font-size: 13px;
+  }
+
   .wrapper {
     padding-left: 15px;
     padding-right: 15px;
@@ -811,5 +816,12 @@ footer .footer_copyright span:nth-child(2) {
 
   .blogItem {
     max-width: 380px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  body,
+  html {
+    font-size: 10px;
   }
 }
