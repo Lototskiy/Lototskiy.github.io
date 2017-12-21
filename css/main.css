@@ -167,7 +167,29 @@ h1 {
 
 .header {
   background-color: #a5d3db;
-  height: 666px;
+  padding-bottom: 50px;
+  /*Slider bxSlider
+	&_slider{
+		display:block;
+		max-width:800px;
+		margin:0 auto;
+		.slider-dots{
+			display:flex;
+			margin:0 auto;
+			max-width:110px;
+			&__item a{
+				display:block;
+				width:25px;
+				height:25px;
+				background-color:blue;
+				border-radius:50%;
+				margin:0 5px;
+				&.active{
+					background-color:#fff;
+				}
+			}
+		}
+	}*/
 }
 
 .header_manu {
