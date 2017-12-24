@@ -1,23 +1,32 @@
 $(document).ready(function(){
-	$('.slickslider').slick({
+	$('.sl').slick({
+		dots: true,
 		autoplay: true,
-		autoplaySpeed: 1000,
+		autoplaySpeed: 2000,		
 		cssEase:'ease',
+		fade:true,
+		asNavFor: '.sl2',
+		initialSlide: 1
+	});
+	
+	$('.sl2').slick({
 		dots: true,
 		arrows: false,
-		pauseOnDotsHover: true,
-		slidesToShow: 2,
-		slidesToScroll: 2,
-		responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1,
+		centerMode: true,
+		centerPadding: '40px',
+		slidesToShow: 7,
 		slidesToScroll: 1,
-      }
-    }] 
-	})
+		asNavFor: '.sl',
+		focusOnSelect: true,
+		initialSlide: 1,
+		responsive: [
+		  {
+			breakpoint: 1000,
+			settings: {
+				slidesToShow: 4,
+				centerPadding: '0px'
+			}
+		  }
+		]
+	});
 });

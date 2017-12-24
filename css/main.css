@@ -168,6 +168,9 @@ h1 {
 .header {
   background-color: #a5d3db;
   padding-bottom: 50px;
+  /*SLIDE*/
+  /*Dots slide*/
+  /*Arrows slide*/
   /*Slider bxSlider
 	&_slider{
 		display:block;
@@ -269,6 +272,105 @@ h1 {
   -webkit-border-radius: 15px;
   border-radius: 15px;
   color: #a8d5dd;
+}
+
+.header .sl_slide {
+  position: relative;
+}
+
+.header .sl__text {
+  position: absolute;
+  padding: 20px 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-size: 19px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.header .sl .slick-dots {
+  top: 10px;
+}
+
+.header .sl2 {
+  cursor: pointer;
+  margin: 30px 0 0;
+}
+
+.header .sl2_slide {
+  margin: 0 5px;
+}
+
+.header .sl2_slide img {
+  padding: 3px;
+  background: #249AD7;
+  -webkit-transition: background 3s;
+  -o-transition: background 3s;
+  transition: background 3s;
+}
+
+.header .sl2_slide img:hover {
+  background: #fff;
+}
+
+.header .slick-current img {
+  background: #fff;
+}
+
+.header .slick-dots li button {
+  border: 2px solid #777;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 3px -1px #000000;
+  box-shadow: 1px 1px 3px -1px #000000;
+  -webkit-transition: border-color 2s;
+  -o-transition: border-color 2s;
+  transition: border-color 2s;
+}
+
+.header .slick-dots li button:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #777;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -5px;
+  -webkit-transition: background 2s;
+  -o-transition: background 2s;
+  transition: background 2s;
+}
+
+.header .slick-dots li.slick-active button,
+.header .slick-dots li button:hover {
+  border-color: #fff;
+}
+
+.header .slick-dots li.slick-active button:before,
+.header .slick-dots li button:hover:before {
+  background: #fff;
+}
+
+.header .slick-prev,
+.header .slick-next {
+  z-index: 1001;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.header .slick-prev {
+  left: 25px;
+}
+
+.header .slick-next {
+  right: 25px;
 }
 
 /* SERVICES*/
