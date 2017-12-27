@@ -12,7 +12,7 @@
 </head>
 <body>
 										<!--HEADER-->
-	<header class="header" id="home">
+	<header class="header wow zoomInDown" id="home">
 		<div class="wrapper">
 			<div class="header_manu">
 				<div class="header_logo">
@@ -160,17 +160,17 @@
 										<!--SERVICES-->
 	<section class="services" id="services">
 			<div class="services_items">
-				<div class="services_item">
+				<div class="services_item wow fadeInLeftBig">
 					<img src="img/services_item1.png" alt="Iphone">
 					<div class="services_title">Flat Design</div>
 					<div class="services_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere. </div>
 				</div>
-				<div class="services_item">
+				<div class="services_item wow fadeInDown">
 					<img src="img/services_item2.png" alt="Light Buld">
 					<div class="services_title">Great Ideas</div>
 					<div class="services_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere. </div>
 				</div>
-				<div class="services_item">
+				<div class="services_item wow fadeInRightBig">
 					<img src="img/services_item3.png" alt="Browser">
 					<div class="services_title">Browser  Compatibility</div>
 					<div class="services_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere. </div>
@@ -206,15 +206,15 @@
 										<!--INFORMATION-->
 	<section class="info" id="information">
 		<div class="wrapper">
-			<div class="info_top info_section">
-				<img src="img/information_img.png" alt="Browser">
+			<div class="info_top info_section wow slideInLeft">
+				<img class="animated fadeInLeft" src="img/information_img.png" alt="Browser">
 				<div class="infoDescription">
 					<div class="infoDescription_title">Layered Neatly Photoshop Template</div>
 					<div class="infoDescription_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere. Integer lobortis purus a felis adipiscing, eget ornare justo semper. Etiam commodo tincidunt ante.</div>
 					<button class="infoDescription_btn-green btn">show more</button>
 				</div>
 			</div>
-			<div class="info_bottom info_section">
+			<div class="info_bottom info_section wow slideInRight">
 				<img src="img/information_img.png" alt="Browser">
 				<div class="infoDescription">
 					<div class="infoDescription_title">Layered Neatly Photoshop Template</div>
@@ -294,10 +294,10 @@
 			<div class="contact_text text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere. </div>
 			<div class="contact_form">
 				<form action="">
-					<input type="text" name="text" placeholder="Name:">
-					<input type="email" name="text" placeholder="Email:">
-					<textarea name="" id="" rows="5" placeholder="Message:"></textarea>
-					<input type="submit" value="Show more" class="btn">
+					<input type="text" name="text" placeholder="Name:" class="wow fadeInLeftBig" data-wow-delay="0.2s">
+					<input type="email" name="text" placeholder="Email:" class="wow fadeInLeftBig" data-wow-delay="0.4s">
+					<textarea name="" id="" rows="5" placeholder="Message:" class="wow fadeInLeftBig" data-wow-delay="0.6s"></textarea>
+					<input type="submit" value="Show more" class="btn wow fadeInLeftBig" data-wow-delay="0.8s">
 				</form>	
 			</div>
 			<div class="contact_border"></div>
@@ -322,6 +322,10 @@
 	</footer>
 	
 	<script src="js/libs.min.js"></script>
-	<script src="js/common.js"></script> 
+	<script>
+		new WOW().init();
+	</script>
+	<script src="js/common.js"></script>
+
 </body>
 </html>
