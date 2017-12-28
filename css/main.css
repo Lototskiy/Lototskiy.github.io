@@ -434,15 +434,34 @@ h1 {
   background-color: #98d2a3;
   text-align: center;
   padding: 2.36rem 0 6.1rem;
+  position: relative;
 }
 
 .portfolio h1 {
   color: #feffff;
+  display: inline-block;
 }
 
 .portfolio_nav {
   max-width: 850px;
   margin: 5.15rem auto 2.21rem;
+}
+
+.portfolio_nav.menu {
+  display: block;
+  margin: 10px 0 0;
+}
+
+.portfolio_nav.menu ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.portfolio_nav.menu ul li {
+  margin: 5px 0;
 }
 
 .portfolio_nav ul {
@@ -476,6 +495,70 @@ h1 {
 
 .portfolio_nav ul a:hover {
   border: 3px solid #ffffff;
+}
+
+.portfolio_icon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #red;
+  top: 0;
+  left: 80%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.portfolio_icon.active .portfolio_hamburger {
+  background: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.portfolio_icon.active .portfolio_hamburger:before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.portfolio_icon.active .portfolio_hamburger:after {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  top: 0;
+}
+
+.portfolio_hamburger {
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 45%;
+  left: 30%;
+}
+
+.portfolio_hamburger:before,
+.portfolio_hamburger:after {
+  content: '';
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  position: absolute;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  left: 0;
+}
+
+.portfolio_hamburger:before {
+  content: '';
+  top: -8px;
+}
+
+.portfolio_hamburger:after {
+  content: '';
+  top: 8px;
 }
 
 .portfolio_item {
@@ -1014,5 +1097,17 @@ footer .footer_copyright span:nth-child(2) {
 
   .header .sl .slick-dots {
     display: none;
+  }
+
+  .portfolio h1 {
+    text-align: left;
+  }
+
+  .portfolio_nav {
+    display: none;
+  }
+
+  .portfolio_icon {
+    opacity: 1;
   }
 }

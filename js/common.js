@@ -1,5 +1,9 @@
 $(document).ready(function(){
-	
+	$('.portfolio_icon').click(function(){
+		$('.portfolio_icon').toggleClass('active');
+		$('.portfolio_nav').toggleClass('menu')
+	});
+
 	//jquery-zoom
 	$('.sl2_slide').zoom({
 		magnify: 2
