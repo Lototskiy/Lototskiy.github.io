@@ -695,7 +695,7 @@ h1 {
 .team {
   background-color: #e2b8c7;
   text-align: center;
-  padding: 65px 124px 122px;
+  padding: 65px 0 122px;
 }
 
 .team h1 {
@@ -939,6 +939,17 @@ footer .footer_copyright span:nth-child(2) {
   .header_manu {
     margin-bottom: 0;
   }
+
+  .info_section {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .infoDescription {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -985,21 +996,6 @@ footer .footer_copyright span:nth-child(2) {
   .portfolio_item .img {
     width: -webkit-calc(100% - 30px);
     width: calc(100% - 30px);
-  }
-
-  .info_section {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  .infoDescription {
-    text-align: center;
-  }
-
-  .team {
-    padding: 55px;
   }
 
   .teamItems {
