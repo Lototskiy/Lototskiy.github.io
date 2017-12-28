@@ -534,7 +534,7 @@ h1 {
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: 45%;
+  top: 20%;
   left: 30%;
 }
 
@@ -1096,10 +1096,6 @@ footer .footer_copyright span:nth-child(2) {
 
   .header .sl .slick-dots {
     display: none;
-  }
-
-  .portfolio h1 {
-    text-align: left;
   }
 
   .portfolio_nav {
