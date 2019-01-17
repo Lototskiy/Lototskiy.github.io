@@ -1,10 +1,14 @@
 $(document).ready(function(){
 	//slick-carousel
-	$('.sl').slick({
-		dots: true,
-		arrows:false,		
-		cssEase:'ease-in',
-		vertical:true,
-		initialSlide: 0
-	});
+	$('#fullpage').fullpage({
+		css3:true,
+		navigation: true,
+		navigationPosition: 'right',
+		loopTop:true,
+		loopBottom:true,
+		scrollingSpeed:1000,
+        //options here
+        autoScrolling:true,
+        scrollHorizontally: true
+    });
 });
