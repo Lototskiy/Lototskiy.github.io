@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="location" unicode="&#xe800;" d="M0 475q0 156 109 266t266 109 266-109 109-266q0-78-28-160t-85-166-101-141-110-133q-20-25-49-25l-4 0q-29 0-49 25-66 77-110 133t-101 141-85 166-28 160z m63 0q0-72 28-150t85-161 95-128 100-120l2 0q2-2 2-4l4 4q62 73 100 120t94 128 86 161 29 150q0 129-92 221t-221 91-221-91-91-221z m125 8q0 78 54 133t133 54 133-54 55-133-55-133-133-55-133 55-54 133z m31 0q0-65 46-111t110-45 110 45 46 111-46 110-110 46-110-46-46-110z" horiz-adv-x="750" />
+
+<glyph glyph-name="flight" unicode="&#xe801;" d="M768 761q24-29 7-83t-61-96l-90-90 90-388q3-11-7-18l-71-54q-4-3-11-3-2 0-4 0-8 2-12 9l-155 284-145-145 30-108q3-10-5-17l-53-54q-5-5-13-5h-1q-9 1-14 7l-105 141-141 105q-6 4-7 13-1 7 5 14l54 54q5 5 12 5 4 0 5 0l108-30 145 145-284 155q-8 5-9 14-1 9 5 15l71 71q8 7 17 5l371-89 89 89q43 43 96 60t83-6z" horiz-adv-x="785.7" />
+</font>
+</defs>
+</svg>
