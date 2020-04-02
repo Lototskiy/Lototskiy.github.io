@@ -167,6 +167,7 @@ h1 {
 /* HEADER*/
 
 .header {
+  margin-top: 40px;
   background-color: red;
   padding-bottom: 50px;
   /*SLIDE*/
