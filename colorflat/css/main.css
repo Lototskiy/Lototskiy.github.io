@@ -500,7 +500,7 @@ h1 {
   position: absolute;
   width: 100px;
   height: 100px;
-  background: #red;
+  background: red;
   top: 0;
   left: 80%;
   opacity: 0;
