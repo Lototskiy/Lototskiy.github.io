@@ -1,3 +1,6 @@
 .vscode
 node_modules/
-app/
+src/
+.DS_Store
+.AppleDouble
+.LSOverride
