@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
-  <title>Услуги компании</title>
+  <title>Подать заявку на услуги компании</title>
   <link rel="stylesheet" href="css/libs.min.css" />
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
-<body id="services">
+<body id="order">
   <div class="wrapper">
     <div class="content">
       <a id="button"></a>
@@ -95,13 +95,13 @@
       <div class="breadcrumbs">
         <div class="container">
           <div class="breadcrumbs__inner">
-            <div class="breadcrumbs__title wheel">Услуги</div>
+            <div class="breadcrumbs__title wheel">Оформить заказ</div>
             <ul class="breadcrumbs__list">
               <li>
                 <a href="index.html">Главная</a>
               </li>
               <li class="active">
-                <span>Услуги</span>
+                <span>Оформить заказ</span>
               </li>
             </ul>
           </div>
@@ -114,81 +114,30 @@
         <div id="calendar_weekdays"></div>
         <div id="calendar_content"></div>
       </div> -->
-      <section class="services">
+      <section class="order">
         <div class="container">
-          <div class="services__btn">
-            <button class="icon-th active"></button>
-            <button class="icon-th-list"></button>
-          </div>
-          <div class="services__inner">
-            <div class="services__item">
-              <div class="services__item-images" style="background-image: url(images/service-item6.jpg);"></div>
-              <div class="services__item-info">
-                <a href="" class="services__item-title">Международные грузоперевозки</a>
-                <div class="services__item-descr">
-                  Мы перевозим любые грузы различными видами транспорта по всему миру. Наша транспортная компания
-                  универсальная, и предлагает клиентам международные перевозки высшего качества.
-                </div>
+          <div class="order__title">Уважаемый клиент, Вы можете воспользоваться автоматизированной системой подачи заявки.</div>
+          <div class="order__form">
+            <form>
+              <input type="text" placeholder="Место отправки груза*" required>
+              <input type="text" placeholder="Место прибытия груза*" required>
+              <input type="text" placeholder="Наиминование груза*" required>
+              <div class="order__form-line">
+                <input type="text" placeholder="Вес">
+                <input type="text" placeholder="Объем">
               </div>
-            </div>
-            <div class="services__item services__item--right">
-              <div class="services__item-images" style="background-image: url(images/service-item5.jpg);"></div>
-              <div class="services__item-info">
-                <a href="" class="services__item-title">Перевозка опасных грузов</a>
-                <div class="services__item-descr">
-                  Опасный груз нуждается в специальной транспортировке. Это обеспечивает не только его защиту, но и
-                  безопасность всех окружающих. Перевозка опасных грузов должна осуществляться опытными специалистами.
-                </div>
+              <div class="order__form-line">
+                <input type="tel" placeholder="Телефон*" required>
+                <input type="email" placeholder="E-mail*" required>
               </div>
-            </div>
-            <div class="services__item">
-              <div class="services__item-images" style="background-image: url(images/service-item3.jpg);"></div>
-              <div class="services__item-info">
-                <a href="" class="services__item-title">Перевозка негабаритных грузов</a>
-                <div class="services__item-descr">
-                  Перевозка негабаритных грузов по России и другим странам является наиболее сложным и дорогим видом
-                  транспортирования.Данный сервис стоит заказывать только у самых опытных.
-                </div>
-              </div>
-            </div>
-            <div class="services__item services__item--right">
-              <div class="services__item-images" style="background-image: url(images/service-item2.jpg);"></div>
-              <div class="services__item-info">
-                <a href="" class="services__item-title">Перевозка рефрижератором</a>
-                <div class="services__item-descr">
-                  Рефрижераторные перевозки уже не первый год применяются для того, чтобы осуществлять перевоз товара,
-                  который требует соблюдение специального температурного режима.
-                </div>
-              </div>
-            </div>
-            <div class="services__item">
-              <div class="services__item-images" style="background-image: url(images/service-item4.jpg);"></div>
-              <div class="services__item-info">
-                <a href="" class="services__item-title">Контейнерные перевозки</a>
-                <div class="services__item-descr">
-                  Контейнерные перевозки является одним из самых популярных в сфере грузоперевозок во всем мире,
-                  благодаря высокой мобильности
-                  и возможности коррекции маршрута.
-                </div>
-              </div>
-            </div>
-            <div class="services__item services__item--right">
-              <div class="services__item-images" style="background-image: url(images/service-item8.jpg);"></div>
-              <div class="services__item-info">
-                <a href="" class="services__item-title">Услуги погрузчика и крана</a>
-                <div class="services__item-descr">
-                  Погрузчик и кран – незаменимые устройства для грузоперевозок и стройки. Они позволяют оперативно
-                  доставить до места работ нужную технику, стройматериалы.
-                </div>
-              </div>
-            </div>
+              <textarea placeholder="Дополнительные сведения"></textarea>
+              <input type="submit" value="Оформить">
+            </form>
           </div>
         </div>
       </section>
-      <!-- /.services -->
-
-
-
+      <!-- /.order -->
+    
       <!-- end content -->
     </div>
   </div>
@@ -233,9 +182,6 @@
     </div>
   </footer>
   <!-- /.footer -->
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALyRoiyH8fYT5ycNWG5OtmFoLhzu6Wb-M&callback=initMap">
-  </script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
