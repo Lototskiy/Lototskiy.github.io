@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
-  <title>Truck</title>
+  <title>Грузоперевозки в России</title>
   <link rel="stylesheet" href="css/libs.min.css" />
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
@@ -16,62 +15,83 @@
     <div class="content">
       <a id="button"></a>
       <div class="topline">
-        <div class="container">
-          <div class="topline__inner">
-            <div class="topline__language">
-              <a href="#">рус</a>
-              <a href="#">eng</a>
-              <a href="#">fr</a>
-            </div>
-            <a class="topline__tel" href="tel:88001234567">8 (800) 123-45-67</a>
-            <div class="topline__email">
-              sales@log.ru
-            </div>
-          </div>
+  <div class="container">
+    <div class="topline__inner">
+      <div class="topline__language">
+        <a href="#">рус</a>
+        <a href="#">eng</a>
+        <a href="#">fr</a>
+      </div>
+      <a class="topline__tel" href="tel:88001234567">8 (800) 123-45-67</a>
+      <div class="topline__email">
+        sales@log.ru
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.topline -->
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__box">
+        <a class="header__logo" href="index.html"><img src="images/logo.svg" alt="" /></a>
+        <div class="header__location">
+          <i class="icon-location"></i>
+          Наши офисы
         </div>
       </div>
-      <!-- /.topline -->
-      <header class="header">
-        <div class="container">
-          <div class="header__inner">
-            <div class="header__box">
-              <a class="header__logo" href="index.html"><img src="images/logo.svg" alt="" /></a>
-              <div class="header__location">
-                <i class="icon-location"></i>
-                Наши офисы
-              </div>
-            </div>
-            <a class="header__btn" href="#">
-              <span></span>
-            </a>
-            <nav class="header__nav">
-              <ul class="header__menu">
-                <li><a href="about.html">О компании</a></li>
-                <li><a href="services.html">услуги</a></li>
-                <li><a href="#">автопарк</a></li>
-                <li><a href="#">вакансии</a></li>
-                <li><a href="#">оформить заказ</a></li>
-                <li><a href="#">контакты</a></li>
-              </ul>
-            </nav>
+      <a class="header__btn" href="#">
+        <span></span>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="services.html">услуги</a></li>
+          <li><a href="park.html">автопарк</a></li>
+          <li><a href="order.html">оформить заказ</a></li>
+          <li><a href="#">контакты</a></li>
+        </ul>
+      </nav>
+      <div class="calculator icon-calc">
+        <div class="calculator__form">
+          <div class="calculator__descr">
+            Расчет стоимости перевозки. Данная форма поможет вам быстро узнать стоимость перевозки вашего груза.
           </div>
-        </div>
-      </header>
-      <!-- /.header -->
-      <section class="hero" style="background-image: url(images/mercedes-fury-tyagachi.jpg);">
-        <div class="container">
-          <div class="hero__inner">
-            <div class="hero__title wow zoomInDown" data-wow-duration="1.2s">
-              Грузовые перевозки
+          <form>
+            <div class="calculator__row">
+              <label>Укажите телефон*</label>
+              <input type="tel" required>
             </div>
-            <div class="hero__text wow zoomInUp" data-wow-duration="1.5s">
-              Перевозка крупногабаритных грузов по России и Европе. Полное
-              экспедирование, страхование, упаковка и хранение грузов
+            <div class="calculator__row">
+              <label>Укажите почту*</label>
+              <input type="email" required>
             </div>
-          </div>
+            <div class="calculator__row">
+              <label>Информация о грузе</label>
+              <textarea></textarea>
+            </div>
+          </form>
         </div>
-      </section>
-      <!-- /.hero -->
+      </div>
+    </div>
+  </div>
+</header>
+<!-- /.header -->
+<section class="hero" style="background-image: url(images/mercedes-fury-tyagachi.jpg);">
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__title wow zoomInDown" data-wow-duration="1.2s">
+        Грузовые перевозки
+      </div>
+      <div class="hero__text wow zoomInUp" data-wow-duration="1.5s">
+        Перевозка крупногабаритных грузов по России и Европе. Полное
+        экспедирование, страхование, упаковка и хранение грузов
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /.hero -->
+  <!-- WRITE CODE HERE -->
       <section class="info">
         <div class="container">
           <div class="info__inner">
@@ -240,8 +260,15 @@
           <div class="bloc"></div>
           <div class="phone"><i class="icon-phone" aria-hidden="true"></i></div>
           <div class="text">Кнопка связи</div>
+          <div class="pulse__form">
+            <form>
+              <label>Ваше имя</label>
+              <input type="text">
+            </form>
+          </div>
         </div>
       </div>
+      <!-- end content -->
     </div>
   </div>
 
