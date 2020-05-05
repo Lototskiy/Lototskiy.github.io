@@ -114,6 +114,7 @@ gulp.task("script", function () {
 			"node_modules/slick-carousel/slick/slick.js",
 			"node_modules/wowjs/dist/wow.js",
 			"node_modules/swiper/js/swiper.min.js",
+			"src/js/libs.js"
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())
