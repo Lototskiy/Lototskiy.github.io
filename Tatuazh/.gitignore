@@ -2,5 +2,5 @@
 .AppleDouble
 .LSOverride
 .vscode
-node_modules/
 src/
+node_modules/
