@@ -173,7 +173,7 @@ gulp.task("font-woff", function () {
 		.pipe(ttf2woff())
 		.pipe(gulp.dest("build/fonts/"))
 		.pipe(
-			browserSync.reload({
+			browserSync.reload({ 
 				stream: true,
 			}),
 		);
