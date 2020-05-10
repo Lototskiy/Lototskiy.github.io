@@ -12,6 +12,7 @@
     "@babel/preset-env": "^7.7.7",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
+    "flipclock": "^0.10.8",
     "fontforge": "^0.0.4",
     "global": "^4.4.0",
     "gulp": "^4.0.2",

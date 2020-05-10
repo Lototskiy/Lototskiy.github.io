@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/libs.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
     <title>Tatuazhmaster</title>
@@ -13,28 +13,144 @@
 <body>
   <header class="header">
     <div class="container">
-        <div class="header__logo">
-            <img src="logo.png" alt="logo">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="header__list">
+                    <li><a href="#">Обо мне</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Портфолио</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__tel">
+                <a class="tel" href="tel:74950063116">+7 (495) 006-31-16</a>
+                <a class="call" href="#">заказать звонок</a>
+            </div>
+            <a href="#" class="header__btn btn">консультация</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Обо мне</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Портфолио</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="header__tel">
-            <a class="tel" href="#"></a>
-            <a class="" href="#"></a>
-        </div>
+
     </div>
 </header>
 <!-- /.header -->
   <!-- WRITE CODE HERE -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__info">
+          <div class="hero__info-title">
+            Дипломированный
+            татуаж-мастер
+            международного уровня
+          </div>
+          <div class="advantages">
+            <div class="advantages__inner">
+              <div class="advantages__item advantages__trophy">
+                <div class="advantages__item-img">
+                  <img src="images/advantages-img1.svg" alt="">
+                </div>
+                <span class="advantages__item-descr">5 лет успешной работы</span>
+              </div>
+              <div class="advantages__item advantages__author">
+                <div class="advantages__item-img">
+                  <img src="images/advantages-img2.svg" alt="">
+                </div>
+                <span class="advantages__item-descr">Авторские
+                  методики</span>
+              </div>
+              <div class="advantages__item advantages__diploma">
+                <div class="advantages__item-img">
+                  <img src="images/advantages-img3.svg" alt="">
+                </div>
+                <span class="advantages__item-descr">Дипломированный
+                  специалист</span>
+              </div>
+              <div class="advantages__item advantages__hud">
+                <div class="advantages__item-img">
+                  <img src="images/advantages-img4.svg" alt="">
+                </div>
+                <span class="advantages__item-descr">Художественное
+                  образование</span>
+              </div>
 
-
+            </div>
+          </div>
+          <div class="hero__info-text">
+            Пермаментный татуаж бровей - без боли, эстетично и надолго!
+            Обещание которое почти не исполняют. Почему? Чтобы салону максимально заработать
+            на вас, им приходится экономить абсолютно на всем. Мне не нужно экономить, я работаю
+            на свое имя, делаю упор на качество и индивидуальный подход.
+          </div>
+          <a href="#" class="hero__info-btn btn ">
+            <span class="icon-ok-circle"></span>
+            записаться на прием
+          </a>
+        </div>
+        <div class="hero__img">
+          <!-- <img src="images/header-img.png" alt=""> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.hero -->
+  <section class="results">
+    <div class="container">
+      <div class="results__inner">
+        <div class="results__info">
+          <div class="results__info-title title">
+            Результаты моей работы
+          </div>
+          <div class="results__info-text">
+            Виртуозно комбинирую различные технологии татуажа
+            в зависимости от ваших анатомических особенностей строения лица. Также использую гиппоалергенные материалы
+            для всех типов кожных покровов.
+          </div>
+          <ul class="results__info-list">
+            <li>Перекрою ваш неудачный татуаж</li>
+            <li>Обновлю ваш старый татуаж</li>
+            <li>Эффектно преображу ваш внешний вид</li>
+            <li>Вы перестанете тратить время на макияж</li>
+            <li>Сделаю симитричными ваши губы, брови и веки</li>
+            <li>Безопасный и естественный татуаж на долго</li>
+          </ul>
+        </div>
+        <div class="results__twentytwenty" id="results__twentytwenty">
+          <img src="images/results-afterbefore.png" alt="">
+          <img src="images/results-afterbefore.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.results -->
+  <section class="discounts">
+    <div class="container">
+      <div class="discounts__inner" style="background-image: url(images/discounts-bg.png);">
+        <div class="discounts__info">
+          <div class="discounts__info-subtitle">
+            Преобрази свой образ!
+          </div>
+          <div class="discounts__info-title title">
+            Скидка новым
+            клиентам -10%
+          </div>
+          <a href="#" class="discounts__info-link">
+            записаться на прием
+          </a>
+          <title></title>
+        </div>
+        <div class="discounts__flipclock">
+          <div class="clock" id="clock"></div>
+          <div class="message"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.discounts -->
   <!-- STOP WRITE CODE -->
   <footer>
   
