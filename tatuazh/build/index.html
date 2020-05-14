@@ -32,7 +32,7 @@
                 <a class="tel" href="tel:74950063116">+7 (495) 006-31-16</a>
                 <a class="call" href="#">заказать звонок</a>
             </div>
-            <a href="#" class="header__btn btn">консультация</a>
+            <a class="header__btn btn" data-fancybox data-src="#consultation" href="javascript:;">консультация</a>
         </div>
 
     </div>
@@ -86,12 +86,12 @@
             на вас, им приходится экономить абсолютно на всем. Мне не нужно экономить, я работаю
             на свое имя, делаю упор на качество и индивидуальный подход.
           </div>
-          <a href="#" class="hero__info-btn btn ">
+          <a data-fancybox data-src="#reception" href="javascript:;" class="hero__info-btn btn">
             <span class="icon-ok-circle"></span>
             записаться на прием
           </a>
         </div>
-        <div class="hero__img">
+        <div class="hero__img" style="background-image: url(images/header-img.png);">
           <!-- <img src="images/header-img.png" alt=""> -->
         </div>
       </div>
@@ -138,7 +138,7 @@
             Скидка новым
             клиентам -10%
           </div>
-          <a href="#" class="discounts__info-link">
+          <a data-fancybox data-src="#reception" href="javascript:;" class="discounts__info-link">
             записаться на прием
           </a>
           <title></title>
@@ -312,7 +312,7 @@
   <!-- /.comfort -->
   <section class="procedure">
     <div class="procedure__inner wrap">
-      <div class="procedure__img">
+      <div class="procedure__img" style="background-image: url(images/procedure__img.png);">
         <span>Как проходит
           процедура</span>
       </div>
@@ -381,12 +381,414 @@
     </div>
   </section>
   <!-- /.procedure -->
+  <section class="tool">
+    <div class="container">
+      <div class="tool__title title">
+        Что я использую в работе
+      </div>
+      <div class="tool__inner">
+        <div class="tool__item">
+          <div class="tool__item-img" style="background-image: url(images/tool-img1.png);"></div>
+          <div class="tool__item-info">
+            <div class="tool__item-title">
+              Стерильные одноразовые
+              материалы
+            </div>
+            <div class="tool__item-text">
+              Придерживаюсь строгих правил безопасности здоровья клиента. В работе использую исключительно одноразовые
+              материалы.
+            </div>
+          </div>
+        </div>
+        <div class="tool__item">
+          <div class="tool__item-img" style="background-image: url(images/tool-img2.png);"></div>
+          <div class="tool__item-info">
+            <div class="tool__item-title">
+              Органическую натуральную краску
+            </div>
+            <div class="tool__item-text">
+              Сертифицированную органическую краску AQUAтм. С помощью неё достигается лучшее проникновение краски и
+              стойкость. Производитель США.
+            </div>
+          </div>
+        </div>
+        <div class="tool__item">
+          <div class="tool__item-img" style="background-image: url(images/tool-img3.png);"></div>
+          <div class="tool__item-info">
+            <div class="tool__item-title">
+              Симметрию лица
+            </div>
+            <div class="tool__item-text">
+              Профессиональный подход в моделировании татуажа, в его размере, цвете, толщины с помощью технологии
+              «Золотого сечения». Использую навыки художественного образования и профессиональные навыки тончайшего и
+              деликатного татуажа.
+            </div>
+          </div>
+        </div>
+        <div class="tool__item">
+          <div class="tool__item-img" style="background-image: url(images/tool-img4.png);"></div>
+          <div class="tool__item-info">
+            <div class="tool__item-title">
+              Гипоаллергенные расходные материалы
+            </div>
+            <div class="tool__item-text">
+              Я использую швейцарские иглы из платины, которые не вызывают аллергических реакций. Краска на основе цинка
+              железа и воды не вызывает на коже различного рода раздражений, предотвращая отторжение пигмента.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.tool -->
+  <section class="gallery">
+    <div class="gallery__top container">
+      <div class="gallery__top-title title">
+        Мои работы
+      </div>
+      <div class="see-all">
+        <a href="#">Посмотреть все</a>
+      </div>
+    </div>
+    <div class="gallery__wrap">
+      <div class="gallery__items" id="gallery">
+        <div class="gallery__item sizer4 gallery__item--1">
+          <img src="images/gallery/gallery1.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--2">
+          <img src="images/gallery/gallery2.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--3">
+          <img src="images/gallery/gallery3.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--4">
+          <img src="images/gallery/gallery4.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--5">
+          <img src="images/gallery/gallery5.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--6">
+          <img src="images/gallery/gallery6.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--7">
+          <img src="images/gallery/gallery7.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--8">
+          <img src="images/gallery/gallery8.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--9">
+          <img src="images/gallery/gallery9.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--10">
+          <img src="images/gallery/gallery10.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--11">
+          <img src="images/gallery/gallery11.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--12">
+          <img src="images/gallery/gallery12.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- /.gallery -->
+  <section class="stock">
+    <div class="container">
+      <div class="stock__inner">
+        <div class="stock__info">
+          <div class="stock__info-short-title">
+            Акция -15%
+          </div>
+          <div class="stock__info-title title">
+            Вдвоем дешевле!
+          </div>
+          <div class="stock__info-text">
+            Запишись вместе с подругой на пермаментный макияж любой зоны и получи скидку 15% на процедуру!
+          </div>
+          <div class="stock__info-form">
+            <form>
+              <input type="text" required placeholder="Имя">
+              <input type="tel" required placeholder="Телефон">
+              <button type="submit">Оставить заявку</button>
+            </form>
+          </div>
+          <div class="stock__info-link">
+            Нажимая на кнопку, вы соглашаетесь с <a href="#">условиями обработки персональных данных.</a>
+          </div>
+        </div>
+        <div class="stock__img" style="background-image: url(images/stock-img.png);"></div>
+      </div>
+    </div>
+  </section>
+  <!-- /.stock -->
+  <section class="reviews">
+    <div class="container">
+      <div class="reviews__top">
+        <div class="reviews__title title">
+          Отзывы
+        </div>
+        <div class="reviews-button">
+          <div class="reviews-button-prev"></div>
+          <div class="reviews-button-next"></div>
+        </div>
+        <div class="see-all">
+          <a href="#">Посмотреть все</a>
+        </div>
+
+      </div>
+      <div class="reviews-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="reviews__item">
+              <div class="reviews__item-wrap" style="background-image: url(images/reviews-wrap.png);">
+                <div class="reviews__item-img" style="background-image: url(images/reviews-photo1.jpg);"></div>
+              </div>
+
+              <div class="reviews__item-info">
+                <div class="reviews__item-name">
+                  Валя Смирнова <a class="icon-vkontakte" href="#"></a>
+                </div>
+                <div class="reviews__item-text">
+                  Я шла на процедуру, совершенно не зная, какую технику выбрать. Дарья и с
+                  техникой помогла определиться, и бровки сделала симметричными. Было совсем не больно, временами даже
+                  щекотно, поэтому хотелось от этого чихнуть.
+                  Мои "пудровые бровки" это чудо.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="reviews__item">
+              <div class="reviews__item-wrap" style="background-image: url(images/reviews-wrap.png);">
+                <div class="reviews__item-img" style="background-image: url(images/reviews-photo2.jpg);"></div>
+              </div>
+              <div class="reviews__item-info">
+                <div class="reviews__item-name">
+                  Валентина Николаева <a class="icon-vkontakte" href="#"></a>
+                </div>
+                <div class="reviews__item-text">
+                  Полтора часа пролетели незаметно, обстановка комфортная, к моему мнению прислушиваются, когда я
+                  сказала, что немного больнова-то, мне сразу нанесли обезболивающее. Татуаж у такого грамотного мастера
+                  - лучшее вложение в свою красоту. Стоимость полностью оправдана!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="reviews__item">
+              <div class="reviews__item-wrap" style="background-image: url(images/reviews-wrap.png);">
+                <div class="reviews__item-img" style="background-image: url(images/reviews-photo1.jpg);"></div>
+              </div>
+
+              <div class="reviews__item-info">
+                <div class="reviews__item-name">
+                  Валя Смирнова <a class="icon-vkontakte" href="#"></a>
+                </div>
+                <div class="reviews__item-text">
+                  Я шла на процедуру, совершенно не зная, какую технику выбрать. Дарья и с
+                  техникой помогла определиться, и бровки сделала симметричными. Было совсем не больно, временами даже
+                  щекотно, поэтому хотелось от этого чихнуть.
+                  Мои "пудровые бровки" это чудо.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="reviews__item">
+              <div class="reviews__item-wrap" style="background-image: url(images/reviews-wrap.png);">
+                <div class="reviews__item-img" style="background-image: url(images/reviews-photo2.jpg);"></div>
+              </div>
+              <div class="reviews__item-info">
+                <div class="reviews__item-name">
+                  Валентина Николаева <a class="icon-vkontakte" href="#"></a>
+                </div>
+                <div class="reviews__item-text">
+                  Полтора часа пролетели незаметно, обстановка комфортная, к моему мнению прислушиваются, когда я
+                  сказала, что немного больнова-то, мне сразу нанесли обезболивающее. Татуаж у такого грамотного мастера
+                  - лучшее вложение в свою красоту. Стоимость полностью оправдана!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews__platform">
+        <div class="reviews__platform-title">
+          Отзывы на платформах
+        </div>
+        <div class="reviews__platform-inner">
+          <div class="reviews__platform-item">
+            <img src="images/reviews-yandex.png" alt="">
+          </div>
+          <div class="reviews__platform-item">
+            <img src="images/reviews-yoo.png" alt="">
+          </div>
+          <div class="reviews__platform-item">
+            <img src="images/reviews-zoon.png" alt="">
+          </div>
+          <div class="reviews__platform-item">
+            <img src="images/reviews-google.png" alt="">
+          </div>
+          <div class="reviews__platform-item">
+            <img src="images/reviews-gis.png" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="about__inner">
+      <div class="about__img" style="background-image: url(images/about-img.png);"></div>
+      <div class="about__info">
+        <div class="about__info-title title">
+          Обо мне
+        </div>
+        <div class="about__info-text">
+          <p>
+            Меня зовут Дарья, мне 23 года. Я окончила художественную школу и не смогла разорвать свою жизнь с
+            искусством. Более 5 лет я работаю мастером по перманентному макияжу, соединяя свои навыки художника с
+            отточенным мастерством тату-мастера.
+          </p>
+          <p>
+            В своей работе стремлюсь применять различные техники нанесения татуажа, регулярно совершенствую свое
+            мастерство и стремлюсь к естественности в работе. Отдаю предпочтение качественной и проверенной продукции,
+            вне зависимости от ее стоимости.
+          </p>
+          <p>
+            Считаю своей миссией - раскрытие природной красоты каждой из нас. Индивидуальный подход, качественные
+            материалы, персонифицированные секреты ухода и великолепный результат, убедят в твоей неповторимости и
+            будут
+            радовать долгие годы.
+          </p>
+        </div>
+        <a data-fancybox data-src="#reception" href="javascript:;" class="about__info-btn btn">
+          <span class="icon-ok-circle"></span>
+          записаться на прием
+        </a>
+      </div>
+    </div>
+    <div class="about__items">
+      <div class="about__item">
+        <div class="about__item-title about__item-title--diplom">
+          Школа татуажа
+          Hi-Tech
+        </div>
+        <a class="about__item-img" href="images/about-img1.jpg" data-fancybox="images" data-width="2000" data-height="1200" >
+          <img src="images/about-img1.jpg" alt="">
+          <span class="icon-zoom-in"></span>
+        </a>
+      </div>
+      <div class="about__item">
+        <div class="about__item-title">
+
+        </div>
+        <a class="about__item-img" href="images/about-img2.jpg" data-fancybox="images" data-width="2000" data-height="1200">
+          <img src="images/about-img2.jpg" alt="">
+          <span class="icon-zoom-in"></span>
+        </a>
+      </div>
+      <div class="about__item">
+        <div class="about__item-title">
+          Свидетельство художественной школы
+        </div>
+        <a class="about__item-img" href="images/about-img3.jpg" data-fancybox="images" data-width="2000" data-height="1200">
+          <img src="images/about-img3.jpg" alt="">
+          <span class="icon-zoom-in"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- /.reviews -->
   <!-- STOP WRITE CODE -->
   <footer>
   
 </footer>
   <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
+
+  <!-- modal -->
+  <div id="consultation" class="consultation" style="background-image: url(images/modal-bg.png);">
+    <div class="consultation__title">
+      Записаться на консультацию
+    </div>
+    <div class="consultation__text">
+      Оставьте свои контактные данные и я свяжусь с вами в кратчайшие сроки
+    </div>
+    <div class="consultation__form">
+      <form>
+        <input type="text" required placeholder="Имя">
+        <input type="tel" required placeholder="Телефон">
+        <button type="submit">Оставить заявку</button>
+      </form>
+    </div>
+    <div class="consultation__confidentiality">
+      <input type="checkbox" name="scales">
+      <span>Подтверждаю согласие с <a href="#">политикой конфиденциальности</a></span>
+    </div>
+  </div>
+
+  <div id="reception" class="reception" style="background-image: url(images/reception-bg.png);">
+    <div class="reception__title">
+      Спасибо за заявку!
+    </div>
+    <div class="reception__text">
+      Скоро я обязательно свяжусь с вами
+    </div>
+    <div class="reception__number">
+      Ваша заявка №34
+    </div>
+    <div class="reception__name">
+      Олеся Константиновна Константинопольская <a href="tel:799966633300">+7 999 666-333-00</a>
+
+    </div>
+    <div class="reception__rekomendatsiyi">
+      Хотите получить рекомендации перед приемом?
+    </div>
+    <div class="reception__form">
+      <form>
+        <input type="email" required placeholder="E-mail">
+        <button type="submit">Получить рекомендации</button>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
