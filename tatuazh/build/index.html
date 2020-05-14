@@ -4,23 +4,791 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Document</title>
+    <title>Tatuazhmaster</title>
   </head>
 
 <body>
   <header class="header">
-    <h1>Привет Дмитрий</h1>
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="header__list">
+                    <li><a href="#">Обо мне</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Портфолио</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__tel">
+                <a class="tel" href="tel:74950063116">+7 (495) 006-31-16</a>
+                <a class="call" href="#">заказать звонок</a>
+            </div>
+            <a class="header__btn btn" data-fancybox data-src="#consultation" href="javascript:;">консультация</a>
+        </div>
+
+    </div>
 </header>
+<!-- /.header -->
   <!-- WRITE CODE HERE -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__info">
+          <div class="hero__info-title">
+            Дипломированный
+            татуаж-мастер
+            международного уровня
+          </div>
+          <div class="advantages">
+            <div class="advantages__inner">
+              <div class="advantages__item advantages__trophy">
+                <div class="advantages__item-img">
+                  <img src="images/advantages-img1.svg" alt="">
+                </div>
+                <span class="advantages__item-descr">5 лет успешной работы</span>
+              </div>
+              <div class="advantages__item advantages__author">
+                <div class="advantages__item-img">
+                  <img src="images/advantages-img2.svg" alt="">
+                </div>
+                <span class="advantages__item-descr">Авторские
+                  методики</span>
+              </div>
+              <div class="advantages__item advantages__diploma">
+                <div class="advantages__item-img">
+                  <img src="images/advantages-img3.svg" alt="">
+                </div>
+                <span class="advantages__item-descr">Дипломированный
+                  специалист</span>
+              </div>
+              <div class="advantages__item advantages__hud">
+                <div class="advantages__item-img">
+                  <img src="images/advantages-img4.svg" alt="">
+                </div>
+                <span class="advantages__item-descr">Художественное
+                  образование</span>
+              </div>
 
+            </div>
+          </div>
+          <div class="hero__info-text">
+            Пермаментный татуаж бровей - без боли, эстетично и надолго!
+            Обещание которое почти не исполняют. Почему? Чтобы салону максимально заработать
+            на вас, им приходится экономить абсолютно на всем. Мне не нужно экономить, я работаю
+            на свое имя, делаю упор на качество и индивидуальный подход.
+          </div>
+          <a data-fancybox data-src="#reception" href="javascript:;" class="hero__info-btn btn">
+            <span class="icon-ok-circle"></span>
+            записаться на прием
+          </a>
+        </div>
+        <div class="hero__img" style="background-image: url(images/header-img.png);">
+          <!-- <img src="images/header-img.png" alt=""> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.hero -->
+  <section class="results">
+    <div class="container">
+      <div class="results__inner">
+        <div class="results__info">
+          <div class="results__info-title title">
+            Результаты моей работы
+          </div>
+          <div class="results__info-text">
+            Виртуозно комбинирую различные технологии татуажа
+            в зависимости от ваших анатомических особенностей строения лица. Также использую гиппоалергенные материалы
+            для всех типов кожных покровов.
+          </div>
+          <ul class="results__info-list">
+            <li>Перекрою ваш неудачный татуаж</li>
+            <li>Обновлю ваш старый татуаж</li>
+            <li>Эффектно преображу ваш внешний вид</li>
+            <li>Вы перестанете тратить время на макияж</li>
+            <li>Сделаю симитричными ваши губы, брови и веки</li>
+            <li>Безопасный и естественный татуаж на долго</li>
+          </ul>
+        </div>
+        <div class="results__twentytwenty" id="results__twentytwenty">
+          <img src="images/results-afterbefore.png" alt="">
+          <img src="images/results-afterbefore.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.results -->
+  <section class="discounts">
+    <div class="container">
+      <div class="discounts__inner" style="background-image: url(images/discounts-bg.png);">
+        <div class="discounts__info">
+          <div class="discounts__info-subtitle">
+            Преобрази свой образ!
+          </div>
+          <div class="discounts__info-title title">
+            Скидка новым
+            клиентам -10%
+          </div>
+          <a data-fancybox data-src="#reception" href="javascript:;" class="discounts__info-link">
+            записаться на прием
+          </a>
+          <title></title>
+        </div>
+        <div class="discounts__flipclock">
+          <div class="clock" id="clock"></div>
+          <div class="message"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.discounts -->
+  <section class="services">
+    <div class="services__wrapper wrap">
+      <div class="services__item">
+        <div class="services__inner">
+          <div class="services__info">
+            <div class="services__info-title title">
+              Татуаж бровей
+            </div>
+            <div class="services__info-text">
+              <p>Ручной метод нанесения перманентного макияжа посредством манипулы. Отличается наиболее безболезненным
+                ходом процедуры и естественностью, за счет прорисовки каждого волоска вручную. </p>
+              <p>Форма и цвет подбираются исходя из анатомических особенностей строения лица
+                и цветотипа. За счет контроля наклона, толщины и цвета нарисованных волосков достигается эффект
+                натуральности. Не зависит от волосяного покрова и дефектов зоны бровей.</p>
+            </div>
+            <div class="services__info-box">
+              <div class="services__info-price">
+                от 7 000 руб.
+              </div>
+              <div class="services__info-btn btn">
+                <a class="services__info-link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="services__images" style="background-image: url(images/services__images1.png);"></div>
+        </div>
+      </div>
+      <div class="services__item services__item--right">
+        <div class="services__inner">
+          <div class="services__info">
+            <div class="services__info-title title">
+              Татуаж век
+            </div>
+            <div class="services__info-text">
+              <p>Ручной метод нанесения перманентного макияжа посредством манипулы. Отличается наиболее безболезненным
+                ходом процедуры и естественностью, за счет прорисовки каждого волоска вручную.
+              </p>
+              <p>Форма и цвет подбираются исходя из анатомических особенностей строения лица
+                и цветотипа. За счет контроля наклона, толщины и цвета нарисованных волосков достигается эффект
+                натуральности. Не зависит от волосяного покрова и дефектов зоны бровей.</p>
+            </div>
+            <div class="services__info-box">
+              <div class="services__info-price">
+                от 7 000 руб.
+              </div>
+              <div class="services__info-btn btn">
+                <a class="services__info-link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="services__images" style="background-image: url(images/services__images2.png);"></div>
+        </div>
+      </div>
+      <div class="services__item">
+        <div class="services__inner">
+          <div class="services__info">
+            <div class="services__info-title title">
+              Татуаж губ
+            </div>
+            <div class="services__info-text">
+              <p>Ручной метод нанесения перманентного макияжа посредством манипулы. Отличается наиболее безболезненным
+                ходом процедуры и естественностью, за счет прорисовки каждого волоска вручную. </p>
+              <p>Форма и цвет подбираются исходя из анатомических особенностей строения лица
+                и цветотипа. За счет контроля наклона, толщины и цвета нарисованных волосков достигается эффект
+                натуральности. Не зависит от волосяного покрова и дефектов зоны бровей.</p>
+            </div>
+            <div class="services__info-box">
+              <div class="services__info-price">
+                от 7 000 руб.
+              </div>
+              <div class="services__info-btn btn">
+                <a class="services__info-link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="services__images" style="background-image: url(images/services__images3.png);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.services -->
+  <section class="comfort">
+    <div class="container">
+      <div class="comfort__title title">
+        Моя работа - это когда:
+      </div>
+      <div class="comfort__inner">
+        <div class="comfort__item">
+          <div class="comfort__img" style="background-image: url(images/comfort__img1.png);"></div>
+          <div class="comfort__info">
+            <div class="comfort__info-title">
+              Не больно
+            </div>
+            <div class="comfort__info-text">
+              Процедура проходит под аппликационной анестезией.
+            </div>
+          </div>
+        </div>
+        <div class="comfort__item">
+          <div class="comfort__img" style="background-image: url(images/comfort__img2.png);"></div>
+          <div class="comfort__info">
+            <div class="comfort__info-title">
+              Быстро заживает
+            </div>
+            <div class="comfort__info-text">
+              Не травмирую эпидермис кожи, что влияет на регенеративные функции.
+            </div>
+          </div>
+        </div>
+        <div class="comfort__item">
+          <div class="comfort__img" style="background-image: url(images/comfort__img3.png);"></div>
+          <div class="comfort__info">
+            <div class="comfort__info-title">
+              Надолго
+            </div>
+            <div class="comfort__info-text">
+              Благодаря качественным пигментам и уникальным советам по уходу.
+            </div>
+          </div>
+        </div>
+        <div class="comfort__item">
+          <div class="comfort__img" style="background-image: url(images/comfort__img4.png);"></div>
+          <div class="comfort__info">
+            <div class="comfort__info-title">
+              Надежно
+            </div>
+            <div class="comfort__info-text">
+              WOW-эффект от татуажа который останется надолго.
+            </div>
+          </div>
+        </div>
+        <div class="comfort__item">
+          <div class="comfort__img" style="background-image: url(images/comfort__img5.png);"></div>
+          <div class="comfort__info">
+            <div class="comfort__info-title">
+              Эстетично
+            </div>
+            <div class="comfort__info-text">
+              Подберу процедуру, которая идеально для вас подойдет.
+            </div>
+          </div>
+        </div>
+        <div class="comfort__item">
+          <div class="comfort__img" style="background-image: url(images/comfort__img6.png);"></div>
+          <div class="comfort__info">
+            <div class="comfort__info-title">
+              Гипоаллергено
+            </div>
+            <div class="comfort__info-text">
+              Стерильность помещения
+              и органические материалы
+              не вызовут воспаления.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.comfort -->
+  <section class="procedure">
+    <div class="procedure__inner wrap">
+      <div class="procedure__img" style="background-image: url(images/procedure__img.png);">
+        <span>Как проходит
+          процедура</span>
+      </div>
+      <div class="procedure__right">
+        <div class="procedure__box">
+          <div class="procedure__stage">
+            <span class="stage">этап</span>
+            <span class="number">первый</span>
+          </div>
+          <div class="procedure__info">
+            <div class="procedure__info-title">
+              Отправьте вашу заявку
+            </div>
+            <div class="procedure__info-text">
+              После получения заявки я с вами свяжусь для уточнения деталей заказа. Прочтите <a href="#">рекомендации до
+                процедуры.</a>
+            </div>
+          </div>
+        </div>
+        <div class="procedure__box">
+          <div class="procedure__stage">
+            <span class="stage">этап</span>
+            <span class="number">второй</span>
+          </div>
+          <div class="procedure__info">
+            <div class="procedure__info-title">
+              Прием-моделирование
+            </div>
+            <div class="procedure__info-text">
+              Вы приходите на прием, на котором мы выбираем наиболее подходящий вариант татуажа. Моделирование выполняю
+              по технологии "золотого сечения".
+            </div>
+          </div>
+        </div>
+        <div class="procedure__box">
+          <div class="procedure__stage">
+            <span class="stage">этап</span>
+            <span class="number">третий</span>
+          </div>
+          <div class="procedure__info">
+            <div class="procedure__info-title">
+              Выполнение процедуры
+            </div>
+            <div class="procedure__info-text">
+              В процессе вы можете контролировать каждый шаг. Вам будет комфортно, теплые одеяла, приятная музыка и
+              мягкая ортопедическая кушетка.
+            </div>
+          </div>
+        </div>
+        <div class="procedure__box">
+          <div class="procedure__stage">
+            <span class="stage">этап</span>
+            <span class="number">четвертый</span>
+          </div>
+          <div class="procedure__info">
+            <div class="procedure__info-title">
+              Завершение работы
+            </div>
+            <div class="procedure__info-text">
+              Вы получаете эффектный и эстетичный татуаж выбранной вами зоны. После консультирую по уходу за зоной
+              татуажа для наилучшего заживления.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.procedure -->
+  <section class="tool">
+    <div class="container">
+      <div class="tool__title title">
+        Что я использую в работе
+      </div>
+      <div class="tool__inner">
+        <div class="tool__item">
+          <div class="tool__item-img" style="background-image: url(images/tool-img1.png);"></div>
+          <div class="tool__item-info">
+            <div class="tool__item-title">
+              Стерильные одноразовые
+              материалы
+            </div>
+            <div class="tool__item-text">
+              Придерживаюсь строгих правил безопасности здоровья клиента. В работе использую исключительно одноразовые
+              материалы.
+            </div>
+          </div>
+        </div>
+        <div class="tool__item">
+          <div class="tool__item-img" style="background-image: url(images/tool-img2.png);"></div>
+          <div class="tool__item-info">
+            <div class="tool__item-title">
+              Органическую натуральную краску
+            </div>
+            <div class="tool__item-text">
+              Сертифицированную органическую краску AQUAтм. С помощью неё достигается лучшее проникновение краски и
+              стойкость. Производитель США.
+            </div>
+          </div>
+        </div>
+        <div class="tool__item">
+          <div class="tool__item-img" style="background-image: url(images/tool-img3.png);"></div>
+          <div class="tool__item-info">
+            <div class="tool__item-title">
+              Симметрию лица
+            </div>
+            <div class="tool__item-text">
+              Профессиональный подход в моделировании татуажа, в его размере, цвете, толщины с помощью технологии
+              «Золотого сечения». Использую навыки художественного образования и профессиональные навыки тончайшего и
+              деликатного татуажа.
+            </div>
+          </div>
+        </div>
+        <div class="tool__item">
+          <div class="tool__item-img" style="background-image: url(images/tool-img4.png);"></div>
+          <div class="tool__item-info">
+            <div class="tool__item-title">
+              Гипоаллергенные расходные материалы
+            </div>
+            <div class="tool__item-text">
+              Я использую швейцарские иглы из платины, которые не вызывают аллергических реакций. Краска на основе цинка
+              железа и воды не вызывает на коже различного рода раздражений, предотвращая отторжение пигмента.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.tool -->
+  <section class="gallery">
+    <div class="gallery__top container">
+      <div class="gallery__top-title title">
+        Мои работы
+      </div>
+      <div class="see-all">
+        <a href="#">Посмотреть все</a>
+      </div>
+    </div>
+    <div class="gallery__wrap">
+      <div class="gallery__items" id="gallery">
+        <div class="gallery__item sizer4 gallery__item--1">
+          <img src="images/gallery/gallery1.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--2">
+          <img src="images/gallery/gallery2.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--3">
+          <img src="images/gallery/gallery3.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--4">
+          <img src="images/gallery/gallery4.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--5">
+          <img src="images/gallery/gallery5.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--6">
+          <img src="images/gallery/gallery6.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--7">
+          <img src="images/gallery/gallery7.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--8">
+          <img src="images/gallery/gallery8.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--9">
+          <img src="images/gallery/gallery9.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--10">
+          <img src="images/gallery/gallery10.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--11">
+          <img src="images/gallery/gallery11.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
+        <div class="gallery__item sizer4 gallery__item--12">
+          <img src="images/gallery/gallery12.png" alt="">
+          <!-- <div class="gallery__item-cover">
+            <a href="#">fgh</a>
+          </div> -->
+        </div>
 
+      </div>
+    </div>
+  </section>
+  <!-- /.gallery -->
+  <section class="stock">
+    <div class="container">
+      <div class="stock__inner">
+        <div class="stock__info">
+          <div class="stock__info-short-title">
+            Акция -15%
+          </div>
+          <div class="stock__info-title title">
+            Вдвоем дешевле!
+          </div>
+          <div class="stock__info-text">
+            Запишись вместе с подругой на пермаментный макияж любой зоны и получи скидку 15% на процедуру!
+          </div>
+          <div class="stock__info-form">
+            <form>
+              <input type="text" required placeholder="Имя">
+              <input type="tel" required placeholder="Телефон">
+              <button type="submit">Оставить заявку</button>
+            </form>
+          </div>
+          <div class="stock__info-link">
+            Нажимая на кнопку, вы соглашаетесь с <a href="#">условиями обработки персональных данных.</a>
+          </div>
+        </div>
+        <div class="stock__img" style="background-image: url(images/stock-img.png);"></div>
+      </div>
+    </div>
+  </section>
+  <!-- /.stock -->
+  <section class="reviews">
+    <div class="container">
+      <div class="reviews__top">
+        <div class="reviews__title title">
+          Отзывы
+        </div>
+        <div class="reviews-button">
+          <div class="reviews-button-prev"></div>
+          <div class="reviews-button-next"></div>
+        </div>
+        <div class="see-all">
+          <a href="#">Посмотреть все</a>
+        </div>
+
+      </div>
+      <div class="reviews-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="reviews__item">
+              <div class="reviews__item-wrap" style="background-image: url(images/reviews-wrap.png);">
+                <div class="reviews__item-img" style="background-image: url(images/reviews-photo1.jpg);"></div>
+              </div>
+
+              <div class="reviews__item-info">
+                <div class="reviews__item-name">
+                  Валя Смирнова <a class="icon-vkontakte" href="#"></a>
+                </div>
+                <div class="reviews__item-text">
+                  Я шла на процедуру, совершенно не зная, какую технику выбрать. Дарья и с
+                  техникой помогла определиться, и бровки сделала симметричными. Было совсем не больно, временами даже
+                  щекотно, поэтому хотелось от этого чихнуть.
+                  Мои "пудровые бровки" это чудо.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="reviews__item">
+              <div class="reviews__item-wrap" style="background-image: url(images/reviews-wrap.png);">
+                <div class="reviews__item-img" style="background-image: url(images/reviews-photo2.jpg);"></div>
+              </div>
+              <div class="reviews__item-info">
+                <div class="reviews__item-name">
+                  Валентина Николаева <a class="icon-vkontakte" href="#"></a>
+                </div>
+                <div class="reviews__item-text">
+                  Полтора часа пролетели незаметно, обстановка комфортная, к моему мнению прислушиваются, когда я
+                  сказала, что немного больнова-то, мне сразу нанесли обезболивающее. Татуаж у такого грамотного мастера
+                  - лучшее вложение в свою красоту. Стоимость полностью оправдана!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="reviews__item">
+              <div class="reviews__item-wrap" style="background-image: url(images/reviews-wrap.png);">
+                <div class="reviews__item-img" style="background-image: url(images/reviews-photo1.jpg);"></div>
+              </div>
+
+              <div class="reviews__item-info">
+                <div class="reviews__item-name">
+                  Валя Смирнова <a class="icon-vkontakte" href="#"></a>
+                </div>
+                <div class="reviews__item-text">
+                  Я шла на процедуру, совершенно не зная, какую технику выбрать. Дарья и с
+                  техникой помогла определиться, и бровки сделала симметричными. Было совсем не больно, временами даже
+                  щекотно, поэтому хотелось от этого чихнуть.
+                  Мои "пудровые бровки" это чудо.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="reviews__item">
+              <div class="reviews__item-wrap" style="background-image: url(images/reviews-wrap.png);">
+                <div class="reviews__item-img" style="background-image: url(images/reviews-photo2.jpg);"></div>
+              </div>
+              <div class="reviews__item-info">
+                <div class="reviews__item-name">
+                  Валентина Николаева <a class="icon-vkontakte" href="#"></a>
+                </div>
+                <div class="reviews__item-text">
+                  Полтора часа пролетели незаметно, обстановка комфортная, к моему мнению прислушиваются, когда я
+                  сказала, что немного больнова-то, мне сразу нанесли обезболивающее. Татуаж у такого грамотного мастера
+                  - лучшее вложение в свою красоту. Стоимость полностью оправдана!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews__platform">
+        <div class="reviews__platform-title">
+          Отзывы на платформах
+        </div>
+        <div class="reviews__platform-inner">
+          <div class="reviews__platform-item">
+            <img src="images/reviews-yandex.png" alt="">
+          </div>
+          <div class="reviews__platform-item">
+            <img src="images/reviews-yoo.png" alt="">
+          </div>
+          <div class="reviews__platform-item">
+            <img src="images/reviews-zoon.png" alt="">
+          </div>
+          <div class="reviews__platform-item">
+            <img src="images/reviews-google.png" alt="">
+          </div>
+          <div class="reviews__platform-item">
+            <img src="images/reviews-gis.png" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="about__inner">
+      <div class="about__img" style="background-image: url(images/about-img.png);"></div>
+      <div class="about__info">
+        <div class="about__info-title title">
+          Обо мне
+        </div>
+        <div class="about__info-text">
+          <p>
+            Меня зовут Дарья, мне 23 года. Я окончила художественную школу и не смогла разорвать свою жизнь с
+            искусством. Более 5 лет я работаю мастером по перманентному макияжу, соединяя свои навыки художника с
+            отточенным мастерством тату-мастера.
+          </p>
+          <p>
+            В своей работе стремлюсь применять различные техники нанесения татуажа, регулярно совершенствую свое
+            мастерство и стремлюсь к естественности в работе. Отдаю предпочтение качественной и проверенной продукции,
+            вне зависимости от ее стоимости.
+          </p>
+          <p>
+            Считаю своей миссией - раскрытие природной красоты каждой из нас. Индивидуальный подход, качественные
+            материалы, персонифицированные секреты ухода и великолепный результат, убедят в твоей неповторимости и
+            будут
+            радовать долгие годы.
+          </p>
+        </div>
+        <a data-fancybox data-src="#reception" href="javascript:;" class="about__info-btn btn">
+          <span class="icon-ok-circle"></span>
+          записаться на прием
+        </a>
+      </div>
+    </div>
+    <div class="about__items">
+      <div class="about__item">
+        <div class="about__item-title about__item-title--diplom">
+          Школа татуажа
+          Hi-Tech
+        </div>
+        <a class="about__item-img" href="images/about-img1.jpg" data-fancybox="images" data-width="2000" data-height="1200" >
+          <img src="images/about-img1.jpg" alt="">
+          <span class="icon-zoom-in"></span>
+        </a>
+      </div>
+      <div class="about__item">
+        <div class="about__item-title">
+
+        </div>
+        <a class="about__item-img" href="images/about-img2.jpg" data-fancybox="images" data-width="2000" data-height="1200">
+          <img src="images/about-img2.jpg" alt="">
+          <span class="icon-zoom-in"></span>
+        </a>
+      </div>
+      <div class="about__item">
+        <div class="about__item-title">
+          Свидетельство художественной школы
+        </div>
+        <a class="about__item-img" href="images/about-img3.jpg" data-fancybox="images" data-width="2000" data-height="1200">
+          <img src="images/about-img3.jpg" alt="">
+          <span class="icon-zoom-in"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- /.reviews -->
   <!-- STOP WRITE CODE -->
   <footer>
   
 </footer>
   <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
+
+  <!-- modal -->
+  <div id="consultation" class="consultation" style="background-image: url(images/modal-bg.png);">
+    <div class="consultation__title">
+      Записаться на консультацию
+    </div>
+    <div class="consultation__text">
+      Оставьте свои контактные данные и я свяжусь с вами в кратчайшие сроки
+    </div>
+    <div class="consultation__form">
+      <form>
+        <input type="text" required placeholder="Имя">
+        <input type="tel" required placeholder="Телефон">
+        <button type="submit">Оставить заявку</button>
+      </form>
+    </div>
+    <div class="consultation__confidentiality">
+      <input type="checkbox" name="scales">
+      <span>Подтверждаю согласие с <a href="#">политикой конфиденциальности</a></span>
+    </div>
+  </div>
+
+  <div id="reception" class="reception" style="background-image: url(images/reception-bg.png);">
+    <div class="reception__title">
+      Спасибо за заявку!
+    </div>
+    <div class="reception__text">
+      Скоро я обязательно свяжусь с вами
+    </div>
+    <div class="reception__number">
+      Ваша заявка №34
+    </div>
+    <div class="reception__name">
+      Олеся Константиновна Константинопольская <a href="tel:799966633300">+7 999 666-333-00</a>
+
+    </div>
+    <div class="reception__rekomendatsiyi">
+      Хотите получить рекомендации перед приемом?
+    </div>
+    <div class="reception__form">
+      <form>
+        <input type="email" required placeholder="E-mail">
+        <button type="submit">Получить рекомендации</button>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
