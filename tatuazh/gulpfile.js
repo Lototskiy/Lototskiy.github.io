@@ -97,7 +97,8 @@ gulp.task("style", function () {
 			"node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css",
 			"node_modules/swiper/css/swiper.css",
 			"node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css",
-			"node_modules/jquery-form-styler/dist/jquery.formstyler.css"
+			"node_modules/jquery-form-styler/dist/jquery.formstyler.css",
+			"node_modules/rateyo/src/jquery.rateyo.css"
 			
 		])
 		.pipe(sourcemaps.init())
@@ -117,7 +118,7 @@ gulp.task("script", function () {
 			"node_modules/flipclock/dist/flipclock.js",
 			"node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
 			"node_modules/swiper/js/swiper.min.js",
-			
+			"node_modules/rateyo/src/jquery.rateyo.js",
 			// "node_modules/masonry-layout/dist/masonry.pkgd.js",
 			// "node_modules/imagesloaded/imagesloaded.js",
 			"src/js/libs.js",

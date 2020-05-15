@@ -32,7 +32,7 @@
                 <a class="tel" href="tel:74950063116">+7 (495) 006-31-16</a>
                 <a class="call" href="#">заказать звонок</a>
             </div>
-            <a class="header__btn btn" data-fancybox data-src="#consultation" href="javascript:;">консультация</a>
+            <a  class="header__btn btn" data-fancybox data-src="#consultation" href="javascript:;">консультация</a>
         </div>
 
     </div>
@@ -141,11 +141,20 @@
           <a data-fancybox data-src="#reception" href="javascript:;" class="discounts__info-link">
             записаться на прием
           </a>
-          <title></title>
         </div>
-        <div class="discounts__flipclock">
-          <div class="clock" id="clock"></div>
-          <div class="message"></div>
+        <!-- <div class="discounts__flipclock"></div> -->
+        <div id="countdown" class="countdown">
+          <div class="countdown-title">до конца акции:</div>
+          <!-- <div class="countdown__inner"></div> -->
+          <div class="countdown-number">
+            <span class="hours countdown-time"></span>
+          </div>
+          <div class="countdown-number">
+            <span class="minutes countdown-time"></span>
+          </div>
+          <div class="countdown-number">
+            <span class="seconds countdown-time"></span>
+          </div>
         </div>
       </div>
     </div>
@@ -571,7 +580,6 @@
         <div class="see-all">
           <a href="#">Посмотреть все</a>
         </div>
-
       </div>
       <div class="reviews-slider">
         <div class="swiper-wrapper">
@@ -674,6 +682,7 @@
       </div>
     </div>
   </section>
+  <!-- /.reviews -->
   <section class="about">
     <div class="about__inner">
       <div class="about__img" style="background-image: url(images/about-img.png);"></div>
@@ -711,7 +720,8 @@
           Школа татуажа
           Hi-Tech
         </div>
-        <a class="about__item-img" href="images/about-img1.jpg" data-fancybox="images" data-width="2000" data-height="1200" >
+        <a class="about__item-img" href="images/about-img1.jpg" data-fancybox="images" data-width="2000"
+          data-height="1200">
           <img src="images/about-img1.jpg" alt="">
           <span class="icon-zoom-in"></span>
         </a>
@@ -720,7 +730,8 @@
         <div class="about__item-title">
 
         </div>
-        <a class="about__item-img" href="images/about-img2.jpg" data-fancybox="images" data-width="2000" data-height="1200">
+        <a class="about__item-img" href="images/about-img2.jpg" data-fancybox="images" data-width="2000"
+          data-height="1200">
           <img src="images/about-img2.jpg" alt="">
           <span class="icon-zoom-in"></span>
         </a>
@@ -729,14 +740,180 @@
         <div class="about__item-title">
           Свидетельство художественной школы
         </div>
-        <a class="about__item-img" href="images/about-img3.jpg" data-fancybox="images" data-width="2000" data-height="1200">
+        <a class="about__item-img" href="images/about-img3.jpg" data-fancybox="images" data-width="2000"
+          data-height="1200">
           <img src="images/about-img3.jpg" alt="">
           <span class="icon-zoom-in"></span>
         </a>
       </div>
     </div>
   </section>
-  <!-- /.reviews -->
+  <!-- /.about -->
+  <section class="subscribers">
+    <div class="container">
+      <div class="subscribers__inner">
+        <div class="subscribers__img">
+          <img src="images/subscribers-img.png" alt="">
+        </div>
+        <div class="subscribers__info">
+          <div class="subscribers__info-title title">
+            Более 4 тысяч подписчиков,
+            узнавай о скидках первая!
+          </div>
+          <div class="subscribers__info-text">
+            Более 4 тысяч подписчиков в социальных сетях Вконтакте и Инстаграм, розыгрыши, скидки и познавательный
+            контент ждет тебя в моих соц. сетях. Узнай всё о татуаже и моей работе!
+          </div>
+          <div class="subscribers__info-link">
+            <a class="btn" href="#">Instagram</a>
+            <a class="btn" href="#">Вконтакте</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.subscribers -->
+  <section class="massmedia">
+    <div class="container">
+      <div class="massmedia__wrap">
+        <div class="massmedia__top">
+          <div class="massmedia__title title">
+            Я <span>в</span> СМИ
+          </div>
+          <div class="massmedia-button">
+            <div class="massmedia-button-prev"></div>
+            <div class="massmedia-button-next"></div>
+          </div>
+          <div class="massmedia__text">
+            Я стараюсь делиться своим экспертным мнением для своей аудитории в СМИ. Это позволяет повысить уровень
+            знания
+            клиентов об татуаже, что позволяет им лучше разбираться в его тонкостях.
+          </div>
+        </div>
+        <div class="massmedia-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="massmedia__item">
+                <div class="massmedia__item-img">
+                  <img src="images/massmedia-img1.png" alt="">
+                </div>
+                <div class="massmedia__item-descr">
+                  Популярная медицинская площадка про медицину.
+                </div>
+                <div class="see-all">
+                  <a href="#">Посмотреть все</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="massmedia__item">
+                <div class="massmedia__item-img">
+                  <img src="images/massmedia-img2.png" alt="">
+                </div>
+                <div class="massmedia__item-descr">
+                  Статья в газете и на сайте
+                </div>
+                <div class="see-all">
+                  <a href="#">Посмотреть все</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="massmedia__item">
+                <div class="massmedia__item-img">
+                  <img src="images/massmedia-img3.png" alt="">
+                </div>
+                <div class="massmedia__item-descr">
+                  Портал о красоте и моде. Размещение будет скоро.
+                </div>
+                <div class="see-all">
+                  <a href="#">Посмотреть все</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="massmedia__item">
+                <div class="massmedia__item-img">
+                  <img src="images/massmedia-img1.png" alt="">
+                </div>
+                <div class="massmedia__item-descr">
+                  Популярная медицинская площадка про медицину.
+                </div>
+                <div class="see-all">
+                  <a href="#">Посмотреть все</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts">
+          <div class="contacts__inner">
+            <div class="contacts__info">
+              <div class="contacts__info-title title">
+                Контакты
+              </div>
+              <div class="contacts__info-box">
+                <span class="icon icon-wristwatch"></span>
+                Время работы
+                <span>Ежедневно,
+                  с 10:00 до 20:00</span>
+              </div>
+              <div class="contacts__info-box">
+                <span class="icon icon-map-o"></span>
+                Москва, метро Тверская,
+                ул. Спиридоновка, 24/1
+              </div>
+              <div class="contacts__info-box">
+                <span class="icon icon-phone"></span>
+                <a href="tel:74950063116 ">+7 (495) 006-31-16 </a>
+              </div>
+              <div class="contacts__info-box">
+                <span class="icon icon-mail"></span>
+                hello@tatuazhmaster.ru
+              </div>
+              <div class="contacts__info-box">
+                <span class="icon icon-mobile"></span>
+                <div class="chat-message">
+                  <a href="tel:79008888888">+7 900 888-88-88</a>
+                  <a href="#">
+                    <img src="images/viber.png" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="images/whatsapp.png" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="images/telegram.png" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="rate-y">
+                <div class="rate-y__img">
+                  <img src="images/rate-y.png" alt="">
+                </div>
+                <div class="rate-y__start" data-rateyo-rating="4.6"></div>
+                <span>4.6</span>
+              </div>
+              <div class="rate-zoon">
+                <div class="rate-zoon__title">
+                  Наш рейтинг на <a href="#"><img src="images/rate-zoon.png" alt=""></a>
+                </div>
+                <div class="rate-zoon__start" data-rateyo-rating="4.3"></div>
+                <a href="#">53 отзыва</a>
+              </div>
+            </div>
+            <div class="contacts__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2738.793967843335!2d37.589816316046694!3d55.76167669877484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a37c86e9301%3A0x8ced38848f68cc4!2z0YPQuy4g0KHQv9C40YDQuNC00L7QvdC-0LLQutCwLCAyNC8xLCDQnNC-0YHQutCy0LAsINCg0L7RgdGW0Y8sIDEyMzAwMQ!5e1!3m2!1suk!2sua!4v1589577137241!5m2!1suk!2sua"
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+            </div>
+          </div>
+        </div>
+        <!-- /.contacts -->
+      </div>
+    </div>
+  </section>
+  <!-- /.massmedia -->
   <!-- STOP WRITE CODE -->
   <footer>
   
@@ -789,6 +966,7 @@
       </form>
     </div>
   </div>
+
 </body>
 
 </html>
