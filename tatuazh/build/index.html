@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/libs.min.css" />
-    <link rel="stylesheet" href="css/style.min.css">
-    <title>Tatuazhmaster</title>
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/libs.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Дипломированный татуаж-мастер</title>
+</head>
 
 <body>
   <header class="header">
@@ -180,7 +182,7 @@
                 от 7 000 руб.
               </div>
               <div class="services__info-btn btn">
-                <a class="services__info-link" href="#">Подробнее</a>
+                <a class="services__info-link" href="eyebrows.html">Подробнее</a>
               </div>
             </div>
           </div>
@@ -774,7 +776,7 @@
   </section>
   <!-- /.subscribers -->
   <section class="massmedia">
-    <div class="container">
+    <div class="wrap">
       <div class="massmedia__wrap">
         <div class="massmedia__top">
           <div class="massmedia__title title">
@@ -854,9 +856,12 @@
               </div>
               <div class="contacts__info-box">
                 <span class="icon icon-wristwatch"></span>
-                Время работы
-                <span>Ежедневно,
-                  с 10:00 до 20:00</span>
+                <div class="contacts__info-box__time">
+                  Время работы
+                  <span>Ежедневно,
+                    с 10:00 до 20:00
+                  </span>
+                </div>
               </div>
               <div class="contacts__info-box">
                 <span class="icon icon-map-o"></span>
@@ -865,7 +870,7 @@
               </div>
               <div class="contacts__info-box">
                 <span class="icon icon-phone"></span>
-                <a href="tel:74950063116 ">+7 (495) 006-31-16 </a>
+                <a class="phone" href="tel:74950063116 ">+7 (495) 006-31-16 </a>
               </div>
               <div class="contacts__info-box">
                 <span class="icon icon-mail"></span>
@@ -874,7 +879,7 @@
               <div class="contacts__info-box">
                 <span class="icon icon-mobile"></span>
                 <div class="chat-message">
-                  <a href="tel:79008888888">+7 900 888-88-88</a>
+                  <a class="chat" href="tel:79008888888">+7 900 888-88-88</a>
                   <a href="#">
                     <img src="images/viber.png" alt="">
                   </a>
@@ -904,8 +909,7 @@
             <div class="contacts__map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2738.793967843335!2d37.589816316046694!3d55.76167669877484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a37c86e9301%3A0x8ced38848f68cc4!2z0YPQuy4g0KHQv9C40YDQuNC00L7QvdC-0LLQutCwLCAyNC8xLCDQnNC-0YHQutCy0LAsINCg0L7RgdGW0Y8sIDEyMzAwMQ!5e1!3m2!1suk!2sua!4v1589577137241!5m2!1suk!2sua"
-                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
           </div>
         </div>
@@ -914,13 +918,6 @@
     </div>
   </section>
   <!-- /.massmedia -->
-  <!-- STOP WRITE CODE -->
-  <footer>
-  
-</footer>
-  <script src="js/libs.min.js"></script>
-<script src="js/main.min.js"></script>
-
   <!-- modal -->
   <div id="consultation" class="consultation" style="background-image: url(images/modal-bg.png);">
     <div class="consultation__title">
@@ -966,7 +963,52 @@
       </form>
     </div>
   </div>
+  <!-- STOP WRITE CODE -->
+  <footer class="footer">
+  <div class="footer__content">
+    <div class="container">
+      <div class="footer__content-inner">
+        <div class="footer__logo">
+          <a href="index.html">
+            <img src="images/footer-logo.png" alt="logo">
+          </a>
+        </div>
+        <a href="#" class="footer__btn btn">
+          <span class="icon-ok-circle"></span>
+          записаться онлайн
+        </a>
+        <div class="footer__connection">
+          <a class="footer__tel" href="tel:74950063116">+7 (495) 006-31-16</a>
+          <div class="footer__social">
+            <a class="footer__social-link icon-phone" href="#"></a>
+            <a class="footer__social-link icon-whatsapp" href="#"></a>
+            <a class="footer__social-link icon-telegram" href="#"></a>
+            <a class="footer__social-link icon-instagram" href="#"></a>
+            <a class="footer__social-link icon-vkontakte" href="#"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__bottom-inner">
+        <div class="footer__bottom-tagline">
+          Сделаю ваши брови эстетичными и надолго!
+          <span>- это не слоган, это мой подход!</span>
+        </div>
+        <div class="footer__bottom-copyright">
+          ИНН 463405195120 ИП Чухранина Дарья Петровна
+          © 2019 «Дарья Чухранина». Все права защищены.
+        </div>
+      </div>
+    </div>
+  </div>
 
+</footer>
+<!-- /.footer -->
+  <script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
 </body>
 
 </html>
