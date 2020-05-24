@@ -118,6 +118,7 @@ gulp.task("script", function () {
 			"node_modules/flipclock/dist/flipclock.js",
 			"node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
 			"node_modules/swiper/js/swiper.min.js",
+			"node_modules/mixitup/dist/mixitup.js",
 			"node_modules/rateyo/src/jquery.rateyo.js",
 			// "node_modules/masonry-layout/dist/masonry.pkgd.js",
 			// "node_modules/imagesloaded/imagesloaded.js",
