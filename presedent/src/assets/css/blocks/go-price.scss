@@ -1,0 +1,38 @@
+.go-price {
+	padding: 90px 0px;
+	padding-top: 0 !important;
+	@media screen and ( max-width: 1200px ) {
+		padding: 50px 0px;
+	}
+	.center-wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__title {
+	font-family: "Geometria";
+		font-weight: 800;
+		font-size: 26px;
+		line-height: 1.2;
+		margin-bottom: 25px;
+		color: $gray-d;
+		@media screen and ( max-width: 1200px ) {
+			font-size: 22px;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 20px;
+		margin-bottom: 35px;
+		line-height: 1.4;
+		font-weight: 300;
+		@media screen and ( max-width: 1200px ) {
+			font-size: 16px;
+			margin-bottom: 25px;
+		}
+	}
+}

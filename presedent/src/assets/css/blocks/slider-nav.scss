@@ -1,0 +1,85 @@
+.slider-nav {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: center;
+	margin-top: 55px;
+	&__prev,
+	&__next {
+		cursor: pointer;
+		width: 32px;
+		height: 32px;
+		display: flex;
+		justify-content: center;
+		align-items: center; 
+		svg {
+			fill: $primary !important;
+			width: 17px;
+			height: 17px;
+		}
+
+		&:hover {
+			svg {
+				fill: #fff !important;
+			}
+			background: #52eea2;
+		}
+	}
+
+	&__prev {
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+
+	.swiper-pagination {
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+		margin-left: 20px;
+		margin-right: 20px;
+		width: auto !important;
+		position: static;
+		
+		
+		&-bullet {
+			margin: 8px;
+			background: $primary;
+		}
+	}
+}
+
+.orbit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #52eea2;
+	border-radius: 50%;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border-radius: 50%;
+		background: #fff;
+		width: 130%;
+		height: 130%;
+		transform: translate(-50%,-50%);
+		z-index: -1;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border-radius: 50%;
+		background: $primary;
+		opacity: 0.15;
+		width: 165%;
+		height: 165%;
+		transform: translate(-50%,-50%);
+		z-index: -2;		
+	}
+}

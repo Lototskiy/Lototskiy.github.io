@@ -1,0 +1,47 @@
+.anim2 {
+	position: relative;
+	img {
+		max-width: 100%;
+	}
+	> div {
+			position: absolute;
+			left: 30%;
+			height: 75%;
+			bottom: 37.7%;
+			overflow: hidden;
+			border-radius: 0px 0px 50% 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			animation: border-radius 5s infinite;
+			width: 14%;
+			img {
+				animation: item1 5s infinite;
+				width: 100%;
+				height: auto;
+			}
+	}
+}
+
+
+@keyframes item1 {
+	50% {
+		transform: translate(0,78%);
+	}
+} 
+
+@keyframes border-radius {
+	20% {
+		border-radius: 0px 0px 50% 50%;
+
+	}
+
+	44% {
+		border-radius: 0px 0px 35% 35%;
+	}
+
+	50% {
+		border-radius: 0px 0px 30% 30%;
+	}
+
+} 

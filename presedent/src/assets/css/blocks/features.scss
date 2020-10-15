@@ -1,0 +1,134 @@
+.features {
+	padding: 90px 0px;
+	@media screen and ( max-width: 1200px ) {
+		padding: 50px 0px;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: -10px;
+
+		.feature {
+			margin-bottom: 10px;
+			&:nth-child(1) {
+				width: calc( 30% - 10px );
+			}
+
+			&:nth-child(2) {
+				width: calc( 30% - 10px );
+			}
+
+			&:nth-child(3) {
+				width: calc( 40% - 10px );
+			}
+
+			&:nth-child(4) {
+				width: calc( 25% - 10px );
+			}
+
+			&:nth-child(5) {
+				width: calc( 25% - 10px );
+			}
+
+			&:nth-child(6) {
+				width: calc( 50% - 10px );
+				.feature__img {
+					position: absolute;
+					bottom: 0px;
+					left: 0px;
+					width: 75%;
+					height: 100%;
+					img {
+						position: absolute;
+						bottom: 0px;
+						left: 0px;
+						width: 100%;
+						height: 50%;
+						object-fit: contain;
+					}
+				}
+			}
+
+			&:nth-child(7) {
+				width: calc( 50% - 10px );
+				background: #ECF5F7;
+				color: #ECF5F7;
+				padding-bottom: 110px;
+				.feature__title,
+				.feature__text {
+					width: 50%;
+					margin-left: auto;
+				}
+				.feature__img {
+					position: absolute;
+					bottom: 0px;
+					left: 0px;
+					width: 75%;
+					height: 100%;
+					img {
+						position: absolute;
+						top: 0px;
+						left: 0px;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+
+
+			&:nth-child(8) {
+				width: calc( 50% - 10px );
+				background: #f8f8f8;
+				color: #f8f8f8;
+				.feature__img {
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					width: 100%;
+					height: 100%;
+					img {
+						position: absolute;
+						top: 0px;
+						left: 0px;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+
+			@media screen and ( max-width: 1200px ) {
+				width: 100% !important;
+			}
+		}
+	}
+
+	&__slider {
+		.center-wrap {
+			padding: 0px;
+			max-width: 600px;
+		}
+
+		.swiper {
+			&-container {
+				margin: -50px 0px;
+				padding: 50px 12%;
+			}
+
+			&-slide {
+				display: flex;
+			}
+		}
+
+		.services__item {
+			flex-grow: 1;
+		}
+
+		.feature {
+			width: 100%;
+		}
+	}
+}

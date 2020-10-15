@@ -1,0 +1,54 @@
+.anim1 {
+	position: relative;
+	
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	&__img {
+
+		&1 {
+			position: absolute;
+			width: 50%;
+			bottom: 35.5%;
+			left: -12%;
+			animation: arm 6s infinite;
+			transform: perspective(200px) rotateZ(-6deg)  rotateX(8deg) translate(-10%,6%) rotate3d(0,0,1,-5deg) scale(0.9); 
+		}
+		&2 {
+			position: absolute;
+			top: 0px;
+			right: 12%;
+			width: 40%;
+			animation: screen 6s infinite;
+			transform-origin: 100% center;
+			transform: perspective(10px) rotateZ(0deg)  rotateY(-20deg)  rotate3d(0,0,1,-5deg); 
+		}
+	}
+}
+
+
+@keyframes arm {
+
+	35% {
+		transform: perspective(0px) rotateZ(0deg) rotateX(0deg) scaleX(1); 
+	}
+
+	70% {
+		transform: perspective(0px) rotateZ(0deg) rotateX(0deg) scaleX(1); 
+	}
+
+} 
+
+
+@keyframes screen {
+
+	35% {
+		transform: perspective(0px) rotateZ(0deg) rotateX(0deg) scaleX(1); 
+	}
+
+	70% {
+		transform: perspective(0px) rotateZ(0deg) rotateX(0deg) scaleX(1); 
+	}
+
+} 

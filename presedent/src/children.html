@@ -1,0 +1,1592 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i&amp;display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>ПрезиДЕНТ - Стоматологическая клиника</title>
+	<link rel="icon" type="image/png" href="assets/images/logo.webp" />
+</head>
+<!-- <div class="preloader">
+	<div class="preloader__wrap">
+		<div class="preloader__title">
+			<span>Стоматологическая клиника</span>
+		</div>
+		<div class="preloader__line">
+			<span></span>
+		</div>
+		<div class="preloader__bot">
+			<img src="assets/images/logo.webp" alt="">
+		</div>
+	</div>
+</div> -->
+<style>
+	.preloader{width:100%;position:fixed;height:100%;background:#fff;color:#fff;display:flex;justify-content:center;align-items:center;z-index:9999;transition:opacity .5s;clip-path:polygon(0 0,100% 0,100% 100%,-30% 100%);animation:preloaderClip 1.2s 3.5s;animation-fill-mode:forwards!important}.preloader--opacity0{opacity:0}.preloader--none{display:none}.preloader__wrap{position:relative;display:flex;flex-direction:column;align-items:center;width:100%}.preloader__title{color:#353535;font-weight:800;font-family:Geometria;font-size:42px;margin-bottom:30px;overflow:hidden}.preloader__title span{display:block;transform:translate(0,100%) rotate(-2deg);position:relative;top:15px;animation:preloaderTitle 1s .7s,preloaderTitle2 .7s 3s;animation-fill-mode:forwards!important}.preloader__line{width:100%;height:2px!important;background:rgba(0,0,0,.03);position:relative}.preloader__line span{position:absolute;left:0;top:0;height:100%;background:#497bd2;width:100px;display:block;opacity:1;animation:preloaderLine 3s cubic-bezier(1,.44,.84,.165);animation-fill-mode:forwards!important}.preloader__bot{margin-top:40px;overflow:hidden}.preloader__bot img{transform:translate(0,100%) rotate(-6deg);animation:preloaderTitle 1s .7s,preloaderTitle3 .7s 3s;animation-fill-mode:forwards!important;max-width:100px}@keyframes preloaderLine{100%{width:100%}}@keyframes preloaderTitle{100%{transform:translate(0,0) rotate(0);top:0}}@keyframes preloaderTitle2{0%{transform:translate(0,0) rotate(0);top:0}100%{transform:translate(0,-120%) rotate(0);opacity:0}}@keyframes preloaderTitle3{0%{transform:translate(0,0) rotate(0);top:0}100%{transform:translate(0,120%) rotate(0);opacity:0}}@keyframes preloaderClip{100%{clip-path:polygon(130% 0,100% 0,100% 100%,100% 100%);animation-timing-function:cubic-bezier(.86,0,.07,1)!important}}
+	@media screen and ( max-width: 1200px ) {
+		.preloader__title span {
+			font-size:  22px !important;
+			text-align: center;
+		}		
+	}
+</style>
+
+<div class="page-trans"></div>
+<style>
+	.page-trans{width:100%;position:fixed;height:100%;background:#f5f8fe;color:#fff;display:flex;justify-content:center;align-items:center;z-index:9999;transition:opacity .5s;width:100%;animation:pageShow 1.5s;animation-fill-mode:forwards!important;animation-timing-function:cubic-bezier(.86,0,.07,1)!important}.page-trans--ph{animation:pageHide 1.5s;animation-fill-mode:forwards!important;animation-timing-function:cubic-bezier(.86,0,.07,1)!important}.page-trans--opacity0{opacity:0}.page-trans--none{display:none}@keyframes pageHide{0%{width:0%}100%{width:100%}}@keyframes pageShow{100%{width:0%}}
+</style>
+
+
+<body id="body">
+	<header class='header' data-animation-type='opacity' data-animation-duration='1200'>
+		<div class="center-wrap">
+			<div class="header__top">
+				
+				<a href='/' class="header__logo">
+					<img src="assets/images/logo.webp" alt="">
+					<img src="assets/images/logo.webp" alt="">
+				</a>
+				<p class="header__text">Стоматологическая<br>клиника в Москве</p>
+				<div class="header__nav2">
+					<ul class="header__nav2-list anchors">
+						<li class="header__nav2-item"><a data-page-trans='false' href="doctors" class="header__nav2-link">Наши врачи</a></li>
+						<li class="header__nav2-item"><a href="/#sales" class="header__nav2-link">Акции</a></li>
+						<li class="header__nav2-item"><a data-page-trans='false' href="faq" class="header__nav2-link">FAQ</a></li>
+						<li class="header__nav2-item"><a data-anchors='false' href="/news.html" class="header__nav2-link">Мероприятия</a></li>
+						<li class="header__nav2-item"><a data-anchors='false' href="/news.html" class="header__nav2-link">Блог</a></li>
+					</ul>
+				</div>
+				<p class="header__adress">г. Москва ул. 3-я<br> Красногвардейская, 3</p>
+				<div class="header__phone">
+					<a href="tel:74950125134">+7 (495) 012-51-34</a>
+					<span>Ежедневно с 9:00 до 21:00</span>
+				</div>
+				<div class="header__burger">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="header__bot">
+				<nav class="header__nav">
+					<ul class="header__nav-list anchors">
+						<li class="header__nav-item header__nav-item--menu">
+							<div class='burger'>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+							<a href="/#services" class="header__nav-link hover-squad">
+								Услуги
+							</a>
+							<div class="services-menu">
+								<div class="services-menu__hover"></div>
+								<div class="services-menu__nav">
+									<div class="services-menu__nav-item" data-services-tab='1'>
+										<p>Диагностика</p>
+										<div class="services-menu__nav-img"><img src="assets/images/services-menu1.webp" alt=""></div>
+									</div>
+									<div class="services-menu__nav-sep"></div>
+									<div class="services-menu__nav-item" data-services-tab='2'>
+										<p>Хирургия</p>
+										<div class="services-menu__nav-img"><img src="assets/images/service3.webp" alt=""></div>
+									</div>
+									<div class="services-menu__nav-sep"></div>
+									<div class="services-menu__nav-item" data-services-tab='3'>
+										<p>Эстетическая<br> стоматология</p>
+										<div class="services-menu__nav-img"><img src="assets/images/service4.webp" alt=""></div>
+									</div>
+									<div class="services-menu__nav-sep"></div>
+									<div class="services-menu__nav-item" data-services-tab='4'>
+										<p>Имплантация</p>
+										<div class="services-menu__nav-img"><img src="assets/images/services-menu4.webp" alt=""></div>
+									</div>
+									<div class="services-menu__nav-sep"></div>
+									<div class="services-menu__nav-item" data-services-tab='5'>
+										<p>Ортопедическая<br> стоматология</p>
+										<div class="services-menu__nav-img"><img src="assets/images/service6.webp" alt=""></div>
+									</div>
+									<div class="services-menu__nav-sep"></div>
+									<div class="services-menu__nav-item" data-services-tab='6'>
+										<p>Гигиена и<br> отбеливание</p>
+										<div class="services-menu__nav-img"><img src="assets/images/service5.webp" alt=""></div>
+									</div>
+								</div>
+								<div class="services-menu__tabs">
+									<div class="services-menu__tab" data-services-tab='1'>
+										<p class="services-menu__tab-title">Диагностика</p>
+										<div class="services-menu__tab-list">
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости ультразвуком
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Плазмолифтинг
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление кисты зуба
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление альвеолита
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Резекция
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+										</div>
+										<div class="services-menu__tab-btns">
+											<div class="btn__wrap btn__wrap--empty">
+												<a href='service.html' class="btn">
+													Страница услуги
+													<em class="btn__overlay"></em>
+												</a>
+											</div>
+											<div onclick='show_popup("popup1")' class="btn__wrap">
+												<span class="btn">
+													Запись на услугу
+													<em class="btn__overlay"></em>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="services-menu__tab" data-services-tab='2'>
+										<p class="services-menu__tab-title">Хирургия</p>
+										<div class="services-menu__tab-list">
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости ультразвуком
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Плазмолифтинг
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление кисты зуба
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление альвеолита
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Резекция
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+										</div>
+										<div class="services-menu__tab-btns">
+											<div class="btn__wrap btn__wrap--empty">
+												<a href='service.html' class="btn">
+													Страница услуги
+													<em class="btn__overlay"></em>
+												</a>
+											</div>
+											<div onclick='show_popup("popup1")' class="btn__wrap">
+												<span class="btn">
+													Запись на услугу
+													<em class="btn__overlay"></em>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="services-menu__tab" data-services-tab='3'>
+										<p class="services-menu__tab-title">Эстетическая
+										стоматология</p>
+										<div class="services-menu__tab-list">
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости ультразвуком
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Плазмолифтинг
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление кисты зуба
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление альвеолита
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Резекция
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+										</div>
+										<div class="services-menu__tab-btns">
+											<div class="btn__wrap btn__wrap--empty">
+												<a href='service.html' class="btn">
+													Страница услуги
+													<em class="btn__overlay"></em>
+												</a>
+											</div>
+											<div onclick='show_popup("popup1")' class="btn__wrap">
+												<span class="btn">
+													Запись на услугу
+													<em class="btn__overlay"></em>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="services-menu__tab" data-services-tab='4'>
+										<p class="services-menu__tab-title">Имплантация</p>
+										<div class="services-menu__tab-list">
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости ультразвуком
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Плазмолифтинг
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление кисты зуба
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление альвеолита
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Резекция
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+										</div>
+										<div class="services-menu__tab-btns">
+											<div class="btn__wrap btn__wrap--empty">
+												<a href='service.html' class="btn">
+													Страница услуги
+													<em class="btn__overlay"></em>
+												</a>
+											</div>
+											<div onclick='show_popup("popup1")' class="btn__wrap">
+												<span class="btn">
+													Запись на услугу
+													<em class="btn__overlay"></em>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="services-menu__tab" data-services-tab='5'>
+										<p class="services-menu__tab-title">Ортопедическая
+										стоматология</p>
+										<div class="services-menu__tab-list">
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости ультразвуком
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Плазмолифтинг
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление кисты зуба
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление альвеолита
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Резекция
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+										</div>
+										<div class="services-menu__tab-btns">
+											<div class="btn__wrap btn__wrap--empty">
+												<a href='service.html' class="btn">
+													Страница услуги
+													<em class="btn__overlay"></em>
+												</a>
+											</div>
+											<div onclick='show_popup("popup1")' class="btn__wrap">
+												<span class="btn">
+													Запись на услугу
+													<em class="btn__overlay"></em>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="services-menu__tab" data-services-tab='6'>
+										<p class="services-menu__tab-title">Гигиена и
+										отбеливание</p>
+										<div class="services-menu__tab-list">
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости ультразвуком
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Плазмолифтинг
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление кисты зуба
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление альвеолита
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Резекция
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+											<a href='#' class="services-menu__tab-link hover-squad">
+												Удаление зуба мудрости
+												<div class="hover-squad__squad">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</a>
+										</div>
+										<div class="services-menu__tab-btns">
+											<div class="btn__wrap btn__wrap--empty">
+												<a href='service.html' class="btn">
+													Страница услуги
+													<em class="btn__overlay"></em>
+												</a>
+											</div>
+											<div onclick='show_popup("popup1")' class="btn__wrap">
+												<span class="btn">
+													Запись на услугу
+													<em class="btn__overlay"></em>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="header__nav-item">
+							<a href="body" data-page-trans='false' class="header__nav-link hover-squad">
+								Детская клиника
+							</a></li>
+
+							<li class="header__nav-item"><a href="/price.html" data-anchors='false' class="header__nav-link hover-squad">
+								Цены
+							</a>
+						</li>
+						<li class="header__nav-item"><a href="reviews" data-page-trans='false' class="header__nav-link hover-squad">
+							Отзывы
+						</a></li>
+						<li class="header__nav-item"><a href="about" data-page-trans='false' class="header__nav-link hover-squad">
+							О клинике
+
+						</a></li>
+						<li class="header__nav-item"><a href="/contacts.html" data-anchors='false' class="header__nav-link hover-squad">
+							Контакты
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="socials socials--header">
+				<a href='https://vk.com/prezedent_vip' target='_blank' class="socials__item vk" href="#">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"> <path d="M47.761,24c0,13.121-10.639,23.76-23.76,23.76C10.878,47.76,0.239,37.121,0.239,24c0-13.123,10.639-23.76,23.762-23.76 C37.122,0.24,47.761,10.877,47.761,24 M35.259,28.999c-2.621-2.433-2.271-2.041,0.89-6.25c1.923-2.562,2.696-4.126,2.45-4.796 c-0.227-0.639-1.64-0.469-1.64-0.469l-4.71,0.029c0,0-0.351-0.048-0.609,0.106c-0.249,0.151-0.414,0.505-0.414,0.505 s-0.742,1.982-1.734,3.669c-2.094,3.559-2.935,3.747-3.277,3.524c-0.796-0.516-0.597-2.068-0.597-3.171 c0-3.449,0.522-4.887-1.02-5.259c-0.511-0.124-0.887-0.205-2.195-0.219c-1.678-0.016-3.101,0.007-3.904,0.398 c-0.536,0.263-0.949,0.847-0.697,0.88c0.31,0.041,1.016,0.192,1.388,0.699c0.484,0.656,0.464,2.131,0.464,2.131 s0.282,4.056-0.646,4.561c-0.632,0.347-1.503-0.36-3.37-3.588c-0.958-1.652-1.68-3.481-1.68-3.481s-0.14-0.344-0.392-0.527 c-0.299-0.222-0.722-0.298-0.722-0.298l-4.469,0.018c0,0-0.674-0.003-0.919,0.289c-0.219,0.259-0.018,0.752-0.018,0.752 s3.499,8.104,7.463,12.23c3.638,3.784,7.764,3.36,7.764,3.36h1.867c0,0,0.566,0.113,0.854-0.189 c0.265-0.288,0.256-0.646,0.256-0.646s-0.034-2.512,1.129-2.883c1.15-0.36,2.624,2.429,4.188,3.497 c1.182,0.812,2.079,0.633,2.079,0.633l4.181-0.056c0,0,2.186-0.136,1.149-1.858C38.281,32.451,37.763,31.321,35.259,28.999"></path> </svg>
+				</a>
+				<a href='https://www.facebook.com/prezidentcity.ru' target='_blank' class="socials__item fb" href="#">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"> <path d="M47.761,24c0,13.121-10.638,23.76-23.758,23.76C10.877,47.76,0.239,37.121,0.239,24c0-13.124,10.638-23.76,23.764-23.76 C37.123,0.24,47.761,10.876,47.761,24 M20.033,38.85H26.2V24.01h4.163l0.539-5.242H26.2v-3.083c0-1.156,0.769-1.427,1.308-1.427 h3.318V9.168L26.258,9.15c-5.072,0-6.225,3.796-6.225,6.224v3.394H17.1v5.242h2.933V38.85z"></path> </svg>
+				</a>
+				<a target='_blank' class="socials__item inst" href="https://www.instagram.com/prezident_city/">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" xml:space="preserve"> <desc>Instagram</desc> <path d="M15,11.014 C12.801,11.014 11.015,12.797 11.015,15 C11.015,17.202 12.802,18.987 15,18.987 C17.199,18.987 18.987,17.202 18.987,15 C18.987,12.797 17.199,11.014 15,11.014 L15,11.014 Z M15,17.606 C13.556,17.606 12.393,16.439 12.393,15 C12.393,13.561 13.556,12.394 15,12.394 C16.429,12.394 17.607,13.561 17.607,15 C17.607,16.439 16.444,17.606 15,17.606 L15,17.606 Z"></path> <path d="M19.385,9.556 C18.872,9.556 18.465,9.964 18.465,10.477 C18.465,10.989 18.872,11.396 19.385,11.396 C19.898,11.396 20.306,10.989 20.306,10.477 C20.306,9.964 19.897,9.556 19.385,9.556 L19.385,9.556 Z"></path> <path d="M15.002,0.15 C6.798,0.15 0.149,6.797 0.149,15 C0.149,23.201 6.798,29.85 15.002,29.85 C23.201,29.85 29.852,23.202 29.852,15 C29.852,6.797 23.201,0.15 15.002,0.15 L15.002,0.15 Z M22.666,18.265 C22.666,20.688 20.687,22.666 18.25,22.666 L11.75,22.666 C9.312,22.666 7.333,20.687 7.333,18.28 L7.333,11.734 C7.333,9.312 9.311,7.334 11.75,7.334 L18.25,7.334 C20.688,7.334 22.666,9.312 22.666,11.734 L22.666,18.265 L22.666,18.265 Z"></path> </svg>
+
+				</a>
+				<a href='https://wa.me/7(495)0125134' target='_blank' class="socials__item wp" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" height="512pt" viewBox="0 0 512 512" width="512pt"><path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm5.425781 405.050781c-.003906 0 .003907 0 0 0h-.0625c-25.644531-.011719-50.84375-6.441406-73.222656-18.644531l-81.222656 21.300781 21.738281-79.375c-13.410156-23.226562-20.464844-49.578125-20.453125-76.574219.035156-84.453124 68.769531-153.160156 153.222656-153.160156 40.984375.015625 79.457031 15.96875 108.382813 44.917969 28.929687 28.953125 44.851562 67.4375 44.835937 108.363281-.035156 84.457032-68.777343 153.171875-153.21875 153.171875zm0 0"/><path d="m261.476562 124.46875c-70.246093 0-127.375 57.105469-127.40625 127.300781-.007812 24.054688 6.726563 47.480469 19.472657 67.75l3.027343 4.816407-12.867187 46.980468 48.199219-12.640625 4.652344 2.757813c19.550781 11.601562 41.964843 17.738281 64.816406 17.746094h.050781c70.191406 0 127.320313-57.109376 127.351563-127.308594.011718-34.019532-13.222657-66.003906-37.265626-90.066406-24.042968-24.0625-56.019531-37.324219-90.03125-37.335938zm74.90625 182.035156c-3.191406 8.9375-18.484374 17.097656-25.839843 18.199219-6.597657.984375-14.941407 1.394531-24.113281-1.515625-5.5625-1.765625-12.691407-4.121094-21.828126-8.0625-38.402343-16.578125-63.484374-55.234375-65.398437-57.789062-1.914063-2.554688-15.632813-20.753907-15.632813-39.59375 0-18.835938 9.890626-28.097657 13.398438-31.925782 3.511719-3.832031 7.660156-4.789062 10.210938-4.789062 2.550781 0 5.105468.023437 7.335937.132812 2.351563.117188 5.507813-.894531 8.613281 6.570313 3.191406 7.664062 10.847656 26.5 11.804688 28.414062.957031 1.917969 1.59375 4.152344.320312 6.707031-1.277344 2.554688-5.519531 8.066407-9.570312 13.089844-1.699219 2.105469-3.914063 3.980469-1.679688 7.8125 2.230469 3.828125 9.917969 16.363282 21.296875 26.511719 14.625 13.039063 26.960938 17.078125 30.789063 18.996094 3.824218 1.914062 6.058594 1.59375 8.292968-.957031 2.230469-2.554688 9.570313-11.175782 12.121094-15.007813 2.550782-3.832031 5.105469-3.191406 8.613282-1.914063 3.511718 1.273438 22.332031 10.535157 26.160156 12.449219 3.828125 1.917969 6.378906 2.875 7.335937 4.472657.960938 1.597656.960938 9.257812-2.230469 18.199218zm0 0"/></svg>
+				</a>
+			</div>
+			<div class="btn__wrap btn__wrap--empty">
+				<span class="btn">
+					Рассчитать стоимость
+					<em class="btn__overlay"></em>
+				</span>
+			</div>
+		</div>
+	</div>
+</header>
+<main>
+	<section class="main-screen">
+		<div class="main-screen__arrow" data-scroll-block='child-services'>
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="92" viewBox="0 0 16 92" fill="none">
+				<path d="M7.2929 91.7071C7.68342 92.0976 8.31659 92.0976 8.70711 91.7071L15.0711 85.3431C15.4616 84.9526 15.4616 84.3195 15.0711 83.9289C14.6805 83.5384 14.0474 83.5384 13.6569 83.9289L8 89.5858L2.34315 83.9289C1.95263 83.5384 1.31946 83.5384 0.928936 83.9289C0.538411 84.3195 0.538412 84.9526 0.928936 85.3431L7.2929 91.7071ZM7 4.37114e-08L7 91L9 91L9 -4.37114e-08L7 4.37114e-08Z" fill="white"/>
+			</svg>
+		</div>
+		<div class="center-wrap">
+			<div class="main-screen__left">
+				<h1 class='main-screen__title' data-animation-type='title' data-animation-delay='0'>
+					<p><span>Лечим зубы с</span></p> <p><span>гарантией результата</span></p></h1>
+					<p class="main-screen__text" data-animation-type='bottom' data-animation-duration='1200' data-animation-delay='0'>Гарантия на все услуги один год и даже более Качество лечения по международным стандартам</p>
+					<div class="btn__wrap btn__wrap--white">
+						<span  class="btn" onclick='show_popup("popup1")'>
+							Бесплатная запись
+							<em class="btn__overlay"></em>
+						</span>
+					</div>
+					<div class="slider-btns">
+						<div class="slider-btns__btn slider-btns__btn--prev">
+							<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.163097 10.3987L9.59779 19.8334C9.81993 20.0555 10.1762 20.0555 10.3983 19.8334C10.6205 19.6113 10.6205 19.255 10.3983 19.0328L1.36601 10.0005L10.3983 0.968197C10.6205 0.746056 10.6205 0.389793 10.3983 0.167654C10.2894 0.0586777 10.1427 0 10.0002 0C9.85765 0 9.71096 0.0544872 9.60198 0.167654L0.167288 9.60235C-0.0548534 9.8203 -0.0548515 10.1808 0.163097 10.3987Z" fill="black"/>
+							</svg>
+
+						</div>
+						<div class="slider-btns__btn slider-btns__btn--next">
+							<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.4018 9.6013L0.96715 0.166606C0.74501 -0.0555352 0.388746 -0.0555352 0.166606 0.166606C-0.0555352 0.388746 -0.0555352 0.74501 0.166606 0.96715L9.19893 9.99948L0.166606 19.0318C-0.0555352 19.2539 -0.0555352 19.6102 0.166606 19.8323C0.27558 19.9413 0.422277 20 0.564782 20C0.707288 20 0.853985 19.9455 0.962959 19.8323L10.3977 10.3977C10.6198 10.1797 10.6198 9.81925 10.4018 9.6013Z" fill="black"/>
+							</svg>
+
+						</div>
+					</div>
+				</div>
+				<div class="main-screen__right">
+					<div></div>
+				</div>
+			</div>	
+		</section>
+		<section class="child-services" id='child-services'>
+			<div class="center-wrap">
+				<div class="child-services__list">
+					<div class="child-services__item" data-animation-type='bottom' data-animation-mobile-delay data-animation-duration='1200' data-animation-delay='0'>
+						<div class="child-services__item-left">
+							<img src="assets/images/child-services1.svg" alt="">
+						</div>
+						<div class="child-services__item-right">
+							<p class="child-services__item-sub-title">...если</p>
+							<p class="child-services__item-title">Болит зуб</p>
+							<div class="child-services__item-list">
+								<p class="child-services__item-item">Лечение кариеса</p>
+								<p class="child-services__item-item">Лечение пульпита</p>
+								<p class="child-services__item-item">Лечение зубов под микроскопом</p>
+							</div>
+						</div>
+					</div>
+					<div class="child-services__item" data-animation-type='bottom' data-animation-mobile-delay data-animation-duration='1200' data-animation-delay='200'>
+						<div class="child-services__item-left">
+							<img src="assets/images/child-services2.svg" alt="">
+						</div>
+						<div class="child-services__item-right">
+							<p class="child-services__item-sub-title">...если</p>
+							<p class="child-services__item-title">Болит зуб</p>
+							<div class="child-services__item-list">
+								<p class="child-services__item-item">Лечение кариеса</p>
+								<p class="child-services__item-item">Лечение пульпита</p>
+								<p class="child-services__item-item">Лечение зубов под микроскопом</p>
+							</div>
+						</div>
+					</div>
+					<div class="child-services__item" data-animation-type='bottom' data-animation-mobile-delay data-animation-duration='1200' data-animation-delay='0'>
+						<div class="child-services__item-left">
+							<img src="assets/images/child-services3.svg" alt="">
+						</div>
+						<div class="child-services__item-right">
+							<p class="child-services__item-sub-title">...если</p>
+							<p class="child-services__item-title">Болит зуб</p>
+							<div class="child-services__item-list">
+								<p class="child-services__item-item">Лечение кариеса</p>
+								<p class="child-services__item-item">Лечение пульпита</p>
+								<p class="child-services__item-item">Лечение зубов под микроскопом</p>
+							</div>
+						</div>
+					</div>
+					<div class="child-services__item" data-animation-type='bottom' data-animation-mobile-delay data-animation-duration='1200' data-animation-delay='200'>
+						<div class="child-services__item-left">
+							<img src="assets/images/child-services4.svg" alt="">
+						</div>
+						<div class="child-services__item-right">
+							<p class="child-services__item-sub-title">...если</p>
+							<p class="child-services__item-title">Болит зуб</p>
+							<div class="child-services__item-list">
+								<p class="child-services__item-item">Лечение кариеса</p>
+								<p class="child-services__item-item">Лечение пульпита</p>
+								<p class="child-services__item-item">Лечение зубов под микроскопом</p>
+							</div>
+						</div>
+					</div>
+					<div class="child-services__item" data-animation-type='bottom' data-animation-mobile-delay data-animation-duration='1200' data-animation-delay='0'>
+						<div class="child-services__item-left">
+							<img src="assets/images/child-services5.svg" alt="">
+						</div>
+						<div class="child-services__item-right">
+							<p class="child-services__item-sub-title">...если</p>
+							<p class="child-services__item-title">Болит зуб</p>
+							<div class="child-services__item-list">
+								<p class="child-services__item-item">Лечение кариеса</p>
+								<p class="child-services__item-item">Лечение пульпита</p>
+								<p class="child-services__item-item">Лечение зубов под микроскопом</p>
+							</div>
+						</div>
+					</div>
+					<div class="child-services__item" data-animation-type='bottom' data-animation-mobile-delay data-animation-duration='1200' data-animation-delay='200'>
+						<div class="child-services__item-left">
+							<img src="assets/images/child-services6.svg" alt="">
+						</div>
+						<div class="child-services__item-right">
+							<p class="child-services__item-sub-title">...если</p>
+							<p class="child-services__item-title">Болит зуб</p>
+							<div class="child-services__item-list">
+								<p class="child-services__item-item">Лечение кариеса</p>
+								<p class="child-services__item-item">Лечение пульпита</p>
+								<p class="child-services__item-item">Лечение зубов под микроскопом</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="go-price">
+			<div class="center-wrap" data-animation-type='bottom' data-animation-duration='1000'>
+				<p class="go-price__title">Не нашли подходящую Вам услугу ?</p>
+				<p class="go-price__text">Мы оказываем все услуги по эстетической и лечебной стоматологии. Напишите нам для уточнения</p>
+				<div class="btn__wrap" onclick='show_popup("popup1")'>
+					<span class="btn">Уточнить услуги
+						<em class="btn__overlay"></em>
+					</span>
+				</div>
+			</div>
+		</section>
+		<section class="child-features">
+			<div class="center-wrap">
+				<div class="child-features__list">
+					<div class="child-features__item" data-animation-type='bottom' data-animation-mobile-delay data-animation-duration='1200' data-animation-delay='0'>
+						<p class="child-features__item-title">ЛЕЧЕНИЕ КАРИЕСА</p>
+						<p class="child-features__item-text">только после диагностики и по показаниям, но лучше профилактика</p>
+					</div>
+					<div class="child-features__item" data-animation-type='bottom' data-animation-mobile-delay data-animation-duration='1200' data-animation-delay='200'>
+						<p class="child-features__item-title">АДАПТАЦИЯ ДЕТЕЙ</p>
+						<p class="child-features__item-text">потому что у нас работают феи и мы против детских слез</p>
+					</div>
+					<div class="child-features__item" data-animation-type='bottom' data-animation-mobile-delay data-animation-duration='1200' data-animation-delay='400'>
+						<p class="child-features__item-title">ЛЕЧЕНИЕ ВО СНЕ</p>
+						<p class="child-features__item-text">без боли и страха, потому что лечим с любовью</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="child">
+
+			<div class="center-wrap">
+				<div class="child__wrap">
+					<div class="child__left">
+						<div class="child__top" data-animation-type='bottom' data-animation-duration='1000'>
+							<div>
+								<div class="child__top-item" data-animation-type='bottom' data-animation-duration='1000'>
+									<h3>Вылечим без стресса</h3>
+									<div class="list">
+										<p>Без боли под седацией азота!</p>
+									</div>
+								</div>
+								<div class="child__top-item" data-animation-type='bottom' data-animation-duration='1000'>
+									<h3>Присмотрим за детьми</h3>
+									<div class="list">
+										<p>В нашей детской зоне ожидания!</p>
+									</div>
+								</div>
+								<div class="child__top-item" data-animation-type='bottom' data-animation-duration='1000'>
+									<h3>Предоставляем все услуги!</h3>
+								</div>
+								<div class="btn__wrap" onclick='show_popup("popup1")' data-animation-type='bottom' data-animation-duration='1000'>
+									<span class="btn">Записаться
+										<em class="btn__overlay"></em>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="child__right">
+						<img src="assets/images/child.webp" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="child__bottom">
+				<div class="child__features">
+					<div class="child__features-list mobile--hide">	
+						<div class="child__feature" data-animation-type='bottom' data-animation-duration='1200' data-animation-delay='0'>
+							<div class="child__feature-img">
+								<img src="assets/images/child1.webp" alt="">
+							</div>
+							<span>Без боли</span>
+							<p>Лечим зубки маленьких пациентов во сне безболезненно</p>
+						</div>
+						<div class="child__feature" data-animation-type='bottom' data-animation-duration='1200' data-animation-delay='200'>
+							<div class="child__feature-img">
+								<img src="assets/images/child2.webp" alt="">
+							</div>
+							<span>Весело</span>
+							<p>Лечим в комфортной для детей атмосфере</p>
+						</div>
+						<div class="child__feature" data-animation-type='bottom' data-animation-duration='1200' data-animation-delay='400'>
+							<div class="child__feature-img">
+								<img src="assets/images/child3.webp" alt="">
+							</div>
+							<span>Надежно</span>
+							<p>Каждый наш детский стоматолог имеет больше 8 лет опыта работы</p>
+						</div>
+					</div>
+					<div class="child__slider desktop--hide">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="child__feature">
+										<div class="child__feature-img">
+											<img src="assets/images/child1.webp" alt="">
+										</div>
+										<span>Без боли</span>
+										<p>Лечим зубки маленьких пациентов во сне безболезненно</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="child__feature">
+										<div class="child__feature-img">
+											<img src="assets/images/child2.webp" alt="">
+										</div>
+										<span>Весело</span>
+										<p>Лечим в комфортной для детей атмосфере</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="child__feature">
+										<div class="child__feature-img">
+											<img src="assets/images/child3.webp" alt="">
+										</div>
+										<span>Надежно</span>
+										<p>Каждый наш детский стоматолог имеет больше 8 лет опыта работы</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services__slider-stupet services__slider-stupet--bot">
+							<svg class="t778__scroll-icon" style="width:22px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"> <path d="M97.2 298.2S56.1 225 38.8 193.3c-23-42.2-26.8-60-10.9-68.8 9.9-5.5 23.6-3.2 32 11.4l19.6 31.2V44.8s-1.2-32.3 21.8-32.3c24.5 0 22.4 32.3 22.4 32.3v59.4s12.9-9.3 28-5.1c7.7 2.1 16.7 5.8 21.5 18 0 0 30.7-14.9 46 16.8 0 0 35.4-7 35.4 29.7s-44.2 134.6-44.2 134.6H97.2zM249.9.5l-10.6 10.6 24.1 23.8H158.5v15h105l-24.2 23.9 10.6 10.6 42.5-42z" class="st0"></path> </svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<section class="about" id="about">
+		<div class="center-wrap">
+			<h2 class="simple-title"  data-animation-type='title'>
+				<div class="simple-title__squad">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<p><span>Наша</span></p>
+				<p><span>детская комната</span></p>
+			</h2>
+			<div class="about__wrap">
+				<div class="about__left">
+
+					<div class="about__slider" data-animation-type='none' data-animation-duration='1500'>
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div data-animation-type='clip' data-animation-duration='1500'>
+										<figure class="slide-bgimg" style="background-image:url(assets/images/room.webp">
+											<img src="assets/images/room.webp" class="entity-img" />
+										</figure>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div data-animation-type='clip' data-animation-duration='1500'>
+										<figure class="slide-bgimg" style="background-image:url(https://thumb.tildacdn.com/tild3663-6434-4363-b666-386565663330/-/resize/500x500/-/format/webp/2020-01-23_170109.JPG)">
+											<img data-src="https://thumb.tildacdn.com/tild3663-6434-4363-b666-386565663330/-/resize/500x500/-/format/webp/2020-01-23_170109.JPG" class="entity-img lazy" />
+										</figure>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div data-animation-type='clip' data-animation-duration='1500'>
+										<figure class="slide-bgimg" style="background-image:url(https://thumb.tildacdn.com/tild6435-3434-4234-a530-366131346461/-/resize/500x500/-/format/webp/2020-01-24_141525_1.JPG)">
+											<img class="slide-bgimg lazy" data-src="https://thumb.tildacdn.com/tild6435-3434-4234-a530-366131346461/-/resize/500x500/-/format/webp/2020-01-24_141525_1.JPG" />
+										</figure>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider-btns">
+						<div class="slider-btns__btn slider-btns__btn--border slider-btns__btn--prev">
+							<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.163097 10.3987L9.59779 19.8334C9.81993 20.0555 10.1762 20.0555 10.3983 19.8334C10.6205 19.6113 10.6205 19.255 10.3983 19.0328L1.36601 10.0005L10.3983 0.968197C10.6205 0.746056 10.6205 0.389793 10.3983 0.167654C10.2894 0.0586777 10.1427 0 10.0002 0C9.85765 0 9.71096 0.0544872 9.60198 0.167654L0.167288 9.60235C-0.0548534 9.8203 -0.0548515 10.1808 0.163097 10.3987Z" fill="black"/>
+							</svg>
+
+						</div>
+						<div class="slider-btns__btn slider-btns__btn--border slider-btns__btn--next">
+							<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.4018 9.6013L0.96715 0.166606C0.74501 -0.0555352 0.388746 -0.0555352 0.166606 0.166606C-0.0555352 0.388746 -0.0555352 0.74501 0.166606 0.96715L9.19893 9.99948L0.166606 19.0318C-0.0555352 19.2539 -0.0555352 19.6102 0.166606 19.8323C0.27558 19.9413 0.422277 20 0.564782 20C0.707288 20 0.853985 19.9455 0.962959 19.8323L10.3977 10.3977C10.6198 10.1797 10.6198 9.81925 10.4018 9.6013Z" fill="black"/>
+							</svg>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="about__right animations">
+					<div class="about__overlay" data-animation-deep='2' data-animation-duration='1200' data-animation-type='clip'></div>
+					<p class="about__title" data-animation-type='clip' data-animation-duration='1200'>ПрезиДЕНТ</p>
+					<p class="about__sub-title" data-animation-type='clip' data-animation-duration='1200'>Cтоматологическая клиника нового поколения</p>
+					<div class="list">
+						<p data-animation-type='left' data-animation-duration='500' data-animation-delay='0' >Оборудование и материалы, соответствующие передовым мировым стандартам</p>
+						<p data-animation-type='left' data-animation-duration='500' data-animation-delay='200' data-animation-time='1'>Профессионалы, прошедшие обучение у лучших отечественных и зарубежных специалистов</p>
+						<p data-animation-type='left' data-animation-duration='500' data-animation-delay='400' >Согласование плана лечения только после тщательного анализа всех возможных варианта</p>
+						<p data-animation-type='left' data-animation-duration='500' data-animation-delay='600' >Внимательное и доброжелательное отношение персонала</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="grid">
+
+		<div class="grid__part grid__part--left">
+			<div class="grid__top">
+				<div class="grid__item" data-animation-type='clip' data-animation-duration='1500'>
+					<a href='https://thumb.tildacdn.com/tild3139-3335-4235-b838-323633336435/-/resize/1000x600/-/format/webp/2020-01-24_141427.JPG' data-fancybox='grid-slider'>
+						<img class="lazy" data-animation-type='img' data-animation-duration='5000' data-src="https://thumb.tildacdn.com/tild3139-3335-4235-b838-323633336435/-/resize/1000x600/-/format/webp/2020-01-24_141427.JPG" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="grid__bottom">
+				<div data-grid='true' class="grid__item" data-animation-type='clip' data-animation-duration='1500'>
+					<a href='https://images.unsplash.com/photo-1468493858157-0da44aaf1d13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80' data-fancybox='grid-slider'>
+						<img class="lazy" data-animation-type='img' data-animation-duration='5000' data-src="https://images.unsplash.com/photo-1468493858157-0da44aaf1d13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80" alt="">
+					</a>
+				</div>
+				<div data-grid='true' class="grid__item" data-animation-type='clip' data-animation-duration='1500'>
+					<a href='https://thumb.tildacdn.com/tild3035-3866-4266-b338-373438386233/-/cover/360x360/center/center/-/format/webp/f40c96f6-30ec-40e7-a.jpg' data-fancybox='grid-slider'>
+						<img class="lazy" data-animation-type='img' data-animation-duration='5000' data-src="https://thumb.tildacdn.com/tild3035-3866-4266-b338-373438386233/-/cover/360x360/center/center/-/format/webp/f40c96f6-30ec-40e7-a.jpg" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="grid__part grid__part--right">
+			<div class="grid__left">
+				<div class="grid__item" data-animation-type='clip' data-animation-duration='1500'>
+					<a href='https://thumb.tildacdn.com/tild6231-6261-4564-a139-306332666339/-/resize/1000x1000/-/format/webp/2020-01-24_130336.JPG' data-fancybox='grid-slider'>
+						<img class="lazy" data-animation-type='img' data-animation-duration='5000' data-src="https://thumb.tildacdn.com/tild6231-6261-4564-a139-306332666339/-/resize/1000x1000/-/format/webp/2020-01-24_130336.JPG" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="grid__right">
+				<div class="grid__item" data-animation-type='clip' data-animation-duration='1500'>
+					<a href='https://thumb.tildacdn.com/tild6435-3434-4234-a530-366131346461/-/resize/500x500/-/format/webp/2020-01-24_141525_1.JPG' data-fancybox='grid-slider'>
+						<img class="lazy" data-animation-type='img' data-animation-duration='5000' data-src="https://thumb.tildacdn.com/tild6435-3434-4234-a530-366131346461/-/resize/500x500/-/format/webp/2020-01-24_141525_1.JPG" alt="">
+					</a>
+				</div>
+				<div data-grid='true' class="grid__item" data-animation-type='clip' data-animation-duration='1500'>
+					<a href='https://images.unsplash.com/photo-1445527815219-ecbfec67492e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80' data-fancybox='grid-slider'>
+						<img class="lazy" data-animation-type='img' data-animation-duration='5000' data-src="https://images.unsplash.com/photo-1445527815219-ecbfec67492e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="doctors" id="doctors">
+		<div class="center-wrap">
+			<h2 class="simple-title"  data-animation-type='title'>
+				<div class="simple-title__squad">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<p><span>Зубные "ФЕИ" </span></p>
+				<p><span>нашей клиники.</span></p>
+			</h2>
+			<div class="doctors__tabs">
+				<div class="doctors__tab">
+					<div class="doctors__tab-img">
+						<div>
+							<img src="assets/images/doctor1.webp" alt="">
+						</div>
+					</div>
+					<div class="doctors__tab-right animations">
+						<p class="doctors__tab-title">Прививкова Дарья Игоревна</p>
+						<p class="doctors__tab-sub-title">Детский врач, ортопед, терапевт</p>
+						<div class="doctors__tab-content">
+							<div class="doctors__tab-overlay" data-animation-type='clip' data-animation-deep='2' data-animation-duration='1200'></div>
+							<p class="doctors__tab-exp">Стаж работы 10 лет</p>
+							<div class="doctors__tab-text">
+								<p data-animation-type='clip' data-animation-duration='1200'>Опытный врач широкого профиля со стажем 10 лет. Замечательно восстанавливает форму и функцию разрушенных зубов. Работает аккуратно и быстро. Владеет всеми новейшими методами протезирования, эндодонтического лечения зубов.</p>
+								<p data-animation-type='clipright' data-animation-time='1' data-animation-duration='1200'>Отлично ладит с детьми. Проходила обучение по психологической подготовке ребёнка к стоматологическому приему. Постоянно осваивает новые методы лечения в детской стоматологии, применяет их в своей практике – проходила обучение передовым стоматологическим методикам в Германии.</p>
+							</div>
+							<div class="btn__wrap" data-animation-type='bottom' data-animation-duration='1200' onclick='show_popup("popup1")'>
+								<span class="btn">Записаться
+									<em class="btn__overlay"></em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="doctors__slider">
+			<div class="center-wrap">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="doctors__doctor" data-animation-type='bottom' data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='0'>
+								<div class="doctors__doctor-img">
+									<div>
+										<img src="assets/images/doctor11.webp" alt="">
+									</div>
+								</div>
+								<div class="doctors__doctor-content">
+									<p>Прививкова Дарья Игоревна</p>
+									<span>Детский стоматолог</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="doctors__doctor" data-animation-type='bottom' data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='200'>
+								<div class="doctors__doctor-img">
+									<div>
+										<img src="assets/images/doctor11.webp" alt="">
+									</div>
+								</div>
+								<div class="doctors__doctor-content">
+									<p>Прививкова Дарья Игоревна</p>
+									<span>Детский стоматолог</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="doctors__doctor" data-animation-type='bottom' data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='400'>
+								<div class="doctors__doctor-img">
+									<div>
+										<img src="assets/images/doctor11.webp" alt="">
+									</div>
+								</div>
+								<div class="doctors__doctor-content">
+									<p>Прививкова Дарья Игоревна</p>
+									<span>Детский стоматолог</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="doctors__doctor" data-animation-type='bottom' data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='600'>
+								<div class="doctors__doctor-img">
+									<div>
+										<img src="assets/images/doctor11.webp" alt="">
+									</div>
+								</div>
+								<div class="doctors__doctor-content">
+									<p>Прививкова Дарья Игоревна</p>
+									<span>Детский стоматолог</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="doctors__doctor" data-animation-type='bottom' data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='800'>
+								<div class="doctors__doctor-img">
+									<div>
+										<img src="assets/images/doctor11.webp" alt="">
+									</div>
+								</div>
+								<div class="doctors__doctor-content">
+									<p>Прививкова Дарья Игоревна</p>
+									<span>Детский стоматолог</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="doctors__doctor">
+								<div class="doctors__doctor-img">
+									<div>
+										<img src="assets/images/doctor11.webp" alt="">
+									</div>
+								</div>
+								<div class="doctors__doctor-content">
+									<p>Прививкова Дарья Игоревна</p>
+									<span>Детский стоматолог</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="doctors__doctor">
+								<div class="doctors__doctor-img">
+									<div>
+										<img src="assets/images/doctor11.webp" alt="">
+									</div>
+								</div>
+								<div class="doctors__doctor-content">
+									<p>Прививкова Дарья Игоревна</p>
+									<span>Детский стоматолог</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="doctors__doctor">
+								<div class="doctors__doctor-img">
+									<div>
+										<img src="assets/images/doctor11.webp" alt="">
+									</div>
+								</div>
+								<div class="doctors__doctor-content">
+									<p>Прививкова Дарья Игоревна</p>
+									<span>Детский стоматолог</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="doctors__doctor">
+								<div class="doctors__doctor-img">
+									<div>
+										<img src="assets/images/doctor11.webp" alt="">
+									</div>
+								</div>
+								<div class="doctors__doctor-content">
+									<p>Прививкова Дарья Игоревна</p>
+									<span>Детский стоматолог</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="doctors__doctor">
+								<div class="doctors__doctor-img">
+									<div>
+										<img src="assets/images/doctor11.webp" alt="">
+									</div>
+								</div>
+								<div class="doctors__doctor-content">
+									<p>Прививкова Дарья Игоревна</p>
+									<span>Детский стоматолог</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="doctors__doctor">
+								<div class="doctors__doctor-img">
+									<div>
+										<img src="assets/images/doctor11.webp" alt="">
+									</div>
+								</div>
+								<div class="doctors__doctor-content">
+									<p>Прививкова Дарья Игоревна</p>
+									<span>Детский стоматолог</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="doctors__doctor">
+								<div class="doctors__doctor-img">
+									<div>
+										<img src="assets/images/doctor11.webp" alt="">
+									</div>
+								</div>
+								<div class="doctors__doctor-content">
+									<p>Прививкова Дарья Игоревна</p>
+									<span>Детский стоматолог</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="center-wrap">
+			<div class="slider-btns">
+				<div class="slider-btns__btn slider-btns__btn--border slider-btns__btn--prev">
+					<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0.163097 10.3987L9.59779 19.8334C9.81993 20.0555 10.1762 20.0555 10.3983 19.8334C10.6205 19.6113 10.6205 19.255 10.3983 19.0328L1.36601 10.0005L10.3983 0.968197C10.6205 0.746056 10.6205 0.389793 10.3983 0.167654C10.2894 0.0586777 10.1427 0 10.0002 0C9.85765 0 9.71096 0.0544872 9.60198 0.167654L0.167288 9.60235C-0.0548534 9.8203 -0.0548515 10.1808 0.163097 10.3987Z" fill="black"/>
+					</svg>
+
+				</div>
+				<div class="slider-btns__btn slider-btns__btn--border slider-btns__btn--next">
+					<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M10.4018 9.6013L0.96715 0.166606C0.74501 -0.0555352 0.388746 -0.0555352 0.166606 0.166606C-0.0555352 0.388746 -0.0555352 0.74501 0.166606 0.96715L9.19893 9.99948L0.166606 19.0318C-0.0555352 19.2539 -0.0555352 19.6102 0.166606 19.8323C0.27558 19.9413 0.422277 20 0.564782 20C0.707288 20 0.853985 19.9455 0.962959 19.8323L10.3977 10.3977C10.6198 10.1797 10.6198 9.81925 10.4018 9.6013Z" fill="black"/>
+					</svg>
+
+				</div>
+			</div>
+		</div>
+	</section>
+		<section class="reviews" id="reviews">
+			<div class="center-wrap">
+			<h2 class="simple-title"  data-animation-type='title'>
+				<div class="simple-title__squad">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<p><span>Отзывы наших</span></p>
+				<p><span>довольных родителей</p>
+			</h2>
+			</div>
+			<div class="reviews__slider">
+				<div class="center-wrap">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="reviews__item" data-animation-type='bottom' data-animation-duration='2500'>
+									<div class="reviews__item-left">
+										<img src="assets/images/quote.svg" alt="">
+									</div>
+									<div class="reviews__item-right">
+										<h3 class="reviews__item-title">Вера Воронина</h3>
+										<p class="reviews__item-text">Повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить значение существенных финансовых и административных условий.
+										Повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить значение существенных финансовых и административных условий.</p>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="reviews__item" data-animation-type='bottom' data-animation-duration='2500'>
+									<div class="reviews__item-left">
+										<img src="assets/images/quote.svg" alt="">
+									</div>
+									<div class="reviews__item-right">
+										<h3 class="reviews__item-title">Геннадий Букин</h3>
+										<p class="reviews__item-text">Повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить значение существенных финансовых и административных условий.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				<div class="slider-btns">	
+					<div class="slider-btns__btn slider-btns__btn--border slider-btns__btn--prev">
+						<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.163097 10.3987L9.59779 19.8334C9.81993 20.0555 10.1762 20.0555 10.3983 19.8334C10.6205 19.6113 10.6205 19.255 10.3983 19.0328L1.36601 10.0005L10.3983 0.968197C10.6205 0.746056 10.6205 0.389793 10.3983 0.167654C10.2894 0.0586777 10.1427 0 10.0002 0C9.85765 0 9.71096 0.0544872 9.60198 0.167654L0.167288 9.60235C-0.0548534 9.8203 -0.0548515 10.1808 0.163097 10.3987Z" fill="black"/>
+						</svg>
+
+					</div>
+					<div class="slider-btns__btn slider-btns__btn--border slider-btns__btn--next">
+						<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.4018 9.6013L0.96715 0.166606C0.74501 -0.0555352 0.388746 -0.0555352 0.166606 0.166606C-0.0555352 0.388746 -0.0555352 0.74501 0.166606 0.96715L9.19893 9.99948L0.166606 19.0318C-0.0555352 19.2539 -0.0555352 19.6102 0.166606 19.8323C0.27558 19.9413 0.422277 20 0.564782 20C0.707288 20 0.853985 19.9455 0.962959 19.8323L10.3977 10.3977C10.6198 10.1797 10.6198 9.81925 10.4018 9.6013Z" fill="black"/>
+						</svg>
+					</div>
+				</div>
+				</div>
+			</div>
+		</section>
+	<section class="callback form callback--blue">
+		<div class="center-wrap">
+			<div class="callback__title" data-animation-type='title'>
+				<p><span>Запишитесь на прохождение</span></p>
+				<p><span>бесплатной консультации</span></p>
+			</div>
+			<p class="callback__text">Просто заполните форму, наш менеджер свяжется с Вами в ближайшее время</p>
+			<form action="" class='inputs'>
+				<div class="inputs__wrap">
+					<input type="text" name='name' placeholder="Ваше имя">
+				</div>
+				<div class="inputs__wrap">
+					<input type="text" name='phone' placeholder="+7 (000) 000-00-00">
+				</div>
+				<div class="btn__wrap btn__wrap--input">
+					<input class='btn' type="submit" value='Жду звонка'>
+				</div>
+			</form>
+			<div class="callback__img-wrap">
+				<img src="assets/images/callback-child.webp" alt="" class="callback__img">
+			</div>
+		</div>
+	</section>
+	<section class="faq animations" id='faq'>
+		<div class="center-wrap">
+			<h2 class="simple-title"  data-animation-type='title'>
+				<div class="simple-title__squad">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<p><span>Часто задаваемые</span></p>
+				<p><span>вопросы <em class='mobile--hide'>наших родителей</em>.</span></p>
+			</h2>
+			<div class="faq__list">
+				<div class="faq__item faq__item--active" data-animation-type='bottom' data-animation-duration='400'>
+					<h3 class="faq__item-title">Зачем ставить протезы?</h3>
+					<p class="faq__item-text text">- Разумеется. Если для вас актуальна только дизайн или только верстка -  тогда Вы можете смело писать нам и мы вас проинформируем об основных моментах рабочего процесса.</p>
+				</div>
+				<div class="faq__item" data-animation-type='bottom' data-animation-duration='400'>
+					<h3 class="faq__item-title">Как понять, что уже как бы пора?</h3>
+					<p class="faq__item-text text">- В первую очередь, нужно обозначить, что конечная стоимость услуг  зависит от поставленного технического задания, от вида проекта и типа работы. Это чаще всего обсуждается в индивидуальном порядке. На нашем сайте в разделе " Сколько стоит и с чем едят " предоставлены приблизительные цены на определенный перечень услуг. Для подробностей свяжитесь с нами любым удобным способом. Мы сможем вам дать более точный ответ, после того, как узнаем ваши требования к сайту и обьем работы</p>
+				</div>
+				<div class="faq__item" data-animation-type='bottom' data-animation-duration='400'>
+					<h3 class="faq__item-title">Какой протез выбрать ? </h3>
+					<p class="faq__item-text text">- Для оплаты мы пользуемся либо платежной системой от vk, либо на банковскую карту, в крайнем случаем Вы можете скинуть на сбербанк нашим колегам из РФ, а они уже мне переведут, так что проблем с оплатой пока не возникало.</p>
+				</div>
+				<div class="faq__item" data-animation-type='bottom' data-animation-duration='400'>
+					<h3 class="faq__item-title">Вы работаете по предоплате ?</h3>
+					<p class="faq__item-text text">- Все зависит от заказчика, если мы ваш доверяем - тогда можно и без предоплаты, а если у вас подозрительные профили в соц-сетях, ник какой-то не человеческий, тогда конечно могут быть сомнения и мы предпочитаем предоплату, а вообще, чтоб никто не волновался, можно работу поделить на части, и скинуть предоплату после небольшой проделаной работы.</p>
+				</div>
+				<div class="faq__item" data-animation-type='bottom' data-animation-duration='400'>
+					<h3 class="faq__item-title">Сколько времени уходит на создание сайта ?</h3>
+					<p class="faq__item-text text">- Количество времени потраченного на разработку сайта зависит от нескольких факторов: вид сайта, сложность дизайна, функционал сайта, структура сайта, количество страниц. В среднем на дизайн лендинга уходит до 5 дней, на верстку лендинга уходит 2-3 дня, натяжка - 1 день.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+		<footer class='footer'>
+			<div class="center-wrap">
+				<div class="footer__wrap">
+					<div class="footer__left">
+						<a href="/" class='footer__logo'>
+							<img src="assets/images/logo.webp" alt="">
+						</a>
+						<a href="tel:+380663641919" class="footer__phone">+7 (495) 012-51-34</a>
+						<a href="mailto:vystavochnaya@prezident.ru" class="footer__email">vystavochnaya@prezident.ru</a>
+						<div class="socials socials--footer">
+							<a href='https://vk.com/prezedent_vip' target='_blank' class="socials__item vk" href="#">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"> <path d="M47.761,24c0,13.121-10.639,23.76-23.76,23.76C10.878,47.76,0.239,37.121,0.239,24c0-13.123,10.639-23.76,23.762-23.76 C37.122,0.24,47.761,10.877,47.761,24 M35.259,28.999c-2.621-2.433-2.271-2.041,0.89-6.25c1.923-2.562,2.696-4.126,2.45-4.796 c-0.227-0.639-1.64-0.469-1.64-0.469l-4.71,0.029c0,0-0.351-0.048-0.609,0.106c-0.249,0.151-0.414,0.505-0.414,0.505 s-0.742,1.982-1.734,3.669c-2.094,3.559-2.935,3.747-3.277,3.524c-0.796-0.516-0.597-2.068-0.597-3.171 c0-3.449,0.522-4.887-1.02-5.259c-0.511-0.124-0.887-0.205-2.195-0.219c-1.678-0.016-3.101,0.007-3.904,0.398 c-0.536,0.263-0.949,0.847-0.697,0.88c0.31,0.041,1.016,0.192,1.388,0.699c0.484,0.656,0.464,2.131,0.464,2.131 s0.282,4.056-0.646,4.561c-0.632,0.347-1.503-0.36-3.37-3.588c-0.958-1.652-1.68-3.481-1.68-3.481s-0.14-0.344-0.392-0.527 c-0.299-0.222-0.722-0.298-0.722-0.298l-4.469,0.018c0,0-0.674-0.003-0.919,0.289c-0.219,0.259-0.018,0.752-0.018,0.752 s3.499,8.104,7.463,12.23c3.638,3.784,7.764,3.36,7.764,3.36h1.867c0,0,0.566,0.113,0.854-0.189 c0.265-0.288,0.256-0.646,0.256-0.646s-0.034-2.512,1.129-2.883c1.15-0.36,2.624,2.429,4.188,3.497 c1.182,0.812,2.079,0.633,2.079,0.633l4.181-0.056c0,0,2.186-0.136,1.149-1.858C38.281,32.451,37.763,31.321,35.259,28.999"></path> </svg>
+							</a>
+							<a href='https://www.facebook.com/prezidentcity.ru' target='_blank' class="socials__item fb" href="#">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"> <path d="M47.761,24c0,13.121-10.638,23.76-23.758,23.76C10.877,47.76,0.239,37.121,0.239,24c0-13.124,10.638-23.76,23.764-23.76 C37.123,0.24,47.761,10.876,47.761,24 M20.033,38.85H26.2V24.01h4.163l0.539-5.242H26.2v-3.083c0-1.156,0.769-1.427,1.308-1.427 h3.318V9.168L26.258,9.15c-5.072,0-6.225,3.796-6.225,6.224v3.394H17.1v5.242h2.933V38.85z"></path> </svg>
+							</a>
+							<a target='_blank' class="socials__item inst" href="https://www.instagram.com/prezident_city/">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" xml:space="preserve"> <desc>Instagram</desc> <path d="M15,11.014 C12.801,11.014 11.015,12.797 11.015,15 C11.015,17.202 12.802,18.987 15,18.987 C17.199,18.987 18.987,17.202 18.987,15 C18.987,12.797 17.199,11.014 15,11.014 L15,11.014 Z M15,17.606 C13.556,17.606 12.393,16.439 12.393,15 C12.393,13.561 13.556,12.394 15,12.394 C16.429,12.394 17.607,13.561 17.607,15 C17.607,16.439 16.444,17.606 15,17.606 L15,17.606 Z"></path> <path d="M19.385,9.556 C18.872,9.556 18.465,9.964 18.465,10.477 C18.465,10.989 18.872,11.396 19.385,11.396 C19.898,11.396 20.306,10.989 20.306,10.477 C20.306,9.964 19.897,9.556 19.385,9.556 L19.385,9.556 Z"></path> <path d="M15.002,0.15 C6.798,0.15 0.149,6.797 0.149,15 C0.149,23.201 6.798,29.85 15.002,29.85 C23.201,29.85 29.852,23.202 29.852,15 C29.852,6.797 23.201,0.15 15.002,0.15 L15.002,0.15 Z M22.666,18.265 C22.666,20.688 20.687,22.666 18.25,22.666 L11.75,22.666 C9.312,22.666 7.333,20.687 7.333,18.28 L7.333,11.734 C7.333,9.312 9.311,7.334 11.75,7.334 L18.25,7.334 C20.688,7.334 22.666,9.312 22.666,11.734 L22.666,18.265 L22.666,18.265 Z"></path> </svg>
+
+							</a>
+							<a href='https://wa.me/7(495)0125134' target='_blank' class="socials__item wp" href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" height="512pt" viewBox="0 0 512 512" width="512pt"><path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm5.425781 405.050781c-.003906 0 .003907 0 0 0h-.0625c-25.644531-.011719-50.84375-6.441406-73.222656-18.644531l-81.222656 21.300781 21.738281-79.375c-13.410156-23.226562-20.464844-49.578125-20.453125-76.574219.035156-84.453124 68.769531-153.160156 153.222656-153.160156 40.984375.015625 79.457031 15.96875 108.382813 44.917969 28.929687 28.953125 44.851562 67.4375 44.835937 108.363281-.035156 84.457032-68.777343 153.171875-153.21875 153.171875zm0 0"/><path d="m261.476562 124.46875c-70.246093 0-127.375 57.105469-127.40625 127.300781-.007812 24.054688 6.726563 47.480469 19.472657 67.75l3.027343 4.816407-12.867187 46.980468 48.199219-12.640625 4.652344 2.757813c19.550781 11.601562 41.964843 17.738281 64.816406 17.746094h.050781c70.191406 0 127.320313-57.109376 127.351563-127.308594.011718-34.019532-13.222657-66.003906-37.265626-90.066406-24.042968-24.0625-56.019531-37.324219-90.03125-37.335938zm74.90625 182.035156c-3.191406 8.9375-18.484374 17.097656-25.839843 18.199219-6.597657.984375-14.941407 1.394531-24.113281-1.515625-5.5625-1.765625-12.691407-4.121094-21.828126-8.0625-38.402343-16.578125-63.484374-55.234375-65.398437-57.789062-1.914063-2.554688-15.632813-20.753907-15.632813-39.59375 0-18.835938 9.890626-28.097657 13.398438-31.925782 3.511719-3.832031 7.660156-4.789062 10.210938-4.789062 2.550781 0 5.105468.023437 7.335937.132812 2.351563.117188 5.507813-.894531 8.613281 6.570313 3.191406 7.664062 10.847656 26.5 11.804688 28.414062.957031 1.917969 1.59375 4.152344.320312 6.707031-1.277344 2.554688-5.519531 8.066407-9.570312 13.089844-1.699219 2.105469-3.914063 3.980469-1.679688 7.8125 2.230469 3.828125 9.917969 16.363282 21.296875 26.511719 14.625 13.039063 26.960938 17.078125 30.789063 18.996094 3.824218 1.914062 6.058594 1.59375 8.292968-.957031 2.230469-2.554688 9.570313-11.175782 12.121094-15.007813 2.550782-3.832031 5.105469-3.191406 8.613282-1.914063 3.511718 1.273438 22.332031 10.535157 26.160156 12.449219 3.828125 1.917969 6.378906 2.875 7.335937 4.472657.960938 1.597656.960938 9.257812-2.230469 18.199218zm0 0"/></svg>
+							</a>
+						</div>
+					</div>
+					<div class="footer__nav anchors">
+						<a href="/#services" data-page-trans='false' class="footer__nav-link hover-squad">
+							Услуги
+						</a>
+						<a href="body" data-page-trans='false' class="footer__nav-link hover-squad">
+							Детская клиника
+						</a>
+						<a href="/price.html" data-anchors='false' class="footer__nav-link hover-squad">
+							Цены
+						</a>
+						<a href="reviews" data-page-trans='false' class="footer__nav-link hover-squad">
+							Отзывы
+						</a>
+						<a href="about" data-page-trans='false' class="footer__nav-link hover-squad">
+							О клинике
+						</a>
+						<a href="/contacts.html" data-anchors='false' class="footer__nav-link hover-squad">
+							Контакты
+						</a>
+						<br>
+						<a href="doctors" data-page-trans='false' class="footer__nav-link hover-squad">
+							Наши врачи
+						</a>
+						<a href="/#sales" class="footer__nav-link hover-squad">
+							Выгодны предложения
+						</a>
+ 						<a href="faq" data-page-trans='false' class="footer__nav-link hover-squad">
+							FAQ
+						</a>
+						<a href="/news.html" data-anchors='false' class="footer__nav-link hover-squad">
+							Мероприятия
+						</a>
+						<a href="/news.html" data-anchors='false' class="footer__nav-link hover-squad">
+							Блог
+						</a>
+					</div>
+					<div class="footer__right">
+						<p>Остались вопросы?</p>
+						<span>Давайте мы перезвоним Вам!</span>
+						<div class="btn__wrap btn__wrap--over-bg">
+							<span onclick='show_popup("popup1")' class="btn">
+								Перезвонить
+								<em class="btn__overlay"></em>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="center-wrap">
+					<p>Copyright © AKB Opt, 2020 | Created by <a href="#" target='_blank'>&nbsp; &lt;/A &  T&gt;</a></p>
+					<span href="#" onclick='show_popup("popup2")'>Политика обработки персональных данных</span>
+				</div>
+			</div>
+		</footer>
+		<div id="to-top" class='to-top'>
+			<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M10.4018 9.6013L0.96715 0.166606C0.74501 -0.0555352 0.388746 -0.0555352 0.166606 0.166606C-0.0555352 0.388746 -0.0555352 0.74501 0.166606 0.96715L9.19893 9.99948L0.166606 19.0318C-0.0555352 19.2539 -0.0555352 19.6102 0.166606 19.8323C0.27558 19.9413 0.422277 20 0.564782 20C0.707288 20 0.853985 19.9455 0.962959 19.8323L10.3977 10.3977C10.6198 10.1797 10.6198 9.81925 10.4018 9.6013Z" fill="black"></path>
+			</svg>
+		</div>
+		<div class="popup-wrap" id='popup1'>
+			<div class="popup">
+				<div class="popup__close" onclick="close_popup('popup1')">
+					<div></div>
+					<div></div>
+				</div>
+				<h2 class="popup__title">Обратная связь</h2>
+				<p class="popup__sub-title">Пожалуйста, введите некоторые данные о себе и наш менеджер свяжеться</p>
+				<form action="" class='inputs'>
+					<div class="inputs__wrap">
+						<input type="text" class='inputs__name' name='name' placeholder="Имя">
+					</div>
+					<div class="inputs__wrap">
+						<input type="text" class='inputs__phone' name='phone' placeholder="Телефон">
+					</div>
+					<div class="inputs__accept inputs__accept--active">
+						<div class='inputs__accept-check'></div>
+						<div class="inputs__accept-content">
+							<span>Я подтверждаю свое согласие с</span>
+							<p onclick="show_popup('popup2')">Пользовательским соглашением</p>
+						</div>
+					</div>
+					<div class="btn__wrap">
+						<a href="#" class="btn">Записаться
+							<em class="btn__overlay"></em>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="popup-wrap" id='popup2'>
+			<div class="popup popup--big">
+				<div class="popup__close" onclick="close_popup('popup2')">
+					<div></div>
+					<div></div>
+				</div>
+				<div class="text-editor">
+					<h2>Политика обработки персональных данных</h2>
+					<div class="privacy__text text">
+						<p>В соответствии со статьями 6, 9, 10 Федерального закона от 27.07.2006 г. № 152-ФЗ «О персональных данных» настоящим подтверждаю свое согласие на обработку моих персональных данных ООО «КАРАТ».</p>
+
+						<p>Я подтверждаю свое согласие с тем, что обработка персональных данных осуществляется в медико-профилактических целях, в целях установления медицинского диагноза, оказания медицинских и медико-социальных услуг, ведения учета и систематизации оказанных услуг, а также в целях улучшения качества обслуживания пациентов и проведения маркетинговых программ, статистических исследований.</p>
+
+						<p>Я даю согласие на обработку следующих персональных данных: Ф.И.О., пол и дата рождения ребенка, контактный(е) телефон(ы), адрес электронной почты, данные о состоянии здоровья, заболеваниях, случаях обращения за медицинской помощью.</p>
+
+						<p>В целях улучшения качества обслуживания и проведения маркетинговых программ, настоящим также даю свое согласие на получение информации об услугах ООО «КАРАТ»: в виде sms-сообщений, по e-mail и телефону на указанный мною выше номер телефона и адрес электронной почты.</p>
+
+						<p>ООО «КАРАТ» вправе обрабатывать мои персональные данные посредством внесения их в электронную базу данных, включения в списки (реестры) и отчетные формы, предусмотренные документами, регламентирующими предоставление отчетных данных (документов).</p>
+
+						<p>Я уведомлен о том, что я вправе в любое время отозвать свое согласие на обработку персональных данных (в том числе своего согласия о получении информации об услугах по e-mail, sms, телефону) путем подачи письменного заявления ООО «КАРАТ», а также получить доступ к своим персональным данным при личном обращении либо при получении письменного запроса.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mobile-menu">
+			<div class="mobile-menu__wrap">
+				<div class="mobile-menu__header">
+					<div class="mobile-menu__act mobile-menu__act--close">
+						<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.79" fill-rule="evenodd" clip-rule="evenodd" d="M15 1.5L13.5 0L7.5 6L1.5 0L0 1.5L6 7.5L0 13.5L1.5 15L7.5 9L13.5 15L15 13.5L9 7.5L15 1.5Z" fill="#575757"/>
+						</svg>
+					</div>	
+				</div>
+				<nav class="mobile-menu__nav toogles__wrap anchors">
+					<a href="/" class='mobile-menu__link'>Главная</a>
+					<div class="toogles__item">
+						<p class="toogles__item-title">Услуги</p>
+						<div class="toogles__item-content">
+							<div>
+								<a href="/service.html" class="mobile-menu__nav-link">Диагностика</a>
+								<a href="/service.html" class="mobile-menu__nav-link">Хириругия</a>
+								<a href="/service.html" class="mobile-menu__nav-link">Эстетическая стоматология</a>
+								<a href="/service.html" class="mobile-menu__nav-link">Имплантация</a>
+								<a href="/service.html" class="mobile-menu__nav-link">Ортопедическая стоматология</a>
+								<a href="/service.html" class="mobile-menu__nav-link">Гигиена и отбеливание</a>
+							</div>
+						</div>
+					</div>
+					<a href="/price.html" class='mobile-menu__link'>Цены на услуги</a>
+					<a href="body" data-page-trans='false' class='mobile-menu__link'>Детская стоматология</a>
+					<a href="about" data-page-trans='false' class='mobile-menu__link'>О клинике</a>
+					<a href="/news.html" class='mobile-menu__link'>Блог</a>
+					<a href="/contacts.html" class='mobile-menu__link'>Контакты</a>
+					<a href="doctors" data-page-trans='false' class='mobile-menu__link mobile-menu__link--small'>Наши врачи</a>
+					<a href="/#sales" class='mobile-menu__link mobile-menu__link--small'>Акции</a>
+					<a href="faq" data-page-trans='false' class='mobile-menu__link mobile-menu__link--small'>FAQ</a>
+					<a href="/news.html" class='mobile-menu__link mobile-menu__link--small'>Мероприятия</a>
+					<a href="/news.html" class='mobile-menu__link mobile-menu__link--small'>Блог</a>
+				</nav>
+				<div class="btn__wrap btn__wrap--empty">
+					<span class="btn">
+						Рассчитать стоимость
+						<em class="btn__overlay"></em>
+					</span>
+				</div>
+				<div class="btn__wrap">
+					<span class="btn" onclick='show_popup("popup1")'>
+						Бесплатная запись
+						<em class="btn__overlay"></em>
+					</span>
+				</div>
+				<div class="socials socials--menu">
+					<a href='https://vk.com/prezedent_vip' target='_blank' class="socials__item vk" href="#">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"> <path d="M47.761,24c0,13.121-10.639,23.76-23.76,23.76C10.878,47.76,0.239,37.121,0.239,24c0-13.123,10.639-23.76,23.762-23.76 C37.122,0.24,47.761,10.877,47.761,24 M35.259,28.999c-2.621-2.433-2.271-2.041,0.89-6.25c1.923-2.562,2.696-4.126,2.45-4.796 c-0.227-0.639-1.64-0.469-1.64-0.469l-4.71,0.029c0,0-0.351-0.048-0.609,0.106c-0.249,0.151-0.414,0.505-0.414,0.505 s-0.742,1.982-1.734,3.669c-2.094,3.559-2.935,3.747-3.277,3.524c-0.796-0.516-0.597-2.068-0.597-3.171 c0-3.449,0.522-4.887-1.02-5.259c-0.511-0.124-0.887-0.205-2.195-0.219c-1.678-0.016-3.101,0.007-3.904,0.398 c-0.536,0.263-0.949,0.847-0.697,0.88c0.31,0.041,1.016,0.192,1.388,0.699c0.484,0.656,0.464,2.131,0.464,2.131 s0.282,4.056-0.646,4.561c-0.632,0.347-1.503-0.36-3.37-3.588c-0.958-1.652-1.68-3.481-1.68-3.481s-0.14-0.344-0.392-0.527 c-0.299-0.222-0.722-0.298-0.722-0.298l-4.469,0.018c0,0-0.674-0.003-0.919,0.289c-0.219,0.259-0.018,0.752-0.018,0.752 s3.499,8.104,7.463,12.23c3.638,3.784,7.764,3.36,7.764,3.36h1.867c0,0,0.566,0.113,0.854-0.189 c0.265-0.288,0.256-0.646,0.256-0.646s-0.034-2.512,1.129-2.883c1.15-0.36,2.624,2.429,4.188,3.497 c1.182,0.812,2.079,0.633,2.079,0.633l4.181-0.056c0,0,2.186-0.136,1.149-1.858C38.281,32.451,37.763,31.321,35.259,28.999"></path> </svg>
+					</a>
+					<a href='https://www.facebook.com/prezidentcity.ru' target='_blank' class="socials__item fb" href="#">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"> <path d="M47.761,24c0,13.121-10.638,23.76-23.758,23.76C10.877,47.76,0.239,37.121,0.239,24c0-13.124,10.638-23.76,23.764-23.76 C37.123,0.24,47.761,10.876,47.761,24 M20.033,38.85H26.2V24.01h4.163l0.539-5.242H26.2v-3.083c0-1.156,0.769-1.427,1.308-1.427 h3.318V9.168L26.258,9.15c-5.072,0-6.225,3.796-6.225,6.224v3.394H17.1v5.242h2.933V38.85z"></path> </svg>
+					</a>
+					<a target='_blank' class="socials__item inst" href="https://www.instagram.com/prezident_city/">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" xml:space="preserve"> <desc>Instagram</desc> <path d="M15,11.014 C12.801,11.014 11.015,12.797 11.015,15 C11.015,17.202 12.802,18.987 15,18.987 C17.199,18.987 18.987,17.202 18.987,15 C18.987,12.797 17.199,11.014 15,11.014 L15,11.014 Z M15,17.606 C13.556,17.606 12.393,16.439 12.393,15 C12.393,13.561 13.556,12.394 15,12.394 C16.429,12.394 17.607,13.561 17.607,15 C17.607,16.439 16.444,17.606 15,17.606 L15,17.606 Z"></path> <path d="M19.385,9.556 C18.872,9.556 18.465,9.964 18.465,10.477 C18.465,10.989 18.872,11.396 19.385,11.396 C19.898,11.396 20.306,10.989 20.306,10.477 C20.306,9.964 19.897,9.556 19.385,9.556 L19.385,9.556 Z"></path> <path d="M15.002,0.15 C6.798,0.15 0.149,6.797 0.149,15 C0.149,23.201 6.798,29.85 15.002,29.85 C23.201,29.85 29.852,23.202 29.852,15 C29.852,6.797 23.201,0.15 15.002,0.15 L15.002,0.15 Z M22.666,18.265 C22.666,20.688 20.687,22.666 18.25,22.666 L11.75,22.666 C9.312,22.666 7.333,20.687 7.333,18.28 L7.333,11.734 C7.333,9.312 9.311,7.334 11.75,7.334 L18.25,7.334 C20.688,7.334 22.666,9.312 22.666,11.734 L22.666,18.265 L22.666,18.265 Z"></path> </svg>
+
+					</a>
+					<a href='https://wa.me/7(495)0125134' target='_blank' class="socials__item wp" href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" height="512pt" viewBox="0 0 512 512" width="512pt"><path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm5.425781 405.050781c-.003906 0 .003907 0 0 0h-.0625c-25.644531-.011719-50.84375-6.441406-73.222656-18.644531l-81.222656 21.300781 21.738281-79.375c-13.410156-23.226562-20.464844-49.578125-20.453125-76.574219.035156-84.453124 68.769531-153.160156 153.222656-153.160156 40.984375.015625 79.457031 15.96875 108.382813 44.917969 28.929687 28.953125 44.851562 67.4375 44.835937 108.363281-.035156 84.457032-68.777343 153.171875-153.21875 153.171875zm0 0"/><path d="m261.476562 124.46875c-70.246093 0-127.375 57.105469-127.40625 127.300781-.007812 24.054688 6.726563 47.480469 19.472657 67.75l3.027343 4.816407-12.867187 46.980468 48.199219-12.640625 4.652344 2.757813c19.550781 11.601562 41.964843 17.738281 64.816406 17.746094h.050781c70.191406 0 127.320313-57.109376 127.351563-127.308594.011718-34.019532-13.222657-66.003906-37.265626-90.066406-24.042968-24.0625-56.019531-37.324219-90.03125-37.335938zm74.90625 182.035156c-3.191406 8.9375-18.484374 17.097656-25.839843 18.199219-6.597657.984375-14.941407 1.394531-24.113281-1.515625-5.5625-1.765625-12.691407-4.121094-21.828126-8.0625-38.402343-16.578125-63.484374-55.234375-65.398437-57.789062-1.914063-2.554688-15.632813-20.753907-15.632813-39.59375 0-18.835938 9.890626-28.097657 13.398438-31.925782 3.511719-3.832031 7.660156-4.789062 10.210938-4.789062 2.550781 0 5.105468.023437 7.335937.132812 2.351563.117188 5.507813-.894531 8.613281 6.570313 3.191406 7.664062 10.847656 26.5 11.804688 28.414062.957031 1.917969 1.59375 4.152344.320312 6.707031-1.277344 2.554688-5.519531 8.066407-9.570312 13.089844-1.699219 2.105469-3.914063 3.980469-1.679688 7.8125 2.230469 3.828125 9.917969 16.363282 21.296875 26.511719 14.625 13.039063 26.960938 17.078125 30.789063 18.996094 3.824218 1.914062 6.058594 1.59375 8.292968-.957031 2.230469-2.554688 9.570313-11.175782 12.121094-15.007813 2.550782-3.832031 5.105469-3.191406 8.613282-1.914063 3.511718 1.273438 22.332031 10.535157 26.160156 12.449219 3.828125 1.917969 6.378906 2.875 7.335937 4.472657.960938 1.597656.960938 9.257812-2.230469 18.199218zm0 0"/></svg>
+					</a>
+				</div>
+				<a href="tel:+74950125134" class="mobile-menu__phone"><span>+7 (495) 012-51-34</span></a>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+		<script>
+		 // Маска телефон
+		 !function(e){"function"==typeof define&&define.amd?define(["jquery"],e):e("object"==typeof exports?require("jquery"):jQuery)}(function(e){var t,n=navigator.userAgent,a=/iphone/i.test(n),i=/chrome/i.test(n),r=/android/i.test(n);e.mask={definitions:{9:"[0-9]",a:"[A-Za-z]","*":"[A-Za-z0-9]"},autoclear:!0,dataName:"rawMaskFn",placeholder:"_"},e.fn.extend({caret:function(e,t){var n;if(0!==this.length&&!this.is(":hidden"))return"number"==typeof e?(t="number"==typeof t?t:e,this.each(function(){this.setSelectionRange?this.setSelectionRange(e,t):this.createTextRange&&(n=this.createTextRange(),n.collapse(!0),n.moveEnd("character",t),n.moveStart("character",e),n.select())})):(this[0].setSelectionRange?(e=this[0].selectionStart,t=this[0].selectionEnd):document.selection&&document.selection.createRange&&(n=document.selection.createRange(),e=0-n.duplicate().moveStart("character",-1e5),t=e+n.text.length),{begin:e,end:t})},unmask:function(){return this.trigger("unmask")},mask:function(n,o){var c,l,u,f,s,h,g,m;if(!n&&this.length>0){c=e(this[0]);var d=c.data(e.mask.dataName);return d?d():void 0}return o=e.extend({autoclear:e.mask.autoclear,placeholder:e.mask.placeholder,completed:null},o),l=e.mask.definitions,u=[],f=g=n.length,s=null,e.each(n.split(""),function(e,t){"?"==t?(g--,f=e):l[t]?(u.push(new RegExp(l[t])),null===s&&(s=u.length-1),f>e&&(h=u.length-1)):u.push(null)}),this.trigger("unmask").each(function(){function c(){if(o.completed){for(var e=s;h>=e;e++)if(u[e]&&C[e]===d(e))return;o.completed.call(w)}}function d(e){return o.placeholder.charAt(e<o.placeholder.length?e:0)}function p(e){for(;++e<g&&!u[e];);return e}function v(e){for(;--e>=0&&!u[e];);return e}function b(e,t){var n,a;if(!(0>e)){for(n=e,a=p(t);g>n;n++)if(u[n]){if(!(g>a&&u[n].test(C[a])))break;C[n]=C[a],C[a]=d(a),a=p(a)}A(),w.caret(Math.max(s,e))}}function k(e){var t,n,a,i;for(t=e,n=d(e);g>t;t++)if(u[t]){if(a=p(t),i=C[t],C[t]=n,!(g>a&&u[a].test(i)))break;n=i}}function y(){var e=w.val(),t=w.caret();if(m&&m.length&&m.length>e.length){for(T(!0);t.begin>0&&!u[t.begin-1];)t.begin--;if(0===t.begin)for(;t.begin<s&&!u[t.begin];)t.begin++;w.caret(t.begin,t.begin)}else{for(T(!0);t.begin<g&&!u[t.begin];)t.begin++;w.caret(t.begin,t.begin)}c()}function x(){T(),w.val()!=E&&w.change()}function j(e){if(!w.prop("readonly")){var t,n,i,r=e.which||e.keyCode;m=w.val(),8===r||46===r||a&&127===r?(t=w.caret(),n=t.begin,i=t.end,i-n===0&&(n=46!==r?v(n):i=p(n-1),i=46===r?p(i):i),S(n,i),b(n,i-1),e.preventDefault()):13===r?x.call(this,e):27===r&&(w.val(E),w.caret(0,T()),e.preventDefault())}}function R(t){if(!w.prop("readonly")){var n,a,i,o=t.which||t.keyCode,l=w.caret();if(!(t.ctrlKey||t.altKey||t.metaKey||32>o)&&o&&13!==o){if(l.end-l.begin!==0&&(S(l.begin,l.end),b(l.begin,l.end-1)),n=p(l.begin-1),g>n&&(a=String.fromCharCode(o),u[n].test(a))){if(k(n),C[n]=a,A(),i=p(n),r){var f=function(){e.proxy(e.fn.caret,w,i)()};setTimeout(f,0)}else w.caret(i);l.begin<=h&&c()}t.preventDefault()}}}function S(e,t){var n;for(n=e;t>n&&g>n;n++)u[n]&&(C[n]=d(n))}function A(){w.val(C.join(""))}function T(e){var t,n,a,i=w.val(),r=-1;for(t=0,a=0;g>t;t++)if(u[t]){for(C[t]=d(t);a++<i.length;)if(n=i.charAt(a-1),u[t].test(n)){C[t]=n,r=t;break}if(a>i.length){S(t+1,g);break}}else C[t]===i.charAt(a)&&a++,f>t&&(r=t);return e?A():f>r+1?o.autoclear||C.join("")===D?(w.val()&&w.val(""),S(0,g)):A():(A(),w.val(w.val().substring(0,r+1))),f?t:s}var w=e(this),C=e.map(n.split(""),function(e,t){return"?"!=e?l[e]?d(t):e:void 0}),D=C.join(""),E=w.val();w.data(e.mask.dataName,function(){return e.map(C,function(e,t){return u[t]&&e!=d(t)?e:null}).join("")}),w.one("unmask",function(){w.off(".mask").removeData(e.mask.dataName)}).on("focus.mask",function(){if(!w.prop("readonly")){clearTimeout(t);var e;E=w.val(),e=T(),t=setTimeout(function(){w.get(0)===document.activeElement&&(A(),e==n.replace("?","").length?w.caret(0,e):w.caret(e))},10)}}).on("blur.mask",x).on("keydown.mask",j).on("keypress.mask",R).on("input.mask paste.mask",function(){w.prop("readonly")||setTimeout(function(){var e=T(!0);w.caret(e),c()},0)}),i&&r&&w.off("input.mask").on("input.mask",y),T()})}})});
+		 $('[name="phone"]').mask("+7 (999) 999-99-99");
+		</script>
+	</body>
+
+	</html>

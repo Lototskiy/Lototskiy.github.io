@@ -1,0 +1,256 @@
+.footer {
+	background: $bg;
+	color: #000;
+	padding-top: 50px;
+	@media screen and ( max-width: 1200px ) {
+		padding-top: 35px;
+	}
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		padding: 30px 0px;
+		@media screen and ( max-width: 1200px ) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+		width: 200px;
+		align-items: flex-start;
+		@media screen and ( max-width: 1200px ) {
+			align-items: center;
+		}
+	}
+
+	&__logo {
+		margin-bottom: 30px;
+		display: block;
+		width: 85px;
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__phone {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 20px;
+		margin-bottom: 15px;
+		padding-left: 30px;
+		cursor: pointer;
+		position: relative;
+		background: url('~img/phone--gray.svg') no-repeat;
+		background-position: left center;
+		background-size: contain;
+		transition: all 0.2s;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__email {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 20px;
+		padding-left: 30px;
+		margin-bottom: 30px;
+		cursor: pointer;
+		position: relative;
+		background: url('~img/email--gray.svg') no-repeat;
+		background-position: left center;
+		background-size: contain;
+		transition: all 0.2s;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		max-height: 250px;
+		padding-top: 15px;
+		margin-right: -80px;
+		@media screen and ( max-width: 1200px ) {
+			margin-right: 0px;
+			max-height: 1000px;
+			align-items: center;
+			margin-bottom: 35px;
+		}
+		
+		&-link {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 1;
+			margin-bottom: 20px;
+			display: inline-block;
+			margin-right: 80px;
+			z-index: 2;
+			&:hover {
+				z-index: 3;
+			}
+			@media screen and ( max-width: 1200px ) {
+				margin-right: 0;
+				font-size: 16px;
+				margin-bottom: 15px;
+			}
+			
+			&:nth-child(1) {
+				margin-right: 120px;
+				@media screen and ( max-width: 1200px ) {
+					margin-right: 0px;
+				}
+			}
+
+			cursor: pointer;
+			position: relative;
+
+			.hover-squad {
+				z-index: 2;
+				&__squad {
+					margin-top: -1px;
+				}
+			}
+		}
+	}
+
+	&__right {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: right;
+		padding-top: 15px;
+		@media screen and ( max-width: 1200px ) {
+			flex-direction: column;
+			align-items: center;
+		}
+		p {
+			font-weight: bold;
+			font-size: 22px;
+			line-height: 1;
+			margin-bottom: 15px;
+		}
+
+		span:not(.btn) {
+			font-size: 16px;
+			line-height: 1;
+			margin-bottom: 18px;
+		}
+
+		.btn__wrap {
+			z-index: 2;
+		}
+	}
+
+	&__bottom {
+		margin-top: 30px;
+		position: relative;
+		border-top: 1px solid rgba(0,0,0,0.1);
+		> .center-wrap {
+			padding: 25px 15px;
+			display: flex;
+			position: relative;
+			@media screen and ( max-width: 1200px ) {
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				padding-top: 22px;
+				padding-bottom: 35px;
+			}
+			
+			> span {
+				font-weight: 700;
+				font-size: 15px;
+				cursor: pointer;
+				position: relative;
+				color: $gray-d;
+				@media screen and ( max-width: 380px ) {
+					font-size: 12px;
+				}
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0px;
+					bottom: 0px;
+					width: 100%;
+					height: 1px;
+					background: #000;
+					opacity: 0.5;
+					transition: all 0.5s;
+				}
+				&:hover {
+					&::before {
+						width: 0px;		
+						opacity: 0;
+					}	
+				}
+				&:last-of-type {
+					margin-left: 22px;
+					position: relative;
+					@media screen and ( max-width: 1200px ) {
+						margin-top: 5px;
+						margin-bottom: 22px;
+						margin-left: 0px;
+					}
+				}
+
+				cursor: pointer;
+				position: relative;
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0px;
+					bottom: 0px;
+					width: 0%;
+					height: 1px;
+					background: #eee;
+					opacity: 0;
+					transition: all 0.5s;
+				}
+				&:hover {
+					&::after {
+						width: 100%;		
+						opacity: 0.7;
+					}	
+				}
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				left: 15px;
+				width: calc( 100% - 30px );
+				height: 1px;
+				background: #EEEEEE;
+				opacity: 0.3;
+			}
+		}
+
+		p {
+			margin-right: auto;
+			font-weight: 700;
+			font-size: 14px;
+			@media screen and ( max-width: 1200px ) {
+				margin-right: 0px;
+				order: 2;
+				font-size: 12px;
+				max-width: 160px;
+				line-height: 1.4;
+				span {
+					display: none;
+				}
+			}
+			a {
+				color: $primary;
+				font-weight: 700;
+				opacity: 0.5;
+			}
+		}
+
+	}	
+}

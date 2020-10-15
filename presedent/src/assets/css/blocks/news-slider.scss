@@ -1,0 +1,57 @@
+.news-slider {
+	padding: 90px 0px;
+	@media screen and ( max-width: 1200px ) {
+		padding: 50px 0px;
+	}
+
+	+ .go-price {
+		padding-top: 0px;
+	}
+
+	&__slider {
+		position: relative;
+		.news-card {
+			width: 100%;
+		}
+
+		.swiper-container {
+			padding: 0px 10px;
+			padding-bottom: 60px;
+			margin-bottom: -60px;
+		}
+
+		.slider-btns {
+			@media screen and ( min-width: 1200px ) {
+				position: static;
+			}
+			&__btn {
+				@media screen and ( min-width: 	1200px ) {
+					background: transparent;
+					svg path {
+						fill: #000;
+					}
+					position: absolute;
+					top: 50%;
+					transform: translate(0,-50%);
+					z-index: 2;
+
+					&--next {
+						right: -80px;
+					}
+
+					&--prev {
+						left: -80px;
+					}
+				}
+
+				&:hover {
+					opacity: 1;
+					background: $primary;
+					svg path {
+						fill: #fff;
+					}
+				}
+			}
+		}
+	}
+}

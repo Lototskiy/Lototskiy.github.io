@@ -1,0 +1,31 @@
+	
+.toogles {
+	&__item {
+		&-content {
+			display: inherit;
+			flex-direction: inherit;
+			justify-content: inherit;
+			&[style*="display: block"]{
+				display: inherit !important;
+			}
+			@media screen and ( max-width: 1200px ) {
+				display: none;	
+			}
+			> div {
+				display: inherit;
+				flex-direction: inherit;
+				flex-wrap: inherit;
+				justify-content: inherit;
+				align-items: inherit;
+				width: 100%;
+			}
+		}
+		@media screen and ( min-width: 1200px ) {
+			
+			&-title:not([data-toogles]):not(.checkout__step-header) {
+				pointer-events: none;
+			}
+		}
+	}
+
+}

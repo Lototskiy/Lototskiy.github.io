@@ -1,0 +1,350 @@
+.btn {
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+white-space: nowrap;
+text-align: center;
+transition: all 0.5s;
+color: #fff;
+padding: 0px 32px;
+line-height: 50px;
+text-transform: uppercase;
+font-size: 15px;
+font-weight: 700;
+letter-spacing: 0.02em;
+position: relative;
+overflow: hidden;
+font-family: "Geometria";
+min-width: 200px;
+background: $primary;
+text-shadow: 0px 0px 2px rgba(0,0,0,0.1);
+z-index: 2;
+border: 2px solid $primary;
+width: 100%;
+
+@media screen and ( max-width: 1200px ) {
+	line-height: 40px;
+	font-size: 14px;
+	padding: 0px 20px;
+	min-width: 150px;
+}
+
+// блик у кнопки
+
+&::before {
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 100%;
+	top: 0;
+	left: -100px;
+	background-color: #fff;
+	display: block;
+	transform: skewX(-45deg);
+	opacity: 0;
+	z-index: 3;
+}
+
+
+&:hover {
+	box-shadow: none;
+	color: $primary;
+	border-color: $primary;
+
+	// анимация блика при наведении
+
+	&::before {
+		animation: blik 5s;
+	}
+
+	// анимация цветовой шторки при наведениии
+
+	.btn__overlay {
+		animation: animCacheHover 0.3s forwards alternate cubic-bezier(0.17, 0.67, 0.83, 0.67);
+		.price__block & {
+		animation: animCacheHoverPrice 0.3s forwards alternate cubic-bezier(0.17, 0.67, 0.83, 0.67);
+		}
+	}
+}
+
+
+// анимаци блика всега
+
+&:not(:hover) {
+	&::before {
+		animation: blik 5s infinite;
+	}
+}
+
+// цветовая шторка у кнопки 
+
+&__overlay {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 150%;
+	height: 150%;
+	width: 120%;
+	transform: skewY(10deg);
+	top: auto;
+	left: -10%;
+	transition: 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+	z-index: 2;
+	animation: animCache 0.3s forwards cubic-bezier(0.17, 0.67, 0.83, 0.67);	
+	z-index: -1;
+	background: #fff;
+
+	.price__block & {
+		bottom: 250%;
+		height: 250%;
+		animation: animCachePrice 0.3s forwards cubic-bezier(0.17, 0.67, 0.83, 0.67);	
+	}
+
+	.popup & {
+		animation: animCacheLong 0.3s forwards cubic-bezier(0.17, 0.67, 0.83, 0.67);
+	}
+}
+
+
+
+// контейнер кнопки 
+
+&__wrap {
+	
+	position: relative;
+
+	&--input {
+		z-index: 2;
+		&:hover input {
+			color: #fff;
+		}
+	}
+
+	&::after {
+		content: "";
+		color: $primary;
+		width: 70%;
+		left: 15%;
+		bottom: 0px;
+		position: absolute;
+		box-shadow: 0px 0px 25px 5px;
+		opacity: 0.6;
+		z-index: -1;
+		transition: all 0.2s;
+	}
+
+	&:hover {
+		&::before,
+		&::after {
+			opacity: 0;
+		}
+	}
+
+	&--over-bg {
+		.btn__overlay {
+			background: $bg;
+		}
+	}
+
+	&--white {
+		.btn {
+			background: #fff;
+			color: $primary;
+			border-color: #fff;
+			&__overlay {
+				background: $primary;
+			}
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+
+	// стилизация пустых кнопков 
+
+	&--empty {
+
+
+		.btn__overlay {
+			background: $primary;
+		}
+
+
+		&::after {
+			display: none;
+		}
+
+		.btn {
+
+			text-transform: inherit;
+			background: transparent;
+			font-weight: 700;
+			z-index: 2;
+			color: $primary;
+			&:hover {
+				color: #fff;
+				border-color: $primary;
+			}
+
+			&::after {
+				display: none;
+			}
+
+			//стилизация пустых кнопок в зависимости от цвета
+
+			&.btn--black {
+				border-color: $gray-d;
+				color: $gray-d;
+				&:hover {
+					color: #fff;
+				}
+
+				.btn__overlay {
+					background: $gray-d;
+				}
+			}
+
+
+			&.btn--white {
+				border-color: #fff;
+				.btn__overlay {
+					background: #fff;
+				}
+				&:hover {
+					color: #000;
+					border-color: #fff;
+				}
+			}
+
+
+			&.btn--bg {
+				border-color: transparent;
+				color: $gray-d;
+				border-width: 1px;
+				.btn__overlay {
+					background: $bg
+				}
+				&:hover {
+					color: #000;
+					border-color: transparent;
+				}
+			}
+
+
+			//   </ стилизация пустых кнопок в зависимости от цвета
+
+		}
+
+	}
+}
+
+}
+
+
+// Анимация цветовой шторки при наведении
+
+@keyframes animCacheHover {
+
+0% {
+	-webkit-transform: skewY(10deg);
+	transform: skewY(10deg);
+	bottom: 150%;
+}
+100% {
+	-webkit-transform: skewY(0deg);
+	transform: skewY(0deg);
+	bottom: 0%;
+}
+
+}
+
+// Анимация цветовой шторки при наведении
+
+@keyframes animCache {
+
+0% {
+	-webkit-transform: skewY(0deg);
+	transform: skewY(0deg);
+	bottom: 0%;
+}
+100% {
+	-webkit-transform: skewY(10deg);
+	transform: skewY(10deg);
+	bottom: 150%;
+}
+
+}
+
+@keyframes animCacheLong {
+
+0% {
+	-webkit-transform: skewY(0deg);
+	transform: skewY(0deg);
+	bottom: 0%;
+}
+100% {
+	-webkit-transform: skewY(10deg);
+	transform: skewY(10deg);
+	bottom: 170%;
+}
+
+}
+
+
+
+// Анимация цветовой шторки при наведении
+
+@keyframes animCacheHoverPrice {
+
+0% {
+	-webkit-transform: skewY(10deg);
+	transform: skewY(10deg);
+	bottom: 250%;
+}
+100% {
+	-webkit-transform: skewY(0deg);
+	transform: skewY(0deg);
+	bottom: 0%;
+}
+
+}
+
+// Анимация цветовой шторки при наведении
+
+@keyframes animCachePrice {
+
+0% {
+	-webkit-transform: skewY(0deg);
+	transform: skewY(0deg);
+	bottom: 0%;
+}
+100% {
+	-webkit-transform: skewY(10deg);
+	transform: skewY(10deg);
+	bottom: 250%;
+}
+
+}
+
+
+
+// Анимация блика
+
+
+@keyframes blik {
+0% {
+
+}
+
+25% {
+	left: calc( 100% + 100px );
+	opacity: 0.2;
+}
+
+25.1% {
+	opacity: 0;
+	left: 0px;
+}
+} 

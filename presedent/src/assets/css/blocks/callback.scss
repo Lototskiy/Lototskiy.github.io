@@ -1,0 +1,117 @@
+.callback {
+	padding: 100px 0px;
+	margin: 90px 0px;
+	background: $bg;
+	&--blue {
+		background: $primary;
+		position: relative;
+		.btn__wrap input {
+			background: #fff;
+			color: $primary;
+		}
+
+		.center-wrap {
+			position: static !important;
+		}
+	}
+	@media screen and ( max-width: 1200px ) {
+		padding: 50px 0px;
+		margin: 50px 0px;
+	}
+
+	.center-wrap {
+		position: relative;
+		@media screen and ( max-width: 1200px ) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		right: 0px;
+		bottom: -100px;
+		.callback--blue & {
+			bottom: 0px;
+			left: calc( ( 100% - 1270px ) / 2 + 750px  );
+		}
+		@media screen and ( max-width: 1200px ) {
+			position: static;
+			max-width: 200px;
+			&-wrap {
+				margin-bottom: 20px;
+				margin-left: 25px;
+				order: -1;
+				position: relative;
+				margin-right: auto;
+				&::before {
+					content: "";
+					width: 120%;
+					background: $primary;
+					height: 2px;
+					position: absolute;
+					bottom: 0px;
+					z-index: 2;
+					left: -10%;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+
+	&__title {
+		font-family: "Geometria";
+		font-style: normal;
+		font-weight: 800;
+		font-size: 40px;
+		line-height: 1.2;
+		color: #333;
+		margin-bottom: 30px;
+		max-width: 650px;
+		.callback--blue & {
+			color: #fff;
+		}
+		@media screen and ( max-width: 1200px ) {
+			font-size: 22px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__text {
+		color: $gray-d;
+		font-size: 20px;
+		font-weight: 300;
+		margin-bottom: 50px;
+		.callback--blue & {
+			color: #fff;
+		}
+		@media screen and ( max-width: 1200px ) {
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+	}
+
+	form {
+		display: flex;
+		align-items: center;
+		@media screen and ( max-width: 1200px ) {
+			flex-direction: column;
+		}
+		.btn__wrap {
+			@media screen and ( max-width: 1200px ) {
+				width: 100%;
+			}
+		}
+
+		.inputs__wrap {
+			width: auto;
+			margin-right: 20px;
+			@media screen and ( max-width: 1200px ) {
+				margin-right: 0px;
+				margin-bottom: 15px;
+				width: 100%;
+			}
+		}
+
+	}
+}

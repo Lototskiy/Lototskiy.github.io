@@ -1,0 +1,42 @@
+.price-menu {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
+
+
+	@media screen and ( min-width: 700px ) {
+		
+		.sticky {
+			position: fixed;
+			z-index: 101;
+			right: calc( ( 100% - 1250px ) / 2 );
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 100px !important;
+		}
+
+		.stop {
+			position: relative;
+			z-index: 101;	
+		}
+	}
+
+
+
+	&__title {
+		font-size: 22px;
+		font-weight: 800;
+		margin-bottom: 20px;
+	}
+
+	&__item {
+		margin-bottom: 20px;
+		font-size: 18px;
+		cursor: pointer;
+		position: relative;
+		font-weight: 300;
+		display: block;
+	}
+}

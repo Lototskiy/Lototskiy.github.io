@@ -1,0 +1,131 @@
+.child-services {
+	padding: 90px 0px;
+	margin-top: 90px;
+
+	@media screen and (max-width: 1200px) {
+		margin-top: 50px;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: -26px;
+	}
+
+	&__item {
+		box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 5px 30px rgba(73, 123, 210, 0.12);
+		background: #fff;
+		margin-bottom: 26px;
+		width: calc((100% - 26px * 1) / 2);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border: 1px solid rgba(30, 30, 30, 0.02);
+		padding: 46px;
+
+		@media screen and (max-width:1200px) {
+			width: 100%;
+			padding: 26px;
+		}
+		@media screen and (max-width:450px) {
+			padding: 15px;
+		}
+
+		&-left {
+			width: 120px;
+
+			@media screen and (max-width:450px) {
+				width: 80px;
+			}
+
+			img {
+				width: 100%;
+			}
+
+		}
+
+		&-right {
+			width: calc(100% - 120px - 75px);
+			display: flex;
+			flex-direction: column;
+
+			@media screen and (max-width:1200px) {
+				width: calc(100% - 120px - 25px);
+			}
+
+			@media screen and (max-width:450px) {
+				width: calc(100% - 80px - 15px);
+			}
+		}
+
+		&-sub-title {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 21px;
+			color: #C9C9C9;
+			margin-bottom: 6px;
+		}
+
+		&-title {
+			font-weight: 900;
+			font-size: 28px;
+			line-height: 36px;
+			color: $primary;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			margin-bottom: 20px;
+			@media screen and (max-width:450px) {
+			font-size: 20px;
+			margin-bottom: 10px;
+			}
+		}
+
+		&-list {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			color: #333333;
+		}
+
+		&-item {
+			margin-bottom: 10px;
+			cursor: pointer;
+			position: relative;
+			padding-left: 14px;
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: 4px;
+				height: 4px;
+				background: $primary;
+				top: calc(50% - 2px);
+				left: 0px;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 14px;
+				bottom: 0px;
+				width: calc(100% - 14px);
+				height: 1px;
+				background: #333;
+				opacity: 0.8;
+				transition: all 0.5s;
+			}
+
+			&:hover {
+				&::before {
+					width: 0px;
+					opacity: 0;
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+	}
+}

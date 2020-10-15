@@ -1,0 +1,104 @@
+.second-screen {
+	transform: translate(0,-50%);
+	position: relative;
+	z-index: 2;
+	
+	&__wrap {
+		display: flex;
+		height: 400px;
+		width: 50%;
+		margin-left: auto;
+		position: relative;
+	}
+
+	&__left {
+		width: 50%;
+		background: linear-gradient(-135deg, #0ce079 35.06%, #00e676b5 85.25%);
+		position: relative;
+		> div {
+			padding-bottom: 100%;
+		}
+
+		.second-screen__part-content {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			.btn {
+				line-height: 52px;
+			}
+		}
+
+		&::after {
+			content: "";
+			color: $primary;
+			width: 70%;
+			left: 15%;
+			bottom: 0px;
+			position: absolute;
+			box-shadow: 0px 0px 40px 10px;
+			opacity: 0.6;
+			z-index: -1;
+			transition: all 0.2s;
+		}
+
+	}
+
+	&__right {
+		width: 50%;
+		background: $bg;
+		position: relative;
+
+
+		&::after {
+			content: "";
+			color: rgba(120,120,120,0.1);
+			width: 70%;
+			left: 15%;
+			bottom: 0px;
+			position: absolute;
+			box-shadow: 0px 0px 40px 15px;
+			z-index: -1;
+			transition: all 0.2s;
+		}
+
+
+
+		> div {
+			padding-bottom: 100%;
+		}
+
+		.second-screen__part-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__part-content {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		padding: 50px;
+	}
+
+	&__title {
+		font-weight: 900;
+		font-size: 31px;
+		color: #000;
+		line-height: 1.25;
+		margin-bottom: 15px;
+		span {
+			color: #f9f9f9;
+		}
+	}
+
+	&__text {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.3;
+		margin-bottom: 30px;
+	}
+}

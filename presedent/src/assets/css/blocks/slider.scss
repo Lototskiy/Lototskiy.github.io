@@ -1,0 +1,130 @@
+.slider {
+	&__slide {
+		
+		display: none;
+		
+		&--active {
+			display: flex;
+		}
+
+
+		
+		> *:not(.slider__round1):not(.slider__round2) {
+			transition: opacity 1s;
+			opacity: 0;
+		}
+
+		// &--opacity00 {
+		// 	> *:not(.slider__round1):not(.slider__round2) {
+		// 		opacity: 0;
+		// 	}
+		// }
+
+		&--opacity1 {
+			display: flex;
+			> *:not(.slider__round1):not(.slider__round2) {
+				opacity: 1;
+			}
+		}
+
+		&--opacity0 {
+			> *:not(.slider__round1):not(.slider__round2) {
+				opacity: 0;
+			}
+
+			.slider__round2 {
+				animation: rotateSlideRound 1s;
+			}
+		}
+	}
+
+	&__round1 {
+		content: "";
+		position: absolute;
+		width: 320px;
+		height: 320px;
+		border-radius: 50%;
+		background: #fff;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		z-index: -2;
+
+		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05);
+	}
+
+	&__round2 {
+		content: "";
+		position: absolute;
+		width: 290px;
+		height: 290px;
+		border-radius: 50%;
+		background: linear-gradient(110deg, #4f8cf721 35.06%, #4f8cf7 85.25%);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		z-index: -1;
+
+		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05);
+	}
+
+	&__navigation {
+		position: absolute;
+		top: calc( 100% + 10px );
+		font-weight: 400;
+		font-size: 32px;
+		display: flex;
+		align-items: center;
+
+		span {
+			margin: 0px 10px;
+
+			em {
+				font-style: normal;
+				font-size: 22px;
+				padding-right: 5px;
+				display: inline-block;
+				position: relative;
+				bottom: 1px;
+			}
+		}
+
+		&-arrow {
+			width: 36px;
+			height: 36px;
+			margin-top: 2px;
+			border: 1px dashed $primary;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: background 0.5s;
+			&--prev {
+				transform: rotate(180deg);
+			}
+
+			&:hover {
+				background: $primary;
+				svg {
+					fill: #fff !important;
+				}
+			}
+		}
+
+		svg {
+			width: 60%;
+			fill: $primary !important;
+			margin-left: 2px;
+			transition: fill 0.5s;
+		}
+	}
+}
+
+
+
+@keyframes rotateSlideRound {
+	100% {
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}

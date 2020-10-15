@@ -1,0 +1,166 @@
+.inputs {
+
+	input {
+		border: none;
+		line-height: 52px;
+		width: 100%;
+		&:not([type='submit']) {
+			padding-left: 50px;
+			padding-right: 15px;
+			background: #fff;
+			font-weight: 300;
+			&::-webkit-input-placeholder {color: rgba(0,0,0,1)}
+			&::-moz-placeholder          {color: rgba(0,0,0,1)}/* Firefox 19+ */
+			&:-moz-placeholder           {color: rgba(0,0,0,1)}/* Firefox 18- */
+			&:-ms-input-placeholder      {color: rgba(0,0,0,1)}
+		}
+		&[name='name'] {
+			background-image: url('~img/input1.svg');
+			background-repeat: no-repeat;
+			background-position: 20px center;
+		}
+
+		&[name='phone'] {
+			background-image: url('~img/input2.svg');
+			background-repeat: no-repeat;
+			background-position: 25px center;
+		}
+
+		&[name='email'] {
+			background-image: url('~img/input3.svg');
+			background-repeat: no-repeat;
+			background-position: 25px center;
+		}
+
+
+	}
+
+	textarea {
+		&[name='message'] {
+			background-image: url('~img/input4.svg');
+			background-repeat: no-repeat;
+			background-position: 25px center;
+		}
+		resize: none;
+		padding-top: 20px;
+		padding-left: 50px;
+		padding-right: 15px;
+		margin-right: 20px;
+		background: #fff;
+		font-weight: 300;
+		&::-webkit-input-placeholder {color: rgba(0,0,0,1)}
+		&::-moz-placeholder          {color: rgba(0,0,0,1)}/* Firefox 19+ */
+		&:-moz-placeholder           {color: rgba(0,0,0,1)}/* Firefox 18- */
+		&:-ms-input-placeholder      {color: rgba(0,0,0,1)}
+	}
+
+	&__wrap {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		&::after {
+			content: "";
+			color: rgba(0,0,0,0.15);
+			width: 70%;
+			left: 15%;
+			bottom: 0px;
+			position: absolute;
+			box-shadow: 0px 0px 25px 5px;
+			opacity: 0.6;
+			z-index: -1;
+			transition: all 0.2s;
+		}	
+	}
+
+	&__accept {
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		margin: 23px 0px;
+		@media screen and ( max-width: 1200px ) {
+			font-size: 14px;
+		}
+		&-check {
+			width: 18px;
+			height: 18px;
+			border: 2px solid $primary;
+			border-radius: 4px;
+			flex-shrink: 0;
+			margin-right: 12px;
+			position: relative;
+			transition: all 0.3s;
+			cursor: pointer;
+			.inputs--white & {
+				border-color: #fff;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: all 0.3s;
+				background: $primary url('~img/check.svg') no-repeat center / 10px;
+			}
+
+			.inputs__accept--active & {
+				border-color: $primary;
+				&::before {
+					opacity: 1;
+				}
+
+				.inputs--white & {
+					border-color: #fff;
+				}
+			}
+		}
+
+		&-content {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			span {
+				opacity: 0.5;
+				font-size: 14px;
+				transition: all 0.3s;
+				.inputs__accept--active & {
+					opacity: 1;
+				}
+			}
+
+			p {
+				text-transform: uppercase;
+				font-weight: 600;
+				opacity: 0.7;
+				transition: all 0.5s;
+				cursor: pointer;
+				position: relative;
+				.inputs__accept--active & {
+					opacity: 1;
+				}
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0px;
+					bottom: 0px;
+					width: 100%;
+					border-bottom: 1px solid #000;
+					opacity: 0.5;
+					transition: width 0.5s, opacity 0.5s;
+				}
+				&:hover {
+					&::before {
+						width: 0px;		
+						opacity: 0;
+						border-bottom: 2px solid;
+					}	
+				}
+			}
+		}
+
+	}	
+
+}

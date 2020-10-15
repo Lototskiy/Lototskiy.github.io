@@ -1,0 +1,156 @@
+.sales {
+	background: $bg;
+	position: relative;
+	padding-top: calc( 100px + 90px + 90px );
+	padding-bottom: 90px;
+	@media screen and ( max-width: 1200px ) {
+		padding: 50px 0px;
+	}
+	&__wrap {
+		background: #fff;
+		box-shadow: 0px 0px 1px rgba(210, 210, 210, 0.15), 0px 2px 6px rgba(210, 210, 210, 0.15), 0px 10px 15px rgba(210, 210, 210, 0.15);
+		padding: 90px 70px;
+		display: flex;
+		justify-content: space-between;
+		overflow: hidden;
+		@media screen and ( max-width: 1200px ) {
+			flex-direction: column-reverse;
+			padding: 30px 20px;
+		}
+	}
+
+	&__left {
+		width: calc( 50% - 20px );
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		.btn__wrap {
+			z-index: 2;
+		}
+		@media screen and ( max-width: 1200px ) {
+			width: 100%;
+		}
+	}
+
+	&__right {
+		width: calc(  50% - 20px );
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		@media screen and ( max-width: 1200px ) {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__title {
+		font-weight: 800;
+		font-size: 30px;
+		line-height: 1.2;
+		color: $gray-d;
+		margin-bottom: 30px;
+		@media screen and ( max-width: 1200px ) {
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 1.2;
+		margin-bottom: 40px;
+		position: relative;
+		padding-left: 30px;
+		@media screen and ( max-width: 1200px ) {
+			font-size: 16px;
+			margin-bottom: 25px;
+			padding-left: 0px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			background: url(http://localhost:8081/assets/images/list.svg) no-repeat;
+			background-size: contain;
+			left: 0px;
+			top: calc( 50% - 10px );
+			@media screen and ( max-width: 1200px ) {
+				display: none;
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 30px;
+		box-shadow: 0px 0px 1px rgba(210, 210, 210, 0.15), 0px 2px 6px rgba(210, 210, 210, 0.15), 0px 10px 20px rgba(210, 210, 210, 0.15);
+		margin-bottom: 30px;
+		width: 100%;
+
+		@media screen and ( max-width: 1200px ) {
+			padding: 20px;
+			margin-bottom: 20px;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&-title {
+			font-style: normal;
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 1.5;
+			color: #000;
+			@media screen and ( max-width: 1200px ) {
+				font-size: 18px;
+				line-height: 1.3;
+				margin-bottom: 5px;
+			}
+		}
+
+		&-price {
+			font-weight: bold;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			@media screen and ( max-width: 1200px ) {
+				flex-direction: row;
+				justify-content: space-between;
+				width: 100%;
+			}
+			p {
+				&:nth-child(1) {
+				font-size: 20px;
+					color: $red;
+					position: relative;
+					&::before {
+						content: "";
+						position: absolute;
+						top: 50%;
+						width: 100%;
+						height: 1px;
+						background: $red;
+					}
+				}
+
+				&:nth-child(2) {
+					font-size: 28px;
+				}
+
+				span {
+					font-size: 0.7em;
+				}
+			}
+		}
+	}
+
+	.slider-btns {
+		@media screen and ( min-width: 1200px ) {
+			justify-content: center;
+		}
+	}
+}

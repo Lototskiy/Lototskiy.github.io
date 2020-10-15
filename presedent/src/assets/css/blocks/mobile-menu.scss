@@ -1,0 +1,179 @@
+.mobile-menu {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	z-index: 99;
+	overflow: hidden;
+	background: rgba(111, 111, 111, 0.75);
+	display: none;
+	transition: all 0.5s;
+	opacity: 0;
+	touch-action: none;
+	&--active {
+		display: flex;
+	}
+
+	&--opacity0 {
+		opacity: 0;
+	}
+
+	&--opacity1 {
+		opacity: 1;
+	}
+	&__wrap {
+		background: #fff;
+		width: 300px;
+		height: 100%;
+		position: relative;
+		left: -300px;
+		transition: left 0.5s;
+		display: flex;
+		flex-direction: column;
+		overflow: auto;
+			
+		&--left0 {
+			left: 0px;
+		}
+		&--left300 {
+			left: -300px;
+		}
+	}
+	&__header {
+		height: 50px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	&__phone {
+		font-size: 20px;
+		text-decoration: none;
+		text-align: center;
+		width: 100%;
+		display: block;
+		border-top: 1px solid $line;
+		line-height: 54px;
+		font-weight: 600;
+		color: $gray-d;
+		span {
+			padding-left: 25px;
+			background: url('~img/phone--gray.svg') no-repeat left center / 18px;
+		}
+	}
+
+	&__title {
+		font-size: 14px;
+		text-transform: uppercase;
+		padding-left: 20px;
+	}
+
+	&__act {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+	}
+
+	&__nav {
+		padding: 0px 15px;
+		padding-bottom: 0px;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: auto;
+		
+		&-link {
+			font-size: 14px;
+			font-weight: 600;
+			margin-bottom: 15px;
+			color: #333;
+			display: block;
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+		.toogles__item {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 20px;
+			&-title {
+				font-weight: 600;
+				color: #333;
+				font-size: 18px;
+				margin-right: auto;
+				position: relative;
+				padding-right: 20px;
+				&::before {
+					content: "";
+					position: absolute;
+					width: 12px;
+					height: 12px;
+					right: 0px;
+					top: calc( 50% - 6px );
+					transform: rotate(90deg);
+					background: url('~img/tab-arrow.svg') no-repeat center/ contain;
+				}
+			}
+
+			&--active .toogles__item-title::before {
+						transform: rotate(-90deg);
+			}
+			&-content {
+				padding: 15px 20px;
+				padding-bottom: 0px;
+			}
+		}
+	}
+
+	&__link {
+		font-size: 18px;
+		margin-bottom: 15px;
+		font-weight: 600;
+		color: #333;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+
+		&--small {
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+
+	}
+
+	.socials {
+		border-top: 1px solid $line;
+		display: flex;
+		padding: 10px 0px;
+		align-items: center;
+	}
+
+	.btn__wrap {
+		margin: 30px 30px;
+		+ .btn__wrap {
+			margin-top: -20px;
+		}
+
+	}
+
+	&__lang {
+		width: 50%;
+		text-align: center;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
+		font-size: 14px;
+		&--active {
+			background: $line;
+		}
+		&:nth-child(1) {
+			border-right: 1px solid $line;
+		}
+	}
+
+}

@@ -1,0 +1,291 @@
+.services {
+	padding: 90px 0px;
+	margin-top: 90px;
+	@media screen and ( max-width: 1200px ) {
+		padding: 50px 0px;
+		margin-top: 50px;
+	}
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: -30px;
+	}
+
+	&__item {
+		width: calc( ( 100% - 30px * 1  ) / 2 );
+		background: #fff;
+		margin-bottom: 30px;
+		position: relative;
+		cursor: pointer;
+		transition: all 0.3s;
+		border: 1px solid rgba(30,30,30,0.02);
+		display: flex;
+		@media screen and ( max-width: 1200px ) {
+			width: 100%;
+		}
+
+		&:nth-child(1),
+		&:nth-child(4),
+		&:nth-child(5),
+		&:nth-child(8) {
+			background: #E7F0FF;
+			&::after {
+				color: #E7F0FF;
+			}
+		}
+
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(6),
+		&:nth-child(7) {
+			background: #F9FCFE;
+			&::after {
+				color: #F9FCFE;
+			}
+		}
+
+
+		&.animated::after {
+			content: "";
+			width: 70%;
+			left: 15%;
+			bottom: 0px;
+			position: absolute;
+			box-shadow: 0px 0px 30px 12px;
+			z-index: -1;
+			transition: all 0.2s;
+			opacity: 0;
+			animation: shadowOpacity 2s 0.5s;
+			animation-fill-mode: forwards !important;
+		}
+
+		&-wrap {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row-reverse;
+			padding: 50px;
+			padding-bottom: 60px;
+			overflow: hidden;
+			position: relative;
+			flex-grow: 1;
+			@media screen and ( max-width: 1200px ) {
+				padding: 30px 20px;
+				flex-direction: column;
+			}
+		}
+
+		&:last-child {
+			&::before {
+				top: auto;
+				bottom: 100px;
+			}
+		}
+
+
+		&-content {
+			margin-right: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		
+		&-title {
+			font-family: "Geometria";
+			font-weight: 800;
+			font-size: 26px;
+			margin-bottom: 10px;
+			cursor: pointer;
+			position: relative;
+			transition: all 0.5s; 
+			@media screen and ( max-width: 1200px ) {
+				font-size: 20px;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				width: 0%;
+				height: 3px;
+				background: $primary;
+				opacity: 0;
+				transition: all 0.5s;
+			}
+		}
+
+		&-text {
+			margin-bottom: 40px;
+			line-height: 1.4;
+			color: #777;
+			font-weight: 300;
+			font-size: 17px;
+			line-height: 22px;
+			@media screen and ( max-width: 1200px ) {
+				font-size: 16px;
+				margin-bottom: 30px;
+			}
+		}
+
+		&-list {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 20px;
+			font-family: "Geometria";
+			@media screen and ( max-width: 1200px ) {
+				font-size: 16px;
+			}
+		}
+
+
+		&-img {
+			position: absolute;
+			display: flex;
+			justify-content: flex-end;
+			right: 20px;
+			bottom: 0px;
+			top: 20px;
+			width: 50%;
+			height: calc( 100% - 40px );
+
+			.services__item:nth-child(2) & {
+				justify-content: center;
+				right: 0px;
+				> div {
+					margin-bottom: auto;
+				}
+			}
+
+			.services__item:nth-child(3) & {
+				> div {
+					margin-bottom: 30px;
+				}
+			}
+
+			.services__item:nth-child(4) & {
+				right: 60px;
+			}
+
+			.services__item:nth-child(5) & {
+				right: 60px;
+			}
+
+			@media screen and ( max-width: 1200px ) {
+				position: static;
+				width: 100%;
+				height: auto;
+				align-items: center;
+				justify-content: center;
+			}
+			> div:not(.anim) {
+				margin-top: auto;
+				@media screen and ( max-width: 1200px ) {
+					margin-right: 0px;
+					img {
+						max-width: 100%;
+					}
+				}
+			}
+
+			.anim {
+				&1 {
+					width: 58%;
+					margin-right: 10px;
+					margin-top: auto;
+					
+				}
+
+				&2 {
+					width: 85%;
+					margin-top: auto;
+					margin-bottom: 30px !important;
+					
+				}
+			}
+
+
+		}
+	}
+
+	&__slider {
+
+		&-stupet {
+			display: flex;
+			justify-content: flex-end;
+			animation: stupet 1.5s infinite;
+			svg {
+				fill: $primary;
+			}
+			&--top {
+				margin-bottom: 20px;
+			}
+
+			&--bot {
+				margin-top: 20px;
+			}
+		}
+
+		&-bottom {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0px 12%;
+		}
+
+
+		@keyframes stupet {
+			0% {
+				transform: translate3d(-20px,0,0);
+				opacity: 0;
+			}
+			10% {
+				transform: translate3d(-20px,0,0);
+				opacity: 0;
+			}
+			20% {
+				transform: translate3d(-20px,0,0);
+				opacity: 0.7;
+			}
+			70% {
+				transform: translate3d(0,0,0);
+				opacity: 0.7;
+			}
+			80% {
+				transform: translate3d(0,0,0);
+				opacity: 0.7;
+			}
+			81% {
+				transform: translate3d(0,0,0);
+				opacity: 0;
+			}
+			100% {
+				transform: translate3d(0,0,0);
+				opacity: 0;
+			}
+		}
+
+
+		.center-wrap {
+			padding: 0px;
+			max-width: 600px;
+		}
+
+		.swiper {
+			&-container {
+				margin: -30px 0px;
+				padding: 30px 12%;
+			}
+
+			&-slide {
+				display: flex;
+			}
+		}
+
+		.services__item {
+			flex-grow: 1;
+			margin-bottom: 0px;
+			display: flex;
+			align-items: center;
+		}
+	}
+}
