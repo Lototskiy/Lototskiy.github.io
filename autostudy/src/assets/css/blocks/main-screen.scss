@@ -1,0 +1,152 @@
+.main-screen {
+    position: relative;
+    padding-top: 250px;
+    padding-bottom: 318px;
+    overflow-X: hidden;
+
+    @media screen and (max-width:1100px) {
+        padding-top: 208px;
+        padding-top: 170px;
+        padding-bottom: 65px;
+    }
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__content {
+        @media screen and (max-width:1100px) {
+            text-align: center;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        z-index: 5;
+        pointer-events: none;
+        width: 100%;
+        position: absolute;
+        bottom: 50px;
+        left: 870px;
+        max-width: 1300px;
+
+        @media screen and (max-width:1600px) {
+            left: 760px;
+        }
+
+        @media screen and (max-width:1400px) {
+            left: 660px;
+        }
+
+        @media screen and (max-width:1300px) {
+            left: 560px;
+        }
+
+        @media screen and (max-width:1100px) {
+            max-width: 250px;
+            bottom: auto;
+            left: auto;
+            top: calc(50%);
+            transform: translateY(-50%);
+            right: 0;
+        }
+
+        @media screen and (max-width:450px) {
+            right: -100px;
+        }
+
+        &--mobile {
+            max-width: 309px;
+            width: 100%;
+            margin: 0 auto 25px;
+        }
+    }
+
+    &__title {
+        width: 100%;
+        margin-bottom: 57px;
+        max-width: 845px;
+
+        #mother & {
+            max-width: 910px;
+            @media screen and (max-width:1500px) {
+                max-width: 875px;
+            }
+            @media screen and (max-width:1100px) {
+                max-width: 285px;
+            }
+        }
+
+        #student & {
+            max-width: 680px;
+
+            @media screen and (max-width:1100px) {
+                max-width: 255px;
+            }
+        }
+
+        #instr & {
+            max-width: 923px;
+
+            @media screen and (max-width:1500px) {
+                max-width: 630px;
+            }
+
+            @media screen and (max-width:1100px) {
+                max-width: 280px;
+            }
+        }
+
+        @media screen and (max-width:1100px) {
+            margin: 0 auto 24px;
+            max-width: 330px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 72px;
+
+        @media screen and (max-width:1100px) {
+            font-size: 18px;
+            line-height: 21/18*1;
+            max-width: 253px;
+            width: 100%;
+            margin: 0 auto 270px;
+        }
+    }
+
+    &__left {
+        @media screen and (max-width:1100px) {
+            text-align: center;
+        }
+    }
+
+    &__right {
+        position: relative;
+    }
+
+    &__sign {
+        max-width: 360px;
+        width: 100%;
+        position: absolute;
+        top: calc(100% - 113px);
+        left: 233px;
+
+        &--filter {
+            position: absolute;
+            left: 60%;
+            bottom: calc(100% + 20px);
+            top: auto;
+            z-index: 2;
+            max-width: 150px;
+            width: 100%;
+
+            @media screen and (max-width:1100px) {
+                max-width: 80px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+    }
+}

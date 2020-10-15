@@ -1,0 +1,57 @@
+.location {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    line-height: 33px;
+    padding: 0 15px;
+
+    .header--fixed & {
+        margin-left: auto;
+        margin-right: 50px;
+    }
+
+    &__img {
+        max-width: 64px;
+        width: 100%;
+        margin-right: 15px;
+
+        .header--fixed & {
+            max-width: 47px;
+        }
+    }
+
+    &__question {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 28/22*1;
+
+        &-text {
+            font-size: 18px;
+            line-height: 23/18*1;
+
+            span {
+                cursor: pointer;
+                &.active {
+                    #student & {
+                        color: #8941FF;
+                    }
+
+                    #instr & {
+                        color: #FFA841;
+                    }
+
+                    #mother & {
+                        color: #FF86F3;
+                    }
+                }
+
+                margin-right: 20px;
+
+                &:last-child {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}

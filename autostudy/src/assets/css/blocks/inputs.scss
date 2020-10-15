@@ -1,0 +1,71 @@
+.inputs {
+    width: 100%;
+
+    &__field {
+        width: 100%;
+        border: none;
+        line-height: 67px;
+        display: inline-block;
+        border-radius: 100px;
+        padding: 0 41px;
+        font-weight: 600;
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 55px;
+        background: inherit;
+        border: 1px solid #F6F6F6;
+        color: #fff;
+        transition: all 0.5s;
+
+        &--size {
+            width: 100%;
+            border:none;
+
+            #instr & {
+                &:hover {
+                    color: #F6F6F6;
+                    background-color: #FFA841;
+                }
+            }
+            #student & {
+                &:hover {
+                    color: #F6F6F6;
+                    background-color: rgba(137, 65, 255, 1);
+                }
+            }
+            #mother & {
+                &:hover {
+                    color: #F6F6F6;
+                    background-color: #FF86F3;
+                }
+            }
+
+        }
+
+        &:focus {
+            #student & {
+                border: 1px solid #8941FF;
+            }
+
+            #mother & {
+                border: 1px solid #FF86F3;
+            }
+
+            #instr & {
+                border: 1px solid #FFA841;
+            }
+
+        }
+
+        @media screen and (max-width:1100px) {
+            line-height: 43px;
+            font-size: 20px;
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+
+        @media screen and (max-width:450px) {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,144 @@
+.socials-links {
+    display: flex;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(0deg, #29292f 20%, rgba(41, 41, 47, 0) 75%);
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    &--fixed {
+        flex-direction: column;
+        position: fixed;
+        right: calc(((100% - 1340px) / 2) / 2);
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+
+        .socials-links__link+.socials-links__link {
+            margin: 50px 0 0 0;
+        }
+    }
+
+    &--column {
+        display: inline-block;
+
+        .socials-links__link+.socials-links__link {
+            margin: 50px 0 0 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: relative;
+
+        &:hover {
+            svg.normal {
+                opacity: 0;
+            }
+
+            svg.active {
+                opacity: 1;
+            }
+        }
+
+        .mobile-menu & {
+            width: 40px;
+            height: 40px;
+        }
+
+        .header--fixed & {
+            width: 50px;
+            height: 50px;
+        }
+
+        svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            &.active {
+                opacity: 0;
+                transition: opacity 0.5s;
+            }
+
+            &.normal {
+                opacity: 1;
+                transition: opacity 0.5s;
+            }
+
+            transition: all .1s;
+
+            #shape {
+                fill: #29292F;
+
+                .mobile-menu & {
+                    fill: #fff;
+                }
+            }
+
+            #student & {
+                fill: #8941FF;
+
+                #shape {
+                    stroke: #8941FF;
+                }
+            }
+
+            #mother & {
+                fill: #FF86F3;
+
+                #shape {
+                    stroke: #FF86F3;
+                }
+            }
+
+            #instr & {
+                fill: #FFA841;
+
+                #shape {
+                    stroke: #FFA841;
+                }
+            }
+
+        }
+
+        &+.socials-links__link {
+            margin: 0 0 0 50px;
+
+            @media screen and (max-width:1500px) {
+                margin: 0 0 0 25px;
+            }
+
+            @media screen and (max-width:1100px) {
+                margin: 0 0 0 14px;
+            }
+        }
+
+
+
+        &--telegram {
+            svg {
+                // width: 27px;
+            }
+        }
+
+        &--instagram {
+            svg {}
+
+        }
+    }
+}
