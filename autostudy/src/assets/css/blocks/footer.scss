@@ -1,0 +1,94 @@
+.footer {
+	padding: 105px 0;
+	z-index: 10;
+	position: relative;
+
+	@media screen and (max-width:1200px) {
+		padding: 22px 0 31px;
+	}
+
+	&__logo {
+		max-width: 400px;
+		width: 100%;
+
+		@media screen and (max-width:1200px) {
+			width: 123px;
+			margin-bottom: 15px;
+		}
+
+	}
+
+	&-wrap {
+		max-width: 1515px;
+		padding: 0 15px;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@media screen and (max-width:1500px) {
+			max-width: 1200px;
+			width: 100%;
+		}
+
+		@media screen and (max-width:1200px) {
+			max-width: 450px;
+			width: 100%;
+			flex-direction: column;
+		}
+
+	}
+
+	&__tel {
+		font-weight: 600;
+		font-size: 40px;
+		line-height: 50/40*1;
+
+		letter-spacing: -0.04em;
+		color: #F6F6F6;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+		@media screen and (max-width:1500px) {
+			font-size: 40px;
+		}
+
+		@media screen and (max-width:1200px) {
+			font-size: 14px;
+		}
+	}
+
+	&__confidentiality {
+		line-height: 24/20*1;
+		font-size: 20px;
+		color: #F6F6F6;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		position: relative;
+
+		@media screen and (max-width:1500px) {
+			font-size: 20px;
+		}
+
+		@media screen and (max-width:1200px) {
+			font-size: 14px;
+			margin-bottom: 17px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0px;
+			bottom: -1px;
+			width: 100%;
+			height: 1px;
+			background: #F6F6F6;
+			opacity: 1;
+			transition: all 0.5s;
+		}
+
+		&:hover::before {
+			width: 0%;
+			opacity: 0;
+		}
+	}
+}

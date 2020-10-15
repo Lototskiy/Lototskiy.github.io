@@ -1,0 +1,92 @@
+.popup-form {
+    text-align: center;
+    overflow: hidden;
+
+    &:hover {
+        overflow-y: auto;
+    }
+
+    &::-webkit-scrollbar {
+        appearance: none;
+        width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background-color: #2C2C2C;
+    }
+
+    &-title {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 47/36*1;
+        margin: 0 auto 20px;
+        letter-spacing: -0.04em;
+        color: #F6F6F6;
+
+        @media screen and (max-width: 1100px) {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width:450px) {
+            font-size: 22px;
+        }
+    }
+
+    &-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    &-subtitle {
+        max-width: 315px;
+        width: 100%;
+        margin: 0 auto 94px;
+        font-size: 20px;
+        line-height: 24/20*1;
+
+        @media screen and (max-width: 1100px) {
+            margin: 0 auto 54px;
+
+        }
+    }
+
+    &-text {
+        text-align: left;
+
+        @media screen and (max-width:1100px) {
+            font-size: 16px;
+        }
+
+        P {
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    &-btn {
+        width: 100%;
+        color: rgba(246, 246, 246, 0.3);
+        border: 1px solid #F6F6F6;
+        margin-bottom: 55px;
+
+
+        @media screen and (max-width:1100px) {
+            margin-bottom: 30px;
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        &:hover {
+            border: none;
+            line-height: 81px;
+            color: rgba(246, 246, 246, 1);
+        }
+    }
+}

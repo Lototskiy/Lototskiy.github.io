@@ -1,0 +1,83 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    color: #F6F6F6;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin: 0 10px;
+
+    @media screen and (max-width:1100px) {
+        position: absolute;
+        bottom: 175px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    &:hover {
+        box-shadow: 0px 10px 30px rgba(150, 86, 255, 0.3);
+
+        .tooltip__text {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    #mother & {
+        background: #FF86F3;
+        border: 1.5px solid #FF86F3;
+    }
+
+    #student & {
+        background: #8941FF;
+        border: 1.5px solid #8941FF;
+    }
+
+    &__text {
+        visibility: hidden;
+        font-family: 'IBM Plex Sans', sans-serif;
+        opacity: 0;
+        width: 318px;
+        border-radius: 10px;
+        font-size: 12px;
+        line-height: 16/12*1;
+        color: #F6F6F6;
+        padding: 13px 16px;
+        bottom: calc(100% + 18px);
+        transition: all 0.5s;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        @media screen and (max-width:1100px) {
+        width: 295px;
+        }
+        #mother & {
+            background: #FF86F3;
+        }
+
+        #student & {
+            background: #8941FF;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -10px;
+            border-width: 10px;
+            border-style: solid;
+            
+            #mother & {
+                border-color: #FF86F3 transparent transparent transparent;
+            }
+    
+            #student & {
+                border-color: #8941FF transparent transparent transparent;
+            }
+        }
+    }
+}
