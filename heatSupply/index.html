@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Новый уровень</title>
+    <meta name="theme-color" content="#3D4356">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600&amp;family=PT+Sans:wght@400;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
+  <link href="assets/css/app.css" rel="stylesheet"></head>
+  <body id="index-page">
+<header class="header">
+  <div class="center-wrap">
+    <div class="header__wrap anchors"><a class="header__logo" href="main-screen"><img src="assets/images/logo.png" alt=""></a>
+      <nav class="header__nav mobile--hide">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a class="header__nav-link" href="about">О компании</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="services">Услуги</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="builders">Строителям</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="reviews">Oтзывы</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="faq">Частые вопросы</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="contact">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__phone mobile--hide"><a href="tel: +73422032012" data-anchors="false">+7(342)203-20-12</a></div>
+      <div class="header__burger desktop--hide">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div><a class="header__phone desktop--hide" href="tel: 79999999999" data-anchors="false">
+        <svg viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.4001 14.7289C17.1756 14.7289 15.9733 14.514 14.834 14.0916C14.2757 13.8779 13.5894 14.0739 13.2487 14.4666L10.9999 16.3712C8.39191 14.8093 6.78546 13.0075 5.41233 10.1034L7.05999 7.64605C7.48806 7.16641 7.6416 6.46576 7.45764 5.80836C7.07952 4.52335 6.88744 3.17506 6.88744 1.80064C6.88749 0.80776 6.16754 0 5.28264 0H1.60973C0.724831 0 0.00488281 0.80776 0.00488281 1.80059C0.00488281 13.181 8.25686 22.4394 18.4001 22.4394C19.285 22.4394 20.0049 21.6316 20.0049 20.6388V16.5294C20.0049 15.5367 19.2849 14.7289 18.4001 14.7289Z"> </path>
+        </svg></a>
+    </div>
+  </div>
+</header>
+<section class="main-screen" id="main-screen">
+  <div class="center-wrap">
+    <h2 class="main-screen__title">
+      Системы автоматического погодного регулирования теплоснабжения 
+      и индивидуальные тепловые пункты
+    </h2>
+    <h3 class="main-screen__subtitle">В Перми по низким ценам в рассрочку</h3>
+    <div class="main-screen__btn">
+      <div class="btn" onclick="show_popup(&quot;request&quot;)">Оставить заявку</div>
+    </div>
+  </div>
+  <div class="main-screen__img"><img src="assets/images/main-screen__img.png" alt=""></div>
+  <div class="main-screen__row">
+    <div class="main-screen__item main-screen__item--left anchors">
+      <div class="main-screen__item-title">
+        <p>Системы автоматического погодного регулирования теплоснабжения и индивидуальные тепловые пункты</p>
+      </div><a class="link" href="services">Наши услуги</a>
+    </div>
+    <div class="main-screen__item main-screen__item--center anchors">
+      <div class="main-screen__item-title">
+        <p>Более 100 систем установлено на объектах в Перми</p>
+      </div><a class="link" href="about">О компании</a>
+    </div>
+    <div class="main-screen__item main-screen__item--right">
+      <div class="main-screen__item-title">
+        <p>Вернуть до 80% затрат на ИТП</p>
+      </div>
+      <div class="link" onclick="show_popup(&quot;info1&quot;)">Подробнее</div>
+    </div>
+  </div>
+</section>
+<section class="about" id="about">
+  <div class="center-wrap">
+    <div class="about__wrap">
+      <div class="about__row">
+        <div class="about__text about__text--left">
+          <p>
+             ООО "Новый уровень" — <br>
+            это общедомовые приборы учёта <br>
+            отопления и воды, монтаж, обслуживание,<br>
+            автоматика на отопление<br> 
+            и индивидуальные тепловые пункты.
+          </p>
+        </div>
+      </div>
+      <div class="about__row">
+        <div class="about__text about__text--right">
+          <p>
+            Мы работаем с 2013 года и за это время успешно<br> 
+            установили более 100 систем автоматики<br>
+            теплоснабжения и ИТП.<br> 
+            Нам доверяют обслуживание систем и узлов учёта<br>
+            тепловой энергии более 150<span class="desktop--hide"><br></span> многоквартирных домов<br>
+            Перми.<br> 
+            Мы предлагаем продукцию хорошего качества<br>
+            по доступным ценам.<br>
+            Предоставляем беспроцентную рассрочку<br>
+            до 6 месяцев.  
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="services" id="services">
+  <div class="center-wrap">
+    <h2 class="simple-title simple-title--color services__title">Наши услуги</h2>
+    <div class="grid">
+      <div class="grid__item" onclick="show_popup(&quot;request&quot;)">
+        <div class="grid__item-title">Индивидуальный тепловой пункт (ИТП)</div>
+        <div class="grid__item-text">Автоматизированное ИТП с пластинчатыми теплообменниками позволяет выставлять температуру отопления и горячей воды</div>
+        <div class="grid__item-bottom">
+          <p class="grid__item-price">от 300 000 р.</p>
+          <div class="link link--arrow">Подробнее</div>
+        </div>
+      </div>
+      <div class="grid__item" onclick="show_popup(&quot;request&quot;)">
+        <div class="grid__item-title">Узел учета тепловой энергии (УУТП)</div>
+        <div class="grid__item-text">Приборы учета на отопление и гвс/хвс.Проектные работы, согласования и ввод в эксплуатацию</div>
+        <div class="grid__item-bottom grid__item-bottom--row">
+          <p class="grid__item-price">от 130 000 р.</p>
+          <div class="link link--arrow">Подробнее</div>
+        </div>
+      </div>
+      <div class="grid__item" onclick="show_popup(&quot;request&quot;)">
+        <div class="grid__item-title">Обслуживание узла учета тепловой энергии</div>
+        <div class="grid__item-text">Снятие месячного отчета о теплопотреблении, контроль за сроками проверок, акты повторного допуска </div>
+        <div class="grid__item-bottom grid__item-bottom--row">
+          <p class="grid__item-price">от 500 р.</p>
+          <div class="link link--arrow">Подробнее</div>
+        </div>
+      </div>
+      <div class="grid__item" onclick="show_popup(&quot;request&quot;)">
+        <div class="grid__item-title">Обслуживание автоматики на отопление и ИТП</div>
+        <div class="grid__item-text">Техническое обслуживание оборудования, круглосуточная диспетчерская линия, дистанционное управление параметрами</div>
+        <div class="grid__item-bottom">
+          <p class="grid__item-price">от 1000 р.</p>
+          <div class="link link--arrow">Подробнее</div>
+        </div>
+      </div>
+      <div class="grid__item" onclick="show_popup(&quot;request&quot;)">
+        <div class="grid__item-title">Автоматка теплоснабжения (2 контур)</div>
+        <div class="grid__item-text">Система автоматического погодного регулирования отопления позволяет выровнять температуру по всему дому и сэкономить до 40%</div>
+        <div class="grid__item-bottom grid__item-bottom--row">
+          <p class="grid__item-price">от 200 000 р.</p>
+          <div class="link link--arrow">Подробнее</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="maintenance">
+  <div class="center-wrap">
+    <h4 class="maintenance__title">Настройка и обслуживание индивидуальных тепловых пунктов</h4>
+    <p class="maintenance__text">Если в вашем доме уже установлено ИТП, но имеются проблемы с отоплением или горячей водой, то мы сможем помочь их устранить, а наше обслуживание поможет не допускать этих проблем в будущем.</p>
+    <h4 class="maintenance__title">В стоимость обслуживания входит:</h4>
+    <div class="maintenance__list">
+      <div class="maintenance__item">
+        <div class="maintenance__item-title">Удалённое управление автоматикой в ИТП</div><span class="maintenance__item-icon" style="background-image: url(assets/images/bulb.svg);"></span>
+        <div class="maintenance__item-text">Установим модемы за свой счет и сможем следить за всеми параметрами удаленно в реальном времени</div>
+      </div>
+      <div class="maintenance__item">
+        <div class="maintenance__item-title">Круглосуточная диспетчерская</div><span class="maintenance__item-icon" style="background-image: url(assets/images/time.svg);"></span>
+        <div class="maintenance__item-text">Вы в любое время можете поднять температуру горячей воды или убавить отопление</div>
+      </div>
+      <div class="maintenance__item maintenance__item--opacity"></div>
+      <div class="maintenance__item">
+        <div class="maintenance__item-title">Переходы в летний/зимний режим автоматикой в ИТП</div><span class="maintenance__item-icon" style="background-image: url(assets/images/wheel.svg);"></span>
+      </div>
+      <div class="maintenance__item">
+        <div class="maintenance__item-title">Профилактические работы в летний период</div><span class="maintenance__item-icon" style="background-image: url(assets/images/tool.svg);"></span>
+      </div>
+      <div class="maintenance__item">
+        <div class="maintenance__item-title">Все работы с приборами учетаможно включить в обслуживание ИТП</div><span class="maintenance__item-icon" style="background-image: url(assets/images/money.svg);"></span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="application-form">
+  <div class="center-wrap">
+    <h2 class="simple-title application-form__title">Мы вам перезвоним!</h2>
+    <p class="application-form__subtitle">
+      Оставьте нам свои данные и мы свяжемся
+      с вами в ближайшие 30 минут!
+    </p>
+    <div class="application-form__form" autocomplete="off">
+      <form class="inputs" action="" autocomplete="off">
+        <div class="inputs__row">
+          <input class="inputs__field" type="text" name="text" required="" minlength="2" placeholder="Имя">
+          <input class="inputs__field" type="email" name="email" required="" placeholder="Почта">
+          <input class="inputs__field" type="tel" name="phone" required="" placeholder="Телефон">
+          <input class="btn" type="submit" value="Оставить заявку">
+        </div>
+        <div class="inputs__checkbox">
+          <input id="checkbox1" type="checkbox">
+          <label class="inputs__checkbox-label" for="checkbox1"></label>
+          <div class="inputs__privacy"><span></span>Даю согласие на обработку моих персональных данных</div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="application-form__img">
+    <div><img src="assets/images/application-form__img.png" alt=""></div>
+  </div>
+</section>
+<section class="information">
+  <div class="center-wrap">
+    <h2 class="simple-title simple-title--color information__title">Полезная информация</h2>
+    <div class="information__wrap">
+      <div class="information__item information__item--bg" onclick="show_popup(&quot;info1&quot;)"><img src="assets/images/information__img.png" alt="">
+        <p class="information__text">
+          Как вернуть до 80% затрат на ИТП на
+          счет капительного ремонта?
+        </p>
+      </div>
+      <div class="information__item" onclick="show_popup(&quot;info2&quot;)">
+        <p class="information__text">
+          Резульататы установки автоматики
+           на отопление или ИТП
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="builders" id="builders"><img class="builders__img" src="assets/images/builders__img.png" alt="">
+  <div class="center-wrap">
+    <h2 class="simple-title builders__title">Строителям</h2>
+    <p class="builders__subtitle">Посчитайте стоимость ИТП по нагрузкам</p>
+    <p class="builders__text">Мы обработаем вашу заявку в течение часа и отправим результаты на почту.Стоимость будет указана без учёта НДС.</p>
+    <div class="builders__form">
+      <div class="inputs" action="" autocomplete="off">
+        <div class="inputs__row">
+          <div class="inputs__field-wrap"><span class="inputs__content">Тепловые нагрузки</span>
+            <input class="inputs__field inputs__field--size" type="text" name="text" required="" minlength="2" placeholder="05 гал/час">
+          </div>
+          <div class="inputs__field-wrap"><span class="inputs__content">Температурный график</span>
+            <input class="inputs__field inputs__field--size" type="text" name="text" required="" minlength="2" placeholder="130/70">
+          </div>
+        </div>
+        <div class="inputs__row">
+          <div class="inputs__field-wrap"><span class="inputs__content">Количество этажей</span>
+            <input class="inputs__field inputs__field--size" type="text" name="text" required="" minlength="2" placeholder="0">
+          </div>
+          <div class="inputs__field-wrap"><span class="inputs__content">Количество подъездов</span>
+            <input class="inputs__field inputs__field--size" type="text" name="text" required="" minlength="2" placeholder="0">
+          </div>
+        </div>
+        <div class="inputs__row">
+          <div class="inputs__field-wrap"><span class="inputs__content">Почта для связи</span>
+            <input class="inputs__field inputs__field--size" type="email" name="email" required="" placeholder="email@email.ru">
+          </div>
+          <div class="inputs__field-wrap"><span class="inputs__content">Телефон для связи</span>
+            <input class="inputs__field inputs__field--size" type="tel" name="phone" required="" placeholder="+7 123 456-78-90">
+          </div>
+        </div>
+        <div class="inputs__row inputs__row--center">
+          <input class="btn inputs__field inputs__submit" type="submit" value="Оставить заявку">
+        </div>
+        <div class="inputs__checkbox inputs__checkbox--center">
+          <input id="checkbox2" type="checkbox">
+          <label class="inputs__checkbox-label" for="checkbox2"></label>
+          <div class="inputs__privacy"><span></span>Даю согласие на обработку моих персональных данных</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="reviews" id="reviews">
+  <div class="center-wrap">
+    <h2 class="simple-title reviews__title simple-title--color">Отзывы клиентов</h2>
+    <div class="reviews__list">
+      <div class="reviews__item reviews__item--right">
+        <p class="reviews__item-title">Андрей Сергеевич, председатель ТСЖ Ветеран.</p>
+        <p class="reviews__item-text">В нашем ТСЖ 3 дома: Васькина, 3, Васькина, 5 и Щербакова, 40. На первые два дома мы установили еще в 2018 году, остались довольны результатом: Третий дом очень длинный и в крайних подъездах не было никогда так тепло, при этом не надо самим ничего регулировать и поджимать. В этом году мы решили установить уже и на Щербакова, 40. Отопительный сезон ещё не начался, но мы уже уверены, что всё будет работать, как часы.</p>
+      </div>
+      <div class="reviews__item reviews__item--left">
+        <p class="reviews__item-title">Валентина Владимировна, председатель ТСЖ Парковый 45а.</p>
+        <p class="reviews__item-text">Установили автоматику вместе с новыми приборами учёта и лежанкой в 2017 году. За первый месяц (октябрь) заплатили за отопление на 170тр меньше, чем за октябрь 2016. В целом все вложения окупились за первый отопительный сезон, а это около 600тр.</p>
+      </div>
+      <div class="reviews__item reviews__item--right">
+        <p class="reviews__item-title">Вячеслав Васильевич, старший по дому Целинная, 17.</p>
+        <p class="reviews__item-text">Для нас главное было не столько получить экономию с помощью автоматики, сколько сделать так, чтобы во всём доме было тепло, ведь он у нас длинный, восемь подъездов и в угловых квартирах всегда было холоднее на 5 градусов, чем в середине дома. Автоматика справилась и при этом мы потребляем в среднем на 500 Гкал в год меньше. Очень довольны, что выбрали эту компанию.</p>
+      </div>
+      <div class="reviews__item reviews__item--left">
+        <p class="reviews__item-title">Зинаида Валентиновна, председатель ТСЖ Евгения Пермяка, 1.</p>
+        <p class="reviews__item-text">Сначала сильно скептически относилась к этой затее, но ребята меня смогли убедить и я не пожалела - платить стали гораздо меньше, дома тепло и если вдруг захочется добавить тепла, когда на улице слишком ветрено или дождь, то я звоню в диспетчерскую в любое время и в течение получаса становится теплее- у них всё делается с компьютера.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="faq" id="faq">
+  <div class="center-wrap">
+    <h2 class="simple-title simple-title--color faq__title">Ответы на частые вопросы</h2>
+    <div class="faq__list">
+      <div class="faq__item faq__item--active">
+        <h3 class="faq__item-title">Можно ли установить автоматику на отопление в наш старый дом?<span class="faq__item-arrow"><svg viewBox="0 0 10 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.07196 12.4934C9.07213 12.3491 9.03292 12.2107 8.96291 12.1086L0.747724 0.15256C0.599396 -0.0559738 0.362988 -0.0499618 0.219701 0.165909C0.0799497 0.376532 0.0799498 0.7104 0.219701 0.920972L8.1705 12.4933L0.218967 24.0646C0.0706386 24.2731 0.0665426 24.6171 0.209795 24.833C0.353082 25.0489 0.589455 25.0549 0.737818 24.8464C0.740934 24.842 0.743979 24.8376 0.74699 24.833L8.96217 12.8771C9.03226 12.7754 9.07171 12.6373 9.07196 12.4934Z" />
+</svg></span></h3>
+        <p class="faq__item-text">
+          Да, можно! В старых домах автоматика работает ничуть не хуже, чем в новых и не только помогает
+          экономить, но ещё и выравнивает среднюю температуру по дому. У вас больше не будет так, что в середине
+          дома в комнате 26 градусов, а в угловых 19 градусов.
+        </p>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__item-title">Можно ли использовать счёт капитального ремонта для оплаты?<span class="faq__item-arrow"><svg viewBox="0 0 10 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.07196 12.4934C9.07213 12.3491 9.03292 12.2107 8.96291 12.1086L0.747724 0.15256C0.599396 -0.0559738 0.362988 -0.0499618 0.219701 0.165909C0.0799497 0.376532 0.0799498 0.7104 0.219701 0.920972L8.1705 12.4933L0.218967 24.0646C0.0706386 24.2731 0.0665426 24.6171 0.209795 24.833C0.353082 25.0489 0.589455 25.0549 0.737818 24.8464C0.740934 24.842 0.743979 24.8376 0.74699 24.833L8.96217 12.8771C9.03226 12.7754 9.07171 12.6373 9.07196 12.4934Z" />
+</svg></span></h3>
+        <p class="faq__item-text">
+          Да, можно! Большинство новых договоров мы заключаем как раз с использованием счёта кап. ремонта. Мы
+          работаем по предоплате в 30%, а на оставшиеся 70% предлагаем беспроцентную рассрочку до 6 месяцев.
+        </p>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__item-title">Сколько времени занимает монтаж оборудования?<span class="faq__item-arrow"><svg viewBox="0 0 10 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.07196 12.4934C9.07213 12.3491 9.03292 12.2107 8.96291 12.1086L0.747724 0.15256C0.599396 -0.0559738 0.362988 -0.0499618 0.219701 0.165909C0.0799497 0.376532 0.0799498 0.7104 0.219701 0.920972L8.1705 12.4933L0.218967 24.0646C0.0706386 24.2731 0.0665426 24.6171 0.209795 24.833C0.353082 25.0489 0.589455 25.0549 0.737818 24.8464C0.740934 24.842 0.743979 24.8376 0.74699 24.833L8.96217 12.8771C9.03226 12.7754 9.07171 12.6373 9.07196 12.4934Z" />
+</svg></span></h3>
+        <p class="faq__item-text">
+          Большую часть времени (3-4 недели) занимает подготовительные работы: запрос технических условий в
+          теплоснабжающей организации, проектирование и согласование проекта, сам же монтаж проходит в 2 дня
+          - сварочные работы в первый день и электромонтажные во второй.
+        </p>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__item-title">Какие гарантии?<span class="faq__item-arrow"><svg viewBox="0 0 10 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.07196 12.4934C9.07213 12.3491 9.03292 12.2107 8.96291 12.1086L0.747724 0.15256C0.599396 -0.0559738 0.362988 -0.0499618 0.219701 0.165909C0.0799497 0.376532 0.0799498 0.7104 0.219701 0.920972L8.1705 12.4933L0.218967 24.0646C0.0706386 24.2731 0.0665426 24.6171 0.209795 24.833C0.353082 25.0489 0.589455 25.0549 0.737818 24.8464C0.740934 24.842 0.743979 24.8376 0.74699 24.833L8.96217 12.8771C9.03226 12.7754 9.07171 12.6373 9.07196 12.4934Z" />
+</svg></span></h3>
+        <p class="faq__item-text">Законодательство РФ обязывает нас давать гарантию на работы по кап. ремонту на 5 лет. А мы и не против!</p>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__item-title">Как начать с вами работать?<span class="faq__item-arrow"><svg viewBox="0 0 10 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.07196 12.4934C9.07213 12.3491 9.03292 12.2107 8.96291 12.1086L0.747724 0.15256C0.599396 -0.0559738 0.362988 -0.0499618 0.219701 0.165909C0.0799497 0.376532 0.0799498 0.7104 0.219701 0.920972L8.1705 12.4933L0.218967 24.0646C0.0706386 24.2731 0.0665426 24.6171 0.209795 24.833C0.353082 25.0489 0.589455 25.0549 0.737818 24.8464C0.740934 24.842 0.743979 24.8376 0.74699 24.833L8.96217 12.8771C9.03226 12.7754 9.07171 12.6373 9.07196 12.4934Z" />
+</svg></span></h3>
+        <p class="faq__item-text">
+          Оставьте заявку на new_area@mail.ru или позвоните по номеру 203-20-12. Мы сделаем бесплатное
+          обследование вашего дома и подготовим коммерческое предложение, затем вы на общедомовом собрании
+          наберёте две трети голосов за установку автоматики и на основании этого мы уже составим договор и
+          смету. Так же мы можем приехать на ваше собрание, чтобы ответить на все вопросы жильцов.
+        </p>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__item-title">Почему мы должны вам доверять?<span class="faq__item-arrow"><svg viewBox="0 0 10 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.07196 12.4934C9.07213 12.3491 9.03292 12.2107 8.96291 12.1086L0.747724 0.15256C0.599396 -0.0559738 0.362988 -0.0499618 0.219701 0.165909C0.0799497 0.376532 0.0799498 0.7104 0.219701 0.920972L8.1705 12.4933L0.218967 24.0646C0.0706386 24.2731 0.0665426 24.6171 0.209795 24.833C0.353082 25.0489 0.589455 25.0549 0.737818 24.8464C0.740934 24.842 0.743979 24.8376 0.74699 24.833L8.96217 12.8771C9.03226 12.7754 9.07171 12.6373 9.07196 12.4934Z" />
+</svg></span></h3>
+        <p class="faq__item-text">
+          Мы работаем уже 7 лет и стараемся сохранять репутацию и хорошие отношения с нашими клиентами. Но не
+          стоит верить нам на слово: мы подберем несколько ближайших к вам домов, где уже стоит наша система и
+          познакомим вас с председателями этих домов. Так же с некоторых домов мы сможем предоставить
+          ежемесячные отчёты с общедомовых приборов учёта до установки и после. Убедитесь в выгоде
+          предложения перед тем, как соглашаться!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="center-wrap">
+    <h2 class="simple-title simple-title--color contact__title">Контакты</h2>
+    <p class="contact__subtitle mobile--hide">Наши системы установлены по всей Перми</p>
+    <div class="contact__wrap">
+      <div class="contact__map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2112.423643896554!2d56.311311016020134!3d58.031456281223726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c6a7e509da89%3A0x4ecaa08e9b43d5da!2z0YPQuy4g0JvQuNGE0LDQvdC-0LLQsCwgNDEsINCf0LXRgNC80YwsINCf0LXRgNC80YHQutC40Lkg0LrRgNCw0LksINCg0L7RgdGW0Y8sIDYxNDAxNA!5e0!3m2!1suk!2sua!4v1599678614177!5m2!1suk!2sua" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+      <p class="contact__subtitle desktop--hide">Наши системы установлены по всей Перми</p>
+      <div class="contact__info">
+        <div class="contact__row"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M38.9504 30.8579L30.8542 25.4587C29.8268 24.779 28.4496 25.0027 27.69 25.9726L25.3317 29.0048C25.0286 29.4044 24.4777 29.5204 24.0392 29.2768L23.5906 29.0295C22.1035 28.2189 20.2531 27.2098 16.525 23.4803C12.7969 19.7509 11.7857 17.8991 10.9751 16.4147L10.7292 15.9661C10.4822 15.5278 10.596 14.9745 10.9958 14.669L14.0259 12.3114C14.9955 11.5517 15.2194 10.1749 14.5406 9.14714L9.14135 1.051C8.4456 0.00443778 7.04971 -0.309734 5.9726 0.337748L2.58709 2.37143C1.52334 2.99681 0.742912 4.00962 0.409446 5.19765C-0.80967 9.63965 0.107458 17.3059 11.4005 28.6002C20.3838 37.5828 27.0715 39.9985 31.6682 39.9985C32.7261 40.003 33.7798 39.8654 34.8011 39.5893C35.9893 39.2562 37.0023 38.4757 37.6273 37.4116L39.663 34.0281C40.3114 32.9508 39.9974 31.5541 38.9504 30.8579ZM38.5144 33.3442L36.4834 36.7297C36.0346 37.4977 35.3061 38.0624 34.4503 38.3055C30.3496 39.4313 23.1854 38.4988 12.3436 27.6571C1.50186 16.8153 0.569422 9.65168 1.69527 5.55033C1.93867 4.69359 2.50406 3.96408 3.27301 3.51462L6.65852 1.48359C7.12587 1.20238 7.73172 1.33869 8.03363 1.79284L10.9666 6.19617L13.4282 9.88828C13.723 10.3341 13.6262 10.9316 13.2056 11.2614L10.1747 13.6191C9.25235 14.3243 8.98895 15.6005 9.55684 16.6133L9.79751 17.0506C10.6494 18.613 11.7085 20.5567 15.5753 24.4228C19.4421 28.2889 21.3852 29.3481 22.9469 30.2L23.3848 30.4412C24.3975 31.0091 25.6737 30.7457 26.379 29.8234L28.7366 26.7925C29.0666 26.3722 29.6639 26.2754 30.1098 26.5699L38.2052 31.9691C38.6597 32.2707 38.796 32.8769 38.5144 33.3442Z" fill="url(#paint0_linear)"/>
+<path d="M22.6656 6.67C28.921 6.67695 33.9902 11.7463 33.9972 18.0017C33.9972 18.3698 34.2956 18.6682 34.6638 18.6682C35.0319 18.6682 35.3303 18.3698 35.3303 18.0017C35.3226 11.0103 29.657 5.34457 22.6656 5.33691C22.2974 5.33691 21.999 5.63531 21.999 6.00346C21.999 6.3716 22.2974 6.67 22.6656 6.67Z" fill="url(#paint1_linear)"/>
+<path d="M22.6656 10.6695C26.7131 10.6743 29.9931 13.9543 29.9978 18.0018C29.9978 18.3699 30.2963 18.6683 30.6644 18.6683C31.0325 18.6683 31.3309 18.3699 31.3309 18.0018C31.3254 13.2183 27.449 9.34189 22.6656 9.33643C22.2974 9.33643 21.999 9.63482 21.999 10.003C21.999 10.3711 22.2974 10.6695 22.6656 10.6695Z" fill="url(#paint2_linear)"/>
+<path d="M22.6656 14.6685C24.5053 14.6707 25.9962 16.1616 25.9984 18.0014C25.9984 18.3695 26.2969 18.6679 26.665 18.6679C27.033 18.6679 27.3315 18.3695 27.3315 18.0014C27.3285 15.4257 25.2413 13.3383 22.6656 13.3354C22.2974 13.3354 21.999 13.6338 21.999 14.002C21.999 14.3701 22.2974 14.6685 22.6656 14.6685Z" fill="url(#paint3_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="20" y1="0.00146484" x2="20" y2="39.9986" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="28.6647" y1="5.33691" x2="28.6647" y2="18.6682" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="26.665" y1="9.33643" x2="26.665" y2="18.6683" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="24.6653" y1="13.3354" x2="24.6653" y2="18.6679" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+</defs>
+</svg><a class="contact__text contact__text--tel" href="tel: +73422032012">+7(342)203-20-12</a>
+        </div>
+        <div class="contact__row"><svg viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M38 0.666504H2C0.895469 0.666504 0 1.56189 0 2.6665V29.3331C0 30.4377 0.895391 31.3331 2 31.3331H38C39.1045 31.3331 40 30.4378 40 29.3331V2.6665C40 1.56197 39.1046 0.666504 38 0.666504ZM38.6666 29.3332C38.6666 29.7014 38.3682 29.9999 38 29.9999H2C1.6318 29.9999 1.33336 29.7014 1.33336 29.3332V2.6665C1.33336 2.2983 1.6318 1.99986 2 1.99986H38C38.3682 1.99986 38.6666 2.2983 38.6666 2.6665V29.3332Z" fill="url(#paint0_linear)"/>
+<path d="M36.7246 3.33607C36.5484 3.32068 36.3733 3.37591 36.2379 3.48966L20.8578 16.4096C20.3618 16.8265 19.6378 16.8265 19.1418 16.4096L3.7619 3.48959C3.57948 3.33646 3.32917 3.29224 3.10534 3.37365C2.88151 3.45505 2.71808 3.64974 2.67667 3.88435C2.63526 4.11896 2.72214 4.35779 2.90456 4.51091L18.2846 17.4302C19.2758 18.2648 20.7239 18.2648 21.7153 17.4302L37.0952 4.51099C37.2307 4.39732 37.3153 4.23451 37.3307 4.05834C37.3461 3.88216 37.2909 3.70709 37.1771 3.5717C37.0635 3.43615 36.9007 3.35146 36.7246 3.33607Z" fill="url(#paint1_linear)"/>
+<path d="M12.8222 17.3383C12.5862 17.2856 12.3402 17.3648 12.1793 17.5453L2.84593 27.5453C2.67703 27.7183 2.615 27.9692 2.6839 28.2009C2.75281 28.4327 2.94179 28.609 3.17773 28.6616C3.41375 28.7143 3.65968 28.6351 3.82062 28.4546L13.154 18.4546C13.3229 18.2816 13.3849 18.0307 13.316 17.799C13.2471 17.5673 13.0582 17.3909 12.8222 17.3383Z" fill="url(#paint2_linear)"/>
+<path d="M27.8206 17.5453C27.6598 17.3648 27.4137 17.2856 27.1777 17.3383C26.9417 17.3909 26.7528 17.5673 26.6839 17.799C26.615 18.0308 26.677 18.2816 26.8459 18.4546L36.1793 28.4546C36.4324 28.7138 36.8462 28.7235 37.1111 28.4763C37.376 28.2291 37.3951 27.8157 37.154 27.5452L27.8206 17.5453Z" fill="url(#paint3_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="20" y1="0.666504" x2="20" y2="31.3331" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="19.9999" y1="3.3335" x2="19.9999" y2="18.0562" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="7.99996" y1="17.3223" x2="7.99996" y2="28.6777" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="31.9896" y1="17.3223" x2="31.9896" y2="28.6556" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+</defs>
+</svg>
+          <div class="contact__text">new_area@mail.ru</div>
+        </div>
+        <div class="contact__row"><svg viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.1228 28.0652C14.7702 30.4459 16.4149 32.5752 17.5049 33.9466C17.6635 34.1462 17.8122 34.3313 17.9562 34.5097H14.6669C14.2987 34.5097 14.0002 34.8156 14.0002 35.193C14.0002 35.5704 14.2987 35.8763 14.6669 35.8763H25.3335C25.7017 35.8763 26.0001 35.5704 26.0001 35.193C26.0001 34.8156 25.7017 34.5097 25.3335 34.5097H22.0442C22.1882 34.3313 22.3368 34.1461 22.4962 33.9466C23.5855 32.5799 25.2296 30.4459 26.8776 28.0652C28.5127 25.7505 29.9844 23.3192 31.2816 20.7897C32.6429 18.0495 33.3336 15.7748 33.3336 14.0282C33.3381 10.3989 31.9331 6.91712 29.4289 4.3514C29.2616 4.17363 29.0138 4.1022 28.7807 4.16458C28.5476 4.22696 28.3654 4.41338 28.3042 4.65226C28.243 4.89113 28.3123 5.14522 28.4855 5.31691C30.7396 7.62669 32.0042 10.761 32.0002 14.0281C32.0002 15.5574 31.3589 17.6238 30.0936 20.1692C28.8257 22.64 27.3873 25.015 25.7896 27.2759C24.1643 29.6259 22.5396 31.7313 21.4629 33.0843C21.105 33.5339 20.7829 33.9316 20.5082 34.2678C20.38 34.4179 20.1949 34.5039 20.0003 34.5039C19.8057 34.5039 19.6205 34.4178 19.4923 34.2678C19.2176 33.9317 18.8957 33.5339 18.5376 33.0843C17.461 31.732 15.8363 29.6266 14.211 27.2759C12.6132 25.015 11.1748 22.64 9.90695 20.1692C8.64031 17.6238 8.0003 15.5574 8.0003 14.0281C7.99991 9.07851 10.8877 4.60869 15.3337 2.6772C18.321 1.39322 21.6864 1.39322 24.6737 2.6772C24.8931 2.77249 25.1454 2.7407 25.3356 2.5936C25.5258 2.44658 25.6251 2.20666 25.5959 1.96426C25.5668 1.72187 25.4137 1.51382 25.1944 1.41853C18.4054 -1.51651 10.5805 1.74381 7.71499 8.7015C7.02006 10.3868 6.66366 12.1984 6.66702 14.0281C6.66702 15.7747 7.35772 18.0495 8.71906 20.7931C10.0161 23.3214 11.4879 25.7516 13.1228 28.0652Z" fill="url(#paint0_linear)"/>
+<path d="M20.0005 7.85978C20.3687 7.85978 20.6671 7.55388 20.6671 7.17647C20.6671 6.79906 20.3687 6.49316 20.0005 6.49316C16.82 6.49308 14.0823 8.79598 13.4618 11.9934C12.8412 15.1907 14.5107 18.3921 17.4491 19.6397C20.3874 20.8873 23.7764 19.8336 25.5435 17.123C27.3105 14.4124 26.9634 10.7999 24.7145 8.49464C24.5471 8.31703 24.2993 8.24576 24.0661 8.3083C23.8331 8.37084 23.651 8.55743 23.59 8.7963C23.529 9.03525 23.5985 9.28926 23.7718 9.46087C25.5711 11.305 25.8488 14.1949 24.4353 16.3635C23.0217 18.532 20.3106 19.3751 17.9599 18.3771C15.6091 17.3792 14.2735 14.8181 14.7698 12.2602C15.266 9.70223 17.4561 7.85986 20.0005 7.85978Z" fill="url(#paint1_linear)"/>
+<path d="M39.749 37.6333L35.649 30.1165C35.2783 29.4487 34.5846 29.0382 33.835 29.043H29.0837C28.7155 29.043 28.417 29.3489 28.417 29.7263C28.417 30.1037 28.7155 30.4096 29.0837 30.4096H33.835C34.1019 30.4043 34.3509 30.547 34.4863 30.7827L38.585 38.2994C38.6967 38.495 38.6943 38.7375 38.579 38.9309C38.4428 39.1615 38.1966 39.2996 37.9337 39.2931H2.06693C1.80428 39.2995 1.55834 39.1612 1.42224 38.9309C1.30693 38.7375 1.30467 38.495 1.41623 38.2994L5.51491 30.7827C5.65015 30.547 5.8989 30.4044 6.16554 30.4096H10.9169C11.2851 30.4096 11.5835 30.1037 11.5835 29.7263C11.5835 29.3489 11.2851 29.043 10.9169 29.043H6.16562C5.41562 29.038 4.7214 29.4485 4.3503 30.1165L0.250912 37.6333C-0.0908864 38.2521 -0.0829957 39.0113 0.271615 39.6225C0.64521 40.2734 1.33029 40.6692 2.06693 40.6598H37.9337C38.6701 40.669 39.355 40.2732 39.7284 39.6225C40.083 39.0112 40.0909 38.2521 39.749 37.6333Z" fill="url(#paint2_linear)"/>
+<path d="M32.667 32.46H30.0003C29.8687 32.4602 29.74 32.5001 29.6303 32.5748L27.6303 33.9415C27.324 34.151 27.2413 34.5753 27.4456 34.8893C27.65 35.2033 28.064 35.288 28.3703 35.0786L30.2003 33.8267H32.667C33.0352 33.8267 33.3336 33.5208 33.3336 33.1434C33.3336 32.7659 33.0352 32.46 32.667 32.46Z" fill="url(#paint3_linear)"/>
+<path d="M28.667 37.2429C28.667 37.6203 28.9654 37.9262 29.3336 37.9262H34.667C35.0352 37.9262 35.3337 37.6203 35.3337 37.2429C35.3337 36.8655 35.0352 36.5596 34.667 36.5596H29.3336C28.9654 36.5596 28.667 36.8655 28.667 37.2429Z" fill="url(#paint4_linear)"/>
+<path d="M12.0003 35.1934C12.2942 35.1938 12.5537 34.9968 12.639 34.7085C12.7244 34.4202 12.6155 34.1086 12.371 33.9415L10.371 32.5748C10.2611 32.5 10.1322 32.46 10.0003 32.46H7.33364C6.96543 32.46 6.66699 32.7659 6.66699 33.1433C6.66699 33.5207 6.96551 33.8266 7.33364 33.8266H9.80029L11.6323 35.0784C11.7413 35.1531 11.8694 35.193 12.0003 35.1934Z" fill="url(#paint5_linear)"/>
+<path d="M5.33364 36.5596C4.96543 36.5596 4.66699 36.8655 4.66699 37.2429C4.66699 37.6203 4.96543 37.9262 5.33364 37.9262H10.667C11.0352 37.9262 11.3337 37.6203 11.3337 37.2429C11.3337 36.8655 11.0352 36.5596 10.667 36.5596H5.33364Z" fill="url(#paint6_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="20.0003" y1="0.339844" x2="20.0003" y2="35.8763" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="20.0001" y1="6.49316" x2="20.0001" y2="20.1606" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="20" y1="29.043" x2="20" y2="40.66" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="30.3336" y1="32.46" x2="30.3336" y2="35.1935" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+<linearGradient id="paint4_linear" x1="32.0003" y1="36.5596" x2="32.0003" y2="37.9262" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+<linearGradient id="paint5_linear" x1="9.66742" y1="32.46" x2="9.66742" y2="35.1934" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+<linearGradient id="paint6_linear" x1="8.00032" y1="36.5596" x2="8.00032" y2="37.9262" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#3D4356"/>
+</linearGradient>
+</defs>
+</svg>
+          <div class="contact__text">г.Пермь, ул. Лифанова, 41</div>
+        </div>
+        <div class="contact__schedule">
+          <p class="contact__column"><span class="contact__column-title">Часы работы:</span><span class="contact__column-time">09:00–18:00</span></p>
+          <p class="contact__column"><span class="contact__column-title">Обед:</span><span class="contact__column-time">13:00–14:00</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="request">
+  <div class="center-wrap">
+    <h3 class="request__title">Остались вопросы?</h3>
+    <p class="request__subtitle">
+      Оставьте нам свои данные и мы свяжемся с вами
+      в ближайшие 30 минут!
+    </p>
+    <div class="request__form" autocomplete="off">
+      <form class="inputs" action="" autocomplete="off">
+        <div class="inputs__row">
+          <input class="inputs__field" type="text" name="text" required="" minlength="2" placeholder="Имя">
+          <input class="inputs__field" type="email" name="email" required="" placeholder="Почта">
+          <input class="inputs__field" type="tel" name="phone" required="" placeholder="Телефон">
+        </div>
+        <div class="inputs__row inputs__row--center">
+          <input class="btn inputs__field inputs__submit" type="submit" value="Оставить заявку">
+        </div>
+        <div class="inputs__checkbox inputs__checkbox--center">
+          <input id="checkbox" type="checkbox">
+          <label class="inputs__checkbox-label" for="checkbox"></label>
+          <div class="inputs__privacy"><span></span>Даю согласие на обработку моих персональных данных</div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<div class="mobile-menu">
+  <div class="mobile-menu__wrap">
+    <div class="mobile-menu__header">
+      <div class="mobile-menu__act mobile-menu__act--close">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.79" fill-rule="evenodd" clip-rule="evenodd" d="M15 1.5L13.5 0L7.5 6L1.5 0L0 1.5L6 7.5L0 13.5L1.5 15L7.5 9L13.5 15L15 13.5L9 7.5L15 1.5Z" fill="#575757"></path>
+        </svg>
+      </div>
+    </div>
+    <nav class="mobile-menu__nav anchors">
+      <ul class="mobile-menu__nav-list">
+        <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="about">О компании</a></li>
+        <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="services">Услуги</a></li>
+        <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="builders">Строителям</a></li>
+        <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="reviews">Отзывы</a></li>
+        <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="faq">Частые вопросы</a></li>
+        <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="contact">Контакты</a></li>
+      </ul>
+    </nav><span class="mobile-menu__schedule">График работы: 9:00 - 18:00</span>
+    <div class="mobile-menu__phones"><a class="mobile-menu__phone" href="tel:73422032012">+7(342)203-20-12</a></div>
+  </div>
+</div>
+<div class="popup-wrap" id="request">
+  <div class="popup">
+    <div class="popup__close" onclick="close_popup('request')">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="popup-form">
+      <h2 class="popup-form__title">Мы вам перезвоним!</h2>
+      <p class="popup-form__subtitle">Оставьте нам свои данные и мы свяжемся с вами в ближайшие 30 минут!</p>
+      <form class="inputs" action="" autocomplete="on">
+        <div class="inputs__row inputs__row--column">
+          <input class="inputs__field" type="text" name="text" minlength="2" placeholder="Имя" autocomplete="off">
+          <input class="inputs__field" type="email" name="email" placeholder="Почта">
+          <input class="inputs__field" type="tel" name="phone" placeholder="Телефон">
+          <div class="btn btn--bg" onclick="close_popup('request');show_popup('thank')">Оставить заявку</div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="popup-wrap" id="thank">
+  <div class="popup popup--700">
+    <div class="popup__close" onclick="close_popup(&quot;thank&quot;)">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="popup-form">
+      <h2 class="popup-form__title">Спасибо!<span>Ваша заявка отправлена! </span></h2>
+      <div class="popup-form__img">
+        <div><img src="assets/images/popup__img.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup-wrap" id="info1">
+  <div class="popup popup--1175">
+    <div class="popup__close" onclick="close_popup('info1')">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="popup-form">
+      <div class="popup-form__wrap">
+        <div class="popup-form__left">
+          <div class="popup-form__text">
+            <p>Постановление Правительства РФ от 17.01.2017 №18 позволяет вернуть часть средств затраченные на энергоэффективный капитальный ремонт. </p>
+            <p> <span>Что это значит? </span>Если вы делаете ремонт за счёт средств кап. ремонта и благодаря ему вы стали потреблять меньше энергии на 10% и больше, то, собрав некоторый пакет документов, вы сможете рассчитывать на возврат до 80% по смете, но не более 5 млн. р.</p>
+            <p>
+              Вы можете ознакомиться подробнее сами, перейдя по ссылке http://government.ru/docs/all/110071/(эта ссылка ведет на сайт правительства РФ, она безопасна)</p>
+            <p>У нас уже есть примеры одобрения компенсации. Мы поможем вам собрать и отправить все необходимые документы.</p>
+            <p>Таким образом, в лучшем случае, ваша автоматика или ИТП обойдётся вам всего в 20% от стоимости. </p>
+          </div>
+        </div>
+        <div class="popup-form__right">
+          <h2 class="popup-form__title">Мы вам перезвоним!</h2>
+          <p class="popup-form__subtitle">Оставьте нам свои данные и мы свяжемся с вами в ближайшие 30 минут!</p>
+          <form class="inputs" action="" autocomplete="off">
+            <div class="inputs__row inputs__row--column">
+              <input class="inputs__field" type="text" name="text" minlength="2" placeholder="Имя">
+              <input class="inputs__field" type="email" name="email" placeholder="Почта">
+              <input class="inputs__field" type="tel" name="phone" placeholder="Телефон">
+              <div class="btn btn--bg" onclick="close_popup('request');show_popup('thank')">Оставить заявку</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup-wrap" id="info2">
+  <div class="popup popup--1175">
+    <div class="popup__close" onclick="close_popup('info2')">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="popup-form">
+      <div class="popup-form__wrap">
+        <div class="popup-form__left">
+<div class="reports">
+  <div class="reports__wrap">
+    <div class="reports__item">
+      <div class="reports__title">Целинная, 17</div>
+      <div class="reports__before">
+        <div class="reports__before-title">До установки:</div>
+        <div class="reports__before-price">460 Гкал / 900 000р</div>
+      </div>
+      <div class="reports__after reports__after--small">
+        <div class="reports__after-title">После установки:</div>
+        <div class="reports__after-price">253 Гкал / 500 000р</div>
+      </div>
+    </div>
+    <div class="reports__item">
+      <div class="reports__title">Молдавская, 4</div>
+      <div class="reports__before reports__before--small">
+        <div class="reports__before-title">До установки:</div>
+        <div class="reports__before-price">390 Гкал / 760 000р</div>
+      </div>
+      <div class="reports__after">
+        <div class="reports__after-title">После установки:</div>
+        <div class="reports__after-price">290 Гкал / 560 000р</div>
+      </div>
+    </div>
+  </div>
+  <div class="reports__text">* оригинальные отчеты предоставляем по запросу</div>
+</div>
+        </div>
+        <div class="popup-form__right">
+          <h2 class="popup-form__title">Мы вам перезвоним!</h2>
+          <p class="popup-form__subtitle">Оставьте нам свои данные и мы свяжемся с вами в ближайшие 30 минут!</p>
+          <form class="inputs" action="" autocomplete="off">
+            <div class="inputs__row inputs__row--column">
+              <input class="inputs__field" type="text" name="text" minlength="2" placeholder="Имя">
+              <input class="inputs__field" type="email" name="email" placeholder="Почта">
+              <input class="inputs__field" type="tel" name="phone" placeholder="Телефон">
+              <div class="btn btn--bg" onclick="close_popup('request');show_popup('thank')">Оставить заявку</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup-wrap" id="privacy">
+  <div class="popup popup--700">
+    <div class="popup__close" onclick="close_popup('privacy')">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="popup-form">
+      <h2 class="popup-form__title">Политика конфендициальности</h2>
+      <div class="popup-form__text popup-form__text--color">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, magni iure sit? Saepe dolor,
+          cumque recusandae laboriosam obcaecati voluptatibus explicabo! Dicta iste consequuntur
+          voluptatem quis minima tempora. Voluptates, commodi, dolore.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, magni iure sit? Saepe dolor,
+          cumque recusandae laboriosam obcaecati voluptatibus explicabo! Dicta iste consequuntur
+          voluptatem quis minima tempora. Voluptates, commodi, dolore.contract
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="center-wrap">
+    <div class="footer__wrap">
+      <div class="footer__copyright mobile--hide">
+        <p>2020</p>
+      </div>
+      <div class="footer__confid" onclick="show_popup(&quot;privacy&quot;)">Политика обработки персональных данных</div>
+      <div class="footer__development">Разработка дизайна — Пономарева Дарья </div>
+    </div>
+  </div>
+</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      ! function (e) {
+      "function" == typeof define && define.amd ? define(["jquery"], e) : e("object" == typeof exports ? require(
+      "jquery") : jQuery)
+      }(function (e) {
+      var t, n = navigator.userAgent,
+      a = /iphone/i.test(n),
+      i = /chrome/i.test(n),
+      r = /android/i.test(n);
+      e.mask = {
+      definitions: {
+      9: "[0-9]",
+      a: "[A-Za-z]",
+      "*": "[A-Za-z0-9]"
+      },
+      autoclear: !0,
+      dataName: "rawMaskFn",
+      placeholder: "_"
+      }, e.fn.extend({
+      caret: function (e, t) {
+      var n;
+      if (0 !== this.length && !this.is(":hidden")) return "number" == typeof e ? (t =
+      "number" == typeof t ? t : e, this.each(function () {
+      this.setSelectionRange ? this.setSelectionRange(e, t) : this
+      .createTextRange && (n = this.createTextRange(), n.collapse(!0), n
+      .moveEnd("character", t), n.moveStart("character", e), n
+      .select())
+      })) : (this[0].setSelectionRange ? (e = this[0].selectionStart, t = this[0]
+      .selectionEnd) : document.selection && document.selection.createRange && (
+      n = document.selection.createRange(), e = 0 - n.duplicate().moveStart(
+      "character", -1e5), t = e + n.text.length), {
+      begin: e,
+      end: t
+      })
+      },
+      unmask: function () {
+      return this.trigger("unmask")
+      },
+      mask: function (n, o) {
+      var c, l, u, f, s, h, g, m;
+      if (!n && this.length > 0) {
+      c = e(this[0]);
+      var d = c.data(e.mask.dataName);
+      return d ? d() : void 0
+      }
+      return o = e.extend({
+      autoclear: e.mask.autoclear,
+      placeholder: e.mask.placeholder,
+      completed: null
+      }, o), l = e.mask.definitions, u = [], f = g = n.length, s = null, e.each(n.split(""),
+      function (e, t) {
+      "?" == t ? (g--, f = e) : l[t] ? (u.push(new RegExp(l[t])), null === s && (s =
+      u.length - 1), f > e && (h = u.length - 1)) : u.push(null)
+      }), this.trigger("unmask").each(function () {
+      function c() {
+      if (o.completed) {
+      for (var e = s; h >= e; e++)
+      if (u[e] && C[e] === d(e)) return;
+      o.completed.call(w)
+      }
+      }
+      function d(e) {
+      return o.placeholder.charAt(e < o.placeholder.length ? e : 0)
+      }
+      function p(e) {
+      for (; ++e < g && !u[e];);
+      return e
+      }
+      function v(e) {
+      for (; --e >= 0 && !u[e];);
+      return e
+      }
+      function b(e, t) {
+      var n, a;
+      if (!(0 > e)) {
+      for (n = e, a = p(t); g > n; n++)
+      if (u[n]) {
+      if (!(g > a && u[n].test(C[a]))) break;
+      C[n] = C[a], C[a] = d(a), a = p(a)
+      } A(), w.caret(Math.max(s, e))
+      }
+      }
+      function k(e) {
+      var t, n, a, i;
+      for (t = e, n = d(e); g > t; t++)
+      if (u[t]) {
+      if (a = p(t), i = C[t], C[t] = n, !(g > a && u[a].test(i))) break;
+      n = i
+      }
+      }
+      function y() {
+      var e = w.val(),
+      t = w.caret();
+      if (m && m.length && m.length > e.length) {
+      for (T(!0); t.begin > 0 && !u[t.begin - 1];) t.begin--;
+      if (0 === t.begin)
+      for (; t.begin < s && !u[t.begin];) t.begin++;
+      w.caret(t.begin, t.begin)
+      } else {
+      for (T(!0); t.begin < g && !u[t.begin];) t.begin++;
+      w.caret(t.begin, t.begin)
+      }
+      c()
+      }
+      function x() {
+      T(), w.val() != E && w.change()
+      }
+      function j(e) {
+      if (!w.prop("readonly")) {
+      var t, n, i, r = e.which || e.keyCode;
+      m = w.val(), 8 === r || 46 === r || a && 127 === r ? (t = w.caret(),
+      n = t.begin, i = t.end, i - n === 0 && (n = 46 !== r ? v(n) :
+      i = p(n - 1), i = 46 === r ? p(i) : i), S(n, i), b(n, i -
+      1), e.preventDefault()) : 13 === r ? x.call(this, e) :
+      27 === r && (w.val(E), w.caret(0, T()), e.preventDefault())
+      }
+      }
+      function R(t) {
+      if (!w.prop("readonly")) {
+      var n, a, i, o = t.which || t.keyCode,
+      l = w.caret();
+      if (!(t.ctrlKey || t.altKey || t.metaKey || 32 > o) && o && 13 !==
+      o) {
+      if (l.end - l.begin !== 0 && (S(l.begin, l.end), b(l.begin, l
+      .end - 1)), n = p(l.begin - 1), g > n && (a = String
+      .fromCharCode(o), u[n].test(a))) {
+      if (k(n), C[n] = a, A(), i = p(n), r) {
+      var f = function () {
+      e.proxy(e.fn.caret, w, i)()
+      };
+      setTimeout(f, 0)
+      } else w.caret(i);
+      l.begin <= h && c()
+      }
+      t.preventDefault()
+      }
+      }
+      }
+      function S(e, t) {
+      var n;
+      for (n = e; t > n && g > n; n++) u[n] && (C[n] = d(n))
+      }
+      function A() {
+      w.val(C.join(""))
+      }
+      function T(e) {
+      var t, n, a, i = w.val(),
+      r = -1;
+      for (t = 0, a = 0; g > t; t++)
+      if (u[t]) {
+      for (C[t] = d(t); a++ < i.length;)
+      if (n = i.charAt(a - 1), u[t].test(n)) {
+      C[t] = n, r = t;
+      break
+      } if (a > i.length) {
+      S(t + 1, g);
+      break
+      }
+      } else C[t] === i.charAt(a) && a++, f > t && (r = t);
+      return e ? A() : f > r + 1 ? o.autoclear || C.join("") === D ? (w.val() &&
+      w.val(""), S(0, g)) : A() : (A(), w.val(w.val().substring(0, r +
+      1))), f ? t : s
+      }
+      var w = e(this),
+      C = e.map(n.split(""), function (e, t) {
+      return "?" != e ? l[e] ? d(t) : e : void 0
+      }),
+      D = C.join(""),
+      E = w.val();
+      w.data(e.mask.dataName, function () {
+      return e.map(C, function (e, t) {
+      return u[t] && e != d(t) ? e : null
+      }).join("")
+      }), w.one("unmask", function () {
+      w.off(".mask").removeData(e.mask.dataName)
+      }).on("focus.mask", function () {
+      if (!w.prop("readonly")) {
+      clearTimeout(t);
+      var e;
+      E = w.val(), e = T(), t = setTimeout(function () {
+      w.get(0) === document.activeElement && (A(), e ==
+      n.replace("?", "").length ? w.caret(0,
+      e) : w.caret(e))
+      }, 10)
+      }
+      }).on("blur.mask", x).on("keydown.mask", j).on("keypress.mask", R).on(
+      "input.mask paste.mask",
+      function () {
+      w.prop("readonly") || setTimeout(function () {
+      var e = T(!0);
+      w.caret(e), c()
+      }, 0)
+      }), i && r && w.off("input.mask").on("input.mask", y), T()
+      })
+      }
+      })
+      });
+      $('[name="phone"]').mask("+7 (999) 999-99-99");
+    </script>
+  <script type="text/javascript" src="js/app.js"></script></body>
+</html>
