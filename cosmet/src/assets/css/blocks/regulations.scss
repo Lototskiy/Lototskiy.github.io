@@ -1,0 +1,298 @@
+// start regulations
+
+.regulations {
+	margin-bottom: 165px;
+
+	@media screen and (max-width:1200px) {
+		margin-bottom: 0;
+	}
+
+	@media screen and (max-width:450px) {
+		margin-bottom: 0;
+	}
+
+	.simple-title {
+		color: #212121;
+		margin-bottom: 97px;
+
+		@media screen and (max-width:1200px) {
+			padding: 0 15px;
+			max-width: 260px;
+			width: 100%;
+			margin-bottom: 50px;
+		}
+	}
+
+	.center-wrap {
+		@media screen and (max-width:1200px) {
+			padding: 0;
+		}
+
+	}
+
+	&__title {
+		color: #212121;
+		margin-bottom: 97px;
+
+		@media screen and (max-width:1200px) {
+			padding: 0 15px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 13px;
+
+		@media screen and (max-width:450px) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__img {
+		max-width: 717px;
+		width: 100%;
+		position: relative;
+
+		@media screen and (max-width:1200px) {
+			order: 1;
+			margin-top: 20px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: -47px;
+			left: -37px;
+			width: 60px;
+			height: 68px;
+			background-image: url(../../images/line-contact.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			z-index: 2;
+			transform: rotate(90deg);
+
+			@media screen and (max-width:1200px) {
+				bottom: -14px;
+				left: -7px;
+			}
+
+			@media screen and (max-width:500px) {
+				height: 0;
+			}
+		}
+
+		>div {
+
+			overflow: hidden;
+			position: relative;
+			padding-bottom: 60.52%;
+		}
+
+		img {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__item {
+		width: calc((100% - 40px * 2) / 3);
+		margin-bottom: 45px;
+		padding-bottom: 30px;
+		position: relative;
+
+		@media screen and (max-width:1200px) {
+			width: 100%;
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0px;
+			}	
+		}
+
+		&:nth-child(3n - 2)::before {
+			height: 0;
+
+			@media screen and (max-width:1200px) {
+				height: 1;
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 1px;
+			height: 100%;
+			background: rgba(155, 155, 155, 0.1);
+			left: -18px;
+			top: 0;
+
+			@media screen and (max-width:1200px) {
+				width: calc(100% - 30px);
+				margin: 0 auto;
+				height: 1px;
+				left: 0;
+				top: 100%;
+				right: 0;
+			}
+		}
+
+		&-number {
+			font-weight: 800;
+			font-size: 60px;
+			line-height: 1.1;
+			color: $primary;
+			margin-bottom: 21px;
+
+			@media screen and (max-width:1200px) {
+				padding: 0 15px;
+				font-size: 50px;
+				margin-bottom: 10px;
+			}
+
+			sab {
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 1.17;
+
+				@media screen and (max-width:1200px) {
+					font-size: 20px;
+				}
+			}
+		}
+
+		&-title {
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 1.4;
+			color: #212121;
+			margin-bottom: 20px;
+
+			@media screen and (max-width:1200px) {
+				padding: 0 15px;
+				font-size: 18px;
+				margin-bottom: 14px;
+			}
+
+		}
+
+		&-text {
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 1.5;
+			color: #525252;
+			width: 100%;
+
+			@media screen and (max-width:1200px) {
+				padding: 0 15px;
+				font-size: 14px;
+				line-height: 1.7;
+			}
+		}
+	}
+}
+
+// end regulations
+
+
+
+//start job
+
+
+// end job
+// start license
+.license {
+	margin-bottom: 151px;
+}
+
+.license__title {
+	margin-bottom: 68px;
+}
+
+.license-swiper .swiper-slide {
+	width: calc((100% - 30px * 3) / 4);
+}
+
+.license__slider-img {
+	padding-bottom: 63%;
+	position: relative;
+	width: 100%;
+	transition: all 1s ease-out;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+
+	img {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+
+.license__slider {
+	position: relative;
+	// max-width: 1270px;
+	width: 100%;
+	padding: 0 40px;
+}
+
+.license-swiper {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1;
+}
+
+.license-button-next {
+	position: absolute;
+	width: 10.56px;
+	height: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	right: 0px;
+	left: auto;
+	background-image: url(../../images/button-next.svg);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.license-button-prev {
+	position: absolute;
+	width: 10.56px;
+	height: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 0px;
+	right: auto;
+	background-image: url(../../images/button-prev.svg);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+//   end license

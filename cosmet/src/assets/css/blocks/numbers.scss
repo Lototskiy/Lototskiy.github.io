@@ -1,0 +1,96 @@
+.numbers {
+    background: $black;
+    padding-bottom: 121px;
+
+    .simple-title {
+        margin-bottom: 95px;
+
+        @media screen and (max-width:1200px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        padding: 30px 0px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width: 1200px) {
+            flex-wrap: wrap;
+            // margin-bottom: -36px;
+            flex-direction: column;
+        }
+    }
+
+    &__sep {
+        background: rgba(220, 186, 151, 0.15);
+        border-radius: 2px;
+        width: 1px;
+        height: 204px;
+
+        @media screen and (max-width: 1200px) {
+            display: none;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        min-height: 205px;
+
+        @media screen and (max-width: 1200px) {
+            min-height: auto;
+            border-bottom: 1px solid rgba(220, 186, 151, 0.15);
+            padding-bottom: 15px;
+
+            &:last-of-type {
+                border-bottom: 0px solid rgba(220, 186, 151, 0.15);
+            }
+        }
+
+        span {
+            color: $primary;
+            font-weight: bold;
+            font-size: 120px;
+            line-height: 1.2;
+            text-align: center;
+            margin-bottom: 8px;
+
+            @media screen and (max-width:1200px) {
+                font-size: 80px;
+            }
+
+            // @media screen and (max-width: 1200px) {
+            //     font-size: 36px;
+            //     line-height: 42px;
+            //     margin-bottom: 5px;
+            // }
+            sub {
+                font-size: 50px;
+                line-height: 48px;
+                position: relative;
+                bottom: 0px;
+            }
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            color: #9B9B9B;
+            max-width: 199px;
+            width: 100%;
+
+            @media screen and (max-width: 1200px) {
+                font-size: 14px;
+                line-height: 1.29;
+                max-width: 145px;
+            }
+        }
+    }
+}

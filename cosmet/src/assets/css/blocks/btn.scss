@@ -1,0 +1,27 @@
+.btn {
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	line-height: 60px;
+	display: inline-block;
+	white-space: nowrap;
+	text-align: center;
+	background-color: $primary;
+	width: 220px;
+	font-weight: 600;
+	font-size: 16px;
+	color: #212121;
+	border-radius: 1px;
+	position: relative;
+	z-index: 100;
+	transition: all 0.3s;
+	&:hover{
+		background: #fff;
+	}
+	@media screen and (max-width:1200px) {
+		min-width: 180px;
+		line-height: 46px;
+		font-size: 14px; 
+	}
+
+}

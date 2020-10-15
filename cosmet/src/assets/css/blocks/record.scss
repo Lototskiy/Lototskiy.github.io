@@ -1,0 +1,65 @@
+.record {
+    max-width: 692px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 75px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: calc(100% - 10px);
+        top: calc(100% - 20px);
+        width: 60px;
+        height: 68px;
+        background-image: url('~img/line-contact.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 2;
+
+        @media screen and (max-width:1200px) {
+            left: calc(100% - 47px);
+            top: calc(100% - 40px);
+        }
+
+        @media screen and (max-width:450px) {
+            bottom: 10px;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 1.7;
+        color: #FFFFFF;
+        text-align: center;
+
+
+        @media screen and (max-width:1200px) {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        @media screen and (max-width:450px) {
+            font-size: 16px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.8;
+        color: #9B9B9B;
+        margin-bottom: 40px;
+        text-align: center;
+
+        @media screen and (max-width:1200px) {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        @media screen and (max-width:450px) {
+            font-size: 14px;
+        }
+    }
+}

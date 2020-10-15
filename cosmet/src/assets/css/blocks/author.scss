@@ -1,0 +1,181 @@
+.author {
+    background: $black;
+    padding: 75px 0 91px;
+
+    @media screen and (max-width:1200px) {
+        padding: 80px 0 0;
+    }
+    @media screen and (max-width:450px) {
+    padding: 35px 0 0;
+    }
+
+    .simple-title {
+        max-width: 423px;
+        width: 100%;
+        margin-bottom: 26px;
+    }
+
+    .center-wrap {
+        @media screen and (max-width:1200px) {
+            padding: 0;
+        }
+    }
+
+    &__subtitle {
+        display: inline-block;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 25px;
+        color: #9B9B9B;
+        margin-bottom: 81px;
+
+    }
+
+    &__box {
+        padding-top: 7px;
+        padding-left: 17px;
+        padding-bottom: 7px;
+        margin-bottom: 38px;
+        position: relative;
+
+        @media screen and (max-width:1200px) {
+            padding-left: 13px;
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+
+        &-name {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 0.7;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+
+            @media screen and (max-width:1200px) {
+                font-size: 20px;
+                line-height: 1;
+                margin-bottom: 4px;
+            }
+        }
+
+        &-descr {
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 1.38;
+            color: #FFFFFF;
+            max-width: 219px;
+            width: 100%;
+
+            @media screen and (max-width:1200px) {
+                font-size: 12px;
+                max-width: 200px;
+            }
+        }
+
+        &-line {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 3px;
+            height: 100%;
+            background: $primary;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width:1200px) {
+            flex-direction: column;
+            align-items: normal;
+        }
+
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            max-width: 616px;
+            width: 100%;
+            margin-right: 68px;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 1.78;
+            color: #9B9B9B;
+            position: relative;
+
+            @media screen and (max-width:1200px) {
+                font-size: 14px;
+                flex-direction: column-reverse;
+                padding: 0 15px;
+            }
+
+            p+p {
+                margin-top: 30px;
+
+                @media screen and (max-width:1200px) {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        &-text {
+            @media screen and (max-width:1200px) {
+                margin-bottom: 45px;
+            }
+        }
+
+        &-signature {
+            margin-left: auto;
+            display: block;
+            width: 148px;
+            margin-top: 19px;
+
+            @media screen and (max-width:1200px) {
+                width: 88px;
+                position: absolute;
+                right: 7px;
+                top: calc(100% - 124px);
+            }
+
+            @media screen and (max-width:450px) {
+                width: 47px;
+                right: 10px;
+                top: calc(100% - 111px);
+            }
+
+            >div {
+                position: relative;
+                padding-bottom: 83.78%;
+
+                img {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        &-img {
+            max-width: 624px;
+            width: 100%;
+            overflow: hidden;
+
+            >div {
+                position: relative;
+                padding-bottom: 66.18%;
+
+                img {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

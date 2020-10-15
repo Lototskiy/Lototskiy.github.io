@@ -1,0 +1,148 @@
+.preloader {
+	width: 100%;
+	position: fixed;
+	height: 100%;
+	background: #000;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+	transition: opacity 0.5s;
+
+	&--opacity0 {
+		opacity: 0;
+	}
+
+	&--hide {
+		display: none;
+	}
+
+
+	&__wrap {
+		position: relative;
+		justify-content: center;
+		align-items: center;
+		display: none;
+		.preloader--go & {
+			display: flex;
+		}
+	}
+
+	&__item {
+		visibility:  hidden;
+		position: absolute;
+		> span {
+			font-size: 62px;
+			font-weight: 600;
+			color: #666;
+			white-space: nowrap;
+			animation: textSize 3.5s;
+			@media screen and ( max-width: 1200px ) {
+				font-size: 20px;
+			}
+		}
+
+		&:nth-child(1) {
+			animation-fill-mode: forwards !important;
+			animation: fistItem 1.5s 0s, displayBlock, displayNone 0s 1.5s;
+			display: flex;
+			span {
+				color: #f1f1f1;
+				margin-left: 10px;
+			}
+
+			p {
+				font-size: 62px;
+				font-weight: 600;
+				color: #666;
+				white-space: nowrap;
+				animation: textSize 3s;
+			@media screen and ( max-width: 1200px ) {
+				font-size: 20px;
+			}
+			}
+		}
+		&:nth-child(2) {
+			animation-fill-mode: forwards !important;
+			animation: displayBlock 0s 1.5s, displayNone 0s 1.9s;
+		}
+		&:nth-child(3) {
+			animation-fill-mode: forwards !important;
+			animation: displayBlock 0s 1.9s, displayNone 0s 2.3s;
+		}
+		&:nth-child(4) {
+			animation-fill-mode: forwards !important;
+			animation: displayBlock 0s 2.3s, displayNone 0s 2.7s;
+		}
+		&:nth-child(5) {
+			animation-fill-mode: forwards !important;
+			animation: displayBlock 0s 2.7s, displayNone 0s 3.1s;
+		}
+		&:nth-child(6) {
+			width: 200px;
+			text-align: center;
+			animation-fill-mode: forwards !important;
+			animation: displayBlock 0s 3.1s;
+		}
+	}
+}
+
+@keyframes fistItem {
+
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes displayNone {
+
+	0% {
+
+	}
+
+	100% {
+		visibility: hidden;
+	}
+}
+
+
+@keyframes displayBlock {
+
+	0% {
+
+	}
+
+	100% {
+		visibility: visible;
+	}
+}
+
+@keyframes textSize {
+
+	0% {
+
+	}
+
+	100% {
+		font-size: 80px;
+	}
+}
+
+
+@media screen and ( max-width: 1200px ) {
+	@keyframes textSize {
+
+		0% {
+
+		}
+
+		100% {
+			font-size: 24px;
+		}
+	}
+}

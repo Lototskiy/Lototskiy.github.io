@@ -1,0 +1,271 @@
+[data-animation-type] {
+	animation-fill-mode: forwards !important;
+	&.animated {
+		opacity: initial !important;
+		clip-path: initial !important;
+	}
+}
+
+[data-animation-type='clip'] {
+	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1) !important;
+}
+
+
+[data-animation-type='left'] {
+	opacity: 0;
+	left: -80px;
+	position: relative;
+	animation-timing-function: cubic-bezier(0.56, 0.09, 0.42, 0.91) !important;
+}
+
+[data-animation-type='img'] {
+	transform: scale(1.15);
+	animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+@keyframes img {
+	100% {
+		transform: scale(1);
+	}
+} 
+
+
+
+[data-animation-type='top'] {
+	opacity: 0;
+	position: relative;
+	top: -50px;
+}
+
+
+
+
+[data-animation-type='clipover'] {
+	position: relative;
+	.overlay {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 0%;
+		height: 100%;
+		background: #ccc;
+		z-index: 2;
+		animation-timing-function: cubic-bezier(0.66, 0, 0.01, 1) !important;
+	}
+	> *:not(.overlay) {
+		visibility: hidden;
+	}
+
+}
+.clipover--active > * {
+	visibility: visible !important;
+}
+
+
+@keyframes clipover2 {
+
+	50% {
+		left: 0px;
+		right: 0px;
+		width: 100%;		
+	}
+
+	50.1% {
+		right: 0px;
+		left: auto;
+	}
+
+	100% {
+		left: auto;
+		right: 0px;
+		width: 0%;
+	}
+}
+
+
+[data-animation-type='cliptop'] {
+	clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+	animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1) !important;
+	&.animated {
+		clip-path: initial !important;
+	}
+}
+
+
+
+@keyframes cliptop {
+	100% {
+		clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+	}
+} 
+
+
+
+[data-animation-type='bottom'] {
+	opacity: 0;
+	position: relative;
+	bottom: -50px;
+	animation-timing-function: ease !important;
+}
+
+[data-animation-type='clipgrad'] {
+	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	animation-timing-function: 1s cubic-bezier(.77, 0, .175, 1) !important;
+		background: linear-gradient(90deg, rgba(255,255,255,0.7) 50%, #fff 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200%;
+	background-position: 0% center;
+}
+
+
+[data-animation-type='clipgrad2'] {
+	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	animation-timing-function: 1s cubic-bezier(.77, 0, .175, 1) !important;
+		background: linear-gradient(90deg, rgba(0,0,0,0.5) 50%, #212121 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200%;
+	background-position: 0% center;
+}
+
+[data-animation-type='opacity'] {
+	opacity: 0;
+}
+
+
+
+[data-animation-type='overlay'] {
+	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1) !important;
+	position: relative;
+	.overlay {
+		position: absolute;
+		top: -5%;
+		right: -5%;
+		width: 110%;
+		height: 110%;
+		animation-fill-mode: forwards !important;
+		&--right {
+			right: auto;
+			left: -5%;
+		}
+	}
+}
+
+
+
+@keyframes clip {
+	100% {
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	}
+} 
+
+
+[data-animation-type='clipright'] {
+	clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+	animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1) !important;
+}
+
+
+@keyframes clipright {
+	100% {
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	}
+} 
+
+
+
+@keyframes clipgrad {
+
+	40% {
+		background-position: 0% center;
+	}
+
+	80% {
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	}
+
+
+	100% {
+		background-position: -100% center;
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	}
+
+}
+
+
+@keyframes clipgrad2 {
+
+	40% {
+		background-position: 0% center;
+	}
+
+	80% {
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	}
+
+
+	100% {
+		background-position: -100% center;
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	}
+
+}
+
+
+
+@keyframes left {
+	100% {
+		left: 0%;
+		opacity: 1;
+	}
+} 
+
+
+@keyframes top {
+	100% {
+		top: 0px;
+		opacity: 1;
+	}
+} 
+
+
+
+@keyframes bottom {
+	100% {
+		bottom: 0px;
+		opacity: 1;
+	}
+} 
+
+
+
+@keyframes overlay {
+	100% {
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	}
+} 
+
+
+@keyframes overlay2 {
+	100% {
+		width: 0%;
+	}
+} 
+
+
+@keyframes opacity {
+	100% {
+		opacity: 1;
+	}
+} 
+
+
+
+@keyframes image {
+	100% {
+		filter: grayscale(0%);
+	}
+} 

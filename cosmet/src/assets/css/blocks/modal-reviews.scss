@@ -1,0 +1,62 @@
+// .modal-reviews {
+//     display: none;
+//     position: relative;
+//     background: #FFFFFF;
+//     border: 1px solid $primary;
+//     box-sizing: border-box;
+//     max-width: 357px;
+//     width: 100%;
+//     padding: 46px 33px;
+
+//     .fancybox-button {
+//         background-image: url(../../images/modalblack-cross.svg);
+//         background-repeat: no-repeat;
+//         background-position: center;
+//         background-size: cover;
+//         border: 0;
+//         border-radius: 0;
+//         box-shadow: none;
+//         cursor: pointer;
+//         display: inline-block;
+//         height: 20px;
+//         margin: 0;
+//         padding: 10px;
+//         transition: color .2s;
+//         vertical-align: top;
+//         visibility: inherit;
+//         width: 20px;
+//         position: absolute;
+//         top: 46px;
+//         right: 20px;
+//     }
+
+//     .reviews__item-photo {
+//         bottom: auto;
+//         position: relative;
+//         margin-bottom: 16px;
+//         margin-top: 40px;
+//     }
+
+//     .reviews__item-photo,
+//     .reviews__item-instagram {
+//         &::before {
+//             background-color: rgba(0, 0, 0, 0);
+//         }
+//     }
+
+//     &__title {
+//         font-weight: bold;
+//         font-size: 18px;
+//         line-height: 1.44;
+//         color: #212121;
+//         text-align: center;
+//         margin-bottom: 30px;
+//     }
+
+//     &__text {
+//         font-weight: 400;
+//         font-size: 16px;
+//         color: #525252;
+
+//     }
+// }

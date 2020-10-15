@@ -1,0 +1,103 @@
+.modal {
+    display: none;
+    max-width: 360px;
+    width: 100%;
+    background: #1C130A;
+    border: 1px solid $primary;
+    box-sizing: border-box;
+    padding: 50px 49px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 1.27;
+        color: #FFFFFF;
+        margin-bottom: 18px;
+    }
+
+    &__descr {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 1.33;
+        color: #9B9B9B;
+        max-width: 239px;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .fancybox-button {
+        background-image: url(../../images/modal-cross.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        cursor: pointer;
+        display: inline-block;
+        height: 20px;
+        margin: 0;
+        padding: 10px;
+        transition: color .2s;
+        vertical-align: top;
+        visibility: inherit;
+        width: 20px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    &__form {
+        margin-bottom: -10px;
+
+        input {
+            line-height: 57px;
+            max-width: 248px;
+            width: 100%;
+            padding-right: 10px;
+            border: 1px solid $primary;
+            box-sizing: border-box;
+            margin-bottom: 28px;
+            color: #fff;
+            outline: none;
+            font-weight: 300;
+            font-size: 13px;
+            background-color: inherit;
+
+            &::placeholder {
+                font-weight: 300;
+                font-size: 13px;
+                color: $primary;
+            }
+        }
+
+        input[type=text] {
+            background-image: url(../../images/input-user.svg);
+            background-repeat: no-repeat;
+            background-position: left 20px top 50%;
+            padding-left: 49px;
+        }
+
+        input[type=tel] {
+            background-image: url(../../images/input-tel.svg);
+            background-repeat: no-repeat;
+            background-position: left 10px top 50%;
+            padding-left: 40px;
+        }
+
+        input[type=button] {
+            font-weight: normal;
+            font-size: 14px;
+            color: $primary;
+            cursor: pointer;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 1.25;
+        text-align: center;
+        color: #9B9B9B;
+    }
+}

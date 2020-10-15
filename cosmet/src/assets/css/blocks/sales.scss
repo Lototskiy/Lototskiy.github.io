@@ -1,0 +1,66 @@
+.sales {
+    padding-bottom: 138px;
+    position: relative;
+
+    .simple-title {
+        color: #333333;
+        font-weight: 800;
+        margin-bottom: 85px;
+        width: 100%;
+        text-align: center;
+
+        &::before {
+            height: 0;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        .swiper-container{
+            margin: -25px auto;
+            padding: 25px 0;
+        }
+        .swiper-button {
+            height: 20px;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &-prev,
+            &-next {
+                position: absolute;
+                width: 10px;
+                height: inherit;
+                cursor: pointer;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin: 0;
+                top: 0;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            &-next {
+                left: calc(100% + 53px);
+                right: auto;
+                background-image: url(../../images/button-next.svg);
+            }
+
+            &-prev {
+                left: auto;
+                right: calc(100% + 53px);
+                background-image: url(../../images/button-prev.svg);
+
+            }
+        }
+    }
+
+
+}

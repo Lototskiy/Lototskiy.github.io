@@ -1,0 +1,79 @@
+.breads {
+	font-weight: 500;
+	font-size: 18px;
+
+	@media screen and (max-width: 1200px) {
+		font-size: 14px;
+	}
+
+	&__content {
+		padding: 32px 15px 28px;
+		position: relative;
+
+		@media screen and (max-width: 1200px) {
+			padding: 22px 15px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			height: 1px;
+			width: calc(100% - 30px);
+			left: 15px;
+			bottom: 0px;
+			background: #404040;
+			opacity: 0.2;
+		}
+	}
+
+	&__back {
+		font-weight: bold;
+		font-size: 14px;
+		color: rgb(82, 82, 82,);
+		opacity: 0.8;
+		line-height: 1;
+		margin-top: 35px;
+		display: block;
+		text-transform: uppercase;
+		background: url('../../images/breads-arrow.svg') no-repeat;
+		background-position: left center;
+		padding-left: 24px;
+		background-size: contain;
+		transition: all 0.3s;
+
+		@media screen and (max-width: 1200px) {
+			margin-top: 22px;
+			font-size: 12px;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__link {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 1;
+		color: rgb(82, 82, 82);
+		opacity: 0.5;
+		transition: all 0.3s;
+
+		&--active {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 1;
+			color: rgb(82, 82, 82);
+			opacity: 1;
+			pointer-events: none;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__sep {
+		opacity: 0.5;
+	}
+}

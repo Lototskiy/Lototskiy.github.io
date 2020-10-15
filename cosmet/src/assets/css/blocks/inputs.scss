@@ -1,0 +1,104 @@
+.inputs {
+    margin-bottom: -28px;
+
+    &--row {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width:1200px) {
+            flex-direction: column;
+            // margin: 0 auto;
+        }
+
+        .inputs__wrap {
+            max-width: 207px;
+            width: 100%;
+
+            @media screen and (max-width:1200px) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &--small {
+        .inputs__input {
+            line-height: 45px;
+        }
+    }
+
+    &__wrap {
+        width: 100%;
+        margin-bottom: 28px;
+
+        @media screen and (max-width: 1200px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__input {
+        line-height: 57px;
+        width: 100%;
+        border: 1px solid $primary;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 1200px) {
+            line-height: 46px;
+        }
+    }
+
+    &__name,
+    &__phone {
+        padding: 0 10px 0 45px;
+        color: #fff;
+        outline: none;
+        font-weight: 300;
+        font-size: 16px;
+        background-color: inherit;
+        background-repeat: no-repeat;
+        background-position: 15px 50%;
+        background-size: 18px auto;
+
+        &::-webkit-input-placeholder {
+            color: $primary;
+            font-weight: 300;
+        }
+
+        &::-moz-placeholder {
+            color: $primary;
+            font-weight: 300;
+        }
+
+        /* Firefox 19+ */
+        &:-moz-placeholder {
+            color: $primary;
+            font-weight: 300;
+        }
+
+        /* Firefox 18- */
+        &:-ms-input-placeholder {
+            color: $primary;
+            font-weight: 300;
+        }
+    }
+
+    &__phone {
+        background-image: url('~img/phone.svg');
+    }
+
+    &__name {
+        background-image: url('~img/input-user.svg');
+    }
+
+    &__submit {
+        color: $primary;
+        font-size: 14px;
+        background-color: inherit;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+            background: $primary;
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,339 @@
+.reviews {
+    background: $black;
+    padding: 100px 0;
+
+    @media screen and (max-width:1200px) {
+        padding: 75px 0 75px;
+    }
+
+    @media screen and (max-width:450px) {
+        padding: 35px 0;
+    }
+
+    .simple-title {
+        margin-bottom: 102px;
+
+        @media screen and (max-width:1200px) {
+            margin-bottom: 42px;
+        }
+
+        @media screen and (max-width:450px) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__slider {
+        position: relative;
+
+        .swiper-pagination {
+            position: absolute;
+            bottom: 0;
+            max-width: 80px;
+            margin: 0 auto;
+            right: 0;
+            left: 0;
+            color: #DCBA97;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 26px;
+
+            @media screen and (max-width:450px) {
+                bottom: 33px;
+            }
+
+            &-total {
+                @media screen and (max-width:450px) {
+                    font-size: 18px;
+                }
+            }
+
+            &-current {
+                @media screen and (max-width:450px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    &-swiper {
+        padding-top: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+        padding-top: 120px;
+
+        @media screen and (max-width:1200px) {
+            padding: 120px 40px 0;
+        }
+
+        @media screen and (max-width:450px) {
+            padding: 120px 0 0;
+        }
+
+        .swiper-slide {
+            transition: all .5s ease-out;
+        }
+
+        .swiper-slide-active {
+            transform: translateY(-70px);
+            transition: all .5s ease-out;
+
+            .reviews__item-link {
+                z-index: 1;
+            }
+
+            .reviews__item-instagram {
+                &:hover {
+                    background: #fff;
+
+                    svg {
+                        fill: #DCBA97;
+                    }
+                }
+
+                &::before {
+                    background-color: rgba(0, 0, 0, 0);
+
+                }
+            }
+        }
+
+    }
+
+    &-button {
+        max-width: 152px;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 16px;
+        margin: 0 auto;
+
+        &-next,
+        &-prev {
+            position: absolute;
+            width: 6.34px;
+            height: 12px;
+            z-index: 10;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        &-next {
+            right: 0px;
+            left: auto;
+            background-image: url(../../images/job-button-next.svg);
+
+            @media screen and (max-width:450px) {
+                right: 32px;
+                bottom: 24px;
+            }
+        }
+
+        &-prev {
+            left: 0px;
+            right: auto;
+            background-image: url(../../images/job-button-prev.svg);
+
+            @media screen and (max-width:450px) {
+                left: 32px;
+                bottom: 24px;
+            }
+        }
+    }
+
+    &__item {
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0.5;
+        padding: 70px 50px 40px;
+        position: relative;
+        transition: opacity .5s;
+
+        @media screen and (max-width:1200px) {
+            padding: 54px 20px 39px;
+        }
+
+        &-name {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #212121;
+            text-align: center;
+            margin-bottom: 20px;
+
+            @media screen and (max-width:1200px) {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &-photo {
+            position: absolute;
+            bottom: calc(100% - 50px);
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            right: 0;
+            left: 0;
+            transition: opacity .5s;
+
+            @media screen and (max-width:1200px) {
+                width: 70px;
+                height: 70px;
+                bottom: calc(100% - 35px);
+            }
+            &--popup{
+                bottom: calc(100% - 150px);
+            }
+            >div {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 2px solid #DCBA97;
+                padding-bottom: 100%;
+
+                img {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                right: 0;
+                left: 0;
+                bottom: 0;
+                top: 0;
+                background-color: rgb(0, 0, 0, );
+                opacity: 0.3;
+                border-radius: 50%;
+                z-index: 2;
+                transition: opacity 0.5s;
+            }
+        }
+
+        &-instagram {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            background: #DCBA97;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .5s ease-out;
+            z-index: 3;
+
+            @media screen and (max-width:1200px) {
+                width: 20px;
+                height: 20px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.3);
+                border-radius: 50%;
+                z-index: 100;
+            }
+
+            svg {
+                fill: #fff;
+                transition: all .5s;
+
+                @media screen and (max-width:1200px) {
+                    width: 9px;
+                    height: 9px;
+                }
+            }
+        }
+
+        &-link {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            color: #DCBA97;
+            cursor: pointer;
+            z-index: -1;
+            position: relative;
+            display: inline-block;
+
+            @media screen and (max-width:1200px) {
+                font-size: 12px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                bottom: -2px;
+                width: 100%;
+                height: 1px;
+                background: rgba(220, 186, 151, 0.35);
+                opacity: 1;
+                transition: all 0.5s;
+            }
+
+            &:hover::before {
+                width: 0%;
+                opacity: 0;
+            }
+        }
+
+        &-text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.3;
+            color: #525252;
+            margin-bottom: 12px;
+            &--popup{
+                font-size: 18px;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+.swiper-slide.swiper-slide-active .reviews__item {
+    background-color: #fff;
+    opacity: 1;
+}
+
+.swiper-slide.swiper-slide-active .reviews__item-photo::before {
+    opacity: 0;
+}
+
+.swiper-pagination-total {
+    font-size: 24px;
+}
+
+.swiper-pagination-current {
+    font-size: 20px;
+}
+
+// end reviews

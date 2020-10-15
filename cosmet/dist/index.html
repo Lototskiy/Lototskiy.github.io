@@ -1,0 +1,1886 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<title>LUCKY - салон красоты</title>
+<link href="assets/css/app.css" rel="stylesheet"></head>
+
+<style>
+	.preloader {
+		width: 100%;
+		position: fixed;
+		height: 100%;
+		background: #000;
+		color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 9999;
+		transition: opacity .5s
+	}
+
+	.preloader--opacity0 {
+		opacity: 0
+	}
+
+	.preloader--hide {
+		display: none
+	}
+
+	.preloader__wrap {
+		position: relative;
+		justify-content: center;
+		align-items: center;
+		display: none
+	}
+
+	.preloader--go .preloader__wrap {
+		display: flex
+	}
+
+	.preloader__item {
+		visibility: hidden;
+		position: absolute
+	}
+
+	.preloader__item>span {
+		font-size: 62px;
+		font-weight: 600;
+		color: #666;
+		white-space: nowrap;
+		animation: textSize 3.5s
+	}
+
+	@media screen and (max-width:1200px) {
+		.preloader__item>span {
+			font-size: 20px
+		}
+	}
+
+	.preloader__item:nth-child(1) {
+		animation-fill-mode: forwards !important;
+		animation: fistItem 1.5s 0s, displayBlock, displayNone 0s 1.5s;
+		display: flex
+	}
+
+	.preloader__item:nth-child(1) span {
+		color: #f1f1f1;
+		margin-left: 10px
+	}
+
+	.preloader__item:nth-child(1) p {
+		font-size: 62px;
+		font-weight: 600;
+		color: #666;
+		white-space: nowrap;
+		animation: textSize 3s
+	}
+
+	@media screen and (max-width:1200px) {
+		.preloader__item:nth-child(1) p {
+			font-size: 20px
+		}
+	}
+
+	.preloader__item:nth-child(2) {
+		animation-fill-mode: forwards !important;
+		animation: displayBlock 0s 1.5s, displayNone 0s 1.9s
+	}
+
+	.preloader__item:nth-child(3) {
+		animation-fill-mode: forwards !important;
+		animation: displayBlock 0s 1.9s, displayNone 0s 2.3s
+	}
+
+	.preloader__item:nth-child(4) {
+		animation-fill-mode: forwards !important;
+		animation: displayBlock 0s 2.3s, displayNone 0s 2.7s
+	}
+
+	.preloader__item:nth-child(5) {
+		animation-fill-mode: forwards !important;
+		animation: displayBlock 0s 2.7s, displayNone 0s 3.1s
+	}
+
+	.preloader__item:nth-child(6) {
+		width: 200px;
+		text-align: center;
+		animation-fill-mode: forwards !important;
+		animation: displayBlock 0s 3.1s
+	}
+
+	@keyframes fistItem {
+		0% {
+			opacity: 0
+		}
+
+		100% {
+			opacity: 1
+		}
+	}
+
+	@keyframes displayNone {
+		100% {
+			visibility: hidden
+		}
+	}
+
+	@keyframes displayBlock {
+		100% {
+			visibility: visible
+		}
+	}
+
+	@keyframes textSize {
+		100% {
+			font-size: 80px
+		}
+	}
+
+	@media screen and (max-width:1200px) {
+		@keyframes textSize {
+			100% {
+				font-size: 24px
+			}
+		}
+	}
+</style>
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		document.querySelector('.preloader').classList.add('preloader--go');
+		setTimeout(function () {
+
+
+			function hideLoader() {
+				document.querySelector('.preloader').classList.add('preloader--opacity0');
+				document.querySelector('.preloader').addEventListener('transitionend', function () {
+					document.querySelector('.preloader').classList.add('preloader--hide');
+					let overs = document.querySelectorAll('.over--main .over-item');
+					for (var i = 0; i < overs.length; i++) {
+						overs[i].style.animationPlayState = "running";
+					}
+
+				});
+			}
+
+			hideLoader();
+		}, 0);
+	});
+</script>
+<div class="preloader">
+	<div class="preloader__wrap">
+		<div class="preloader__item">
+			<p>Салон</p><span>Lucky</span>
+		</div>
+		<div class="preloader__item">
+			<span>Парикмахерский зал</span>
+		</div>
+		<div class="preloader__item">
+			<span>Спа кабинет</span>
+		</div>
+		<div class="preloader__item">
+			<span>Солярий</span>
+		</div>
+		<div class="preloader__item">
+			<span>Ногти</span>
+		</div>
+		<div class="preloader__item">
+			<img src="assets/images/logo.svg" alt="">
+		</div>
+	</div>
+</div>
+
+
+<body>
+	<div class="social social--fixed">
+		<a class="social__link social__link-telegram" href="" target="_blank">
+			<svg viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M10.7062 16.4767L10.272 23.4566C10.8933 23.4566 11.1623 23.1516 11.485 22.7854L14.3976 19.6042L20.4329 24.6554C21.5398 25.3604 22.3196 24.9891 22.6182 23.4916L26.5797 2.27675L26.5808 2.2755C26.9319 0.405505 25.9891 -0.325741 24.9107 0.133006L1.62488 10.3217C0.0356652 11.0267 0.0597275 12.0392 1.35472 12.4979L7.30797 14.6142L21.1362 4.72548C21.787 4.23299 22.3787 4.50548 21.892 4.99798L10.7062 16.4767Z" />
+			</svg>
+		</a>
+		<a class="social__link social__link-vk" href="" target="_blank">
+			<svg viewBox="0 0 36 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M34.7448 17.8387C34.6506 17.681 34.0678 16.4146 31.2634 13.8118C28.3275 11.0863 28.7219 11.5289 32.2581 6.81617C34.4117 3.94605 35.2728 2.19331 35.0033 1.44401C34.747 0.729766 33.1629 0.918186 33.1629 0.918186L27.8959 0.948858C27.8959 0.948858 27.5059 0.896276 27.2145 1.06936C26.9319 1.24025 26.7501 1.63462 26.7501 1.63462C26.7501 1.63462 25.9153 3.85622 24.8023 5.7448C22.4558 9.73011 21.5159 9.94044 21.1325 9.69286C20.2408 9.11665 20.4643 7.37486 20.4643 6.13917C20.4643 2.27656 21.0493 0.666228 19.3228 0.249952C18.7488 0.111923 18.3281 0.019904 16.8624 0.00456746C14.9826 -0.0151509 13.3898 0.0111402 12.4893 0.451517C11.889 0.745102 11.4267 1.40019 11.7093 1.43744C12.0577 1.48345 12.8464 1.64996 13.2649 2.2196C13.806 2.95356 13.7863 4.60552 13.7863 4.60552C13.7863 4.60552 14.0974 9.1517 13.0611 9.71696C12.3491 10.1048 11.3741 9.31383 9.28177 5.6966C8.21041 3.84527 7.39976 1.79675 7.39976 1.79675C7.39976 1.79675 7.24421 1.41553 6.96596 1.21177C6.62855 0.964195 6.15531 0.885322 6.15531 0.885322L1.14685 0.915995C1.14685 0.915995 0.395358 0.937904 0.1193 1.26435C-0.126084 1.55575 0.0995819 2.15606 0.0995819 2.15606C0.0995819 2.15606 4.02135 11.3295 8.46017 15.9545C12.5331 20.194 17.156 19.9157 17.156 19.9157H19.2505C19.2505 19.9157 19.8837 19.8456 20.2057 19.4973C20.5037 19.1774 20.4928 18.5771 20.4928 18.5771C20.4928 18.5771 20.4511 15.7661 21.7569 15.352C23.043 14.9445 24.695 18.0688 26.4455 19.2716C27.7688 20.1808 28.7745 19.9815 28.7745 19.9815L33.4565 19.9157C33.4565 19.9157 35.906 19.7646 34.7448 17.8387Z" />
+			</svg>
+		</a>
+		<a class="social__link social__link-instagram" href="" target="_blank">
+			<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M10.2103 0.000976562H3.78967C1.70001 0.000976562 0 1.70099 0 3.79065V10.2114C0 12.301 1.70001 14.001 3.78967 14.001H10.2104C12.3 14.001 14 12.301 14 10.2114V3.79065C14 1.70099 12.3 0.000976563 10.2103 0.000976563V0.000976562ZM7 10.829C4.88919 10.829 3.17198 9.11179 3.17198 7.00098C3.17198 4.89017 4.88919 3.17296 7 3.17296C9.11081 3.17296 10.828 4.89017 10.828 7.00098C10.828 9.11179 9.11081 10.829 7 10.829ZM10.9196 4.07573C10.2958 4.07573 9.78842 3.56837 9.78842 2.9446C9.78842 2.32082 10.2958 1.81335 10.9196 1.81335C11.5433 1.81335 12.0508 2.32082 12.0508 2.9446C12.0508 3.56837 11.5433 4.07573 10.9196 4.07573Z" />
+				<path
+					d="M7.00044 3.99365C5.3423 3.99365 3.99316 5.34268 3.99316 7.00093C3.99316 8.65907 5.3423 10.0082 7.00044 10.0082C8.65869 10.0082 10.0077 8.65907 10.0077 7.00093C10.0077 5.34268 8.65869 3.99365 7.00044 3.99365Z" />
+				<path
+					d="M10.9198 2.63428C10.7487 2.63428 10.6094 2.77356 10.6094 2.94467C10.6094 3.11578 10.7487 3.25507 10.9198 3.25507C11.091 3.25507 11.2303 3.11589 11.2303 2.94467C11.2303 2.77345 11.091 2.63428 10.9198 2.63428Z" />
+			</svg>
+		</a>
+
+		<a class="social__link social__link-wa" href="" target="_blank">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+				x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+				<g>
+					<g>
+						<path
+							d="M256.064,0h-0.128C114.784,0,0,114.816,0,256c0,56,18.048,107.904,48.736,150.048l-31.904,95.104l98.4-31.456    C155.712,496.512,204,512,256.064,512C397.216,512,512,397.152,512,256S397.216,0,256.064,0z M405.024,361.504    c-6.176,17.44-30.688,31.904-50.24,36.128c-13.376,2.848-30.848,5.12-89.664-19.264C189.888,347.2,141.44,270.752,137.664,265.792    c-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624,26.176-62.304c6.176-6.304,16.384-9.184,26.176-9.184    c3.168,0,6.016,0.16,8.576,0.288c7.52,0.32,11.296,0.768,16.256,12.64c6.176,14.88,21.216,51.616,23.008,55.392    c1.824,3.776,3.648,8.896,1.088,13.856c-2.4,5.12-4.512,7.392-8.288,11.744c-3.776,4.352-7.36,7.68-11.136,12.352    c-3.456,4.064-7.36,8.416-3.008,15.936c4.352,7.36,19.392,31.904,41.536,51.616c28.576,25.44,51.744,33.568,60.032,37.024    c6.176,2.56,13.536,1.952,18.048-2.848c5.728-6.176,12.8-16.416,20-26.496c5.12-7.232,11.584-8.128,18.368-5.568    c6.912,2.4,43.488,20.48,51.008,24.224c7.52,3.776,12.48,5.568,14.304,8.736C411.2,329.152,411.2,344.032,405.024,361.504z" />
+					</g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+			</svg>
+		</a>
+	</div>
+	<main>
+		<header class="header">
+			<div class="center-wrap">
+				<div class="header__top">
+					<div class="header__top-address">
+						г. Владивосток, ул. Каплунова, 6
+					</div>
+					<div class="header__top-time">
+						График работы:
+						9:00 - 20:00
+					</div>
+					<div class="header__top-tel">
+						<a href="tel:74232530057">+7 (423) 253-00-57</a>
+						<a href="tel:84232393353">+8 (423) 239-33-53</a>
+					</div>
+				</div>
+				<div class="header__menu mobile--hide">
+					<nav class="header__nav">
+						<ul class="header__nav-list anchors">
+							<li class="header__nav-item"><a href="about" class="header__nav-link" target="_blank">О
+									салоне</a></li>
+							<li class="header__nav-item"><a href="services" class="header__nav-link"
+									target="_blank">Услуги</a>
+							</li>
+							<li class="header__nav-item"><a href="masters" class="header__nav-link"
+									target="_blank">Мастера</a></li>
+							<li class="header__nav-item header__nav-logo">
+								<a href="/" data-anchors='false' class="header__nav-link" target="_blanck">
+									<img src="assets/images/logo.svg" alt="">
+								</a>
+							</li>
+							<li class="header__nav-item"><a href="reviews" class="header__nav-link"
+									target="_blank">отзывы</a>
+							</li>
+							<li class="header__nav-item"><a href="/news.html" class="header__nav-link" target="_blank"
+									data-anchors='false'>Блог</a>
+							</li>
+							<li class="header__nav-item"><a href="contacts" class="header__nav-link"
+									target="_blank">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__burger desktop--hide">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<a href="#" class="header__logo--mobile desktop--hide">
+					<img src="assets/images/logo--mobile.png" alt="">
+				</a>
+			</div>
+		</header>
+		<!-- /.header -->
+		<div class="hero">
+			<img src="assets/images/main-screen__bg.png" data-animation-type='img' data-animation-delay='4000'
+				data-animation-duration='5000' class="hero__bg" alt="">
+			<div class="center-wrap">
+				<div class="hero__info">
+					<h1 class="hero__info-title" data-animation-type='clipgrad' data-animation-delay='4000'
+						data-animation-duration='1500'>
+						САЛОН LUCKY
+					</h1>
+					<div class="hero__info-subtitle" data-animation-type='bottom' data-animation-delay='4000'
+						data-animation-duration='2000'>
+						Услуги красоты бизнес-класса
+					</div>
+					<span class="btn" data-animation-type='bottom' data-animation-duration='2000'
+						onclick='show_popup("popup1")'>Записаться</span>
+				</div>
+
+
+			</div>
+
+			<a class="scroll" href="#thanks">
+				<span></span>
+				<div class="scroll__scrolldown">
+					<div class="scroll__line"></div>
+				</div>
+			</a>
+
+		</div>
+		<!-- hero -->
+		<div class="author" id='about'>
+			<div class="center-wrap">
+				<div class="simple-title-wrap animations">
+					<h2 class="simple-title" data-animation-time='1' data-animation-type='clipgrad'
+						data-animation-duration='1200'>
+						Вы еще не приходили<br>
+						к нам в гости?
+						<div class="simple-title__line" data-animation-type='clipright' data-animation-duration='1200'
+							data-animation-deep='2'></div>
+					</h2>
+				</div>
+				<span class="author__subtitle mobile--hide" data-animation-duration='1200' data-animation-color='#fff'
+					data-animation-type='clipover'>
+					<div class="overlay"></div>
+					<span>Давайте познакомимся!</span>
+				</span>
+
+				<div class="author__info">
+					<div class="author__info-wrap">
+						<div class="author__box animation">
+							<div class="author__box-line" data-animation-type='cliptop' data-animation-duration='1200'
+								dat-animation-deep='2'></div>
+							<div class="author__box-name">
+								Оксана Жураковская
+							</div>
+							<div class="author__box-descr" data-animation-time='1' data-animation-duration='1200'
+								data-animation-color='#fff' data-animation-type='clipover'>
+								<span>владелица салона красоты “Lucky”
+									и самый преданный его гость.</span>
+								<div class="overlay"></div>
+							</div>
+						</div>
+						<div class="author__info-text">
+							<p data-animation-type='clip' data-animation-duration='1500'>
+								Индустрия красоты меня вдохновляет, даёт возможность преобразить этот мир, сделать его
+								намного красивее. Так я могу подарить моменты радости и спокойствия нашим дорогим
+								гостям!
+								Создавать красоту и настроение - главная цель моего бизнеса.
+							</p>
+							<p data-animation-type='clipright' data-animation-duration='1500'>
+								Наши клиенты всегда остаются довольны, ведь в моем салоне работают профессионалы с
+								высокой
+								квалификацией, внимательные и требовательные в первую очередь к самим себе и к
+								результату
+								своего труда. И я с гордостью ставлю свою подпись, ведь я уверенна в своей команде!
+							</p>
+							<p data-animation-type='clip' data-animation-duration='1500'>
+								Я всех приглашаю к себе в гости, в салон красоты Lucky, ведь красивыми нужно быть не
+								только
+								по праздникам, а каждый день.
+							</p>
+						</div>
+
+						<div class="author__info-signature">
+							<div>
+								<img src="assets/images/author-signature.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="author__info-img">
+						<div>
+							<img data-animation-type='img' data-animation-duration='5000'
+								src="assets/images/author-img.png" alt="">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- /.author -->
+		<section class="numbers">
+			<div class="center-wrap">
+				<div class="simple-title-wrap animations">
+					<h2 class="simple-title" data-animation-time='1' data-animation-type='clipgrad'
+						data-animation-duration='1200'>
+						Немного цифр
+						<div class="simple-title__line" data-animation-type='clipright' data-animation-duration='1200'
+							data-animation-deep='2'></div>
+					</h2>
+				</div>
+				<div class="numbers__list">
+					<div class="numbers__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-delay='0'>
+						<span>10</span>
+						<p>лет работаем для Вас</p>
+					</div>
+					<div class="numbers__sep"></div>
+					<div class="numbers__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-delay='200'>
+						<span>23</span>
+						<p>сотрудника в команде</p>
+					</div>
+					<div class="numbers__sep"></div>
+					<div class="numbers__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-delay='400'>
+						<span>5<sub>+</sub></span>
+						<p>академий и стилистов
+							мирового уровня</p>
+					</div>
+					<div class="numbers__sep"></div>
+					<div class="numbers__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-delay='600'>
+						<span>95<sub>%</sub></span>
+						<p>постоянных клиентов</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.counter -->
+		<section class="services" id='services'>
+			<div class="center-wrap">
+				<div class="simple-title-wrap animations">
+					<h2 class="simple-title" data-animation-time='1' data-animation-type='clipgrad2'
+						data-animation-duration='1200'>
+						Наши услуги
+						<div class="simple-title__line" data-animation-type='clipright' data-animation-duration='1200'
+							data-animation-deep='2'></div>
+					</h2>
+				</div>
+				<div class="services__subtitle" data-animation-type='bottom' data-animation-duration='1200'>
+					Все процедуры делаются с использованием косметики класса люкс. Все препараты сертифицированы.
+				</div>
+				<div class="services__inner">
+					<div onclick='show_popup("popup5")' class="services__item" data-animation-type='bottom'
+						data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='0'>
+						<div>
+							<img src="assets/images/services-img4.png" alt="">
+							<p class="services__item-title">
+								Ногтевой<br>сервис
+							</p>
+						</div>
+					</div>
+
+					<div onclick='show_popup("popup5")' class="services__item" data-animation-type='bottom'
+						data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='200'>
+						<div>
+							<img src="assets/images/services-img5.png" alt="">
+							<p class="services__item-title">
+								Косметология<br>все виды
+							</p>
+						</div>
+					</div>
+					<div onclick='show_popup("popup5")' class="services__item" data-animation-type='bottom'
+						data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='400'>
+						<div>
+							<img src="assets/images/services-img6.png" alt="">
+							<p class="services__item-title">
+								Эстетические<br>
+								процедуры
+							</p>
+						</div>
+					</div>
+
+					<div class="services__item services__item--hide"></div>
+
+					<!-- mobile -->
+					<a data-fancybox data-src="#modal-services" data-animation-type='bottom'
+						data-animation-duration='1200' href="javascript:;"
+						class="services-slider__item services__item desktop--hide">
+						<div>
+							<img src="assets/images/services-img1.png" alt="">
+							<p class="services__item-title">
+								Парикмахерский<br> зал
+							</p>
+						</div>
+					</a>
+					<a data-fancybox data-src="#modal-services" data-animation-type='bottom'
+						data-animation-duration='1200' href="javascript:;"
+						class="services-slider__item services__item desktop--hide">
+						<div>
+							<img src="assets/images/services-img2.png" alt="">
+							<p class="services__item-title">
+								Спа<br> кабинет
+							</p>
+						</div>
+					</a>
+					<a data-fancybox data-src="#modal-services" data-animation-type='bottom'
+						data-animation-duration='1200' href="javascript:;"
+						class="services-slider__item services__item desktop--hide">
+						<div>
+							<img src="assets/images/services-img3.png" alt="">
+							<p class="services__item-title">
+								Солярий
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- /.services -->
+		<section class="price">
+			<div class="center-wrap">
+				<div class="price__text" data-animation-type='bottom' data-animation-duration='1200'>
+					<p>
+						Оставьте свой номер WhatsApp, и мы вышлем вам полный детальный прайс
+					</p>
+				</div>
+				<div class="price__form" data-animation-type='bottom' data-animation-duration='1200'>
+					<form action="" class='inputs inputs--white'>
+						<div class="inputs__wrap">
+							<input type="tel" name="phone" class='inputs__phone inputs__input' placeholder="+7 ( _____ ) ___-___-___">
+						</div>
+						<div class="inputs__wrap">
+							<span class="btn" onclick='show_popup("popup3")'>Получить прайс</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- price -->
+		<section class="masters" id='masters'>
+			<div class="center-wrap">
+				<div class="simple-title-wrap animations">
+					<h2 class="simple-title" data-animation-time='1' data-animation-type='clipgrad2'
+						data-animation-duration='1200'>
+						Наши мастера
+						<div class="simple-title__line" data-animation-type='clipright' data-animation-duration='1200'
+							data-animation-deep='2'></div>
+					</h2>
+				</div>
+				<div class="masters__descr" data-animation-type='bottom' data-animation-duration='1200'>
+					У нас работают только лучшие мастера с большим опытом. Мы регулярно проводим
+					мастер-классы для повышения их квалификации, для этого приглашаем ведущих московских стилистов.
+				</div>
+				<div class="masters-slider">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div onclick='show_popup("popup4")' class="masters__item">
+									<div>
+										<img src="assets/images/masters-img3.png" alt="">
+										<div class="masters__item-content">
+											<p class="masters__item-title">
+												Ошивалова Татьяна
+											</p>
+											<p class="masters__item-descr">
+												парикмахер<br>
+												Стаж работы 2 года
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div onclick='show_popup("popup4")' class="masters__item">
+									<div>
+										<img src="assets/images/masters-img1.png" alt="">
+										<div class="masters__item-content">
+											<p class="masters__item-title">
+												Молокова Светлана
+											</p>
+											<p class="masters__item-descr">
+												парикмахер<br>
+												Стаж работы 5 лет
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div onclick='show_popup("popup4")' class="masters__item">
+									<div>
+										<img src="assets/images/masters-img4.png" alt="">
+										<div class="masters__item-content">
+											<p class="masters__item-title">
+												Зубенко Юлия
+											</p>
+											<p class="masters__item-descr">
+												массажист, косметолог<br>
+												Стаж работы 5 лет
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div onclick='show_popup("popup4")' class="masters__item">
+									<div>
+										<img src="assets/images/masters-img2.png" alt="">
+										<div class="masters__item-content">
+											<p class="masters__item-title">
+												Хмелева Кристина
+											</p>
+											<p class="masters__item-descr">
+												мастер ногтевого сервиса<br>
+												Стаж работы 8 лет
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button">
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+				<div class="certifications-slider">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a data-fancybox="certifications-gallery" href="assets/images/certifications-img1.png"
+									class="certifications__item">
+									<div>
+										<img src="assets/images/certifications-img1.png" alt="">
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a data-fancybox="certifications-gallery" href="assets/images/certifications-img2.png"
+									class="certifications__item">
+									<div>
+										<img src="assets/images/certifications-img2.png" alt="">
+									</div>
+
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a data-fancybox="certifications-gallery" href="assets/images/certifications-img3.png"
+									class="certifications__item">
+									<div>
+										<img src="assets/images/certifications-img3.png" alt="">
+									</div>
+
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button">
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+				<div class="masters__text">
+					<p data-animation-type='bottom' data-animation-duration='1200'>
+						А что бы наше знакомство было еще более приятным,<br>
+						мы дарим вам скидку <span>30%</span> на лазерную эпиляцию любой зоны!
+					</p>
+				</div>
+				<div class="masters__link" data-animation-type='bottom' data-animation-duration='1200'>
+					<span class="btn" onclick='show_popup("popup2")'>Получить скидку</span>
+				</div>
+			</div>
+		</section>
+		<!-- /.masters -->
+		<section class="regulations">
+			<div class="center-wrap">
+				<div class="simple-title-wrap animations">
+					<h2 class="simple-title" data-animation-time='1' data-animation-type='clipgrad2'
+						data-animation-duration='1200'>
+						Философия нашей работы - 7 правил
+						<div class="simple-title__line" data-animation-type='clipright' data-animation-duration='1200'
+							data-animation-deep='2'></div>
+					</h2>
+				</div>
+				<div class="regulations__list">
+					<div class="regulations__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-mobile-delay data-animation-delay='0'>
+						<p class="regulations__item-number">01<sab>/07</sab>
+						</p>
+						<h3 class="regulations__item-title">
+							Прозрачность<br>ценовой политики
+						</h3>
+						<div class="regulations__item-text">
+							Вы всегда можете узнать, из чего складывается
+							цена той или иной услуги. После того, как мы ее вам озвучили при записи, она не
+							увеличится.
+						</div>
+					</div>
+					<div class="regulations__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-mobile-delay data-animation-delay='200'>
+						<p class="regulations__item-number">02<sab>/07</sab>
+						</p>
+						<h3 class="regulations__item-title">
+							Учитываем <br> каждую деталь
+						</h3>
+						<div class="regulations__item-text">
+							Мы обязательно учитываем Ваш типаж, образ жизни и предпочитаемый стиль в одежде при
+							подборе
+							прически, цвета волос или макияжа.
+						</div>
+					</div>
+					<div class="regulations__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-mobile-delay data-animation-delay='400'>
+						<p class="regulations__item-number">03<sab>/07</sab>
+						</p>
+						<h3 class="regulations__item-title">
+							Современные <br> техники работы
+						</h3>
+						<div class="regulations__item-text">
+							Используем только самые современные техники эпиляции, если у вас низкий болевой порог -
+							обезболим.
+						</div>
+					</div>
+					<div class="regulations__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-mobile-delay data-animation-delay='0'>
+						<p class="regulations__item-number">04<sab>/07</sab>
+						</p>
+						<h3 class="regulations__item-title">
+							Высокое <br> качество материала
+						</h3>
+						<div class="regulations__item-text">
+							Все инструменты тщательно стерилизуются.
+							Те, которые невозможно стерилизовать - одноразовые.
+						</div>
+					</div>
+					<div class="regulations__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-mobile-delay data-animation-delay='200'>
+						<p class="regulations__item-number">05<sab>/07</sab>
+						</p>
+						<h3 class="regulations__item-title">
+							Работа <br> на результат
+						</h3>
+						<div class="regulations__item-text">
+							Мы отвечаем за качество. Если результат оказался нестойким ( например, окрашивание или
+							маникюр) - бесплатно исправим недочеты.
+						</div>
+					</div>
+					<div class="regulations__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-mobile-delay data-animation-delay='400'>
+						<p class="regulations__item-number">06<sab>/07</sab>
+						</p>
+						<h3 class="regulations__item-title">
+							Высокий <br> уровень репутации
+						</h3>
+						<div class="regulations__item-text">
+							У нас прекрасная репутация, которой мы дорожим. Вам не будет стыдно, что вы обращаетесь
+							к
+							нашим мастерам. Посещение нашего салона - это стиль и образ жизни успешного человека
+						</div>
+					</div>
+					<div class="regulations__img">
+						<div>
+							<img data-animation-type='img' data-animation-duration='5000'
+								src="assets/images/regulations-images.jpg" alt="">
+						</div>
+					</div>
+					<div class="regulations__item" data-animation-type='bottom' data-animation-duration='1200'>
+						<p class="regulations__item-number">07<sab>/07</sab>
+						</p>
+						<h3 class="regulations__item-title">
+							Медицинская<br> лицензия и рабочие
+						</h3>
+						<div class="regulations__item-text">
+							И самое главное - мы соблюдаем законы и
+							заботимся о вашем здоровье. Поэтому у нашего салона есть медицинская лицензия, а все
+							косметологические процедуры проводятся специалистами с медицинским образованием ( в
+							штате 2
+							врача и 2 медицинских сестры).
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.regulations -->
+
+		<section class="job">
+			<div class="center-wrap">
+				<div class="simple-title-wrap animations">
+					<h2 class="simple-title" data-animation-time='1' data-animation-type='clipgrad'
+						data-animation-duration='1200'>
+						Наши работы
+						<div class="simple-title__line" data-animation-type='clipright' data-animation-duration='1200'
+							data-animation-deep='2'></div>
+					</h2>
+				</div>
+			</div>
+			<div class="swiper-container main-slider" data-animation-type='bottom' data-animation-duration='1200'>
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div>
+							<figure class="slide-bgimg"
+								style="background-image:url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80')">
+								<img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80"
+									class="entity-img" />
+							</figure>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div>
+							<figure class="slide-bgimg"
+								style="background-image:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80')">
+								<img class="slide-bgimg"
+									src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80" />
+							</figure>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div>
+							<figure class="slide-bgimg"
+								style="background-image:url('https://images.unsplash.com/photo-1500840216050-6ffa99d75160?ixlib=rb-1.2.1&auto=format&fit=crop&w=1373&q=80')">
+								<img src="https://images.unsplash.com/photo-1500840216050-6ffa99d75160?ixlib=rb-1.2.1&auto=format&fit=crop&w=1373&q=80"
+									class="entity-img" />
+							</figure>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div>
+							<figure class="slide-bgimg"
+								style="background-image:url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80')">
+								<img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80"
+									class="entity-img" />
+							</figure>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div>
+							<figure class="slide-bgimg"
+								style="background-image:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80')">
+								<img class="slide-bgimg"
+									src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80" />
+							</figure>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div>
+							<figure class="slide-bgimg"
+								style="background-image:url('https://images.unsplash.com/photo-1500840216050-6ffa99d75160?ixlib=rb-1.2.1&auto=format&fit=crop&w=1373&q=80')">
+								<img src="https://images.unsplash.com/photo-1500840216050-6ffa99d75160?ixlib=rb-1.2.1&auto=format&fit=crop&w=1373&q=80"
+									class="entity-img" />
+							</figure>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div>
+							<figure class="slide-bgimg"
+								style="background-image:url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80')">
+								<img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80"
+									class="entity-img" />
+							</figure>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div>
+							<figure class="slide-bgimg"
+								style="background-image:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80')">
+								<img class="slide-bgimg"
+									src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80" />
+							</figure>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div>
+							<figure class="slide-bgimg"
+								style="background-image:url('https://images.unsplash.com/photo-1500840216050-6ffa99d75160?ixlib=rb-1.2.1&auto=format&fit=crop&w=1373&q=80')">
+								<img src="https://images.unsplash.com/photo-1500840216050-6ffa99d75160?ixlib=rb-1.2.1&auto=format&fit=crop&w=1373&q=80"
+									class="entity-img" />
+							</figure>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-prev">
+					<span>
+						<svg width="12" height="13" viewBox="0 0 12 13" fill="#EEEEEE"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M12 0V13L11.4637 12.712L0.52514 6.78797L0 6.5L0.52514 6.21203L11.4637 0.287975L12 0Z" />
+						</svg>
+
+						OR RIGHT</span>
+				</div>
+				<div class="swiper-button-next">
+					<span>SLIDE LEFT
+						<svg width="12" height="13" viewBox="0 0 12 13" fill="#EEEEEE"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M0 0V13L0.536313 12.712L11.4749 6.78797L12 6.5L11.4749 6.21203L0.536313 0.287975L0 0Z" />
+						</svg>
+					</span>
+				</div>
+			</div>
+		</section>
+		<!-- /.job -->
+		<section class="reviews" id='reviews'>
+			<div class="center-wrap">
+				<div class="simple-title-wrap animations">
+					<h2 class="simple-title" data-animation-time='1' data-animation-type='clipgrad'
+						data-animation-duration='1200'>
+						Отзывы постоянных клиентов
+						<div class="simple-title__line" data-animation-type='clipright' data-animation-duration='1200'
+							data-animation-deep='2'></div>
+					</h2>
+				</div>
+				<div class="reviews__slider" data-animation-type='bottom' data-animation-duration='1200'>
+					<div class="reviews-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="reviews__item">
+									<div class="reviews__item-photo">
+										<div>
+											<img src="assets/images/reviews-img2.jpg" alt="">
+										</div>
+										<a class="reviews__item-instagram" href="#">
+											<svg class="inst" width="14" height="14" viewBox="0 0 14 14"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M10.2103 0.000976562H3.78967C1.70001 0.000976562 0 1.70099 0 3.79065V10.2114C0 12.301 1.70001 14.001 3.78967 14.001H10.2104C12.3 14.001 14 12.301 14 10.2114V3.79065C14 1.70099 12.3 0.000976563 10.2103 0.000976563V0.000976562ZM7 10.829C4.88919 10.829 3.17198 9.11179 3.17198 7.00098C3.17198 4.89017 4.88919 3.17296 7 3.17296C9.11081 3.17296 10.828 4.89017 10.828 7.00098C10.828 9.11179 9.11081 10.829 7 10.829ZM10.9196 4.07573C10.2958 4.07573 9.78842 3.56837 9.78842 2.9446C9.78842 2.32082 10.2958 1.81335 10.9196 1.81335C11.5433 1.81335 12.0508 2.32082 12.0508 2.9446C12.0508 3.56837 11.5433 4.07573 10.9196 4.07573Z" />
+												<path
+													d="M7.00044 3.99365C5.3423 3.99365 3.99316 5.34268 3.99316 7.00093C3.99316 8.65907 5.3423 10.0082 7.00044 10.0082C8.65869 10.0082 10.0077 8.65907 10.0077 7.00093C10.0077 5.34268 8.65869 3.99365 7.00044 3.99365Z" />
+												<path
+													d="M10.9198 2.63428C10.7487 2.63428 10.6094 2.77356 10.6094 2.94467C10.6094 3.11578 10.7487 3.25507 10.9198 3.25507C11.091 3.25507 11.2303 3.11589 11.2303 2.94467C11.2303 2.77345 11.091 2.63428 10.9198 2.63428Z" />
+											</svg>
+										</a>
+									</div>
+									<div class="reviews__item-name">Татьяна Сереброва</div>
+									<p class="reviews__item-text">
+										После похода в салон “ Lucky ” , я осталась
+										восхитительно довольна! Приятный сервис, высокое качество работы и
+										доступные
+										цены..
+									</p>
+									<span onclick='show_popup("popup6")' class="reviews__item-link">
+										Читать весь отзыв
+									</span>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="reviews__item">
+									<div class="reviews__item-photo">
+										<div>
+											<img src="assets/images/reviews-img3.jpg" alt="">
+										</div>
+										<a class="reviews__item-instagram" href="#">
+											<svg class="inst" width="14" height="14" viewBox="0 0 14 14"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M10.2103 0.000976562H3.78967C1.70001 0.000976562 0 1.70099 0 3.79065V10.2114C0 12.301 1.70001 14.001 3.78967 14.001H10.2104C12.3 14.001 14 12.301 14 10.2114V3.79065C14 1.70099 12.3 0.000976563 10.2103 0.000976563V0.000976562ZM7 10.829C4.88919 10.829 3.17198 9.11179 3.17198 7.00098C3.17198 4.89017 4.88919 3.17296 7 3.17296C9.11081 3.17296 10.828 4.89017 10.828 7.00098C10.828 9.11179 9.11081 10.829 7 10.829ZM10.9196 4.07573C10.2958 4.07573 9.78842 3.56837 9.78842 2.9446C9.78842 2.32082 10.2958 1.81335 10.9196 1.81335C11.5433 1.81335 12.0508 2.32082 12.0508 2.9446C12.0508 3.56837 11.5433 4.07573 10.9196 4.07573Z" />
+												<path
+													d="M7.00044 3.99365C5.3423 3.99365 3.99316 5.34268 3.99316 7.00093C3.99316 8.65907 5.3423 10.0082 7.00044 10.0082C8.65869 10.0082 10.0077 8.65907 10.0077 7.00093C10.0077 5.34268 8.65869 3.99365 7.00044 3.99365Z" />
+												<path
+													d="M10.9198 2.63428C10.7487 2.63428 10.6094 2.77356 10.6094 2.94467C10.6094 3.11578 10.7487 3.25507 10.9198 3.25507C11.091 3.25507 11.2303 3.11589 11.2303 2.94467C11.2303 2.77345 11.091 2.63428 10.9198 2.63428Z" />
+											</svg>
+										</a>
+									</div>
+									<div class="reviews__item-name">Евгений Ржевский</div>
+									<p class="reviews__item-text">После похода в салон “ Lucky ” , я осталась
+										восхитительно довольна! Приятный сервис, высокое качество работы и
+										доступные
+										цены..
+									</p>
+									<span onclick='show_popup("popup6")' class="reviews__item-link">
+										Читать весь отзыв
+									</span>
+								</div>
+
+							</div>
+							<div class="swiper-slide">
+								<div class="reviews__item">
+									<div class="reviews__item-photo">
+										<div>
+											<img src="assets/images/reviews-img1.jpg" alt="">
+										</div>
+										<a class="reviews__item-instagram" href="#">
+											<svg class="inst" width="14" height="14" viewBox="0 0 14 14"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M10.2103 0.000976562H3.78967C1.70001 0.000976562 0 1.70099 0 3.79065V10.2114C0 12.301 1.70001 14.001 3.78967 14.001H10.2104C12.3 14.001 14 12.301 14 10.2114V3.79065C14 1.70099 12.3 0.000976563 10.2103 0.000976563V0.000976562ZM7 10.829C4.88919 10.829 3.17198 9.11179 3.17198 7.00098C3.17198 4.89017 4.88919 3.17296 7 3.17296C9.11081 3.17296 10.828 4.89017 10.828 7.00098C10.828 9.11179 9.11081 10.829 7 10.829ZM10.9196 4.07573C10.2958 4.07573 9.78842 3.56837 9.78842 2.9446C9.78842 2.32082 10.2958 1.81335 10.9196 1.81335C11.5433 1.81335 12.0508 2.32082 12.0508 2.9446C12.0508 3.56837 11.5433 4.07573 10.9196 4.07573Z" />
+												<path
+													d="M7.00044 3.99365C5.3423 3.99365 3.99316 5.34268 3.99316 7.00093C3.99316 8.65907 5.3423 10.0082 7.00044 10.0082C8.65869 10.0082 10.0077 8.65907 10.0077 7.00093C10.0077 5.34268 8.65869 3.99365 7.00044 3.99365Z" />
+												<path
+													d="M10.9198 2.63428C10.7487 2.63428 10.6094 2.77356 10.6094 2.94467C10.6094 3.11578 10.7487 3.25507 10.9198 3.25507C11.091 3.25507 11.2303 3.11589 11.2303 2.94467C11.2303 2.77345 11.091 2.63428 10.9198 2.63428Z" />
+											</svg>
+										</a>
+									</div>
+									<div class="reviews__item-name">Елена Кузнецова</div>
+									<p class="reviews__item-text">После похода в салон “ Lucky ” , я осталась
+										восхитительно довольна! Приятный сервис, высокое качество работы и
+										доступные
+										цены..
+									</p>
+									<span onclick='show_popup("popup6")' class="reviews__item-link">
+										Читать весь отзыв
+									</span>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="reviews-button">
+						<div class="reviews-button-next"></div>
+						<div class="reviews-button-prev"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.reviews -->
+		<section class="contact" id='contacts'>
+			<div class="center-wrap">
+				<div class="simple-title-wrap animations">
+					<h2 class="simple-title" data-animation-time='1' data-animation-type='clipgrad'
+						data-animation-duration='1200'>
+						Остались вопросы?<br>
+						Позвоните или напишите нам
+						<div class="simple-title__line" data-animation-type='clipright' data-animation-duration='1200'
+							data-animation-deep='2'></div>
+					</h2>
+				</div>
+				<div class="contact__inner">
+					<div class="contact__info">
+						<div class="contact__info-row">
+							<p class="contact__info-name" data-animation-type='clipover' data-animation-duration='1200'>
+								<span>WhatsApp:</span>
+								<em class="overlay"></em>
+							</p>
+							<a class="contact__info-tel" href="tel:79585423303" data-animation-type='clipover'
+								data-animation-duration='1200'>
+								<span>+7 958 542 33 03</span>
+								<em class="overlay"></em>
+							</a>
+						</div>
+						<div class="contact__info-row">
+							<p class="contact__info-name" data-animation-type='clipover' data-animation-duration='1200'>
+								<span>Instagram:</span>
+								<em class="overlay"></em>
+							</p>
+							<a class="contact__info-link" href="#" target="_blanc" class="contact__info-adress"
+								data-animation-type='clipover'
+								data-animation-duration='1200'><span>@salon_lucky</span><em class="overlay"></em></a>
+						</div>
+						<div class="contact__info-row">
+							<p class="contact__info-name" data-animation-type='clipover' data-animation-duration='1200'>
+								<span>E-mail:</span>
+								<em class="overlay"></em>
+							</p>
+							<a class="contact__info-link" href="#" target="_blanc" class="contact__info-adress"
+								data-animation-type='clipover'
+								data-animation-duration='1200'><span>salonlucky.vl@mail.ru</span><em
+									class="overlay"></em></a>
+						</div>
+						<div class="contact__info-row">
+							<p class="contact__info-name" data-animation-type='clipover' data-animation-duration='1200'>
+								<span>Адрес:</span>
+								<em class="overlay"></em>
+							</p>
+							<p class="contact__info-adress" data-animation-type='clipover'
+								data-animation-duration='1200'>
+								<span>г. Владивосток, ул. Каплунова, 6</span>
+								<em class="overlay"></em>
+							</p>
+						</div>
+					</div>
+					<div class="map" data-animation-type='bottom' data-animation-duration='1200'>
+						<!-- <div class="map" id="map"></div> -->
+						<iframe
+							src="https://www.google.com/maps/embed?language=ru&pb=!1m18!1m12!1m3!1d2912.556806786785!2d131.94050931548043!3d43.113827979143515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb3928a8ccb415d%3A0xeb3a8edf8bef7ce9!2z0YPQuy4g0JrQsNC_0LvRg9C90L7QstCwLCA2LCDQktC70LDQtNC40LLQvtGB0YLQvtC6LCDQn9GA0LjQvNC-0YDRgdC60LjQuSDQutGA0LDQuSwg0KDQvtGB0ZbRjywgNjkwMDEz!5e0!3m2!1suk!2sua!4v1593522135802!5m2!1suk!2sua"
+							frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+							tabindex="0"></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.contact -->
+	</main>
+	<footer class=footer>
+		<div class="center-wrap">
+			<div class="footer__inner">
+				<div class="footer__logo">
+					<a href="index.html">
+						<img src="assets/images/logo.svg" alt="Логотип">
+					</a>
+				</div>
+				<nav class="footer__nav">
+					<ul class="footer__list anchors">
+						<li><a href="about" target="_blanc">О салоне</a></li>
+						<li><a href="services" target="_blanc">Услуги</a></li>
+						<li><a href="masters" target="_blanc">Мастера</a></li>
+						<li><a href="reviews" target="_blanc">Отзывы</a></li>
+						<li><a href="/news.html" target="_blanc" data-anchors='false'>Блог</a></li>
+						<li><a href="contacts" target="_blanc">Контакты </a></li>
+					</ul>
+				</nav>
+				<div class="footer__copyright">
+					<a class="footer__copyright-link" onclick='show_popup("privacy")'>Политика конфидициальности</a>
+					<span>© 2020 Салон красоты “Lucky”</span>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<p>Разработчики: <a href="https://vk.com/slastenilia" target="_blank">Slasten Digital</a></p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- start popup -->
+	<div class="popup-wrap" id='popup1'>
+		<div class="popup">
+			<div class="popup__close" onclick="close_popup('popup1')">
+				<div></div>
+				<div></div>
+			</div>
+			<h2 class="popup__title">Оставьте заявку</h2>
+			<p class="popup__sub-title">
+				Заполните форму, и мы перезвоним<br>
+				вам в течение дня
+			</p>
+			<!-- inputs--white -->
+			<form action="" class='inputs'>
+				<div class="inputs__wrap">
+					<input type="text" class='inputs__name inputs__input' placeholder="Введите Ваше имя">
+				</div>
+				<div class="inputs__wrap">
+					<input type="tel" name="phone" class='inputs__phone inputs__input' placeholder="+7 ( _____ ) ___-___-___">
+				</div>
+				<div class="inputs__wrap">
+					<input type="submit" class='inputs__submit inputs__input' value="Позвоните мне">
+				</div>
+			</form>
+			<p class="popup__text">
+				* Нажимая на кнопку вы соглашаетесь<br>
+				с нашей политикой конфиденциальности
+			</p>
+		</div>
+	</div>
+	<div class="popup-wrap" id='popup2'>
+		<div class="popup">
+			<div class="popup__close" onclick="close_popup('popup2')">
+				<div></div>
+				<div></div>
+			</div>
+			<h2 class="popup__title">Получить скидку</h2>
+			<p class="popup__sub-title">
+				Заполните форму, и мы подарим<br>
+				вам скидку 30% на лазерную<br> эпиляцию любой зоны
+			</p>
+			<form action="" class='inputs'>
+				<div class="inputs__wrap">
+					<input type="text" class='inputs__name inputs__input' placeholder="Введите Ваше имя">
+				</div>
+				<div class="inputs__wrap">
+					<input type="tel" name="phone" class='inputs__phone inputs__input' placeholder="+7 ( _____ ) ___-___-___">
+				</div>
+				<div class="inputs__wrap">
+					<input type="submit" class='inputs__submit inputs__input' value="Получить скидку">
+				</div>
+			</form>
+			<p class="popup__text">
+				* Нажимая на кнопку вы соглашаетесь<br>
+				с нашей политикой конфиденциальности
+			</p>
+		</div>
+	</div>
+	<div class="popup-wrap" id='popup3'>
+		<div class="popup">
+			<div class="popup__close" onclick="close_popup('popup3')">
+				<div></div>
+				<div></div>
+			</div>
+			<h2 class="popup__title">Получить прайс</h2>
+			<p class="popup__sub-title">
+				Заполните форму, и мы отправим<br>
+				вам детальный прайс в WhatsApp
+			</p>
+			<form action="" class='inputs'>
+				<div class="inputs__wrap">
+					<input type="text" class='inputs__name inputs__input' placeholder="Введите Ваше имя">
+				</div>
+				<div class="inputs__wrap">
+					<input type="tel" name="phone" class='inputs__phone inputs__input' placeholder="+7 ( _____ ) ___-___-___">
+				</div>
+				<div class="inputs__wrap">
+					<input type="submit" class='inputs__submit inputs__input' value="Получить прайс">
+				</div>
+				<!-- <div class="inputs__wrap">
+				<input type="text" class='inputs__email inputs__error' placeholder="E-mail">
+			</div> -->
+				<!-- <textarea class="inputs__message" placeholder="Здесь может быть ваш коментарий..."></textarea> -->
+				<!-- <span class="btn">Позвоните мне</span> -->
+			</form>
+			<p class="popup__text">
+				* Нажимая на кнопку вы соглашаетесь<br>
+				с нашей политикой конфиденциальности
+			</p>
+		</div>
+	</div>
+	<div class="popup-wrap" id='popup4'>
+		<div class="popup popup--big popup--bg">
+			<div class="popup__close popup__close--color" onclick="close_popup('popup4')">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="master">
+				<div class="master__title">
+					Мастера салона
+				</div>
+				<div class="simple-title-wrap">
+					<h2 class="simple-title">
+						Наши услуги
+						<div class="simple-title__line"></div>
+					</h2>
+				</div>
+				<div class="master__wrap">
+					<div class="master__img">
+						<div>
+							<img src="assets/images/masters-img3.png" alt="">
+						</div>
+					</div>
+					<div class="master__info">
+						<div class="master__info-author">
+							<div class="master__info-name">
+								Татьяна Ошивалова
+							</div>
+							<div class="master__info-descr">
+								Стилист - парикмахер,
+								колорист высокой категории
+							</div>
+						</div>
+						<div class="master__info-text">
+							<p>
+								Татьяна - мастер по легким укладкам, окрашиваниям, стрижки детские, стрижки женские,
+								стрижки
+								мужские, лечение волос, хим. завивка.
+							</p>
+							<p>
+								Сильная сторона: Любит выполнять сложные окрашивания волос (аиртач, шатуш, балаяж,
+								растяжки).<br>
+								Стаж работы 2 года.
+							</p>
+							<p>
+								Так что, если Вы хотите выглядеть потрясающе, записывайтесь к Татьяне. В салоне “Lucky”
+								ценят
+								своих специалистов, команда салона работает вместе уже долгие годы!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="simple-title-wrap simple-title-wrap--small">
+				<h2 class="simple-title">
+					Сертификаты мастера
+					<div class="simple-title__line"></div>
+				</h2>
+			</div>
+			<div class="certifications-slider">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a data-fancybox="certifications-gallery" href="assets/images/certifications-img1.png"
+								class="certifications-slider__item">
+								<div>
+									<img src="assets/images/certifications-img1.png" alt="">
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox="certifications-gallery" href="assets/images/certifications-img2.png"
+								class="certifications-slider__item">
+								<div>
+									<img src="assets/images/certifications-img2.png" alt="">
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox="certifications-gallery" href="assets/images/certifications-img3.png"
+								class="certifications-slider__item">
+								<div>
+									<img src="assets/images/certifications-img3.png" alt="">
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button">
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+			</div>
+			<section class="works">
+				<div class="simple-title-wrap simple-title-wrap--small">
+					<h2 class="simple-title">
+						Примеры работы
+						<div class="simple-title__line"></div>
+					</h2>
+				</div>
+				<div class="works__list">
+					<div class="works__item">
+						<a data-fancybox='works' href="../assets/images/modal-master1.png">
+							<img src="../assets/images/modal-master1.png" alt="">
+						</a>
+					</div>
+					<div class="works__item">
+						<a data-fancybox='works' href="../assets/images/modal-master2.png">
+							<img src="../assets/images/modal-master2.png" alt="">
+						</a>
+					</div>
+					<div class="works__item">
+						<a data-fancybox='works' href="../assets/images/modal-master3.png">
+							<img src="../assets/images/modal-master3.png" alt="">
+						</a>
+					</div>
+					<div class="works__item">
+						<a data-fancybox='works' href="../assets/images/modal-master3.png">
+							<img src="../assets/images/modal-master3.png" alt="">
+						</a>
+					</div>
+					<div class="works__item works__item--hide"></div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="popup-wrap" id='popup5'>
+		<div class="popup popup--big">
+			<div class="popup__close" onclick="close_popup('popup5')">
+				<div></div>
+				<div></div>
+			</div>
+			<h2 class="popup__title popup__title--big">Парикмахерский зал </h2>
+			<p class="popup__sub-title">
+				мы оказываем весь спектр парикмахерских услуг от детской стрижки до сложных техник окрашивания.<br>
+				Салон работает на косметике класса "люкс", а каждый мастер несет ответственность за свою работу перед
+				клиентом.
+			</p>
+			<div class="record">
+				<div class="record__title">
+					Вы можете записаться на эту процедуру прямо сейчас!
+				</div>
+				<div class="record__subtitle">
+					Заполните форму ниже и наш менеджер свяжется с Вами для уточнения деталей.
+				</div>
+				<form action="" class='inputs inputs--row inputs--small'>
+					<div class="inputs__wrap">
+						<input type="text" class='inputs__name inputs__input' placeholder="Введите Ваше имя">
+					</div>
+					<div class="inputs__wrap">
+						<input type="tel" name="phone" class='inputs__phone inputs__input' placeholder="+7 ( _____ ) ___-___-___">
+					</div>
+					<div class="inputs__wrap">
+						<input type="submit" class='inputs__submit inputs__input' value="Записаться">
+					</div>
+				</form>
+			</div>
+			<div class="faq">
+				<div class="faq__list">
+					<div class="faq__item faq__item--active">
+						<h3 class="faq__item-title">
+							Окрашивание
+						</h3>
+						<div class="faq__item-text">
+							<p>
+								Своим клиентам наш салон красоты предлагает окрашивание бизнес класса (наивысшего класса
+								среди красителей для волос) профессиональными продуктами брендов Lebel (Япония) и Nirvel
+								(Испания). Краситель Materia от Lebel - это единственный краситель в мире, сочетающий в
+								себе
+								окрашивающую способность и восстановление структуры волос. Решена извечная проблема
+								стойкости яркого цвета. Благодаря увеличенному количеству цветового пигмента и
+								пониженному
+								содержанию аммиака краситель держится на волосах невероятно долго. И даже когда яркость
+								начинает смываться, процесс происходит очень ровно по всей длине. Materia позволяет
+								играть с
+								цветом без изменения тона. Палитра богата различными добавочными цветами и теперь можно
+								получить каждый раз во время окрашивания новые оттенки. Благодаря смешиванию
+								определенных
+								тонов появилась возможность создания неповторимого рецепта окрашивания для каждого
+								человека.
+							</p>
+							<p>
+								Использование профессиональной косметики для волос в домашнем уходе - сегодня это
+								актуальный
+								тренд. И мы рады будем подобрать для вас косметику для ухода за волосами дома, а так же
+								разработаем для вас индивидуальную систему ухода и оздоровления волос и кожи головы. В
+								нашем
+								салоне мы можем вам предложить шампуни, маски и уходы таких известных брендов как:
+								Greymy
+								Professional (Швейцария), Nirvel (Испания), Lebel (Япония), Loreal (Франция).
+							</p>
+							<p>
+								В парикмахерском зале нашего салона работают мастера разного уровня, опыта и
+								квалификации,
+								от молодых специалистов до стилистов - технологов с опытом работы в профессии более 12
+								лет.
+								Поскольку наш салон расположен на базе обучающего и диллерского центра, мы имеем
+								возможность
+								брать молодых и перспективных специалистов, ежегодно ( а если это необходимо, и
+								ежемесячно)
+								повышать их уровень профессионализма, обучая их у самых топовых стилистов страны.
+							</p>
+							<p>
+								Мы всегда следим за модными трендами парикмахерского направления, и готовы выполнить для
+								вас
+								любую технику окрашивания волос от окрашивания/осветления корней до современных растяжек
+								цвета в техниках Балаяж, Шатуш, Сан Райз и другие. Особое внимание в нашем салоне
+								уделяется
+								блондинкам , так как данный цвет волос требует более бережного обращения и ухода.
+							</p>
+						</div>
+					</div>
+					<div class="faq__item">
+						<h3 class="faq__item-title">
+							Стрижки любой сложности
+						</h3>
+						<div class="faq__item-text">
+							<p>
+								Желание быть ухоженным и выглядеть достойно в 21 веке присуще не только женщинам, но и
+								мужчинам. Наш салон предлагает современные мужские стрижки, детские стрижки и женские
+								стрижки на любую длину волос от классической модели до креативной.
+							</p>
+							<p>
+								У мастеров нашего салона нет одинакового подхода к двум клиентам, нет шаблонов, все
+								строго
+								индивидуально. Мастера всегда стараются делать свою работу с полной самоотдачей. У нас
+								не
+								просто стригут волосы — у нас создают образ и стиль, подходящий именно вам.
+							</p>
+						</div>
+					</div>
+					<div class="faq__item">
+						<h3 class="faq__item-title">
+							Лечение/ восстановление волос любой степени повреждения
+						</h3>
+						<p class="faq__item-text">
+							У мастеров нашего салона нет одинакового подхода к двум клиентам, нет шаблонов, все строго
+							индивидуально. Мастера всегда стараются делать свою работу с полной самоотдачей. У нас не
+							просто стригут волосы — у нас создают образ и стиль, подходящий именно вам.
+						</p>
+					</div>
+					<div class="faq__item">
+						<h3 class="faq__item-title">
+							Выпрямление волос
+						</h3>
+						<p class="faq__item-text">
+							У мастеров нашего салона нет одинакового подхода к двум клиентам, нет шаблонов, все строго
+							индивидуально. Мастера всегда стараются делать свою работу с полной самоотдачей. У нас не
+							просто стригут волосы — у нас создают образ и стиль, подходящий именно вам.
+						</p>
+					</div>
+					<div class="faq__item">
+						<h3 class="faq__item-title">
+							Прически/укладки/плетения
+						</h3>
+						<p class="faq__item-text">
+							У мастеров нашего салона нет одинакового подхода к двум клиентам, нет шаблонов, все строго
+							индивидуально. Мастера всегда стараются делать свою работу с полной самоотдачей. У нас не
+							просто стригут волосы — у нас создают образ и стиль, подходящий именно вам.
+						</p>
+					</div>
+					<div class="faq__item">
+						<h3 class="faq__item-title">
+							Профессиональный домашний уход
+						</h3>
+						<p class="faq__item-text">
+							У мастеров нашего салона нет одинакового подхода к двум клиентам, нет шаблонов, все строго
+							индивидуально. Мастера всегда стараются делать свою работу с полной самоотдачей. У нас не
+							просто стригут волосы — у нас создают образ и стиль, подходящий именно вам.
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="popup-wrap" id='popup6'>
+		<div class="popup popup--bg popup--500">
+			<div class="popup__close popup__close--color" onclick="close_popup('popup6')">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="reviews__item-photo reviews__item-photo--popup">
+				<div>
+					<img src="assets/images/reviews-img2.jpg" alt="">
+				</div>
+				<a class="reviews__item-instagram" href="#">
+					<svg class="inst" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M10.2103 0.000976562H3.78967C1.70001 0.000976562 0 1.70099 0 3.79065V10.2114C0 12.301 1.70001 14.001 3.78967 14.001H10.2104C12.3 14.001 14 12.301 14 10.2114V3.79065C14 1.70099 12.3 0.000976563 10.2103 0.000976563V0.000976562ZM7 10.829C4.88919 10.829 3.17198 9.11179 3.17198 7.00098C3.17198 4.89017 4.88919 3.17296 7 3.17296C9.11081 3.17296 10.828 4.89017 10.828 7.00098C10.828 9.11179 9.11081 10.829 7 10.829ZM10.9196 4.07573C10.2958 4.07573 9.78842 3.56837 9.78842 2.9446C9.78842 2.32082 10.2958 1.81335 10.9196 1.81335C11.5433 1.81335 12.0508 2.32082 12.0508 2.9446C12.0508 3.56837 11.5433 4.07573 10.9196 4.07573Z" />
+						<path
+							d="M7.00044 3.99365C5.3423 3.99365 3.99316 5.34268 3.99316 7.00093C3.99316 8.65907 5.3423 10.0082 7.00044 10.0082C8.65869 10.0082 10.0077 8.65907 10.0077 7.00093C10.0077 5.34268 8.65869 3.99365 7.00044 3.99365Z" />
+						<path
+							d="M10.9198 2.63428C10.7487 2.63428 10.6094 2.77356 10.6094 2.94467C10.6094 3.11578 10.7487 3.25507 10.9198 3.25507C11.091 3.25507 11.2303 3.11589 11.2303 2.94467C11.2303 2.77345 11.091 2.63428 10.9198 2.63428Z" />
+					</svg>
+				</a>
+			</div>
+			<div class="reviews__item-name">
+				Татьяна Сереброва
+			</div>
+			<!-- <div class="popup__title">
+				Татьяна Сереброва
+			</div> -->
+			<div class="reviews__item-text reviews__item-text--popup">
+				<p>
+					После похода в салон “ Lucky ” , я осталась восхитительно довольна! Приятный сервис, высокое
+					качество
+					работы
+					и доступные цены.. Хотелось бы отметить высокий профессионализм всего коллектива салона. Это
+					пунктуальные,
+					вежливые и общительные люди. Здесь очень приятная атмосфера и индивидуальный подход. Каждый раз,
+					выходя
+					из
+					салона, получаешь не только красоту, заряд бодрости, но и отличное настроение. Недавно прошла курс
+					классического массажа у Марины Александровны. Это специалист высокого класса, она не только
+					поспособствует
+					борьбе с лишним весом, но и облегчит боли в мышцах спины и шейного отдела. Рекомендую всем, всем,
+					всем и
+					не
+					только женщинам, но и мужчинам!!!! Поверьте не пожалеете. Марина, огромное спасибо за ваш труд.
+					Также
+					спасибо всему коллективу салона красоты). Вы самые лучшие!!!!
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- popup end -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+	<!-- <script src="assets/js/mask.js"></script> -->
+	<script>
+		! function (e) {
+			"function" == typeof define && define.amd ? define(["jquery"], e) : e("object" == typeof exports ? require(
+				"jquery") : jQuery)
+		}(function (e) {
+			var t, n = navigator.userAgent,
+				a = /iphone/i.test(n),
+				i = /chrome/i.test(n),
+				r = /android/i.test(n);
+			e.mask = {
+				definitions: {
+					9: "[0-9]",
+					a: "[A-Za-z]",
+					"*": "[A-Za-z0-9]"
+				},
+				autoclear: !0,
+				dataName: "rawMaskFn",
+				placeholder: "_"
+			}, e.fn.extend({
+				caret: function (e, t) {
+					var n;
+					if (0 !== this.length && !this.is(":hidden")) return "number" == typeof e ? (t =
+						"number" == typeof t ? t : e, this.each(function () {
+							this.setSelectionRange ? this.setSelectionRange(e, t) : this
+								.createTextRange && (n = this.createTextRange(), n.collapse(!0), n
+									.moveEnd("character", t), n.moveStart("character", e), n
+									.select())
+						})) : (this[0].setSelectionRange ? (e = this[0].selectionStart, t = this[0]
+						.selectionEnd) : document.selection && document.selection.createRange && (
+						n = document.selection.createRange(), e = 0 - n.duplicate().moveStart(
+							"character", -1e5), t = e + n.text.length), {
+						begin: e,
+						end: t
+					})
+				},
+				unmask: function () {
+					return this.trigger("unmask")
+				},
+				mask: function (n, o) {
+					var c, l, u, f, s, h, g, m;
+					if (!n && this.length > 0) {
+						c = e(this[0]);
+						var d = c.data(e.mask.dataName);
+						return d ? d() : void 0
+					}
+					return o = e.extend({
+						autoclear: e.mask.autoclear,
+						placeholder: e.mask.placeholder,
+						completed: null
+					}, o), l = e.mask.definitions, u = [], f = g = n.length, s = null, e.each(n.split(""),
+						function (e, t) {
+							"?" == t ? (g--, f = e) : l[t] ? (u.push(new RegExp(l[t])), null === s && (s =
+								u.length - 1), f > e && (h = u.length - 1)) : u.push(null)
+						}), this.trigger("unmask").each(function () {
+						function c() {
+							if (o.completed) {
+								for (var e = s; h >= e; e++)
+									if (u[e] && C[e] === d(e)) return;
+								o.completed.call(w)
+							}
+						}
+
+						function d(e) {
+							return o.placeholder.charAt(e < o.placeholder.length ? e : 0)
+						}
+
+						function p(e) {
+							for (; ++e < g && !u[e];);
+							return e
+						}
+
+						function v(e) {
+							for (; --e >= 0 && !u[e];);
+							return e
+						}
+
+						function b(e, t) {
+							var n, a;
+							if (!(0 > e)) {
+								for (n = e, a = p(t); g > n; n++)
+									if (u[n]) {
+										if (!(g > a && u[n].test(C[a]))) break;
+										C[n] = C[a], C[a] = d(a), a = p(a)
+									} A(), w.caret(Math.max(s, e))
+							}
+						}
+
+						function k(e) {
+							var t, n, a, i;
+							for (t = e, n = d(e); g > t; t++)
+								if (u[t]) {
+									if (a = p(t), i = C[t], C[t] = n, !(g > a && u[a].test(i))) break;
+									n = i
+								}
+						}
+
+						function y() {
+							var e = w.val(),
+								t = w.caret();
+							if (m && m.length && m.length > e.length) {
+								for (T(!0); t.begin > 0 && !u[t.begin - 1];) t.begin--;
+								if (0 === t.begin)
+									for (; t.begin < s && !u[t.begin];) t.begin++;
+								w.caret(t.begin, t.begin)
+							} else {
+								for (T(!0); t.begin < g && !u[t.begin];) t.begin++;
+								w.caret(t.begin, t.begin)
+							}
+							c()
+						}
+
+						function x() {
+							T(), w.val() != E && w.change()
+						}
+
+						function j(e) {
+							if (!w.prop("readonly")) {
+								var t, n, i, r = e.which || e.keyCode;
+								m = w.val(), 8 === r || 46 === r || a && 127 === r ? (t = w.caret(),
+										n = t.begin, i = t.end, i - n === 0 && (n = 46 !== r ? v(n) :
+											i = p(n - 1), i = 46 === r ? p(i) : i), S(n, i), b(n, i -
+											1), e.preventDefault()) : 13 === r ? x.call(this, e) :
+									27 === r && (w.val(E), w.caret(0, T()), e.preventDefault())
+							}
+						}
+
+						function R(t) {
+							if (!w.prop("readonly")) {
+								var n, a, i, o = t.which || t.keyCode,
+									l = w.caret();
+								if (!(t.ctrlKey || t.altKey || t.metaKey || 32 > o) && o && 13 !==
+									o) {
+									if (l.end - l.begin !== 0 && (S(l.begin, l.end), b(l.begin, l
+											.end - 1)), n = p(l.begin - 1), g > n && (a = String
+											.fromCharCode(o), u[n].test(a))) {
+										if (k(n), C[n] = a, A(), i = p(n), r) {
+											var f = function () {
+												e.proxy(e.fn.caret, w, i)()
+											};
+											setTimeout(f, 0)
+										} else w.caret(i);
+										l.begin <= h && c()
+									}
+									t.preventDefault()
+								}
+							}
+						}
+
+						function S(e, t) {
+							var n;
+							for (n = e; t > n && g > n; n++) u[n] && (C[n] = d(n))
+						}
+
+						function A() {
+							w.val(C.join(""))
+						}
+
+						function T(e) {
+							var t, n, a, i = w.val(),
+								r = -1;
+							for (t = 0, a = 0; g > t; t++)
+								if (u[t]) {
+									for (C[t] = d(t); a++ < i.length;)
+										if (n = i.charAt(a - 1), u[t].test(n)) {
+											C[t] = n, r = t;
+											break
+										} if (a > i.length) {
+										S(t + 1, g);
+										break
+									}
+								} else C[t] === i.charAt(a) && a++, f > t && (r = t);
+							return e ? A() : f > r + 1 ? o.autoclear || C.join("") === D ? (w.val() &&
+								w.val(""), S(0, g)) : A() : (A(), w.val(w.val().substring(0, r +
+								1))), f ? t : s
+						}
+						var w = e(this),
+							C = e.map(n.split(""), function (e, t) {
+								return "?" != e ? l[e] ? d(t) : e : void 0
+							}),
+							D = C.join(""),
+							E = w.val();
+						w.data(e.mask.dataName, function () {
+							return e.map(C, function (e, t) {
+								return u[t] && e != d(t) ? e : null
+							}).join("")
+						}), w.one("unmask", function () {
+							w.off(".mask").removeData(e.mask.dataName)
+						}).on("focus.mask", function () {
+							if (!w.prop("readonly")) {
+								clearTimeout(t);
+								var e;
+								E = w.val(), e = T(), t = setTimeout(function () {
+									w.get(0) === document.activeElement && (A(), e ==
+										n.replace("?", "").length ? w.caret(0,
+											e) : w.caret(e))
+								}, 10)
+							}
+						}).on("blur.mask", x).on("keydown.mask", j).on("keypress.mask", R).on(
+							"input.mask paste.mask",
+							function () {
+								w.prop("readonly") || setTimeout(function () {
+									var e = T(!0);
+									w.caret(e), c()
+								}, 0)
+							}), i && r && w.off("input.mask").on("input.mask", y), T()
+					})
+				}
+			})
+		});
+		$('[name="phone"]').mask("+7 (99) 999-99-99");
+	</script>
+
+	<div class="popup-wrap popup-wrap--white" id='privacy'>
+		<div class="popup popup--big">
+			<div class="popup__close" onclick="close_popup('privacy')">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="privacy">
+				<h2>Политика конфендициальности</h2>
+				<br>
+				<div class="text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, magni iure sit? Saepe dolor,
+						cumque recusandae laboriosam obcaecati voluptatibus explicabo! Dicta iste consequuntur
+						voluptatem quis minima tempora. Voluptates, commodi, dolore.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, magni iure sit? Saepe dolor,
+						cumque recusandae laboriosam obcaecati voluptatibus explicabo! Dicta iste consequuntur
+						voluptatem quis minima tempora. Voluptates, commodi, dolore.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="mobile-menu">
+		<div class="mobile-menu__wrap">
+			<div class="mobile-menu__header">
+				<div class="mobile-menu__act mobile-menu__act--close">
+					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path opacity="0.79" fill-rule="evenodd" clip-rule="evenodd"
+							d="M15 1.5L13.5 0L7.5 6L1.5 0L0 1.5L6 7.5L0 13.5L1.5 15L7.5 9L13.5 15L15 13.5L9 7.5L15 1.5Z"
+							fill="#575757" />
+					</svg>
+				</div>
+			</div>
+			<nav class="mobile-menu__nav anchors">
+				<ul class="mobile-menu__nav-list">
+					<li class="mobile-menu__nav-item"><a href="services" class="mobile-menu__nav-link">Услуги</a></li>
+					<li class="mobile-menu__nav-item"><a href="about" class="mobile-menu__nav-link">О салоне</a></li>
+					<li class="mobile-menu__nav-item"><a href="masters" class="mobile-menu__nav-link">Мастера</a></li>
+					<li class="mobile-menu__nav-item"><a href="reviews" class="mobile-menu__nav-link">Отзывы</a></li>
+					<li class="mobile-menu__nav-item"><a href="/news" class="mobile-menu__nav-link">Блог</a></li>
+					<li class="mobile-menu__nav-item"><a href="contacts" class="mobile-menu__nav-link">Контакты</a></li>
+				</ul>
+			</nav>
+			<span class="btn btn--border" onclick='show_popup("popup1")'>Обратная связь</span>
+			<span class="mobile-menu__schedule">График работы: 9:00 - 20:00</span>
+			<div class="mobile-menu__phones">
+				<a href="tel:89219494080" class="mobile-menu__phone">8 (921) 949-40-80</a>
+				<a href="tel:89219494080" class="mobile-menu__phone">8 (921) 949-40-80</a>
+			</div>
+			<div class="social">
+				<a class="social__link social__link-telegram" href="" target="_blank">
+					<svg viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M10.7062 16.4767L10.272 23.4566C10.8933 23.4566 11.1623 23.1516 11.485 22.7854L14.3976 19.6042L20.4329 24.6554C21.5398 25.3604 22.3196 24.9891 22.6182 23.4916L26.5797 2.27675L26.5808 2.2755C26.9319 0.405505 25.9891 -0.325741 24.9107 0.133006L1.62488 10.3217C0.0356652 11.0267 0.0597275 12.0392 1.35472 12.4979L7.30797 14.6142L21.1362 4.72548C21.787 4.23299 22.3787 4.50548 21.892 4.99798L10.7062 16.4767Z" />
+					</svg>
+				</a>
+				<a class="social__link social__link-vk" href="" target="_blank">
+					<svg viewBox="0 0 36 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M34.7448 17.8387C34.6506 17.681 34.0678 16.4146 31.2634 13.8118C28.3275 11.0863 28.7219 11.5289 32.2581 6.81617C34.4117 3.94605 35.2728 2.19331 35.0033 1.44401C34.747 0.729766 33.1629 0.918186 33.1629 0.918186L27.8959 0.948858C27.8959 0.948858 27.5059 0.896276 27.2145 1.06936C26.9319 1.24025 26.7501 1.63462 26.7501 1.63462C26.7501 1.63462 25.9153 3.85622 24.8023 5.7448C22.4558 9.73011 21.5159 9.94044 21.1325 9.69286C20.2408 9.11665 20.4643 7.37486 20.4643 6.13917C20.4643 2.27656 21.0493 0.666228 19.3228 0.249952C18.7488 0.111923 18.3281 0.019904 16.8624 0.00456746C14.9826 -0.0151509 13.3898 0.0111402 12.4893 0.451517C11.889 0.745102 11.4267 1.40019 11.7093 1.43744C12.0577 1.48345 12.8464 1.64996 13.2649 2.2196C13.806 2.95356 13.7863 4.60552 13.7863 4.60552C13.7863 4.60552 14.0974 9.1517 13.0611 9.71696C12.3491 10.1048 11.3741 9.31383 9.28177 5.6966C8.21041 3.84527 7.39976 1.79675 7.39976 1.79675C7.39976 1.79675 7.24421 1.41553 6.96596 1.21177C6.62855 0.964195 6.15531 0.885322 6.15531 0.885322L1.14685 0.915995C1.14685 0.915995 0.395358 0.937904 0.1193 1.26435C-0.126084 1.55575 0.0995819 2.15606 0.0995819 2.15606C0.0995819 2.15606 4.02135 11.3295 8.46017 15.9545C12.5331 20.194 17.156 19.9157 17.156 19.9157H19.2505C19.2505 19.9157 19.8837 19.8456 20.2057 19.4973C20.5037 19.1774 20.4928 18.5771 20.4928 18.5771C20.4928 18.5771 20.4511 15.7661 21.7569 15.352C23.043 14.9445 24.695 18.0688 26.4455 19.2716C27.7688 20.1808 28.7745 19.9815 28.7745 19.9815L33.4565 19.9157C33.4565 19.9157 35.906 19.7646 34.7448 17.8387Z" />
+					</svg>
+				</a>
+				<a class="social__link social__link-instagram" href="" target="_blank">
+					<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M10.2103 0.000976562H3.78967C1.70001 0.000976562 0 1.70099 0 3.79065V10.2114C0 12.301 1.70001 14.001 3.78967 14.001H10.2104C12.3 14.001 14 12.301 14 10.2114V3.79065C14 1.70099 12.3 0.000976563 10.2103 0.000976563V0.000976562ZM7 10.829C4.88919 10.829 3.17198 9.11179 3.17198 7.00098C3.17198 4.89017 4.88919 3.17296 7 3.17296C9.11081 3.17296 10.828 4.89017 10.828 7.00098C10.828 9.11179 9.11081 10.829 7 10.829ZM10.9196 4.07573C10.2958 4.07573 9.78842 3.56837 9.78842 2.9446C9.78842 2.32082 10.2958 1.81335 10.9196 1.81335C11.5433 1.81335 12.0508 2.32082 12.0508 2.9446C12.0508 3.56837 11.5433 4.07573 10.9196 4.07573Z" />
+						<path
+							d="M7.00044 3.99365C5.3423 3.99365 3.99316 5.34268 3.99316 7.00093C3.99316 8.65907 5.3423 10.0082 7.00044 10.0082C8.65869 10.0082 10.0077 8.65907 10.0077 7.00093C10.0077 5.34268 8.65869 3.99365 7.00044 3.99365Z" />
+						<path
+							d="M10.9198 2.63428C10.7487 2.63428 10.6094 2.77356 10.6094 2.94467C10.6094 3.11578 10.7487 3.25507 10.9198 3.25507C11.091 3.25507 11.2303 3.11589 11.2303 2.94467C11.2303 2.77345 11.091 2.63428 10.9198 2.63428Z" />
+					</svg>
+				</a>
+
+				<a class="social__link social__link-wa" href="" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+						id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+						xml:space="preserve">
+						<g>
+							<g>
+								<path
+									d="M256.064,0h-0.128C114.784,0,0,114.816,0,256c0,56,18.048,107.904,48.736,150.048l-31.904,95.104l98.4-31.456    C155.712,496.512,204,512,256.064,512C397.216,512,512,397.152,512,256S397.216,0,256.064,0z M405.024,361.504    c-6.176,17.44-30.688,31.904-50.24,36.128c-13.376,2.848-30.848,5.12-89.664-19.264C189.888,347.2,141.44,270.752,137.664,265.792    c-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624,26.176-62.304c6.176-6.304,16.384-9.184,26.176-9.184    c3.168,0,6.016,0.16,8.576,0.288c7.52,0.32,11.296,0.768,16.256,12.64c6.176,14.88,21.216,51.616,23.008,55.392    c1.824,3.776,3.648,8.896,1.088,13.856c-2.4,5.12-4.512,7.392-8.288,11.744c-3.776,4.352-7.36,7.68-11.136,12.352    c-3.456,4.064-7.36,8.416-3.008,15.936c4.352,7.36,19.392,31.904,41.536,51.616c28.576,25.44,51.744,33.568,60.032,37.024    c6.176,2.56,13.536,1.952,18.048-2.848c5.728-6.176,12.8-16.416,20-26.496c5.12-7.232,11.584-8.128,18.368-5.568    c6.912,2.4,43.488,20.48,51.008,24.224c7.52,3.776,12.48,5.568,14.304,8.736C411.2,329.152,411.2,344.032,405.024,361.504z" />
+							</g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="js/app.js"></script></body>
+
+</html>

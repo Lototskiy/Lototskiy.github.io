@@ -1,0 +1,129 @@
+// .modal-master {
+//     display: none;
+//     background: #FFFFFF;
+//     border: 1px solid #DCBA97;
+//     box-sizing: border-box;
+//     max-width: 1251px;
+//     width: 100%;
+//     padding: 95px 141px 60px;
+//     position: relative;
+
+//     .simple-title {
+//         font-size: 24px;
+//         line-height: 2;
+//         color: #212121;
+//         margin-bottom: 35px;
+//     }
+//     .fancybox-button {
+//         background-image: url(../../images/modalblack-cross.svg);
+//         background-repeat: no-repeat;
+//         background-position: center;
+//         background-size: cover;
+//         border: 0;
+//         border-radius: 0;
+//         box-shadow: none;
+//         cursor: pointer;
+//         display: inline-block;
+//         height: 30px;
+//         margin: 0;
+//         // padding: 10px;
+//         transition: color .2s;
+//         vertical-align: top;
+//         visibility: inherit;
+//         width: 30px;
+//         position: absolute;
+//         top: 59px;
+//         right: 35px;
+//     }
+//     &__title {
+//         font-weight: bold;
+//         font-size: 36px;
+//         line-height: 1.06;
+//         color: #212121;
+//         margin-bottom: 75px;
+//     }
+
+
+
+//     &__wrap {
+//         display: flex;
+//     }
+
+//     &__img {
+//         max-width: 300px;
+//         width: 100%;
+//         margin-right: 39px;
+
+//         >div {
+//             position: relative;
+//             padding-bottom: 150%;
+
+//             img {
+//                 position: absolute;
+//                 top: 0px;
+//                 left: 0px;
+//                 width: 100%;
+//                 height: 100%;
+//                 object-fit: cover;
+//             }
+//         }
+//     }
+
+//     &__info {
+//         max-width: 637px;
+//         width: 100%;
+
+//         &-author {
+//             border-left: 3px solid $primary;
+//             padding: 7px 0 7px 17px;
+//             margin-bottom: 33px;
+//         }
+
+//         &-name {
+//             font-weight: bold;
+//             font-size: 28px;
+//             color: #212121;
+//         }
+
+//         &-descr {
+//             font-size: 13px;
+//             line-height: 1.38;
+//             color: #525252;
+//             max-width: 182px;
+//         }
+
+//         &-text {
+//             font-weight: 300;
+//             font-size: 20px;
+//             color: #525252;
+
+//             p+p {
+//                 margin-top: 30px;
+//             }
+//         }
+//     }
+
+//     &__work {
+//         display: flex;
+//         justify-content: space-between;
+//         flex-wrap: wrap;
+//     }
+
+//     &__item {
+//         width: calc((100% - 34px * 2)/3);
+
+//         >div {
+//             position: relative;
+//             padding-bottom: 63%;
+
+//             img {
+//                 position: absolute;
+//                 top: 0px;
+//                 left: 0px;
+//                 width: 100%;
+//                 height: 100%;
+//                 object-fit: cover;
+//             }
+//         }
+//     }
+// }

@@ -1,0 +1,59 @@
+.map {
+    position: relative;
+    max-width: 651px;
+    width: 100%;
+    height: 338px;
+
+    @media screen and (max-width:1200px) {
+        max-width: 100%;
+        height: 178px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media screen and (max-width:1200px) {
+        margin: 0 auto;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: calc(100% - 45px);
+        left: calc(100% - 40px);
+        width: 60px;
+        height: 68px;
+        background-image: url(../../images/line-contact.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 110;
+
+        @media screen and (max-width:450px) {
+            top: calc(100% - 58px);
+            left: calc(100% - 50px);
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url(../../images/map.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 2;
+        transition: all .7s;
+    }
+
+    &:hover::after {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
