@@ -1,0 +1,82 @@
+.application-form {
+    padding: 75px 0;
+    background: linear-gradient(-287.97deg, #000000 -11.12%, #3D4356 87.66%);
+    position: relative;
+    overflow-x: hidden;
+
+    @media screen and (max-width:1200px) {
+        padding: 75px 0 168px;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    &__subtitle {
+        max-width: 452px;
+        width: 100%;
+        font-size: 24px;
+        line-height: 31px;
+        color: #E4E6E9;
+        margin-bottom: 25px;
+
+        @media screen and (max-width:1200px) {
+            font-size: 15px;
+            line-height: 18px;
+            max-width: 350px;
+            width: 100%;
+        }
+    }
+
+    &__form {
+        max-width: 468px;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        border: 1px solid #1D2029;
+        padding: 0;
+        margin-top: 20px;
+        font-size: 24px;
+        color: #1D2029;
+        margin-bottom: 30px;
+        @media screen and (max-width:1200px) {
+        font-size: 15px;
+        margin-top: 10px;
+        }
+    }
+
+    &__img {
+        max-width: 850px;
+        width: 100%;
+        position: absolute;
+        // right: 0;
+        left: 1070px;
+        bottom: 0px;
+
+        @media screen and (max-width:1500px) {
+            left: 700px;
+        }
+
+        @media screen and (max-width:1200px) {
+            max-width: 300px;
+            left: auto;
+            right: 0;
+        }
+
+        >div {
+            position: relative;
+            padding-bottom: 50.35%;
+
+            img {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

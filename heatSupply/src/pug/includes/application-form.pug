@@ -1,0 +1,24 @@
+section.application-form
+    .center-wrap
+        h2.simple-title.application-form__title
+            | Мы вам перезвоним!
+        p.application-form__subtitle
+            | Оставьте нам свои данные и мы свяжемся
+            | с вами в ближайшие 30 минут!
+        .application-form__form(autocomplete='off')
+            form.inputs(action='' autocomplete='off')
+                .inputs__row
+                    input.inputs__field(type='text' name='text' required='' minlength='2' placeholder="Имя")
+                    input.inputs__field(type='email' name='email' required='' placeholder="Почта")
+                    input.inputs__field(type='tel' name='phone' required='' placeholder="Телефон")
+                    input.btn(type='submit' value='Оставить заявку')
+             
+                .inputs__checkbox
+                    input#checkbox1(type='checkbox')
+                    label.inputs__checkbox-label(for='checkbox1')
+                    .inputs__privacy
+                        span
+                        | Даю согласие на обработку моих персональных данных
+    .application-form__img
+        div
+            img(src="assets/images/application-form__img.png", alt="")

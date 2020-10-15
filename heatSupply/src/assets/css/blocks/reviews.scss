@@ -1,0 +1,90 @@
+.reviews {
+    padding: 170px 0 100px;
+
+    @media screen and (max-width:1200px) {
+        padding: 65px 0 0;
+    }
+
+    &__title {
+        margin-bottom: 127px;
+
+        @media screen and (max-width:1200px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-bottom: 110px;
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 600;
+
+        @media screen and (max-width:1200px) {
+            margin-bottom: 30px;
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        &--right {
+            margin-left: auto;
+            text-align: right;
+            max-width: 810px;
+        }
+
+        &--left {
+            margin-right: auto;
+            text-align: left;
+            max-width: 850px;
+            padding-left: 120px;
+
+            @media screen and (max-width:1200px) {
+                padding-left: 43px;
+            }
+        }
+
+        &-title {
+            font-size: 16px;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            color: #252525;
+
+            @media screen and (max-width:1200px) {
+                font-size: 12px;
+                max-width: 185px;
+                margin-bottom: 10px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100px;
+                height: 2px;
+                background-color: #D60000;
+                right: calc(100% + 20px);
+                top: 50%;
+                transform: translateY(-50%);
+
+                @media screen and (max-width:1200px) {
+                    width: 30px;
+                    right: calc(100% + 13px);
+                    top: 8px;
+                    transform: translateY(0%);
+                }
+            }
+        }
+
+        &-text {
+            font-size: 20px;
+            color: #15171D;
+
+            @media screen and (max-width:1200px) {
+                font-size: 14px;
+            }
+        }
+    }
+}

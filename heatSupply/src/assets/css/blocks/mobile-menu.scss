@@ -1,0 +1,130 @@
+.mobile-menu {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	z-index: 102;
+	overflow: hidden;
+	background: rgba(111, 111, 111, 0.75);
+	display: none;
+	transition: all 0.5s;
+	opacity: 0;
+	touch-action: none;
+	&--active {
+		display: flex;
+	}
+
+	&--opacity0 {
+		opacity: 0;
+	}
+
+	&--opacity1 {
+		opacity: 1;
+	}
+	&__wrap {
+		background: #fff;
+		width: 300px;
+		height: 100%;
+		position: absolute;
+		left: -300px;
+		transition: left 0.5s;
+		display: flex;
+		flex-direction: column;
+		&--left0 {
+			left: 0px;
+		}
+		&--left300 {
+			left: -300px;
+		}
+	}
+	&__header {
+		height: 50px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__schedule {
+		text-align: center;
+		width: 100%;
+		font-size: 12px;
+		font-weight: 500;
+		margin-top: auto;
+		margin-bottom: 10px;
+	}
+
+	&__phones {
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		border-top: 1px solid rgba(0,0,0,0.1);
+		padding: 5px 0px;
+	}
+	&__phone {
+		font-size: 18px;
+		text-align: center;
+		width: 100%;
+		display: block;
+		font-weight: 500;
+		margin-bottom: 4px;
+		position: relative;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	&__title {
+		font-size: 14px;
+		text-transform: uppercase;
+		padding-left: 20px;
+	}
+
+	&__act {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		border-left: 1px solid rgba(87, 87, 87, 0.1);
+	}
+
+	&__nav {
+		position: relative;
+		&-list {
+			display: flex;
+			flex-direction: column;
+			padding: 0px 10px;
+			list-style: none;
+		}
+
+		&-item {
+			&:last-child {
+				a {
+					border-bottom: none;
+				}
+			}
+		}
+
+		&-link {
+			text-decoration: none;
+			font-size: 16px;
+			line-height: 40px;
+			padding: 0px 25px;
+			display: block;
+			padding-left: 24px;
+			position: relative;
+			
+			&::before {
+				content: "";
+				position: absolute;
+				height: 8px;
+				width: 8px;
+				// background: url('~img/arrow.svg') no-repeat;
+				background-position: center;
+				background-size: contain;
+				right: 10px;
+				top: calc( 50% - 4px );
+			}
+		}
+	}
+}

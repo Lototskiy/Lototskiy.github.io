@@ -1,0 +1,9 @@
+.services{
+    padding: 70px 0 65px;
+    &__title{
+        margin-bottom: 42px;
+        @media screen and (max-width:1200px) {
+        margin-bottom: 30px;
+        }
+    }
+}

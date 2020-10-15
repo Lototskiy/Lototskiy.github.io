@@ -1,0 +1,109 @@
+.grid {
+    filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, 0.25));
+    display: grid;
+    grid-template-columns: minmax(auto, 345px) minmax(auto, 277px) minmax(auto, 277px) minmax(auto, 228px);
+    grid-template-rows: minmax(298px, auto) minmax(186px, auto);
+
+    @media screen and (max-width:1200px) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: -12px;
+    }
+
+    &__item {
+        border-radius: 1px;
+        padding: 20px 20px 30px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        @media screen and (max-width:1200px) {
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+
+        &-title {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 23px;
+            color: #FFFFFF;
+            margin-bottom: 7px;
+
+            @media screen and (max-width:1200px) {
+                font-size: 14px;
+            }
+        }
+
+        &-text {
+            font-size: 16px;
+            line-height: 21px;
+            color: #E4E6E9;
+            margin-bottom: auto;
+
+            @media screen and (max-width:1200px) {
+                font-size: 10px;
+                line-height: 14px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &-bottom {
+            @media screen and (max-width:1200px) {
+                display: flex;
+            }
+
+            &--row {
+                display: flex;
+
+                .grid__item-price {
+                    margin-right: 30px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &-price {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 23px;
+            color: #FFFFFF;
+            margin-bottom: 13px;
+            @media screen and (max-width:1200px) {
+                margin-right: 30px;
+                margin-bottom: 0;
+                font-size: 10px;
+            }
+        }
+
+        &:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            background: linear-gradient(336.87deg, #000000 -65.87%, #3D4356 162.36%);
+        }
+
+        &:nth-child(2) {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            background: #3D4356;
+        }
+
+        &:nth-child(3) {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+            background: #120923;
+        }
+
+        &:nth-child(4) {
+            grid-column: 4 / 5;
+            grid-row: 1 / 3;
+            background: #181818;
+        }
+
+        &:nth-child(5) {
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+            background: #2B2D37;
+        }
+
+    }
+}

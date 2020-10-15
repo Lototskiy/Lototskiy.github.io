@@ -1,0 +1,116 @@
+.reports {
+    padding: 70px 20px 70px 74px;
+
+    @media screen and (max-width:1200px) {
+        padding: 35px 20px;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 26px;
+        color: #FFFFFF;
+        margin-bottom: 16px;
+
+        @media screen and (max-width:1200px) {
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+    }
+
+    &__wrap {
+        margin-bottom: 50px;
+
+        @media screen and (max-width:1200px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 78px;
+
+        @media screen and (max-width:1200px) {
+            margin-bottom: 40px;
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__before {
+        background: #C4C4C4;
+        border-radius: 1px;
+        height: 60px;
+        width: 100%;
+        max-width: 440px;
+        padding: 7px 10px;
+        font-size: 15px;
+        line-height: 1.33;
+        color: #3D4356;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (max-width:1200px) {
+            font-size: 10px;
+            height: 30px;
+            max-width: 217px;
+        }
+
+        &-title {
+            font-weight: bold;
+        }
+
+        &--small {
+            max-width: 400px;
+
+            @media screen and (max-width:1200px) {
+                max-width: 190px;
+            }
+        }
+    }
+
+    &__after {
+        background: #FFFFFF;
+        border-radius: 1px;
+        max-width: 280px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.25;
+        color: #000000;
+        height: 60px;
+        padding: 7px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (max-width:1200px) {
+            font-size: 11px;
+            height: 30px;
+            max-width: 140px;
+        }
+
+        &-title {
+            font-weight: bold;
+        }
+
+        &--small {
+            max-width: 250px;
+
+            @media screen and (max-width:1200px) {
+                max-width: 125px;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.25;
+        color: #FFFFFF;
+
+        @media screen and (max-width:1200px) {
+            font-size: 10px;
+        }
+    }
+}

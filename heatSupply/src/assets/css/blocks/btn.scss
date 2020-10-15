@@ -1,0 +1,40 @@
+@import 'mixin';
+.btn {
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	line-height: 55px;
+	display: inline-block;
+	white-space: nowrap;
+	text-align: center;
+	background: #FBFBFB;
+	border-radius: 1px;
+	font-weight: bold;
+	color: #303644;
+	padding: 0 59px;
+	transition: all 0.5s;
+	@include adaptiv-font(24, 12);
+	@media screen and (max-width:1200px) {
+		line-height: 35px;
+	}
+
+	&:hover {
+		background: #FFFFFF;
+		box-shadow: inset 3px 3px 10px #6C6C6C;
+	}
+
+	&:active {
+		background: #E8E8E8;
+		box-shadow: none;
+	}
+	&--bg {
+		background: #3D4356;
+		color: #fff;
+		margin-top: 20px;
+		&:hover {
+			box-shadow: inset 3px 3px 10px #6C6C6C;
+			background: #3D4356;
+		}
+	}
+	
+}

@@ -1,0 +1,23 @@
+section.request
+    .center-wrap
+        h3.request__title
+            | Остались вопросы?
+        p.request__subtitle
+            |Оставьте нам свои данные и мы свяжемся с вами
+            | в ближайшие 30 минут!
+        .request__form(autocomplete='off')
+            form.inputs(action='' autocomplete='off')
+                .inputs__row
+                    input.inputs__field(type='text' name='text' required='' minlength='2' placeholder="Имя")
+                    input.inputs__field(type='email' name='email' required='' placeholder="Почта")
+                    input.inputs__field(type='tel' name='phone' required='' placeholder="Телефон")
+                .inputs__row.inputs__row--center
+                  
+                    input.btn.inputs__field.inputs__submit(type='submit' value='Оставить заявку')
+                    
+                .inputs__checkbox.inputs__checkbox--center
+                    input#checkbox(type='checkbox')
+                    label.inputs__checkbox-label(for='checkbox')
+                    .inputs__privacy
+                        span
+                        | Даю согласие на обработку моих персональных данных

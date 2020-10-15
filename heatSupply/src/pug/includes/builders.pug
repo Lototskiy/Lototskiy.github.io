@@ -1,0 +1,40 @@
+section.builders#builders
+    img(src="assets/images/builders__img.png" alt="").builders__img
+    .center-wrap
+        h2.simple-title.builders__title Строителям
+        p.builders__subtitle Посчитайте стоимость ИТП по нагрузкам
+        p.builders__text Мы обработаем вашу заявку в течение часа и отправим результаты на почту.Стоимость будет указана без учёта НДС.
+        .builders__form
+            .inputs(action='' autocomplete='off')
+                .inputs__row
+                    .inputs__field-wrap
+                        span.inputs__content Тепловые нагрузки
+                        input.inputs__field.inputs__field--size(type='text' name='text' required='' minlength='2' placeholder="05 гал/час")
+                    .inputs__field-wrap
+                        span.inputs__content Температурный график
+                        input.inputs__field.inputs__field--size(type='text' name='text' required='' minlength='2' placeholder="130/70")
+                .inputs__row
+                    .inputs__field-wrap
+                        span.inputs__content Количество этажей
+                        input.inputs__field.inputs__field--size(type='text' name='text' required='' minlength='2' placeholder="0")
+                    .inputs__field-wrap
+                        span.inputs__content Количество подъездов
+                        input.inputs__field.inputs__field--size(type='text' name='text' required='' minlength='2' placeholder="0")
+                .inputs__row
+                    .inputs__field-wrap
+                        span.inputs__content Почта для связи
+                        input.inputs__field.inputs__field--size(type='email' name='email' required='' placeholder="email@email.ru")
+
+                    .inputs__field-wrap
+                        span.inputs__content Телефон для связи
+                        input.inputs__field.inputs__field--size(type='tel' name='phone' required='' placeholder="+7 123 456-78-90")
+                
+                .inputs__row.inputs__row--center
+                    input.btn.inputs__field.inputs__submit(type='submit' value='Оставить заявку')
+                    
+                .inputs__checkbox.inputs__checkbox--center
+                    input#checkbox2(type='checkbox')
+                    label.inputs__checkbox-label(for='checkbox2')
+                    .inputs__privacy
+                        span
+                        | Даю согласие на обработку моих персональных данных

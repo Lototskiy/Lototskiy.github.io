@@ -1,0 +1,93 @@
+#request.popup-wrap
+    .popup
+        .popup__close(onclick="close_popup('request')")
+            div
+            div
+        .popup-form
+            h2.popup-form__title
+                | Мы вам перезвоним!
+            p.popup-form__subtitle
+                | Оставьте нам свои данные и мы свяжемся с вами в ближайшие 30 минут!
+            form.inputs(action='' autocomplete='on')
+                .inputs__row.inputs__row--column
+                    input.inputs__field(type='text' name='text' minlength='2' placeholder="Имя" autocomplete='off')
+                    input.inputs__field(type='email' name='email' placeholder="Почта")
+                    input.inputs__field(type='tel' name='phone' placeholder="Телефон")
+                    .btn.btn--bg(onclick="close_popup('request');show_popup('thank')") Оставить заявку
+#thank.popup-wrap
+    .popup.popup--700
+        .popup__close(onclick='close_popup("thank")')
+            div
+            div
+        .popup-form
+            h2.popup-form__title
+                | Спасибо!
+                span Ваша заявка отправлена! 
+            .popup-form__img
+                div
+                    img(src="assets/images/popup__img.png" alt="")
+#info1.popup-wrap
+    .popup.popup--1175
+        .popup__close(onclick="close_popup('info1')")
+            div
+            div
+        .popup-form
+            .popup-form__wrap
+                .popup-form__left
+                    .popup-form__text
+                        p Постановление Правительства РФ от 17.01.2017 №18 позволяет вернуть часть средств затраченные на энергоэффективный капитальный ремонт. 
+                        p 
+                            span Что это значит? 
+                            | Если вы делаете ремонт за счёт средств кап. ремонта и благодаря ему вы стали потреблять меньше энергии на 10% и больше, то, собрав некоторый пакет документов, вы сможете рассчитывать на возврат до 80% по смете, но не более 5 млн. р.
+                        p Вы можете ознакомиться подробнее сами, перейдя по ссылке http://government.ru/docs/all/110071/
+                            | (эта ссылка ведет на сайт правительства РФ, она безопасна)
+                        p У нас уже есть примеры одобрения компенсации. Мы поможем вам собрать и отправить все необходимые документы.
+                        p Таким образом, в лучшем случае, ваша автоматика или ИТП обойдётся вам всего в 20% от стоимости. 
+                .popup-form__right
+                    h2.popup-form__title
+                        | Мы вам перезвоним!
+                    p.popup-form__subtitle
+                        | Оставьте нам свои данные и мы свяжемся с вами в ближайшие 30 минут!
+                    form.inputs(action='' autocomplete='off')
+                        .inputs__row.inputs__row--column
+                            input.inputs__field(type='text' name='text' minlength='2' placeholder="Имя")
+                            input.inputs__field(type='email' name='email' placeholder="Почта")
+                            input.inputs__field(type='tel' name='phone' placeholder="Телефон")
+                            .btn.btn--bg(onclick="close_popup('request');show_popup('thank')") Оставить заявку
+#info2.popup-wrap
+    .popup.popup--1175
+        .popup__close(onclick="close_popup('info2')")
+            div
+            div
+        .popup-form
+            .popup-form__wrap
+                .popup-form__left
+                    include reports
+                .popup-form__right
+                    h2.popup-form__title
+                        | Мы вам перезвоним!
+                    p.popup-form__subtitle
+                        | Оставьте нам свои данные и мы свяжемся с вами в ближайшие 30 минут!
+                    form.inputs(action='' autocomplete='off')
+                        .inputs__row.inputs__row--column
+                            input.inputs__field(type='text' name='text' minlength='2' placeholder="Имя")
+                            input.inputs__field(type='email' name='email' placeholder="Почта")
+                            input.inputs__field(type='tel' name='phone' placeholder="Телефон")
+                            .btn.btn--bg(onclick="close_popup('request');show_popup('thank')") Оставить заявку
+#privacy.popup-wrap
+    .popup.popup--700
+        .popup__close(onclick="close_popup('privacy')")
+            div
+            div
+        .popup-form
+            h2.popup-form__title
+                | Политика конфендициальности
+            .popup-form__text.popup-form__text--color
+                p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, magni iure sit? Saepe dolor,
+                    | cumque recusandae laboriosam obcaecati voluptatibus explicabo! Dicta iste consequuntur
+                    | voluptatem quis minima tempora. Voluptates, commodi, dolore.
+                p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, magni iure sit? Saepe dolor,
+                    | cumque recusandae laboriosam obcaecati voluptatibus explicabo! Dicta iste consequuntur
+                    | voluptatem quis minima tempora. Voluptates, commodi, dolore.contract

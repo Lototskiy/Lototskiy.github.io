@@ -1,0 +1,119 @@
+.faq {
+    padding: 70px 0 50px;
+    position: relative;
+
+    &__title {
+        margin-bottom: 50px;
+
+        @media screen and (max-width:1200px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .select__value {
+        min-width: 170px;
+    }
+
+    &__list {
+        position: relative;
+        filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, 0.25));
+    }
+
+    &__item {
+        border-top: 1px solid #E4E6E9;
+
+        &:first-child {
+            border-top: 0px solid #E4E6E9;
+        }
+
+        &--active {
+            .faq__item-text {
+                display: block;
+            }
+
+            .faq__item-arrow {
+                background: #E4E6E9;
+
+                svg {
+                    fill: #3D4356;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        &-title {
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #FFFFFF;
+            padding: 21px 21px 21px 95px;
+            position: relative;
+            background: #3D4356;
+            font-family: 'Fira Sans', sans-serif;
+            transition: all 0.5s;
+            &:hover{
+                opacity: 0.9;
+            }
+            @media screen and (max-width: 1200px) {
+                font-size: 12px;
+                line-height: 17px;
+                padding: 14px 14px 14px 60px;
+            }
+
+            // @media screen and (max-width:450px) {
+            //     padding-bottom: 14px;
+            //     padding-top: 14px;
+            // }
+        }
+
+        &-arrow {
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: inherit;
+            height: 100%;
+            width: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s;
+
+            @media screen and (max-width:1200px) {
+                width: 50px;
+            }
+
+            svg {
+                width: 10px;
+                height: 25px;
+                fill: #fff;
+                transition: all 0.5s;
+
+                @media screen and (max-width:1200px) {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+
+        &-text {
+            font-size: 20px;
+            line-height: 1.25;
+            display: none;
+            color: #000000;
+            background: #E4E6E9;
+            padding: 25px;
+
+            @media screen and (max-width:1200px) {
+                font-size: 12px;
+                padding: 10px;
+            }
+
+            // @media screen and (max-width:450px) {
+            //     margin-bottom: 20px;
+            // }
+        }
+    }
+}
+
+// end faq 

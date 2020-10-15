@@ -1,0 +1,128 @@
+.popup-form {
+    &__title {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 36px;
+        color: #000000;
+        margin-bottom: 12px;
+        font-family: 'Fira Sans', sans-serif;
+
+        @media screen and (max-width:1200px) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .popup--700 & {
+            color: #15171D;
+            text-align: center;
+            margin-bottom: 45px;
+
+            @media screen and (max-width:1200px) {
+                margin-bottom: 30px;
+            }
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        line-height: 31px;
+        color: #15171D;
+        margin-bottom: 30px;
+
+        @media screen and (max-width:1200px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    &__img {
+        width: 129px;
+        margin: 0 auto;
+
+        @media screen and (max-width:1200px) {
+            width: 80px;
+        }
+
+        >div {
+            position: relative;
+            padding-bottom: 100%;
+
+            img {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 26px;
+        color: #FFFFFF;
+        padding: 20px 30px 50px;
+
+        @media screen and (max-width:1200px) {
+            font-size: 12px;
+            line-height: 16px;
+            padding: 30px 20px 20px;
+        }
+
+        &--color {
+            color: #000;
+        }
+
+        .popup--700 & {
+            padding: 0;
+        }
+
+        p {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+
+            span {
+                font-weight: bold;
+                display: block;
+            }
+        }
+    }
+
+    &__wrap {
+        display: flex;
+
+        @media screen and (max-width:1200px) {
+            flex-direction: column;
+        }
+
+    }
+
+    &__left {
+        width: 50%;
+        background: linear-gradient(133.84deg, #3D4356 -22.94%, #000000 162.9%);
+
+
+        @media screen and (max-width:1200px) {
+            width: 100%;
+
+        }
+    }
+
+    &__right {
+        width: 50%;
+        padding: 90px 70px 90px 50px;
+
+        @media screen and (max-width:1200px) {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+}
