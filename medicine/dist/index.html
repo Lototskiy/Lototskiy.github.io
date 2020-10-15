@@ -1,0 +1,461 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Поменять!</title>
+	<meta name="theme-color" content="#4F8CF7" />
+	<link rel="icon" type="image/png" href="assets/images/favicon.png" />
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+<link href="assets/css/app.css" rel="stylesheet"></head>
+
+<body>
+	<!-- <header class='header'>
+		<div class="center-wrap">
+			<div class="header__logo">
+				<img src="assets/images/logo.svg" alt="">
+			</div>
+			nav.header__nav>ul.header__nav-list>(li.header__nav-item>a.header__nav-link)*5
+		</div>
+	</header> -->
+	<main>
+		<section class="categories">
+			<div class="center-wrap">
+				<div class="categories__top">
+					<div class="categories__top-title">
+						Нашей командой было разработано более 500 медицинских курсов для всех категорий медицинского
+						персонала.
+					</div>
+					<div class="categories__top-form">
+						<form class="form">
+							<input class="form__input" type="text">
+						</form>
+						<p>Поиск курса по названию</p>
+					</div>
+				</div>
+				<div class="categories-tabs">
+					<ul class="categories-tabs__list">
+						<li class="categories-tabs__item">
+							Для <br>врачей
+						</li>
+						<li class="categories-tabs__item">
+							Для среднего<br>
+							мед.персонала
+						</li>
+						<li class="categories-tabs__item">
+							НМО<br>
+							для врачей
+						</li>
+						<li class="categories-tabs__item">
+							НМО для среднего<br>
+							мед.персонала
+						</li>
+						<li class="categories-tabs__item">
+							Для младшего<br> мед.персонала
+						</li>
+					</ul>
+				</div>
+				<form action="" class='inputs'>
+					<div class="inputs__field-wrap">
+						<div class="inputs__field-checkbox">
+							<input type="checkbox" id="checkbox">
+							<label for="checkbox" class="inputs__label-checkbox"></label>
+							<div class="inputs__field-privacy">
+								<span>
+									Профессиональная переподготовка
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="inputs__field-wrap">
+						<div class="inputs__field-checkbox">
+							<input type="checkbox" id="checkbox1">
+							<label for="checkbox1" class="inputs__label-checkbox"></label>
+							<div class="inputs__field-privacy">
+								<span>
+									Повышение квалификации
+								</span>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="categories-slider">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="categories-slider__item" onclick='show_popup("course")'>
+								<div class="categories-slider__img">
+									<div>
+										<img src="assets/images/categories-slider__img1.png" alt="">
+									</div>
+								</div>
+								<div class="categories-slider__descr">
+									Акне современные вопросы патогенеза, клиники и диагностики
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="categories-slider__item" onclick='show_popup("course")'>
+								<div class="categories-slider__img">
+									<div>
+										<img src="assets/images/categories-slider__img2.png" alt="">
+									</div>
+								</div>
+								<div class="categories-slider__descr">
+									Актуальные проблемы урогинекологии. Недержание мочи у женщин
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="categories-slider__item" onclick='show_popup("course")'>
+								<div class="categories-slider__img">
+									<div>
+										<img src="assets/images/categories-slider__img3.png" alt="">
+									</div>
+								</div>
+								<div class="categories-slider__descr">
+									Генитальная<br>
+									папилломавирусная инфекция
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="categories-slider__item" onclick='show_popup("course")'>
+								<div class="categories-slider__img">
+									<div>
+										<img src="assets/images/categories-slider__img4.png" alt="">
+									</div>
+								</div>
+								<div class="categories-slider__descr">
+									Акушерство и гинекология. Гинекология детей и подростков. Избранные вопросы
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="categories-slider__item" onclick='show_popup("course")'>
+								<div class="categories-slider__img">
+									<div>
+										<img src="assets/images/categories-slider__img5.png" alt="">
+									</div>
+								</div>
+								<div class="categories-slider__descr">
+									Акушерство и гинекология. Гистероскопия
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="categories-slider__item" onclick='show_popup("course")'>
+								<div class="categories-slider__img">
+									<div>
+										<img src="assets/images/categories-slider__img6.png" alt="">
+									</div>
+								</div>
+								<div class="categories-slider__descr">
+									Акушерство и гинекология. Маммология. Избранные вопросы
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button">
+					<div class="swiper-button-prev">
+						<svg viewBox="0 0 59 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M0.646446 4.35355C0.451183 4.15829 0.451183 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM59 4.5H1V3.5H59V4.5Z" />
+						</svg>
+					</div>
+					<div class="swiper-button-next">
+						<svg viewBox="0 0 59 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M58.3536 4.35355C58.5488 4.15829 58.5488 3.84171 58.3536 3.64645L55.1716 0.464466C54.9763 0.269204 54.6597 0.269204 54.4645 0.464466C54.2692 0.659728 54.2692 0.976311 54.4645 1.17157L57.2929 4L54.4645 6.82843C54.2692 7.02369 54.2692 7.34027 54.4645 7.53553C54.6597 7.7308 54.9763 7.7308 55.1716 7.53553L58.3536 4.35355ZM0 4.5H58V3.5H0V4.5Z" />
+						</svg>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- /.categories -->
+		<section class="training">
+			<div class="center-wrap">
+				<div class="training-wrap__title">
+					<div class="training__title title-bg">
+						Порядок прохождения обучения
+					</div>
+				</div>
+				<div class="training__list">
+					<div class="training__item">
+						<div class="training__item-number">01</div>
+						<div class="training__item-title">
+							Подача заявки, консультация и заключение
+							договора
+						</div>
+						<div class="training__item-text">
+							Наш специалист поможет подобрать нужный Вам курс обучения и согласует учебную программу
+						</div>
+					</div>
+					<div class="training__item">
+						<div class="training__item-number">02</div>
+						<div class="training__item-title">
+							Оплата образовательных услуг, начало обучения
+						</div>
+						<div class="training__item-text">
+							Заключение официального договора является гарантией качества оказываемых образовательных
+							услуг
+						</div>
+					</div>
+					<div class="training__item">
+						<div class="training__item-number">03</div>
+						<div class="training__item-title">
+							Обучение, промежуточная и итоговая аттестация
+						</div>
+						<div class="training__item-text">
+							Обучение и сдача экзамена проходит удалённо, в удобное время, количество времени не
+							ограниченно
+						</div>
+					</div>
+					<div class="training__item">
+						<div class="training__item-number">04</div>
+						<div class="training__item-title">
+							Отправка документа о квалификации
+						</div>
+						<div class="training__item-text">
+							Оперативная экспресс-доставка документов о пройденном обучении
+						</div>
+					</div>
+					<div class="training__item training__item--hide">
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.training -->
+		<section class="recording">
+			<!-- <div class="center-wrap"> -->
+			<div class="recording-wrap">
+				<div class="recording__img">
+					<div>
+						<img src="assets/images/recording-img.png" alt="">
+					</div>
+				</div>
+				<div class="recording__info">
+					<div class="recording__info-title">
+						Запишитесь на наши ближайшие бесплатные семинары
+					</div>
+					<div class="recording__info-subtitle">
+						Практические знания от заслуженных специалистов в области здравоохранения
+					</div>
+					<span class="btn">ЗАПИСАТЬСЯ</span>
+				</div>
+			</div>
+			<!-- </div> -->
+		</section>
+		<!-- /.recording -->
+		<section class="advantages">
+			<div class="advantages__title title-bg">
+				Ключевые преимущества<br> прохождения курсов в DDM
+			</div>
+			<div class="center-wrap">
+				<div class="advantages__list">
+					<div class="advantages__item">
+						<div class="advantages__item-title">
+							Рассрочка с оплатой 50/50
+						</div>
+						<div class="advantages__item-text">
+							Наша компания ценит тех, кто пользуется нашими услугами, а потому готова предоставить
+							рассрочку
+							50/50 на 2 месяца.
+						</div>
+					</div>
+
+					<div class="advantages__item">
+						<div class="advantages__item-title">
+							Предоставляем бесплатный демо-доступ
+						</div>
+						<div class="advantages__item-text">
+							Мы предлагаем для удобства каждого бесплатный демо-доступ к материалам, чтоб Вы могли
+							посмотреть
+							на
+							объем информации, изучить формат подачи информации на курсах.
+						</div>
+					</div>
+
+					<div class="advantages__item">
+						<div class="advantages__item-title">
+							За каждым учащимся закреплен индивидуальный куратор
+						</div>
+
+						<div class="advantages__item-text">
+							<p>Для комфортного обучения за каждым учащимся закреплен индивидуальный куратор.</p>
+							<p>Он всегда готов помочь и ответить на все возникающие вопросы.</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- /.advantages -->
+		<section class="mailing">
+			<div class="center-wrap">
+				<div class="mailing-wrap">
+					<div class="mailing__info">
+						<div class="mailing__info-title title-bg">
+							информационная рассылка
+						</div>
+						<div class="mailing__info-descr">
+							Наша компания следит за всеми изменениями в законопроектах в сфере здравоохранения. Оформите
+							подписку на нашу информационную рассылку и будете всегда в курсе нововведений в
+							законодательстве.
+						</div>
+					</div>
+					<div class="mailing__form">
+						<form class="form">
+							<input class="form__input" name="email" type="email" placeholder="Введите Вашу почту"
+								required>
+							<input class="form__submit" type="submit">
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.mailing -->
+		<section class="faq">
+			<div class="center-wrap">
+				<div class="faq__title">
+					Мы подготовили ответы на вопросы, которые могли возникнуть за время, проведенное на сайте. Если не
+					нашли ответа - мы ответим Вам индивидуально.
+				</div>
+				<div class="faq__tabs">
+					<ul class="faq__list">
+						<li class="faq__item">
+							Как я получу свой документ об образовании и в какие сроки?
+						</li>
+
+						<li class="faq__item">
+							Какие документы нужны для начала обучения?
+						</li>
+
+						<li class="faq__item">
+							При каком медицинском ВУЗе вы работаете?
+						</li>
+
+						<li class="faq__item">
+							Имеете ли вы государственную аккредитацию?
+						</li>
+
+						<li class="faq__item">
+							Когда я могу приступить к обучению?
+						</li>
+						<li class="btn">ЗАДАТЬ ВОПРОС</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- <footer class='footer'>
+		<div class="center-wrap"></div>
+	</footer> -->
+
+
+	<!-- popup -->
+	<div class="popup-wrap" id='course'>
+		<div class="popup popup--1200">
+			<div class="popup__close" onclick="close_popup('course')">
+				<span>закрыть окно</span>
+				<div class="popup__close-cross">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="popup-form">
+				<div class="popup-form__category">
+					Психотерапия
+				</div>
+				<h2 class="popup-form__title">
+					Особенности оборота наркотических средств, психотропных веществ и их прекурсоров в медицинских
+					организациях
+				</h2>
+				<div class="popup-form__wrap">
+					<div class="popup-form__top">
+						<div class="popup-form__img">
+							<div>
+								<img src="assets/images/categories-slider__img1.png" alt="">
+							</div>
+						</div>
+						<ul class="popup-form__list">
+							<li class="popup-form__item">
+								<span>Кол-во часов</span><span>36 часов (1 неделя)</span>
+							</li>
+
+							<li class="popup-form__item">
+								<span>Кол-во баллов</span><span>36</span>
+							</li>
+
+							<li class="popup-form__item">
+								<span>Форма обучения</span><span>Дистанционное (заочное)</span>
+							</li>
+
+							<li class="popup-form__item">
+								<span>Стоимость курса </span><span>6 000 руб</span>
+							</li>
+						</ul>
+
+					</div>
+					<div class="popup-form__bottom">
+						<div class="popup-form__btn">
+							<a href="" class="btn">ПОЛУЧИТЬ ДЕМО-ВЕРСИЮ </a>
+						</div>
+
+						<div class="popup-form__descr">
+							<div class="popup-form__descr-title">
+								Описание курса:
+							</div>
+							<div class="popup-form__descr-text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suspendisse
+									scelerisque neque maecenas ac. Massa integer amet turpis cursus odio. Non, orci
+									justo praesent nam accumsan, phasellus venenatis. Sit ultricies mi ridiculus morbi
+									ut nulla a rhoncus, mattis. Eu suspendisse quis quisque purus elementum cursus a.
+									Accumsan cum varius leo nulla id in. Auctor semper faucibus sed egestas nunc. Eros,
+									mollis in sollicitudin neque. Elit ultricies eros, bibendum tempor convallis
+									pretium, ipsum vitae.</p>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suspendisse
+									scelerisque neque maecenas ac. Massa integer amet turpis cursus odio. Non, orci
+									justo praesent nam accumsan, phasellus venenatis. Sit ultricies mi ridiculus morbi
+									ut nulla a rhoncus, mattis. Eu suspendisse quis quisque purus elementum cursus a.
+									Accumsan cum varius leo nulla id in. Auctor semper faucibus sed egestas nunc. Eros,
+									mollis in sollicitudin neque. Elit ultricies eros, bibendum tempor convallis
+									pretium, ipsum vitae.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup-form__text">
+					<p>Минздрав России 3 августа 2012 г. издал приказ № 66н "Об утверждении Порядка и сроков
+						совершенствования медицинскими работниками и фармацевтическими работниками профессиональных
+						знаний и навыков путем обучения по дополнительным профессиональным образовательным программам в
+						образовательных и научных организациях" и отменил приказ №705н, содержавший требование о наличии
+						документов о повышении квалификации и переподготовке государственного образца.
+					</p>
+					<p>
+						По закону все образовательные учреждения ДПО выдают документы установленного образца, которые
+						действительны, как для частных, так и для государственных медицинских учреждений. АНО ДПО ДДМ
+						подключен к ФИС «ФРДО» (Федеральная информационная система «Федеральный реестр сведений о
+						документах об образовании и (или) о квалификации, документах об обучении»). Все выданные
+						документы соответствуют требованиям Рособрнадзора и Министерства здравоохранения РФ.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/app.js"></script></body>
+
+</html>

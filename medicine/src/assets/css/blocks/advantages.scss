@@ -1,0 +1,49 @@
+.advantages {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(38, 63, 241, 0.2);
+    padding: 32px 100px 80px 0;
+    position: relative;
+
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__title {
+        padding: 0 30px 0 100px;
+        position: absolute;
+        border-radius: 0px 5px 5px 0px;
+        top: 32px;
+        left: 0;
+    }
+
+    &__item {
+        max-width: 245px;
+        width: 100%;
+        margin-right: 50px;
+        &:last-child {
+            max-width: 299px;
+            margin-right: 0;
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            margin-bottom: 10px;
+        }
+
+        &-text {
+            max-width: 245px;
+            width: 100%;
+
+            p {
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
