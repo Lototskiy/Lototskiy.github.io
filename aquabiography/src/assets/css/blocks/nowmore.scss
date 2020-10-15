@@ -1,0 +1,24 @@
+.nowmore{
+    padding: 165px 0 280px;
+    &__title{
+        color: #15191D;  
+    }
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left{
+        width: 50%;
+    }
+    &__right{
+        width: 50%;
+        margin-top: -20px;
+    }
+    &__btn{
+        &:hover{
+            background-color: #15191D;
+            color: #fff;
+        }
+    }
+
+}

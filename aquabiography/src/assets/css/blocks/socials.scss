@@ -1,0 +1,38 @@
+.socials {
+    display: flex;
+    &--column{
+        display: inline-block;
+        .socials__link+.socials__link{
+            margin: 50px 0 0 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s;
+        svg {
+            fill:#939598;
+            transition: all .5s;
+            width: 20px;
+            height: 20px;
+
+            &:hover {
+                transform: scale(1.25);
+                // opacity: 0.3;
+                fill:#C6864C;
+            }
+        }
+
+        &+.socials__link {
+           margin-left: 13px;
+
+        }
+        &--instagram {
+            svg {
+                width: 16px;
+            }
+        }
+    }
+}

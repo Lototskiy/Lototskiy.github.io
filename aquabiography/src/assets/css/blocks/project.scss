@@ -1,0 +1,16 @@
+.project {
+    background: #15191D;
+    padding: 140px 0 150px;
+    @media screen and (max-width:1200px) {
+        padding: 70px 0;
+        text-align: center;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 80px;
+        position: relative;
+        z-index: 5;
+    }
+}

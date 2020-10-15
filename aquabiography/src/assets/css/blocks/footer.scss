@@ -1,0 +1,186 @@
+.dark-section--footer {
+	position: absolute !important;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 0;
+}
+.footer {
+	padding: 70px 0;
+    z-index: 4;
+    position: relative;
+	@media screen and (max-width:1200px) {
+		padding: 85px 0;
+	}
+
+	&__top {
+		display: flex;
+	}
+
+	&__wrap {
+		display: flex;
+	}
+
+	&__logo {
+		margin-right: auto;
+
+		@media screen and (max-width:1200px) {
+			margin: 0 auto;
+		}
+	}
+
+	&__top {
+		margin-bottom: 200px;
+
+		@media screen and (max-width:1200px) {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__list {
+		margin-right: 108px;
+
+		&-city,
+		&-tel {
+			font-weight: 350;
+			font-size: 18px;
+			line-height: 27px;
+			color: #CED1D6;
+		}
+
+		&-city {
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				right: calc(100% + 15px);
+				top: 50%;
+				transform: translateY(-50%);
+				height: 1px;
+				width: 40px;
+				background-color: $orange;
+			}
+		}
+
+		&-tel {
+			margin-bottom: 19px;
+			display: inline-block;
+		}
+
+		&-address {
+			font-size: 14px;
+			line-height: 21px;
+			color: #CED1D6;
+		}
+
+		&-map {
+			font-size: 14px;
+			line-height: 21px;
+			color: $orange;
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				width: 0%;
+				height: 1px;
+				background: $orange;
+				opacity: 0;
+				transition: all 0.5s;
+			}
+
+			&:hover::before {
+				width: 100%;
+				opacity: 1;
+			}
+
+		}
+	}
+
+	&__nav {
+
+		&-item {
+			margin-bottom: 11px;
+
+			&:first-child {
+				position: relative;
+
+				&::before {
+					content: "";
+					position: absolute;
+					right: calc(100% + 15px);
+					top: 50%;
+					transform: translateY(-50%);
+					height: 1px;
+					width: 40px;
+					background-color: $orange;
+				}
+			}
+		}
+
+		&-link {
+			font-style: normal;
+			font-weight: 350;
+			font-size: 18px;
+			line-height: 27px;
+			color: #CED1D6;
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				width: 0%;
+				height: 1px;
+				background: #CED1D6;
+				opacity: 0;
+				transition: all 0.5s;
+			}
+
+			&:hover::before {
+				width: 100%;
+				opacity: 1;
+			}
+
+		}
+	}
+
+	&__bot {
+		@media screen and (max-width:1200px) {
+			text-align: center;
+			font-size: 14px;
+		}
+
+		&-copyright {
+			display: block;
+			font-size: 18px;
+			line-height: 27px;
+			color: #FFFFFF;
+
+			@media screen and (max-width:1200px) {
+				font-size: 14px;
+				line-height: 21px;
+			}
+
+		}
+
+		&-text {
+			font-size: 14px;
+			line-height: 21px;
+			color: #CED1D6;
+			display: block;
+		}
+	}
+
+	&__bag {
+		height: 590px;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		left: 0px;
+	}
+}

@@ -1,0 +1,85 @@
+$len: 240;
+$time: 2s;
+#outline {
+  stroke-dasharray: $len*0.01, $len;
+  stroke-dashoffset: 0;
+  animation: preloaderAnim $time linear infinite;
+}
+@keyframes preloaderAnim {
+  12.5% {
+    stroke-dasharray: $len*0.14, $len;
+    stroke-dashoffset: -$len*0.11;
+  }
+  43.75% {
+    stroke-dasharray: $len*0.35, $len;
+    stroke-dashoffset: -$len*0.35;
+  }
+  100% {
+    stroke-dasharray: $len*0.01, $len;
+    stroke-dashoffset: -$len*0.99;
+  }
+}
+
+
+.preloader {
+	width: 100%;
+	position: fixed;
+	height: 100%;
+	background: $black;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+	transition: opacity 0.5s;
+	animation-fill-mode: forwards !important;
+	overflow: hidden;
+
+	&--opacity0 {
+		opacity: 0;
+	}
+
+	&--none {
+		display: none;
+	}
+
+	&__wrap {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		opacity: 0;
+		animation: fistItemShow 2s 0s, fistItemHide 1s 3s;
+		animation-fill-mode: forwards !important;
+	}
+
+	svg {
+		margin-bottom: -40px;
+		max-width: 220px;
+	}
+
+}
+
+
+@keyframes fistItemShow {
+
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+@keyframes fistItemHide {
+
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

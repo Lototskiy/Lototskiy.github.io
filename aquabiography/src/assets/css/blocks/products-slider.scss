@@ -1,0 +1,27 @@
+.products-slider {
+    cursor: grab;
+
+    .swiper-container {
+        width: 100%;
+        padding: 0px 26% 0 0;
+    }
+
+    .swiper-slide {
+        .products__item {
+            opacity: 0.3;
+            transition: all 0.5s;
+            &:hover{
+                img{
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-active {
+            .products__item {
+                opacity: 1;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,109 @@
+.dark-section {
+    background: $black;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    h2 {
+        &::before {
+            display: none;
+        }
+
+        span {
+            -webkit-text-fill-color: initial !important;
+            color: #fff;
+        }
+    }
+
+
+
+
+    &__overlay {
+        width: 6000px;
+        height: 6000px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        background: #15191D;
+        &--bg{
+            background-color:rgba(7, 13, 22, 0.8);
+        }
+    }
+
+    &:hover .dark-section__overlay {
+        background: transparent;
+        background-image: radial-gradient(ellipse closest-side at center center, rgba(255,255,255,0.08) 20px, #15191D 80px);
+    }
+    &:hover {
+        .lp-base__lines-round {
+            display: flex;
+        }
+    }
+
+    &__lines {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        background: $black;
+
+        &-round span {
+            font-weight: bold;
+            font-size: 288px;
+            color: red;
+            opacity: 0.07;
+        }
+
+        &-part {
+            position: absolute;
+            width: 1000px !important;
+            height: 100%;
+            top: 0px;
+            display: flex;
+            justify-content: space-between;
+            background: none !important;
+
+            &--left {
+                right: 100%;
+
+                div {
+                    margin-right: 26px;
+                }
+            }
+
+            &--right {
+                left: 100%;
+
+                div {
+                    margin-left: 26px;
+                }
+            }
+
+            div {
+                width: 1px;
+                // background: rgba(255, 255, 255, 0.1);
+                height: 100%;
+            }
+        }
+
+        .center-wrap {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        div:not(.center-wrap) {
+            width: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    &--total {
+        margin: 200px 0px;
+    }
+}

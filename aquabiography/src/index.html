@@ -1,0 +1,569 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Aquabiography</title>
+	<meta name="theme-color" content="#BF976E" />
+	<link rel="icon" type="image/png" href="assets/images/favicon.png" />
+</head>
+<div class="project-slider__button-prev"></div>
+<div class="project-slider__button-next"></div>
+<div class="cursor-follower"></div>
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		setTimeout(function () {
+			hideLoader();
+		}, 4000); //5000
+	});
+
+
+	function hideLoader() {
+		document.querySelector('.preloader').classList.add('preloader--opacity0');
+		document.querySelector('.preloader').addEventListener('transitionend', function () {
+			document.querySelector('.preloader').classList.add('preloader--none');
+		});
+	}
+</script>
+<div class="preloader">
+	<div class="preloader__wrap">
+		<svg width="300px" height="200px" viewBox="0 0 187.3 93.7" preserveAspectRatio="xMidYMid meet">
+			<path stroke="#ededed" id="outline" fill="none" stroke-width="4" stroke-linecap="round"
+				stroke-linejoin="round" stroke-miterlimit="10"
+				d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+			<path id="outline-bg" opacity="0.05" fill="none" stroke="#ededed" stroke-width="4" stroke-linecap="round"
+				stroke-linejoin="round" stroke-miterlimit="10"
+				d="				M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+		</svg>
+		<img src="assets/images/logo.svg" alt="" class="prelaoder__logo">
+	</div>
+</div>
+
+<body>
+	<header class='header anchors' id="logo">
+		<div class="header__nav header__burger cursor-hover">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<a href="main-screen" class="header__logo cursor-hover">
+			<p class="header__logo-title">Aquabiography</p>
+			<p class="header__logo-subtitle">cristal pools</p>
+		</a>
+		<a href='' class="header__models cursor-hover">
+			<span></span>
+			<span></span>
+			<span></span>
+		</a>
+	</header>
+	<div id="scrollbar">
+		<main>
+			<section class="main-screen anchors" id="main-screen">
+				<img src="assets/images/main-screen-img.png" data-animation-type='img' data-animation-delay='3000'
+					data-animation-duration='8000' class="main-screen__bg" alt="">
+				<div class="main-screen__content">
+					<h1 class="main-screen__title" data-animation-type='bottom' data-animation-duration='2000'
+						data-animation-delay='3300'>
+						Производство <br>
+						композитных бассейнов
+					</h1>
+					<p class="main-screen__subtitle mobile--hide" data-animation-type='bottom'
+						data-animation-duration='2000' data-animation-delay='3300'>
+						Создаем бассейны, которые восхищают<br>
+						превосходным качеством и совершенным дизайном.
+					</p>
+					<a href="#" class="link link--gray cursor-hover" data-animation-type='bottom'
+						data-animation-duration='2000' data-animation-delay='3300'>узнать больше о нас</a>
+				</div>
+				<a class="scroll-down cursor-hover" href="products" data-animation-type='opacity'
+					data-animation-duration='2000' data-animation-delay='3300'>
+					<div class="scroll-down__scrolldown">
+						<div class="scroll-down__line"></div>
+					</div>
+					<span></span>
+				</a>
+				<a class="video fancybox mobile--hide" data-fancybox-type="iframe"
+					href="https://www.youtube.com/embed/YRTrS7CJ3uM" data-animation-type='opacity'
+					data-animation-duration='2000' data-animation-delay='3300'>
+
+					<div class="video__play cursor-hide">
+						<svg viewBox="0 0 45 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path id="play.svg" class="play" d="M45 25L0.245903 49.2487L0.245903 0.751289L45 25Z" />
+						</svg>
+						<iframe class='video__video' width="100%" height="100%"
+							data-src="https://www.youtube.com/embed/YRTrS7CJ3uM?autoplay=1&amp;mute=1&amp;showinfo=0"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
+					</div>
+					<div class="video__rings">
+						<div class="video__ring"></div>
+						<div class="video__ring"></div>
+						<div class="video__ring"></div>
+						<div class="video__ring"></div>
+						<div class="video__ring"></div>
+					</div>
+				</a>
+			</section>
+			<section class="products cursor-hide" id="products">
+				<div class="products__list mobile--hide">
+					<a href="#" class="products__item" data-animation-type='bottom' data-animation-duration='1500'
+						data-animation-delay='0'>
+						<div class="products__item-img">
+							<img src="assets/images/product.png" alt="">
+							<img src="assets/images/product--hover.png" alt="">
+						</div>
+						<div class="products__item-info">
+							<div class="products__item-title">
+								ROYAL
+							</div>
+							<div class="products__item-text">
+								В этой модели композитного бассейна учтены потребности разных категорий пользователей. В
+								ней
+								есть зона мелководья, глубина в которой около 1000мм.
+							</div>
+						</div>
+
+						<img class="products__bg" src="assets/images/product-bg.png" alt="">
+					</a>
+					<a href="#" class="products__item" data-animation-type='bottom' data-animation-duration='1500'
+						data-animation-delay='200'>
+						<div class="products__item-img">
+							<img src="assets/images/product.png" alt="">
+							<img src="assets/images/product--hover.png" alt="">
+						</div>
+						<div class="products__item-info">
+							<div class="products__item-title">
+								Supreme
+							</div>
+							<div class="products__item-text">
+								В этой модели композитного бассейна учтены потребности разных категорий пользователей. В
+								ней
+								есть зона мелководья, глубина в которой около 1000мм.
+							</div>
+						</div>
+						<img class="products__bg" src="assets/images/product-bg.png" alt="">
+					</a>
+					<a href="#" class="products__item" data-animation-type='bottom' data-animation-duration='1500'
+						data-animation-delay='400'>
+						<div class="products__item-img">
+							<img src="assets/images/product3.png" alt="">
+							<img src="assets/images/product--hover.png" alt="">
+						</div>
+						<div class="products__item-info">
+							<div class="products__item-title">
+								ART
+							</div>
+							<div class="products__item-text">
+								В этой модели композитного бассейна учтены потребности разных категорий пользователей. В
+								ней
+								есть зона мелководья, глубина в которой около 1000мм.
+							</div>
+						</div>
+						<img class="products__bg" src="assets/images/product-bg.png" alt="">
+					</a>
+					<a href="#" class="products__item" data-animation-type='bottom' data-animation-duration='1500'
+						data-animation-delay='600'>
+						<div class="products__item-img">
+							<img src="assets/images/product4.png" alt="">
+							<img src="assets/images/product--hover.png" alt="">
+						</div>
+						<div class="products__item-info">
+							<div class="products__item-title">
+								Hugo
+							</div>
+							<div class="products__item-text">
+								В этой модели композитного бассейна учтены потребности разных категорий пользователей. В
+								ней
+								есть зона мелководья, глубина в которой около 1000мм.
+							</div>
+						</div>
+						<img class="products__bg" src="assets/images/product-bg.png" alt="">
+					</a>
+					<a href="#" class="products__item products__item--hide"></a>
+					<a href="#" class="products__item products__item--hide"></a>
+				</div>
+				<div class="center-wrap desktop--hide">
+					<div class="products-slider ">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div href="#" class="products__item">
+										<div class="products__item-img">
+											<img src="assets/images/product.png" alt="">
+										</div>
+										<div class="products__item-info">
+											<div class="products__item-title">
+												ROYAL
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div href="#" class="products__item">
+										<div class="products__item-img">
+											<img src="assets/images/product3.png" alt="">
+										</div>
+										<div class="products__item-info">
+											<div class="products__item-title">
+												Supreme
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div href="#" class="products__item">
+										<div class="products__item-img">
+											<img src="assets/images/product.png" alt="">
+										</div>
+										<div class="products__item-info">
+											<div class="products__item-title">
+												ART
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div href="#" class="products__item">
+										<div class="products__item-img">
+											<img src="assets/images/product4.png" alt="">
+										</div>
+										<div class="products__item-info">
+											<div class="products__item-title">
+												Hugo
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<div class="dark-section">
+				<div class="dark-section__lines">
+					<span class="dark-section__overlay"></span>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<section class="project">
+					<div class="center-wrap">
+						<div class="project__top">
+							<div class="simple-title" data-animation-type='left' data-animation-duration='2000'>
+								Проекты наших партнеров
+							</div>
+							<a href="#" class="link link--gold cursor-hover mobile--hide">смотреть все работы</a>
+						</div>
+
+					</div>
+					<div class="project-slider cursor-hidden" data-animation-type='bottom'
+						data-animation-duration='2000'>
+						<div class="next-slide"></div>
+						<div class="prev-slide"></div>
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div>
+										<figure class="slide-bgimg"
+											style="background-image:url('https://images.unsplash.com/photo-1496066061287-0e2dd8150a64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80')">
+											<img src="https://images.unsplash.com/photo-1496066061287-0e2dd8150a64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80"
+												class="entity-img" />
+										</figure>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div>
+										<figure class="slide-bgimg"
+											style="background-image:url('https://images.unsplash.com/photo-1541893246749-5ce3e4bf8cab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80')">
+											<img src="https://images.unsplash.com/photo-1541893246749-5ce3e4bf8cab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80"
+												class="entity-img" />
+										</figure>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div>
+										<figure class="slide-bgimg"
+											style="background-image:url('https://images.unsplash.com/photo-1559294170-f7e6a2f1f0fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
+											<img src="https://images.unsplash.com/photo-1559294170-f7e6a2f1f0fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+												class="entity-img" />
+										</figure>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div>
+										<figure class="slide-bgimg"
+											style="background-image:url('https://images.unsplash.com/photo-1534009502677-4e5080efa8c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80')">
+											<img src="https://images.unsplash.com/photo-1534009502677-4e5080efa8c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+												class="entity-img" />
+										</figure>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="projects__slider-btns">
+							<div class="swiper-scrollbar-wrap">
+								<div class="swiper-scrollbar">
+								</div>
+							</div>
+						</div>
+						<!-- <div class="swiper-pagination"></div> -->
+					</div>
+					<a href="#" class="link link--gold cursor-hover desktop--hide">смотреть все работы</a>
+				</section>
+			</div>
+			<section class="contact cursor-dark" id="contact">
+				<div class="center-wrap">
+					<div class="contact__wrap">
+						<div class="contact__left" data-animation-type='left' data-animation-duration='1800'>
+							<h2 class="simple-title contact__title">
+								Узнайте больше.
+							</h2>
+						</div>
+						<div class="contact__right" data-animation-type='bottom' data-animation-duration='1800'>
+							<div class="form" autocomplete="off">
+								<form action="" class='inputs'>
+									<div class="inputs__field-wrap">
+										<input type="text" name="text" class='inputs__field' required minlength="2"
+											autocomplete="off">
+										<label for="text" class="inputs__label">
+											<span class="inputs__content">
+												Имя
+											</span>
+										</label>
+									</div>
+									<div class="inputs__field-wrap">
+										<input type="tel" name="phone" class='inputs__field' required
+											autocomplete="off">
+										<label for="phone" class="inputs__label">
+											<span class="inputs__content">
+												Телефон
+											</span>
+										</label>
+									</div>
+									<div class="inputs__field-wrap">
+										<div class="inputs__field-checkbox">
+											<input type="checkbox" id="checkbox">
+											<label for="checkbox" class="inputs__label-checkbox"></label>
+											<div class="inputs__field-privacy">
+												<span>
+													Я согласен на обработку моих персональных данных
+												</span>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="inputs__field-wrap">
+									<input type="submit" name="phone" class='btn contact__btn' value="перезвоните мне">
+								</div> -->
+
+									<a class="btn cursor-hover cursor-white" href="#">перезвоните мне<span></span></a>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="footer__bag"></div>
+		</main>
+	</div>
+	<div class="dark-section dark-section--footer">
+		<div class="dark-section__lines">
+			<span class="dark-section__overlay"></span>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<footer class='footer'>
+			<div class="center-wrap">
+				<div class="footer__top anchors">
+					<a href="main-screen " class="footer__logo cursor-hover">
+						<img src="assets/images/footer-logo.svg" alt="">
+					</a>
+					<div class="footer__list mobile--hide">
+						<div class="footer__list-city cursor-hidden">
+							Санкт-Петербург
+						</div>
+						<a class="footer__list-tel cursor-hide" data-anchors="false" href="tel:78129212020">+7 (812)
+							921-20-20</a>
+						<div class="footer__list-address">
+							<p class="cursor-hide">Витебский проспект 17</p>
+							<a data-anchors='false' class="footer__list-map cursor-hover" target="_blank"
+								href="#">Показать на карте</a>
+						</div>
+					</div>
+					<div class="footer__nav cursor-hover mobile--hide anchors">
+						<ul class="footer__nav-list anchors">
+							<li class="footer__nav-item"><a href="#" class="footer__nav-link">О компании</a></li>
+							<li class="footer__nav-item"><a href="products" class="footer__nav-link">Бассейны</a></li>
+							<li class="footer__nav-item"><a href="#" class="footer__nav-link">Портфолио</a></li>
+							<li class="footer__nav-item"><a href="#" class="footer__nav-link">Блог</a></li>
+							<li class="footer__nav-item"><a href="contact" class="footer__nav-link">Контакты</a></li>
+							<div class="socials">
+								<a data-anchors='false' class="socials__link" href="#" target="_blank">
+									<svg viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M16.1649 7.53634C16.7901 8.18098 17.4634 8.72645 17.9924 9.42068C18.2329 9.71821 18.4733 10.0653 18.6657 10.4124C18.9062 10.9083 18.6657 11.4538 18.2329 11.5034H15.4917C14.7703 11.553 14.2413 11.2554 13.7604 10.7596C13.3756 10.3629 13.039 9.96615 12.6543 9.51986C12.51 9.37109 12.3657 9.17274 12.1733 9.07356C11.7886 8.82562 11.5001 8.9248 11.2596 9.3215C11.0191 9.71821 10.9711 10.1645 10.9711 10.6108C10.923 11.2554 10.7306 11.4538 10.1054 11.4538C8.71075 11.5034 7.41228 11.305 6.20999 10.6108C5.15197 9.96615 4.28632 9.07356 3.56495 8.0818C2.17029 6.09829 1.06419 3.966 0.102354 1.73454C-0.138104 1.23867 0.0542626 0.941137 0.58327 0.941137C1.44892 0.941137 2.36266 0.941137 3.22831 0.941137C3.61304 0.941137 3.80541 1.13949 3.94968 1.53619C4.4306 2.77589 5.0077 3.91642 5.77716 5.00735C5.96953 5.30488 6.16189 5.60241 6.45044 5.80076C6.78708 5.99911 7.02754 5.94952 7.17182 5.60241C7.268 5.35447 7.31609 5.10653 7.31609 4.85859C7.46036 3.966 7.46036 3.12301 7.31609 2.28001C7.21991 1.73454 6.93136 1.38743 6.45044 1.28825C6.20999 1.23867 6.20998 1.13949 6.35426 0.990725C6.59472 0.742785 6.78708 0.544434 7.17182 0.544434H10.2497C10.7306 0.64361 10.8268 0.891549 10.923 1.38743V4.90817C10.923 5.10653 11.0191 5.70158 11.3558 5.80076C11.6443 5.89993 11.7886 5.65199 11.981 5.50323C12.7504 4.70982 13.2794 3.76765 13.7123 2.77589C13.9046 2.3296 14.097 1.88331 14.2894 1.43702C14.4336 1.0899 14.626 0.941137 14.9627 0.941137H17.9443C18.0405 0.941137 18.1367 0.941137 18.1848 0.941137C18.6657 1.04031 18.81 1.23867 18.6657 1.73454C18.4252 2.52795 17.9443 3.1726 17.5115 3.81724C17.0306 4.51147 16.5016 5.2057 16.0207 5.89993C15.5398 6.64375 15.5878 6.94128 16.1649 7.53634Z" />
+									</svg>
+								</a>
+								<a data-anchors='false' class="socials__link socials__link--instagram" href="#"
+									target="_blank">
+									<svg viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M8.78777 0H4.07478C2.15111 0 0.612183 1.58678 0.612183 3.57025V8.42975C0.612183 10.4132 2.15111 12 4.07478 12H8.78777C10.7114 12 12.2504 10.4132 12.2504 8.42975V3.61983C12.2504 1.63636 10.7114 0 8.78777 0ZM11.0962 8.47934C11.0962 9.76859 10.0862 10.8595 8.78777 10.8595H4.07478C2.8244 10.8595 1.76638 9.81818 1.76638 8.47934V3.61983C1.76638 2.33058 2.77631 1.23967 4.07478 1.23967H8.78777C10.0382 1.23967 11.0962 2.28099 11.0962 3.61983V8.47934Z" />
+										<path
+											d="M6.43121 2.92529C4.74803 2.92529 3.40149 4.31377 3.40149 6.04938C3.40149 7.78498 4.74803 9.17346 6.43121 9.17346C8.11439 9.17346 9.46094 7.78498 9.46094 6.04938C9.46094 4.31377 8.11439 2.92529 6.43121 2.92529ZM6.43121 7.93374C5.4213 7.93374 4.60376 7.09074 4.60376 6.04938C4.60376 5.00801 5.4213 4.16501 6.43121 4.16501C7.44112 4.16501 8.25867 5.00801 8.25867 6.04938C8.25867 7.09074 7.44112 7.93374 6.43121 7.93374Z" />
+										<path
+											d="M9.461 3.66945C9.8594 3.66945 10.1824 3.3365 10.1824 2.92579C10.1824 2.51508 9.8594 2.18213 9.461 2.18213C9.06259 2.18213 8.73962 2.51508 8.73962 2.92579C8.73962 3.3365 9.06259 3.66945 9.461 3.66945Z" />
+									</svg>
+								</a>
+							</div>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__bot">
+					<span class="footer__bot-copyright">© 2018 — 2020 Аквабиография</span>
+					<span class="footer__bot-text">Производитель композитных бассейнов</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div class="mobile-menu">
+		<div class="mobile-menu__wrap">
+			<div class="mobile-menu__header">
+				<div class="mobile-menu__act mobile-menu__act--close">
+					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path opacity="0.79" fill-rule="evenodd" clip-rule="evenodd"
+							d="M15 1.5L13.5 0L7.5 6L1.5 0L0 1.5L6 7.5L0 13.5L1.5 15L7.5 9L13.5 15L15 13.5L9 7.5L15 1.5Z"
+							fill="#575757" />
+					</svg>
+				</div>
+			</div>
+			<nav class="mobile-menu__nav anchors">
+				<ul class="mobile-menu__nav-list">
+					<li class="mobile-menu__nav-item"><a href="rate" class="mobile-menu__nav-link">О компании</a></li>
+					<li class="mobile-menu__nav-item"><a href="products" class="mobile-menu__nav-link">Бассейны</a></li>
+					<li class="mobile-menu__nav-item"><a href="products" class="mobile-menu__nav-link">Портфолио</a>
+					</li>
+					</li>
+					<li class="mobile-menu__nav-item"><a href="#" class="mobile-menu__nav-link">Блог</a>
+					</li>
+					<li class="mobile-menu__nav-item"><a href="contact" class="mobile-menu__nav-link">Контакты</a>
+				</ul>
+			</nav>
+			<!-- <span class="btn" onclick='show_popup("call")'>Обратная связь</span> -->
+			<div class="mobile-menu__phones">
+				<a href="tel: +78129212020" class="mobile-menu__phone">+7 (812) 921-20-20</a>
+			</div>
+			<div class="socials">
+				<a class="socials__link socials__link--vk" href="#" target="_blank">
+					<svg viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M16.1649 7.53634C16.7901 8.18098 17.4634 8.72645 17.9924 9.42068C18.2329 9.71821 18.4733 10.0653 18.6657 10.4124C18.9062 10.9083 18.6657 11.4538 18.2329 11.5034H15.4917C14.7703 11.553 14.2413 11.2554 13.7604 10.7596C13.3756 10.3629 13.039 9.96615 12.6543 9.51986C12.51 9.37109 12.3657 9.17274 12.1733 9.07356C11.7886 8.82562 11.5001 8.9248 11.2596 9.3215C11.0191 9.71821 10.9711 10.1645 10.9711 10.6108C10.923 11.2554 10.7306 11.4538 10.1054 11.4538C8.71075 11.5034 7.41228 11.305 6.20999 10.6108C5.15197 9.96615 4.28632 9.07356 3.56495 8.0818C2.17029 6.09829 1.06419 3.966 0.102354 1.73454C-0.138104 1.23867 0.0542626 0.941137 0.58327 0.941137C1.44892 0.941137 2.36266 0.941137 3.22831 0.941137C3.61304 0.941137 3.80541 1.13949 3.94968 1.53619C4.4306 2.77589 5.0077 3.91642 5.77716 5.00735C5.96953 5.30488 6.16189 5.60241 6.45044 5.80076C6.78708 5.99911 7.02754 5.94952 7.17182 5.60241C7.268 5.35447 7.31609 5.10653 7.31609 4.85859C7.46036 3.966 7.46036 3.12301 7.31609 2.28001C7.21991 1.73454 6.93136 1.38743 6.45044 1.28825C6.20999 1.23867 6.20998 1.13949 6.35426 0.990725C6.59472 0.742785 6.78708 0.544434 7.17182 0.544434H10.2497C10.7306 0.64361 10.8268 0.891549 10.923 1.38743V4.90817C10.923 5.10653 11.0191 5.70158 11.3558 5.80076C11.6443 5.89993 11.7886 5.65199 11.981 5.50323C12.7504 4.70982 13.2794 3.76765 13.7123 2.77589C13.9046 2.3296 14.097 1.88331 14.2894 1.43702C14.4336 1.0899 14.626 0.941137 14.9627 0.941137H17.9443C18.0405 0.941137 18.1367 0.941137 18.1848 0.941137C18.6657 1.04031 18.81 1.23867 18.6657 1.73454C18.4252 2.52795 17.9443 3.1726 17.5115 3.81724C17.0306 4.51147 16.5016 5.2057 16.0207 5.89993C15.5398 6.64375 15.5878 6.94128 16.1649 7.53634Z" />
+					</svg>
+				</a>
+				<a class="socials__link socials__link--instagram" href="#" target="_blank">
+					<svg viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M8.78777 0H4.07478C2.15111 0 0.612183 1.58678 0.612183 3.57025V8.42975C0.612183 10.4132 2.15111 12 4.07478 12H8.78777C10.7114 12 12.2504 10.4132 12.2504 8.42975V3.61983C12.2504 1.63636 10.7114 0 8.78777 0ZM11.0962 8.47934C11.0962 9.76859 10.0862 10.8595 8.78777 10.8595H4.07478C2.8244 10.8595 1.76638 9.81818 1.76638 8.47934V3.61983C1.76638 2.33058 2.77631 1.23967 4.07478 1.23967H8.78777C10.0382 1.23967 11.0962 2.28099 11.0962 3.61983V8.47934Z" />
+						<path
+							d="M6.43121 2.92529C4.74803 2.92529 3.40149 4.31377 3.40149 6.04938C3.40149 7.78498 4.74803 9.17346 6.43121 9.17346C8.11439 9.17346 9.46094 7.78498 9.46094 6.04938C9.46094 4.31377 8.11439 2.92529 6.43121 2.92529ZM6.43121 7.93374C5.4213 7.93374 4.60376 7.09074 4.60376 6.04938C4.60376 5.00801 5.4213 4.16501 6.43121 4.16501C7.44112 4.16501 8.25867 5.00801 8.25867 6.04938C8.25867 7.09074 7.44112 7.93374 6.43121 7.93374Z" />
+						<path
+							d="M9.461 3.66945C9.8594 3.66945 10.1824 3.3365 10.1824 2.92579C10.1824 2.51508 9.8594 2.18213 9.461 2.18213C9.06259 2.18213 8.73962 2.51508 8.73962 2.92579C8.73962 3.3365 9.06259 3.66945 9.461 3.66945Z" />
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js'></script>
+</body>
+
+</html>

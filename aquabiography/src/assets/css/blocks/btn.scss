@@ -1,0 +1,38 @@
+.btn {
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+	white-space: nowrap;
+	text-align: center;
+	line-height: 58px;
+	display: inline-block;
+	padding: 0 22px;
+	letter-spacing: 0.125em;
+    font-variant: small-caps;
+	overflow: hidden;
+	border: 1px solid #15191D;
+	color: #15191D;
+	font-family: Circe-Regular;
+	font-size: 18px;
+	transition: color 0.4s;
+
+	span {
+		position: absolute;
+		display: block;
+		width: 0;
+		height: 0;
+		border-radius: 50%;
+		background-color: #15191D;
+		transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+	}
+
+	&:hover {
+		color: white;
+		span {
+			width: 225%;
+			height: 562px;
+		}
+	}
+}
