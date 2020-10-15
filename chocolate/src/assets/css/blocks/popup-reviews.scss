@@ -1,0 +1,136 @@
+.popup-reviews {
+    &__photo {
+        position: absolute;
+        top: 50px;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        transition: opacity .5s;
+        z-index: 10;
+
+        @media screen and (max-width:1200px) {
+            top: 38px;
+        }
+
+        @media screen and (max-width:450px) {
+            width: 80px;
+            height: 80px;
+        }
+
+        svg {
+            width: 110px;
+            height: 110px;
+
+            @media screen and (max-width:450px) {
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+        .circle {
+            position: absolute;
+            z-index: 20;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        >div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 50%;
+            padding-bottom: 100%;
+
+            img {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+                z-index: 2;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            z-index: 2;
+        }
+    }
+
+    &__instagram {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+        background: linear-gradient(99.67deg, #FFEC85 29.55%, #F6BF40 75.44%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s;
+        z-index: 21;
+
+        @media screen and (max-width:1200px) {
+            width: 25px;
+            height: 25px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: 50%;
+            z-index: 100;
+        }
+
+        svg {
+            fill: #fff;
+            transition: all .5s;
+            width: 14px;
+            height: 14px;
+            transition: all .5s;
+
+            @media screen and (max-width:450px) {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 1.44;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4;
+        color: #fff;
+
+        @media screen and (max-width:450px) {
+            font-size: 14px;
+        }
+    }
+}

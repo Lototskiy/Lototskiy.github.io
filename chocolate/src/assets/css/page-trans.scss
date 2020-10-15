@@ -1,0 +1,47 @@
+.page-trans {
+	width: 100%;
+	position: fixed;
+	height: 100%;
+	background-image: url('~img/body-bg.png');
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9998;
+	transition: opacity 0.5s;
+	width: 100%;
+	animation: pageShow 1.5s;
+	animation-fill-mode: forwards !important;
+	animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1) !important;
+
+	&--ph {
+		animation: pageHide 1.5s;
+	animation-fill-mode: forwards !important;
+	animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1) !important;
+	}
+
+	&--opacity0 {
+		opacity: 0;
+	}
+
+	&--none {
+		display: none;
+	}
+
+}
+
+@keyframes pageHide {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+
+@keyframes pageShow {
+	100% {
+		width: 0%;
+	}
+}

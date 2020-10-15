@@ -1,0 +1,728 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+    <title>Шоколадка</title>
+    <meta name="theme-color" content="#4F8CF7"/>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+<link href="assets/css/app.css" rel="stylesheet"></head>
+
+<body style="background-image: url(assets/images/body-bg.png);">
+    <div class="page-trans"></div>
+    <header class='header header--product'>
+        <div class="center-wrap">
+            <div class="header__inner anchors">
+                <a href="index.html" class="header__logo">
+                    <img src="assets/images/logo-black.svg" alt="">
+                </a>
+                <nav class="header__nav mobile--hide">
+                    <ul class="header__nav-list anchors">
+                        <li class="header__nav-item"><a href="video" class="header__nav-link">О курсе </a>
+                        </li>
+                        <li class="header__nav-item"><a href="gallery" class="header__nav-link">Галерея</a>
+                        </li>
+                        <li class="header__nav-item"><a href="reviews" class="header__nav-link">Отзывы</a>
+                        </li>
+                        <li class="header__nav-item"><a href="facilities" class="header__nav-link">Курсы</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="tel:+79116030066" class="header__phone">
+                    <p class="header__phone-link mobile--hide">+ 7 (911) 603 00 66</p>
+                    <p class="header__phone-name mobile--hide">Луиза </p>
+                </a>
+                <!-- <a href="#" class="header__tel desktop--hide">
+					<svg viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M18.4001 14.7289C17.1756 14.7289 15.9733 14.514 14.834 14.0916C14.2757 13.8779 13.5894 14.0739 13.2487 14.4666L10.9999 16.3712C8.39191 14.8093 6.78546 13.0075 5.41233 10.1034L7.05999 7.64605C7.48806 7.16641 7.6416 6.46576 7.45764 5.80836C7.07952 4.52335 6.88744 3.17506 6.88744 1.80064C6.88749 0.80776 6.16754 0 5.28264 0H1.60973C0.724831 0 0.00488281 0.80776 0.00488281 1.80059C0.00488281 13.181 8.25686 22.4394 18.4001 22.4394C19.285 22.4394 20.0049 21.6316 20.0049 20.6388V16.5294C20.0049 15.5367 19.2849 14.7289 18.4001 14.7289Z"
+							fill="url(#paint3_linear)" />
+						<defs>
+							<linearGradient id="paint3_linear" x1="23.0233" y1="15" x2="1.36738" y2="14.1036"
+								gradientUnits="userSpaceOnUse">
+								<stop offset="0.0218751" stop-color="#FFEC85" />
+								<stop offset="1" stop-color="#F6BF40" />
+							</linearGradient>
+						</defs>
+					</svg>
+
+				</a> -->
+                <div class="header__burger desktop--hide">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- /.header -->
+    <main>
+        <section class="product" id="product">
+            <div class="center-wrap">
+                <div class="product-wrap">
+                    <div class="product__img">
+                        <div>
+                            <img src="assets/images/product-img1.png" alt="">
+                        </div>
+                        <a class="video fancybox video--color" data-fancybox-type="iframe"
+                            href="https://www.youtube.com/embed/YRTrS7CJ3uM" data-animation-type='bottom'
+                            data-animation-duration='1500'>
+                            <div class="video__play">
+                                <svg viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.4 9.49998L0.576222 18.0736L0.576222 0.926324L16.4 9.49998Z"
+                                        fill="url(#paint5_linear)" />
+                                    <defs>
+                                        <linearGradient id="paint5_linear" x1="16.4" y1="6.44747" x2="14.7412"
+                                            y2="16.8171" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FFEC85" />
+                                            <stop offset="1" stop-color="#F6BF40" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <iframe class='video__video' width="100%" height="100%"
+                                    src="https://www.youtube.com/embed/YRTrS7CJ3uM?autoplay=1&amp;mute=1&amp;showinfo=0"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product__info">
+                        <a href="index.html" class="product__back">
+                            к списку видеоуроков
+                        </a>
+                        <h2 class="product__title">
+                            Мусовые
+                            пирожные:
+                            ягодное, тропики
+                        </h2>
+                        <p class="product__price">
+                            560 <span>руб.</span>
+                        </p>
+                        <ol class="product__list">
+                            <p class="product__list-title">
+                                Мы с вами приготовим:
+                            </p>
+                            <li class="product__list-item">
+                                Мини-гато “Ягодное”
+                            </li>
+                            <li class="product__list-item">
+                                Мини-гато “Ягодное”
+                            </li>
+                            <li class="product__list-item">
+                                Мини-гато “Ягодное”
+                            </li>
+                        </ol>
+                        <div class="product__row">
+                            <div class="product__row-btn">
+                                <span onclick='show_popup("lesson")' class="btn btn--press">
+                                    Купить урок
+                                </span>
+                            </div>
+                            <div class="product__row-text">
+                                <p>
+                                    Видеоурок действует в течение
+                                    3 месяцев с момента покупки
+                                </p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn--video">
+                            Предпросмотр урока
+                            <span>
+                                <svg viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.4 9.49998L0.576222 18.0736L0.576222 0.926324L16.4 9.49998Z"
+                                        fill="url(#paint0_linear)" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear" x1="16.4" y1="6.44747" x2="14.7412"
+                                            y2="16.8171" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FFEC85" />
+                                            <stop offset="1" stop-color="#F6BF40" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-wrap">
+                    <div class="product__descr">
+                        <div class="product__descr-info">
+                            <div class="product__descr-info__box">
+                                <h3 class="product__descr-info__title">
+                                    Описание
+                                </h3>
+                                <p class="product__descr-info__subtitle">
+                                    видеоурока
+                                </p>
+                            </div>
+                            <div class="product__descr-info__box">
+                                <h3 class="product__descr-info__title">
+                                    Как купить
+                                </h3>
+                                <p class="product__descr-info__subtitle">
+                                    видеурок
+                                </p>
+                            </div>
+                            <div class="product__descr-info__box">
+                                <h3 class="product__descr-info__title">
+                                    Отзывы
+                                </h3>
+                                <p class="product__descr-info__subtitle">
+                                    и комментарии
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product__descr-text">
+                            <p>
+                                Вам очень нравятся муссовые торты, но вы боитесь иметь с ними дело?
+                            </p>
+                            <p>
+                                Я даже знаю, какие
+                                сомнения вас мучают: «Нет, это для меня очень сложно – столько времени уйдет и не
+                                факт,
+                                что получится…» «А вдруг не смогу глазурь приготовить?..», «А если глазурь не
+                                застынет,
+                                что тогда?..»
+                            </p>
+                            <p>
+                                Не терзайте себя: начните не с торта, а пирожного – муссового пирожного с
+                                глазурью.
+                            </p>
+                            <p>
+                                Я расскажу и покажу все нюансы работы с муссами, бисквитами, хрустящим слоем и,
+                                конечно,
+                                глазурью. Отработайте технологию приготовления на пирожных – и можете смело
+                                приступать к
+                                приготовлению муссовых тортов! У вас все получится – поверьте!
+                            </p>
+                            <ul class="product__text-list">
+                                <p class="product__text-list__title">
+                                    Вы также можете купить:
+                                </p>
+                                <li class="product__text-list__item">
+                                    6 видов зефира: без белка, без сахара, с начинкой, классический зефир
+                                </li>
+                                <li class="product__text-list__item">
+                                    4 вида современных кексов. Начинки и покрытия
+                                </li>
+                                <li class="product__text-list__item">
+                                    6 видов зефира: без белка, без сахара, с начинкой, классический зефир
+                                </li>
+                                <li class="product__text-list__item">
+                                    4 вида современных кексов. Начинки и покрытия
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product__items">
+                        <div class="product__item">
+                            <div class="product__item-img">
+                                <div>
+                                    <img src="assets/images/aside__box-img1.png" alt="">
+                                </div>
+                                <a class="video fancybox video--40" data-fancybox-type="iframe"
+                                    href="https://www.youtube.com/embed/YRTrS7CJ3uM" data-animation-type='bottom'
+                                    data-animation-duration='1500'>
+                                    <div class="video__play">
+                                        <svg viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.4 9.49998L0.576222 18.0736L0.576222 0.926324L16.4 9.49998Z"
+                                                fill="url(#paint0_linear)" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear" x1="16.4" y1="6.44747" x2="14.7412"
+                                                    y2="16.8171" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#FFEC85" />
+                                                    <stop offset="1" stop-color="#F6BF40" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                        <iframe class='video__video' width="100%" height="100%"
+                                            src="https://www.youtube.com/embed/YRTrS7CJ3uM?autoplay=1&amp;mute=1&amp;showinfo=0"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product__item-info">
+                                <div class="product__item-title">
+                                    Мусовые
+                                    пирожные
+                                </div>
+                                <div class="product__item-text">
+                                    Давайте вместе готовить легко и развивая своё нужное и умное кондитерское мышление,
+                                    понимая каждый процесс «от» и «до»!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__item">
+                            <div class="product__item-img">
+                                <div>
+                                    <img src="assets/images/aside__box-img2.png" alt="">
+                                </div>
+                                <a class="video fancybox video--40" data-fancybox-type="iframe"
+                                    href="https://www.youtube.com/embed/YRTrS7CJ3uM" data-animation-type='bottom'
+                                    data-animation-duration='1500'>
+                                    <div class="video__play">
+                                        <svg viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.4 9.49998L0.576222 18.0736L0.576222 0.926324L16.4 9.49998Z"
+                                                fill="url(#paint0_linear)" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear" x1="16.4" y1="6.44747" x2="14.7412"
+                                                    y2="16.8171" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#FFEC85" />
+                                                    <stop offset="1" stop-color="#F6BF40" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                        <iframe class='video__video' width="100%" height="100%"
+                                            src="https://www.youtube.com/embed/YRTrS7CJ3uM?autoplay=1&amp;mute=1&amp;showinfo=0"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product__item-info">
+                                <div class="product__item-title">
+                                    Мусовые
+                                    пирожные
+                                </div>
+                                <div class="product__item-text">
+                                    Давайте вместе готовить легко и развивая своё нужное и умное кондитерское мышление,
+                                    понимая каждый процесс «от» и «до»!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__item">
+                            <div class="product__item-img">
+                                <div>
+                                    <img src="assets/images/aside__box-img3.png" alt="">
+                                </div>
+                                <a class="video fancybox video--40" data-fancybox-type="iframe"
+                                    href="https://www.youtube.com/embed/YRTrS7CJ3uM" data-animation-type='bottom'
+                                    data-animation-duration='1500'>
+                                    <div class="video__play">
+                                        <svg viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.4 9.49998L0.576222 18.0736L0.576222 0.926324L16.4 9.49998Z"
+                                                fill="url(#paint0_linear)" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear" x1="16.4" y1="6.44747" x2="14.7412"
+                                                    y2="16.8171" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#FFEC85" />
+                                                    <stop offset="1" stop-color="#F6BF40" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                        <iframe class='video__video' width="100%" height="100%"
+                                            src="https://www.youtube.com/embed/YRTrS7CJ3uM?autoplay=1&amp;mute=1&amp;showinfo=0"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product__item-info">
+                                <div class="product__item-title">
+                                    Мусовые
+                                    пирожные
+                                </div>
+                                <div class="product__item-text">
+                                    Давайте вместе готовить легко и развивая своё нужное и умное кондитерское мышление,
+                                    понимая каждый процесс «от» и «до»!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class='footer'>
+        <div class="center-wrap">
+            <div class="footer__inner">
+                <div class="footer__column footer__column-logo">
+                    <div class="footer__logo anchors">
+                        <a class="footer__logo-link" href="index.html">
+                            <img src="assets/images/logo-black.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="socials">
+                        <a class="socials__link socials__link--telegram" href="" target="_blank">
+                            <svg viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.7014 16.4767L10.2671 23.4566C10.8884 23.4566 11.1574 23.1516 11.4801 22.7854L14.3927 19.6042L20.428 24.6554C21.5349 25.3604 22.3147 24.9891 22.6133 23.4916L26.5749 2.27675L26.576 2.2755C26.927 0.405505 25.9842 -0.325741 24.9058 0.133006L1.61999 10.3217C0.0307824 11.0267 0.0548447 12.0392 1.34984 12.4979L7.30309 14.6142L21.1313 4.72548C21.7821 4.23299 22.3738 4.50548 21.8871 4.99798L10.7014 16.4767Z"
+                                    fill="url(#paint1_linear)" />
+                                <defs>
+                                    <linearGradient id="paint1_linear" x1="23.0233" y1="15" x2="1.36738" y2="14.1036"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.0218751" stop-color="#FFEC85" />
+                                        <stop offset="1" stop-color="#F6BF40" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
+                        <a class="socials__link" href="" target="_blank">
+                            <svg viewBox="0 0 36 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M34.7399 17.8387C34.6457 17.681 34.0629 16.4146 31.2585 13.8118C28.3226 11.0863 28.717 11.5289 32.2532 6.81617C34.4069 3.94605 35.2679 2.19331 34.9984 1.44401C34.7421 0.729766 33.158 0.918186 33.158 0.918186L27.891 0.948858C27.891 0.948858 27.501 0.896276 27.2097 1.06936C26.927 1.24025 26.7452 1.63462 26.7452 1.63462C26.7452 1.63462 25.9104 3.85622 24.7974 5.7448C22.451 9.73011 21.511 9.94044 21.1276 9.69286C20.2359 9.11665 20.4594 7.37486 20.4594 6.13917C20.4594 2.27656 21.0444 0.666228 19.3179 0.249952C18.7439 0.111923 18.3232 0.019904 16.8575 0.00456746C14.9777 -0.0151509 13.3849 0.0111402 12.4844 0.451517C11.8841 0.745102 11.4218 1.40019 11.7044 1.43744C12.0528 1.48345 12.8415 1.64996 13.26 2.2196C13.8012 2.95356 13.7814 4.60552 13.7814 4.60552C13.7814 4.60552 14.0926 9.1517 13.0562 9.71696C12.3442 10.1048 11.3692 9.31383 9.27689 5.6966C8.20552 3.84527 7.39488 1.79675 7.39488 1.79675C7.39488 1.79675 7.23932 1.41553 6.96107 1.21177C6.62367 0.964195 6.15043 0.885322 6.15043 0.885322L1.14196 0.915995C1.14196 0.915995 0.390475 0.937904 0.114418 1.26435C-0.130967 1.55575 0.0946991 2.15606 0.0946991 2.15606C0.0946991 2.15606 4.01646 11.3295 8.45529 15.9545C12.5282 20.194 17.1511 19.9157 17.1511 19.9157H19.2456C19.2456 19.9157 19.8788 19.8456 20.2009 19.4973C20.4988 19.1774 20.4879 18.5771 20.4879 18.5771C20.4879 18.5771 20.4463 15.7661 21.752 15.352C23.0381 14.9445 24.6901 18.0688 26.4406 19.2716C27.764 20.1808 28.7696 19.9815 28.7696 19.9815L33.4516 19.9157C33.4516 19.9157 35.9011 19.7646 34.7399 17.8387Z"
+                                    fill="url(#paint1_linear)" />
+                                <defs>
+                                    <linearGradient id="paint1_linear" x1="23.0233" y1="15" x2="1.36738" y2="14.1036"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.0218751" stop-color="#FFEC85" />
+                                        <stop offset="1" stop-color="#F6BF40" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
+                        <a class="socials__link socials__link--instagram" href="" target="_blank">
+                            <svg viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.7175 0H7.33478C3.30472 0 0.026123 3.27859 0.026123 7.30865V19.6916C0.026123 23.7214 3.30472 27 7.33478 27H19.7177C23.7475 27 27.0261 23.7214 27.0261 19.6916V7.30865C27.0261 3.27859 23.7475 0 19.7175 0V0ZM13.5261 20.8826C9.45528 20.8826 6.14352 17.5708 6.14352 13.5C6.14352 9.42915 9.45528 6.11739 13.5261 6.11739C17.597 6.11739 20.9087 9.42915 20.9087 13.5C20.9087 17.5708 17.597 20.8826 13.5261 20.8826ZM21.0853 7.85845C19.8823 7.85845 18.9038 6.87998 18.9038 5.67698C18.9038 4.47398 19.8823 3.4953 21.0853 3.4953C22.2883 3.4953 23.2669 4.47398 23.2669 5.67698C23.2669 6.87998 22.2883 7.85845 21.0853 7.85845Z"
+                                    fill="url(#paint1_linear)" />
+                                <path
+                                    d="M13.5266 7.69971C10.3287 7.69971 7.72681 10.3014 7.72681 13.4995C7.72681 16.6973 10.3287 19.2992 13.5266 19.2992C16.7246 19.2992 19.3263 16.6973 19.3263 13.4995C19.3263 10.3014 16.7246 7.69971 13.5266 7.69971Z"
+                                    fill="url(#paint1_linear)" />
+                                <path
+                                    d="M21.0854 5.07837C20.7554 5.07837 20.4868 5.34698 20.4868 5.67699C20.4868 6.00699 20.7554 6.2756 21.0854 6.2756C21.4156 6.2756 21.6843 6.00719 21.6843 5.67699C21.6843 5.34678 21.4156 5.07837 21.0854 5.07837Z"
+                                    fill="url(#paint1_linear)" />
+                                <defs>
+                                    <linearGradient id="paint1_linear" x1="23.0233" y1="15" x2="1.36738" y2="14.1036"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.0218751" stop-color="#FFEC85" />
+                                        <stop offset="1" stop-color="#F6BF40" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <nav class="footer__nav">
+                        <ul class="footer__nav-list anchors">
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="advantages">Преимущества</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="video">Видео уроки</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="reviews">Отзывы</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="author">Об авторе</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="faq">Частые вопросы</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__column">
+                    <nav class="footer__nav">
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="product.html">Шоколадный трюфель</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="product.html">Белый шоколад</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="product.html">Веганский шоколад</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="product.html">Трюфель с малиной</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="product.html">Шоколад с перцем чили</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__column footer__column-button">
+                    <p class="footer__column-text">
+                        Курс “Готовь дома полезный шоколад”. Места ограничены. Успей записаться!
+                    </p>
+                    <span onclick='show_popup("course")' class="btn btn--press">
+                        Хочу на курс
+                    </span>
+                </div>
+                <div class="footer__column footer__column-author anchors">
+                    <a href="product" class="footer__column-up">
+                        <svg width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.5216 0.195521L0.199927 11.5172C-0.0666422 11.7837 -0.0666422 12.2112 0.199927 12.4778C0.466496 12.7444 0.894012 12.7444 1.16058 12.4778L11.9994 1.63902L22.8382 12.4778C23.1047 12.7444 23.5322 12.7444 23.7988 12.4778C23.9296 12.347 24 12.171 24 12C24 11.829 23.9346 11.653 23.7988 11.5222L12.4772 0.200549C12.2156 -0.0660191 11.7831 -0.0660181 11.5216 0.195521Z"
+                                fill="url(#paint0_linear)" />
+                            <defs>
+                                <linearGradient id="paint0_linear" x1="18" y1="-1.91641" x2="17.6995" y2="11.8279"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.0218751" stop-color="#FFEC85" />
+                                    <stop offset="1" stop-color="#F6BF40" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="#" class="company__developers" target="_blank">
+                        Создание сайта - <span>A&T studio</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Popup -->
+    <div class="popup-wrap" id='course'>
+		<div class="popup">
+			<div class="popup__close" onclick="close_popup('course')">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="popup__form">
+				<h2 class="popup__form-title">
+					Хочу на курс
+				</h2>
+				<p class="popup__form-subtitle">
+					Заполните форму, и мы перезвоним<br>
+					вам в течение дня
+				</p>
+            </div>
+            <form action="" class='inputs'>
+				<div class="inputs__field-wrap">
+					<input type="text" name="text" class='inputs__field' autocomplete="on" required minlength="2">
+					<label for="text" class="inputs__label">
+						<div class="inputs__content">
+							<span class="inputs__content-text">Имя</span>
+						</div>
+						<span class="inputs__icon">
+							<svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
+									d="M8 0.83168C6.19455 0.83168 4.75078 2.19922 4.75078 3.86293C4.75078 5.52665 6.19455 6.89419 8 6.89419C9.80545 6.89419 11.2492 5.52665 11.2492 3.86293C11.2492 2.19922 9.80545 0.83168 8 0.83168ZM3.88592 3.86293C3.88592 1.71909 5.73882 0 8 0C10.2612 0 12.1141 1.71909 12.1141 3.86293C12.1141 6.00677 10.2612 7.72587 8 7.72587C5.73882 7.72587 3.88592 6.00677 3.88592 3.86293ZM8 10.1698C4.86643 10.1698 2.16725 11.6538 0.801379 13.8011C0.676758 13.997 0.410576 14.0587 0.206845 13.9388C0.00311314 13.819 -0.0610185 13.563 0.0636026 13.3671C1.59875 10.9537 4.58928 9.33816 8 9.33816C11.4107 9.33816 14.4012 10.9537 15.9364 13.3671C16.061 13.563 15.9969 13.819 15.7932 13.9388C15.5894 14.0587 15.3232 13.997 15.1986 13.8011C13.8328 11.6538 11.1336 10.1698 8 10.1698Z" />
+							</svg>
+						</span>
+					</label>
+				</div>
+				<div class="inputs__field-wrap">
+					<input type="tel" name="phone" class='inputs__field' required>
+					<label for="phone" class="inputs__label">
+						<div class="inputs__content inputs__content--required">
+							Телефон
+						</div>
+						<span class="inputs__icon">
+							<svg width="11" height="18" viewBox="0 0 11 18" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<g opacity="0.5">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M0 1.76471C0 0.790086 0.735055 0 1.64179 0H9.35821C10.2649 0 11 0.790086 11 1.76471V16.2353C11 17.2099 10.2649 18 9.35821 18H1.64179C0.735055 18 0 17.2099 0 16.2353V1.76471ZM1.64179 0.882353C1.18842 0.882353 0.820896 1.2774 0.820896 1.76471V16.2353C0.820896 16.7226 1.18842 17.1176 1.64179 17.1176H9.35821C9.81158 17.1176 10.1791 16.7226 10.1791 16.2353V1.76471C10.1791 1.2774 9.81158 0.882353 9.35821 0.882353H9.0709C8.78972 1.13186 8.65124 1.64678 8.5732 2.22721C8.51161 2.68523 8.16277 3.04412 7.73223 3.04412H3.26777C2.83723 3.04412 2.48839 2.68523 2.4268 2.22721C2.34876 1.64678 2.21028 1.13186 1.9291 0.882353H1.64179ZM3.0246 1.12619C3.13192 1.43995 3.19627 1.78126 3.23926 2.101C3.24307 2.12937 3.25516 2.14863 3.26452 2.15787C3.26653 2.15986 3.26909 2.16176 3.26909 2.16176H7.73091C7.73091 2.16176 7.73347 2.15986 7.73548 2.15787C7.74484 2.14863 7.75693 2.12937 7.76074 2.101C7.80374 1.78126 7.86808 1.43995 7.97541 1.12619C8.00238 1.04733 8.03373 0.965262 8.0705 0.882353H2.9295C2.96627 0.965262 2.99762 1.04733 3.0246 1.12619Z" />
+									<path
+										d="M4.02239 1.54412C4.02239 1.37356 4.15102 1.23529 4.3097 1.23529H5.62313C5.78181 1.23529 5.91045 1.37356 5.91045 1.54412C5.91045 1.71468 5.78181 1.85294 5.62313 1.85294H4.3097C4.15102 1.85294 4.02239 1.71468 4.02239 1.54412Z" />
+									<path
+										d="M6.23881 1.54412C6.23881 1.37356 6.36744 1.23529 6.52612 1.23529C6.6848 1.23529 6.81343 1.37356 6.81343 1.54412C6.81343 1.71468 6.6848 1.85294 6.52612 1.85294C6.36744 1.85294 6.23881 1.71468 6.23881 1.54412Z" />
+								</g>
+							</svg>
+						</span>
+					</label>
+				</div>
+				<div class="inputs__field-wrap">
+					<div class="inputs__field-checkbox">
+						<input type="checkbox" id="checkbox">
+						<label for="checkbox" class="inputs__label-checkbox"></label>
+						<div class="inputs__field-privacy">
+							<span>
+								Я подтверждаю свое согласие с
+							</span>
+							<span onclick='show_popup("popup-privacy")' class="inputs__field-popup">
+								ПОЛЬЗОВАТЕЛЬСКИМ СОГЛАШЕНИЕМ
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="inputs__btn">
+					<a href="" class="btn btn--press">Позвоните мне</a>
+				</div>
+			</form>
+		</div>
+    </div>
+    <div class="popup-wrap" id='lesson'>
+		<div class="popup">
+			<div class="popup__close" onclick="close_popup('lesson')">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="popup__form">
+				<h2 class="popup__form-title">
+					Купить урок
+				</h2>
+				<p class="popup__form-subtitle">
+					Заполните форму, и мы перезвоним<br>
+					вам в течение дня
+				</p>
+            </div>
+            <form action="" class='inputs'>
+				<div class="inputs__field-wrap">
+					<input type="text" name="text" class='inputs__field' autocomplete="on" required minlength="2">
+					<label for="text" class="inputs__label">
+						<div class="inputs__content">
+							<span class="inputs__content-text">Имя</span>
+						</div>
+						<span class="inputs__icon">
+							<svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
+									d="M8 0.83168C6.19455 0.83168 4.75078 2.19922 4.75078 3.86293C4.75078 5.52665 6.19455 6.89419 8 6.89419C9.80545 6.89419 11.2492 5.52665 11.2492 3.86293C11.2492 2.19922 9.80545 0.83168 8 0.83168ZM3.88592 3.86293C3.88592 1.71909 5.73882 0 8 0C10.2612 0 12.1141 1.71909 12.1141 3.86293C12.1141 6.00677 10.2612 7.72587 8 7.72587C5.73882 7.72587 3.88592 6.00677 3.88592 3.86293ZM8 10.1698C4.86643 10.1698 2.16725 11.6538 0.801379 13.8011C0.676758 13.997 0.410576 14.0587 0.206845 13.9388C0.00311314 13.819 -0.0610185 13.563 0.0636026 13.3671C1.59875 10.9537 4.58928 9.33816 8 9.33816C11.4107 9.33816 14.4012 10.9537 15.9364 13.3671C16.061 13.563 15.9969 13.819 15.7932 13.9388C15.5894 14.0587 15.3232 13.997 15.1986 13.8011C13.8328 11.6538 11.1336 10.1698 8 10.1698Z" />
+							</svg>
+						</span>
+					</label>
+				</div>
+				<div class="inputs__field-wrap">
+					<input type="tel" name="phone" class='inputs__field' required>
+					<label for="phone" class="inputs__label">
+						<div class="inputs__content inputs__content--required">
+							Телефон
+						</div>
+						<span class="inputs__icon">
+							<svg width="11" height="18" viewBox="0 0 11 18" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<g opacity="0.5">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M0 1.76471C0 0.790086 0.735055 0 1.64179 0H9.35821C10.2649 0 11 0.790086 11 1.76471V16.2353C11 17.2099 10.2649 18 9.35821 18H1.64179C0.735055 18 0 17.2099 0 16.2353V1.76471ZM1.64179 0.882353C1.18842 0.882353 0.820896 1.2774 0.820896 1.76471V16.2353C0.820896 16.7226 1.18842 17.1176 1.64179 17.1176H9.35821C9.81158 17.1176 10.1791 16.7226 10.1791 16.2353V1.76471C10.1791 1.2774 9.81158 0.882353 9.35821 0.882353H9.0709C8.78972 1.13186 8.65124 1.64678 8.5732 2.22721C8.51161 2.68523 8.16277 3.04412 7.73223 3.04412H3.26777C2.83723 3.04412 2.48839 2.68523 2.4268 2.22721C2.34876 1.64678 2.21028 1.13186 1.9291 0.882353H1.64179ZM3.0246 1.12619C3.13192 1.43995 3.19627 1.78126 3.23926 2.101C3.24307 2.12937 3.25516 2.14863 3.26452 2.15787C3.26653 2.15986 3.26909 2.16176 3.26909 2.16176H7.73091C7.73091 2.16176 7.73347 2.15986 7.73548 2.15787C7.74484 2.14863 7.75693 2.12937 7.76074 2.101C7.80374 1.78126 7.86808 1.43995 7.97541 1.12619C8.00238 1.04733 8.03373 0.965262 8.0705 0.882353H2.9295C2.96627 0.965262 2.99762 1.04733 3.0246 1.12619Z" />
+									<path
+										d="M4.02239 1.54412C4.02239 1.37356 4.15102 1.23529 4.3097 1.23529H5.62313C5.78181 1.23529 5.91045 1.37356 5.91045 1.54412C5.91045 1.71468 5.78181 1.85294 5.62313 1.85294H4.3097C4.15102 1.85294 4.02239 1.71468 4.02239 1.54412Z" />
+									<path
+										d="M6.23881 1.54412C6.23881 1.37356 6.36744 1.23529 6.52612 1.23529C6.6848 1.23529 6.81343 1.37356 6.81343 1.54412C6.81343 1.71468 6.6848 1.85294 6.52612 1.85294C6.36744 1.85294 6.23881 1.71468 6.23881 1.54412Z" />
+								</g>
+							</svg>
+						</span>
+					</label>
+				</div>
+				<div class="inputs__field-wrap">
+					<div class="inputs__field-checkbox">
+						<input type="checkbox" id="checkbox">
+						<label for="checkbox" class="inputs__label-checkbox"></label>
+						<div class="inputs__field-privacy">
+							<span>
+								Я подтверждаю свое согласие с
+							</span>
+							<span onclick='show_popup("popup-privacy")' class="inputs__field-popup">
+								ПОЛЬЗОВАТЕЛЬСКИМ СОГЛАШЕНИЕМ
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="inputs__btn">
+					<a href="" class="btn btn--press">Позвоните мне</a>
+				</div>
+			</form>
+		</div>
+    </div>
+    <div class="popup-wrap" id='communication'>
+		<div class="popup">
+			<div class="popup__close" onclick="close_popup('communication')">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="popup__form">
+				<h2 class="popup__form-title">
+					Обратная связь
+				</h2>
+				<p class="popup__form-subtitle">
+					Заполните форму, и мы перезвоним<br>
+					вам в течение дня
+				</p>
+			</div>
+		</div>
+	</div>
+    
+    <!-- Mobile-menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__wrap">
+            <div class="mobile-menu__header">
+                <div class="mobile-menu__act mobile-menu__act--close">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.79" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15 1.5L13.5 0L7.5 6L1.5 0L0 1.5L6 7.5L0 13.5L1.5 15L7.5 9L13.5 15L15 13.5L9 7.5L15 1.5Z"
+                            fill="#575757" />
+                    </svg>
+                </div>
+            </div>
+            <nav class="mobile-menu__nav anchors">
+                <ul class="mobile-menu__nav-list">
+                    <li class="mobile-menu__nav-item"><a href="video" class="mobile-menu__nav-link">О курсе</a></li>
+                    <li class="mobile-menu__nav-item"><a href="gallery" class="mobile-menu__nav-link">Галерея</a></li>
+                    <!-- <li class="mobile-menu__nav-item"><a href="masters" class="mobile-menu__nav-link">Отзывы</a></li> -->
+                    <li class="mobile-menu__nav-item"><a href="reviews" class="mobile-menu__nav-link">Отзывы</a></li>
+                    <li class="mobile-menu__nav-item"><a href="facilities" class="mobile-menu__nav-link">Курсы</a></li>
+                    <!-- <li class="mobile-menu__nav-item"><a href="contacts" class="mobile-menu__nav-link">Контакты</a></li> -->
+                </ul>
+            </nav>
+            <span class="btn btn--border" onclick='show_popup("communication")'>Обратная связь</span>
+            <!-- <span class="mobile-menu__schedule">График работы: 9:00 - 20:00</span> -->
+            <div class="mobile-menu__phones">
+                <a href="tel:79116030066" class="mobile-menu__phone">+ 7 (911) 603 00 66</a>
+            </div>
+            <div class="socials">
+                <a class="socials__link socials__link--telegram" href="" target="_blank">
+                    <svg viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.7014 16.4767L10.2671 23.4566C10.8884 23.4566 11.1574 23.1516 11.4801 22.7854L14.3927 19.6042L20.428 24.6554C21.5349 25.3604 22.3147 24.9891 22.6133 23.4916L26.5749 2.27675L26.576 2.2755C26.927 0.405505 25.9842 -0.325741 24.9058 0.133006L1.61999 10.3217C0.0307824 11.0267 0.0548447 12.0392 1.34984 12.4979L7.30309 14.6142L21.1313 4.72548C21.7821 4.23299 22.3738 4.50548 21.8871 4.99798L10.7014 16.4767Z"
+                            fill="url(#paint1_linear)" />
+                        <defs>
+                            <linearGradient id="paint1_linear" x1="23.0233" y1="15" x2="1.36738" y2="14.1036"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0.0218751" stop-color="#FFEC85" />
+                                <stop offset="1" stop-color="#F6BF40" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+                <a class="socials__link" href="" target="_blank">
+                    <svg viewBox="0 0 36 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M34.7399 17.8387C34.6457 17.681 34.0629 16.4146 31.2585 13.8118C28.3226 11.0863 28.717 11.5289 32.2532 6.81617C34.4069 3.94605 35.2679 2.19331 34.9984 1.44401C34.7421 0.729766 33.158 0.918186 33.158 0.918186L27.891 0.948858C27.891 0.948858 27.501 0.896276 27.2097 1.06936C26.927 1.24025 26.7452 1.63462 26.7452 1.63462C26.7452 1.63462 25.9104 3.85622 24.7974 5.7448C22.451 9.73011 21.511 9.94044 21.1276 9.69286C20.2359 9.11665 20.4594 7.37486 20.4594 6.13917C20.4594 2.27656 21.0444 0.666228 19.3179 0.249952C18.7439 0.111923 18.3232 0.019904 16.8575 0.00456746C14.9777 -0.0151509 13.3849 0.0111402 12.4844 0.451517C11.8841 0.745102 11.4218 1.40019 11.7044 1.43744C12.0528 1.48345 12.8415 1.64996 13.26 2.2196C13.8012 2.95356 13.7814 4.60552 13.7814 4.60552C13.7814 4.60552 14.0926 9.1517 13.0562 9.71696C12.3442 10.1048 11.3692 9.31383 9.27689 5.6966C8.20552 3.84527 7.39488 1.79675 7.39488 1.79675C7.39488 1.79675 7.23932 1.41553 6.96107 1.21177C6.62367 0.964195 6.15043 0.885322 6.15043 0.885322L1.14196 0.915995C1.14196 0.915995 0.390475 0.937904 0.114418 1.26435C-0.130967 1.55575 0.0946991 2.15606 0.0946991 2.15606C0.0946991 2.15606 4.01646 11.3295 8.45529 15.9545C12.5282 20.194 17.1511 19.9157 17.1511 19.9157H19.2456C19.2456 19.9157 19.8788 19.8456 20.2009 19.4973C20.4988 19.1774 20.4879 18.5771 20.4879 18.5771C20.4879 18.5771 20.4463 15.7661 21.752 15.352C23.0381 14.9445 24.6901 18.0688 26.4406 19.2716C27.764 20.1808 28.7696 19.9815 28.7696 19.9815L33.4516 19.9157C33.4516 19.9157 35.9011 19.7646 34.7399 17.8387Z"
+                            fill="url(#paint1_linear)" />
+                        <defs>
+                            <linearGradient id="paint1_linear" x1="23.0233" y1="15" x2="1.36738" y2="14.1036"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0.0218751" stop-color="#FFEC85" />
+                                <stop offset="1" stop-color="#F6BF40" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+                <a class="socials__link socials__link--instagram" href="" target="_blank">
+                    <svg viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19.7175 0H7.33478C3.30472 0 0.026123 3.27859 0.026123 7.30865V19.6916C0.026123 23.7214 3.30472 27 7.33478 27H19.7177C23.7475 27 27.0261 23.7214 27.0261 19.6916V7.30865C27.0261 3.27859 23.7475 0 19.7175 0V0ZM13.5261 20.8826C9.45528 20.8826 6.14352 17.5708 6.14352 13.5C6.14352 9.42915 9.45528 6.11739 13.5261 6.11739C17.597 6.11739 20.9087 9.42915 20.9087 13.5C20.9087 17.5708 17.597 20.8826 13.5261 20.8826ZM21.0853 7.85845C19.8823 7.85845 18.9038 6.87998 18.9038 5.67698C18.9038 4.47398 19.8823 3.4953 21.0853 3.4953C22.2883 3.4953 23.2669 4.47398 23.2669 5.67698C23.2669 6.87998 22.2883 7.85845 21.0853 7.85845Z"
+                            fill="url(#paint1_linear)" />
+                        <path
+                            d="M13.5266 7.69971C10.3287 7.69971 7.72681 10.3014 7.72681 13.4995C7.72681 16.6973 10.3287 19.2992 13.5266 19.2992C16.7246 19.2992 19.3263 16.6973 19.3263 13.4995C19.3263 10.3014 16.7246 7.69971 13.5266 7.69971Z"
+                            fill="url(#paint1_linear)" />
+                        <path
+                            d="M21.0854 5.07837C20.7554 5.07837 20.4868 5.34698 20.4868 5.67699C20.4868 6.00699 20.7554 6.2756 21.0854 6.2756C21.4156 6.2756 21.6843 6.00719 21.6843 5.67699C21.6843 5.34678 21.4156 5.07837 21.0854 5.07837Z"
+                            fill="url(#paint1_linear)" />
+                        <defs>
+                            <linearGradient id="paint1_linear" x1="23.0233" y1="15" x2="1.36738" y2="14.1036"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0.0218751" stop-color="#FFEC85" />
+                                <stop offset="1" stop-color="#F6BF40" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="js/app.js"></script></body>
+
+</html>

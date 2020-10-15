@@ -1,0 +1,40 @@
+.popup__form {
+    &-title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 1.27;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+        margin-right: auto;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width:450px) {
+            font-size: 26px;
+        }
+    }
+
+    &-subtitle {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 1.33;
+        color: #9B9B9B;
+        width: 100%;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 14px;
+        }
+    }
+
+    &-text {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 1.25;
+        text-align: center;
+        color: #9B9B9B;
+        margin-top: 30px;
+    }
+}

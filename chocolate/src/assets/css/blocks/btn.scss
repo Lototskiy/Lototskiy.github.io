@@ -1,0 +1,118 @@
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	z-index: 95;
+	text-decoration: none;
+	text-align: center;
+	font-weight: 700;
+	position: relative;
+	border-radius: 30px;
+	background-image: linear-gradient(122.01deg, #FFEC85 29.55%, #F6BF40 75.44%);
+	transition: background-image .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
+	color: #333333;
+	font-size: 14px;
+	line-height: 60px;
+	min-width: 220px;
+	transition: all .2s cubic-bezier(.42, 0, .46, .97);
+	white-space: nowrap;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(122.01deg, #FFEC85 29.55%, #F6BF40 75.44%);
+		border-radius: 30px;
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
+
+	@media screen and (max-width:1200px) {
+		line-height: 50px;
+		min-width: 180px;
+	}
+
+	&:hover {
+		transform: translate3D(0, 8px, 0);
+		box-shadow: none;
+	}
+
+	&--press {
+		box-shadow: 0 5px 0 #FFEC85, 0px 5px 30px rgba(204, 160, 74, 0.25);
+	}
+	
+	&--empty {
+		width: 100%;
+		background-image: inherit;
+		border-radius: 0;
+		color: #fff;
+		opacity: .3;
+		font-weight: 300;
+		font-size: 16px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0px;
+			bottom: -1px;
+			width: 100%;
+			height: 1px;
+			background: #fff;
+			opacity: 1;
+			transition: all 0.5s;
+		}
+
+		&:hover::before {
+			width: 0%;
+			opacity: 0;
+		}
+
+		&:hover {
+			transform: translate3D(0, 0, 0);
+			box-shadow: none;
+			opacity: 1;
+		}
+	}
+
+	&--video {
+		background-image: linear-gradient(0deg, #303543, #303543);
+		color: #fff;
+		box-shadow: none;
+		position: relative;
+		min-width: 250px;
+		padding-left: 75px;
+		padding-right: 42px;
+		box-shadow: 0 5px 0 #303543;
+		@media screen and (max-width:450px) {
+			padding-left: 65px;
+			padding-right: 32px;
+		}
+
+		&::before {
+			background-image: linear-gradient(0deg, #303543, #303543);
+		}
+
+		span {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 60px;
+			height: 100%;
+			background: linear-gradient(0deg, #424859, #424859);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@media screen and (max-width:1200px) {
+				width: 50px;
+			}
+
+			svg {
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
+}

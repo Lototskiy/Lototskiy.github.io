@@ -1,0 +1,16 @@
+.privacy {
+    &__title {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color:#fff;
+        font-weight: 700;
+    }
+
+    &__text {
+        font-size: 14px;
+        color: #fff;
+        p+p {
+            margin-top: 20px;
+        }
+    }
+}

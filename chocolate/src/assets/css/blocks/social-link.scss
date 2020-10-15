@@ -1,0 +1,64 @@
+.socials {
+	display: flex;
+	align-self: center;
+	justify-content: center;
+    &--fixed {
+        flex-direction: column;
+        position: fixed;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 99;
+        .socials__link+.socials__link{
+            margin: 50px 0 0 0;
+        }
+        @media screen and (max-width:1200px) {
+        display:none;
+        }
+    }
+    &--column{
+        display: inline-block;
+        .socials__link+.socials__link{
+            margin: 50px 0 0 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s;
+        width: 30px;
+        height: 30px;
+        svg {
+            fill: #fff;
+            transition: all .5s;
+            width: 100%;
+
+            &:hover {
+                transform: scale(1.25);
+                fill: #F6BF40;
+            }
+        }
+
+        &+.socials__link {
+            margin:0 0 0 50px;
+
+        }
+
+
+
+        &--telegram {
+            svg {
+                width: 27px;
+            }
+        }
+
+        &--instagram {
+            svg {
+                width: 27px;
+            }
+
+        }
+    }
+}

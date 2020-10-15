@@ -1,0 +1,167 @@
+.footer {
+	background-color: #fff;
+	padding: 75px 0;
+
+	@media screen and (max-width:1200px) {
+		padding: 45px 0;
+	}
+
+	.socials {
+		justify-content: flex-start;
+		&__link + .socials__link{
+			margin: 0 0 0 40px;
+		}
+
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width:1200px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__column {
+		&-logo {
+			@media screen and (max-width:1200px) {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+		}
+
+		&-button {
+			@media screen and (max-width:1200px) {
+				width: 100%;
+				margin-top: 30px;
+			}
+		}
+
+		&-author {
+			@media screen and (max-width:1200px) {
+				display: flex;
+				width: 100%;
+				flex-direction: row-reverse;
+				justify-content: space-between;
+				margin-top: 30px;
+			}
+
+		}
+
+		&-text {
+			font-size: 14px;
+			line-height: 1.5;
+			color: #222222;
+			max-width: 211px;
+			width: 100%;
+			margin-bottom: 17px;
+
+			@media screen and (max-width:1200px) {
+				max-width: 100%;
+			}
+		}
+
+		&-up {
+			display: block;
+			margin-bottom: 80px;
+			text-align: center;
+
+			@media screen and (max-width:1200px) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__logo {
+		margin-bottom: 25px;
+
+		@media screen and (max-width:1200px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__social {
+		max-width: 146px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&-telegram {
+			width: 27px;
+			height: 25px;
+
+			@media screen and (max-width:450px) {
+				width: 23px;
+				height: 21px;
+			}
+
+		}
+
+		&-vk {
+			width: 36px;
+			height: 20px;
+
+			@media screen and (max-width:450px) {
+				width: 32px;
+				height: 16px;
+			}
+		}
+
+		&-instagram {
+			width: 28px;
+			height: 27px;
+
+			@media screen and (max-width:450px) {
+				width: 24px;
+				height: 23px;
+			}
+		}
+	}
+
+	&__nav {
+		&-item {
+			&+.footer__nav-item {
+				margin-top: 15px;
+			}
+		}
+
+		&-link {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 16px;
+			color: #444444;
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0px;
+				bottom: -2px;
+				width: 0%;
+				height: 1px;
+				background: #444444;
+				opacity: 0;
+				transition: all 0.5s;
+			}
+
+			&:hover::before {
+				width: 100%;
+				opacity: 1;
+			}
+		}
+	}
+
+}
+
+.company__developers {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 22px;
+
+	span {
+		color: #000;
+		font-weight: 700;
+	}
+}

@@ -1,0 +1,1663 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+	<script>
+		! function (e) {
+			"function" == typeof define && define.amd ? define(["jquery"], e) : e("object" == typeof exports ? require(
+				"jquery") : jQuery)
+		}(function (e) {
+			var t, n = navigator.userAgent,
+				a = /iphone/i.test(n),
+				i = /chrome/i.test(n),
+				r = /android/i.test(n);
+			e.mask = {
+				definitions: {
+					9: "[0-9]",
+					a: "[A-Za-z]",
+					"*": "[A-Za-z0-9]"
+				},
+				autoclear: !0,
+				dataName: "rawMaskFn",
+				placeholder: "_"
+			}, e.fn.extend({
+				caret: function (e, t) {
+					var n;
+					if (0 !== this.length && !this.is(":hidden")) return "number" == typeof e ? (t =
+						"number" == typeof t ? t : e, this.each(function () {
+							this.setSelectionRange ? this.setSelectionRange(e, t) : this
+								.createTextRange && (n = this.createTextRange(), n.collapse(!0), n
+									.moveEnd("character", t), n.moveStart("character", e), n
+									.select())
+						})) : (this[0].setSelectionRange ? (e = this[0].selectionStart, t = this[0]
+						.selectionEnd) : document.selection && document.selection.createRange && (
+						n = document.selection.createRange(), e = 0 - n.duplicate().moveStart(
+							"character", -1e5), t = e + n.text.length), {
+						begin: e,
+						end: t
+					})
+				},
+				unmask: function () {
+					return this.trigger("unmask")
+				},
+				mask: function (n, o) {
+					var c, l, u, f, s, h, g, m;
+					if (!n && this.length > 0) {
+						c = e(this[0]);
+						var d = c.data(e.mask.dataName);
+						return d ? d() : void 0
+					}
+					return o = e.extend({
+						autoclear: e.mask.autoclear,
+						placeholder: e.mask.placeholder,
+						completed: null
+					}, o), l = e.mask.definitions, u = [], f = g = n.length, s = null, e.each(n.split(""),
+						function (e, t) {
+							"?" == t ? (g--, f = e) : l[t] ? (u.push(new RegExp(l[t])), null === s && (s =
+								u.length - 1), f > e && (h = u.length - 1)) : u.push(null)
+						}), this.trigger("unmask").each(function () {
+						function c() {
+							if (o.completed) {
+								for (var e = s; h >= e; e++)
+									if (u[e] && C[e] === d(e)) return;
+								o.completed.call(w)
+							}
+						}
+
+						function d(e) {
+							return o.placeholder.charAt(e < o.placeholder.length ? e : 0)
+						}
+
+						function p(e) {
+							for (; ++e < g && !u[e];);
+							return e
+						}
+
+						function v(e) {
+							for (; --e >= 0 && !u[e];);
+							return e
+						}
+
+						function b(e, t) {
+							var n, a;
+							if (!(0 > e)) {
+								for (n = e, a = p(t); g > n; n++)
+									if (u[n]) {
+										if (!(g > a && u[n].test(C[a]))) break;
+										C[n] = C[a], C[a] = d(a), a = p(a)
+									} A(), w.caret(Math.max(s, e))
+							}
+						}
+
+						function k(e) {
+							var t, n, a, i;
+							for (t = e, n = d(e); g > t; t++)
+								if (u[t]) {
+									if (a = p(t), i = C[t], C[t] = n, !(g > a && u[a].test(i))) break;
+									n = i
+								}
+						}
+
+						function y() {
+							var e = w.val(),
+								t = w.caret();
+							if (m && m.length && m.length > e.length) {
+								for (T(!0); t.begin > 0 && !u[t.begin - 1];) t.begin--;
+								if (0 === t.begin)
+									for (; t.begin < s && !u[t.begin];) t.begin++;
+								w.caret(t.begin, t.begin)
+							} else {
+								for (T(!0); t.begin < g && !u[t.begin];) t.begin++;
+								w.caret(t.begin, t.begin)
+							}
+							c()
+						}
+
+						function x() {
+							T(), w.val() != E && w.change()
+						}
+
+						function j(e) {
+							if (!w.prop("readonly")) {
+								var t, n, i, r = e.which || e.keyCode;
+								m = w.val(), 8 === r || 46 === r || a && 127 === r ? (t = w.caret(),
+										n = t.begin, i = t.end, i - n === 0 && (n = 46 !== r ? v(n) :
+											i = p(n - 1), i = 46 === r ? p(i) : i), S(n, i), b(n, i -
+											1), e.preventDefault()) : 13 === r ? x.call(this, e) :
+									27 === r && (w.val(E), w.caret(0, T()), e.preventDefault())
+							}
+						}
+
+						function R(t) {
+							if (!w.prop("readonly")) {
+								var n, a, i, o = t.which || t.keyCode,
+									l = w.caret();
+								if (!(t.ctrlKey || t.altKey || t.metaKey || 32 > o) && o && 13 !==
+									o) {
+									if (l.end - l.begin !== 0 && (S(l.begin, l.end), b(l.begin, l
+											.end - 1)), n = p(l.begin - 1), g > n && (a = String
+											.fromCharCode(o), u[n].test(a))) {
+										if (k(n), C[n] = a, A(), i = p(n), r) {
+											var f = function () {
+												e.proxy(e.fn.caret, w, i)()
+											};
+											setTimeout(f, 0)
+										} else w.caret(i);
+										l.begin <= h && c()
+									}
+									t.preventDefault()
+								}
+							}
+						}
+
+						function S(e, t) {
+							var n;
+							for (n = e; t > n && g > n; n++) u[n] && (C[n] = d(n))
+						}
+
+						function A() {
+							w.val(C.join(""))
+						}
+
+						function T(e) {
+							var t, n, a, i = w.val(),
+								r = -1;
+							for (t = 0, a = 0; g > t; t++)
+								if (u[t]) {
+									for (C[t] = d(t); a++ < i.length;)
+										if (n = i.charAt(a - 1), u[t].test(n)) {
+											C[t] = n, r = t;
+											break
+										} if (a > i.length) {
+										S(t + 1, g);
+										break
+									}
+								} else C[t] === i.charAt(a) && a++, f > t && (r = t);
+							return e ? A() : f > r + 1 ? o.autoclear || C.join("") === D ? (w.val() &&
+								w.val(""), S(0, g)) : A() : (A(), w.val(w.val().substring(0, r +
+								1))), f ? t : s
+						}
+						var w = e(this),
+							C = e.map(n.split(""), function (e, t) {
+								return "?" != e ? l[e] ? d(t) : e : void 0
+							}),
+							D = C.join(""),
+							E = w.val();
+						w.data(e.mask.dataName, function () {
+							return e.map(C, function (e, t) {
+								return u[t] && e != d(t) ? e : null
+							}).join("")
+						}), w.one("unmask", function () {
+							w.off(".mask").removeData(e.mask.dataName)
+						}).on("focus.mask", function () {
+							if (!w.prop("readonly")) {
+								clearTimeout(t);
+								var e;
+								E = w.val(), e = T(), t = setTimeout(function () {
+									w.get(0) === document.activeElement && (A(), e ==
+										n.replace("?", "").length ? w.caret(0,
+											e) : w.caret(e))
+								}, 10)
+							}
+						}).on("blur.mask", x).on("keydown.mask", j).on("keypress.mask", R).on(
+							"input.mask paste.mask",
+							function () {
+								w.prop("readonly") || setTimeout(function () {
+									var e = T(!0);
+									w.caret(e), c()
+								}, 0)
+							}), i && r && w.off("input.mask").on("input.mask", y), T()
+					})
+				}
+			})
+		});
+		$('[name="phone"]').mask("+375 (99) 999-99-99");
+	</script>
+	<title>Шоколадка</title>
+	<meta name="theme-color" content="#000000" />
+	<link rel="icon" type="image/png" href="assets/images/favicon.png" />
+</head>
+
+<body style="background-image: url(assets/images/body-bg.png);">
+	<!-- start preloader -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			document.querySelector('.preloader').classList.add('preloader--go');
+			setTimeout(function () {
+
+				function hideLoader() {
+					document.querySelector('.preloader').classList.add('preloader--opacity0');
+					document.querySelector('.preloader').addEventListener('transitionend', function () {
+						document.querySelector('.preloader').classList.add('preloader--hide');
+					});
+				}
+
+				hideLoader();
+			}, 5000);
+		});
+	</script>
+	<div class="preloader">
+		<div class="preloader__wrap">
+			<div class="preloader__item">
+				<p>Legkost</p><span>_vsegda</span>
+			</div>
+			<div class="preloader__item">
+				<span>Диетический шоколад</span>
+			</div>
+			<div class="preloader__item">
+				<span>Карьера на шоколаде</span>
+			</div>
+			<div class="preloader__item">
+				<span>Луиза Сенина</span>
+			</div>
+			<div class="preloader__item">
+				<img src="assets/images/logo.svg" alt="">
+			</div>
+		</div>
+	</div>
+	<!-- end preloader -->
+	<!-- page-trans -->
+	<div class="page-trans"></div>
+	<!-- page-trans -->
+	<div class="socials socials--fixed">
+		<a class="socials__link socials__link--telegram" href="" target="_blank">
+			<svg viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M10.7014 16.4767L10.2671 23.4566C10.8884 23.4566 11.1574 23.1516 11.4801 22.7854L14.3927 19.6042L20.428 24.6554C21.5349 25.3604 22.3147 24.9891 22.6133 23.4916L26.5749 2.27675L26.576 2.2755C26.927 0.405505 25.9842 -0.325741 24.9058 0.133006L1.61999 10.3217C0.0307824 11.0267 0.0548447 12.0392 1.34984 12.4979L7.30309 14.6142L21.1313 4.72548C21.7821 4.23299 22.3738 4.50548 21.8871 4.99798L10.7014 16.4767Z" />
+			</svg>
+		</a>
+		<a class="socials__link" href="" target="_blank">
+			<svg viewBox="0 0 36 20" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M34.7399 17.8387C34.6457 17.681 34.0629 16.4146 31.2585 13.8118C28.3226 11.0863 28.717 11.5289 32.2532 6.81617C34.4069 3.94605 35.2679 2.19331 34.9984 1.44401C34.7421 0.729766 33.158 0.918186 33.158 0.918186L27.891 0.948858C27.891 0.948858 27.501 0.896276 27.2097 1.06936C26.927 1.24025 26.7452 1.63462 26.7452 1.63462C26.7452 1.63462 25.9104 3.85622 24.7974 5.7448C22.451 9.73011 21.511 9.94044 21.1276 9.69286C20.2359 9.11665 20.4594 7.37486 20.4594 6.13917C20.4594 2.27656 21.0444 0.666228 19.3179 0.249952C18.7439 0.111923 18.3232 0.019904 16.8575 0.00456746C14.9777 -0.0151509 13.3849 0.0111402 12.4844 0.451517C11.8841 0.745102 11.4218 1.40019 11.7044 1.43744C12.0528 1.48345 12.8415 1.64996 13.26 2.2196C13.8012 2.95356 13.7814 4.60552 13.7814 4.60552C13.7814 4.60552 14.0926 9.1517 13.0562 9.71696C12.3442 10.1048 11.3692 9.31383 9.27689 5.6966C8.20552 3.84527 7.39488 1.79675 7.39488 1.79675C7.39488 1.79675 7.23932 1.41553 6.96107 1.21177C6.62367 0.964195 6.15043 0.885322 6.15043 0.885322L1.14196 0.915995C1.14196 0.915995 0.390475 0.937904 0.114418 1.26435C-0.130967 1.55575 0.0946991 2.15606 0.0946991 2.15606C0.0946991 2.15606 4.01646 11.3295 8.45529 15.9545C12.5282 20.194 17.1511 19.9157 17.1511 19.9157H19.2456C19.2456 19.9157 19.8788 19.8456 20.2009 19.4973C20.4988 19.1774 20.4879 18.5771 20.4879 18.5771C20.4879 18.5771 20.4463 15.7661 21.752 15.352C23.0381 14.9445 24.6901 18.0688 26.4406 19.2716C27.764 20.1808 28.7696 19.9815 28.7696 19.9815L33.4516 19.9157C33.4516 19.9157 35.9011 19.7646 34.7399 17.8387Z" />
+			</svg>
+		</a>
+		<a class="socials__link socials__link--instagram" href="" target="_blank">
+			<svg viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M19.7175 0H7.33478C3.30472 0 0.026123 3.27859 0.026123 7.30865V19.6916C0.026123 23.7214 3.30472 27 7.33478 27H19.7177C23.7475 27 27.0261 23.7214 27.0261 19.6916V7.30865C27.0261 3.27859 23.7475 0 19.7175 0V0ZM13.5261 20.8826C9.45528 20.8826 6.14352 17.5708 6.14352 13.5C6.14352 9.42915 9.45528 6.11739 13.5261 6.11739C17.597 6.11739 20.9087 9.42915 20.9087 13.5C20.9087 17.5708 17.597 20.8826 13.5261 20.8826ZM21.0853 7.85845C19.8823 7.85845 18.9038 6.87998 18.9038 5.67698C18.9038 4.47398 19.8823 3.4953 21.0853 3.4953C22.2883 3.4953 23.2669 4.47398 23.2669 5.67698C23.2669 6.87998 22.2883 7.85845 21.0853 7.85845Z" />
+				<path
+					d="M13.5266 7.69971C10.3287 7.69971 7.72681 10.3014 7.72681 13.4995C7.72681 16.6973 10.3287 19.2992 13.5266 19.2992C16.7246 19.2992 19.3263 16.6973 19.3263 13.4995C19.3263 10.3014 16.7246 7.69971 13.5266 7.69971Z" />
+				<path
+					d="M21.0854 5.07837C20.7554 5.07837 20.4868 5.34698 20.4868 5.67699C20.4868 6.00699 20.7554 6.2756 21.0854 6.2756C21.4156 6.2756 21.6843 6.00719 21.6843 5.67699C21.6843 5.34678 21.4156 5.07837 21.0854 5.07837Z" />
+			</svg>
+		</a>
+	</div>
+	<header class='header'>
+		<div class="center-wrap">
+			<div class="header__inner anchors">
+				<a href="hero" class="header__logo">
+					<img src="assets/images/logo.svg" alt="">
+				</a>
+				<nav class="header__nav mobile--hide">
+					<ul class="header__nav-list anchors">
+						<li class="header__nav-item"><a href="video" class="header__nav-link">О курсе </a>
+						</li>
+						<li class="header__nav-item"><a href="gallery" class="header__nav-link">Галерея</a>
+						</li>
+						<li class="header__nav-item"><a href="reviews" class="header__nav-link">Отзывы</a>
+						</li>
+						<li class="header__nav-item"><a href="facilities" class="header__nav-link">Курсы</a>
+						</li>
+					</ul>
+				</nav>
+				<a href="tel:+79116030066" class="header__phone">
+					<p class="header__phone-link mobile--hide">+ 7 (911) 603 00 66</p>
+					<p class="header__phone-name mobile--hide">Луиза </p>
+				</a>
+				<div class="header__burger desktop--hide">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+
+		</div>
+	</header>
+	<!-- /.header -->
+	<main>
+		<section class="hero" id="hero">
+			<div class="center-wrap">
+				<div class="hero-wrap">
+					<div class="hero__info">
+						<h1 class="hero__title" data-animation-type='bottom' data-animation-duration='1500'>
+							Полезный
+							шоколад дома
+							<span class="leaflet">
+								<img src="assets/images/hero-img.png" alt="">
+							</span>
+						</h1>
+						<div class="hero__text" data-animation-type='bottom' data-animation-duration='1500'>
+							Авторский онлайн-курс Луизы Сениной
+							по приготовлению RAW и Vegan шоколада
+						</div>
+						<span onclick='show_popup("course")' class="btn btn--press" data-animation-type='bottom'
+							data-animation-duration='1500'>
+							Хочу на курс
+						</span>
+					</div>
+					<div class="hero__img">
+						<div class="hero__img-g">
+							<img src="assets/images/hero-bg.png" alt="">
+						</div>
+						<div class="rounds">
+							<div class="rounds__round rounds__round1"></div>
+							<div class="rounds__round rounds__round2"></div>
+							<div class="rounds__round rounds__round3"></div>
+							<div class="rounds__round rounds__round4"></div>
+							<div class="rounds__round rounds__round5"></div>
+							<div class="rounds__round rounds__round6"></div>
+							<div class="rounds__round rounds__round7"></div>
+							<div class="rounds__round rounds__round8"></div>
+							<div class="rounds__round rounds__round9"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.hero -->
+		<section class="advantages" id="advantages">
+			<div class="title-left title-left--color">
+				<div>
+					Преимущества курса
+					<div class="title-left__scrolldown">
+						<div class="title-left__line">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="center-wrap">
+				<div class="advantages__inner">
+					<span class="big-title" data-animation-type="typing" data-animation-step="250"
+						data-animation-duration='3000' data-animation-text="Почему мы?"></span>
+					<div class="advantages__item">
+						<div class="advantages__item-wrap" data-animation-type='bottom' data-animation-duration='1200'>
+							<div class="advantages__item-title">
+								Диетичность шоколада
+							</div>
+							<div class="advantages__item-text">
+								Наш шоколад на растительном молоке и не содержит белого сахара, обладает низким ГИ и не
+								откладывается в боках.
+							</div>
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__item-wrap" data-animation-type='bottom' data-animation-duration='1200'
+							data-animation-mobile-delay data-animation-delay='200'>
+							<div class="advantages__item-title">
+								Экономия финансов
+							</div>
+							<div class="advantages__item-text">
+								Ты сам(а) выбираешь, что тебе интересно и учишься этому. Ты не платишь за курс целиком,
+								а только за выбранные уроки.
+							</div>
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__item-wrap" data-animation-type='bottom' data-animation-duration='1200'
+							data-animation-mobile-delay data-animation-delay='0'>
+							<div class="advantages__item-title">
+								Ценные знания
+							</div>
+							<div class="advantages__item-text">
+								Ты узнаешь из чего состоит полезный шоколад, как выбрать ингредиенты и инвентарь для
+								работы с ним.
+							</div>
+							<div class="advantages__item-img">
+								<div>
+									<img src="assets/images/advantages-img.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__item-wrap" data-animation-type='bottom' data-animation-duration='1200'
+							data-animation-mobile-delay data-animation-delay='200'>
+							<div class="advantages__item-title">
+								Выдаем сертификат
+							</div>
+							<div class="advantages__item-text">
+								При прохождении полного курса ты гарантировано получаешь сертификат, подтверждающий твое
+								мастерство!
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- /.advantages -->
+		<section class="video-wrap" id="video">
+			<div class="title-left">
+				<div>
+					Видео о курсе
+					<div class="title-left__scrolldown">
+						<div class="title-left__line">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="center-wrap">
+				<h2 class="simple-title" data-animation-type='bottom' data-animation-duration='1200'>
+					<span>Всё об обучении</span> за 1 минуту!
+				</h2>
+				<div class="video__img" data-animation-type='bottom' data-animation-duration='1200'>
+					<div class="video__img--pad">
+						<img data-animation-type='img' data-animation-duration='5000' src="assets/images/video-img.jpg"
+							alt="">
+					</div>
+					<a class="video fancybox" data-fancybox-type="iframe"
+						href="https://www.youtube.com/embed/YRTrS7CJ3uM" data-animation-type='bottom'
+						data-animation-duration='1500'>
+						<div class="video__play">
+							<svg viewBox="0 0 45 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path id="play.svg" class="play" d="M45 25L0.245903 49.2487L0.245903 0.751289L45 25Z" />
+								<!-- <defs>
+									<linearGradient id="paint0_linear" x1="45" y1="16.3667" x2="40.3085" y2="45.695"
+										gradientUnits="userSpaceOnUse">
+										<stop stop-color="#FFEC85" />
+										<stop offset="1" stop-color="#F6BF40" />
+									</linearGradient>
+								</defs> -->
+							</svg>
+							<iframe class='video__video' width="100%" height="100%"
+								src="https://www.youtube.com/embed/YRTrS7CJ3uM?autoplay=1&amp;mute=1&amp;showinfo=0"
+								frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- video -->
+		<section class="video-catalog" id="video-catalog">
+			<div class="title-left">
+				<div>
+					Каталог видоуроков
+					<div class="title-left__scrolldown">
+						<div class="title-left__line">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="center-wrap">
+				<h2 class="simple-title" data-animation-type='bottom' data-animation-duration='1200'>
+					Каталог <span>видеоуроков</span>
+				</h2>
+				<div class="video-catalog__inner">
+					<div class="video-catalog__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-mobile-delay data-animation-delay='0'>
+						<div class="video-catalog__item-image">
+							<div>
+								<img data-animation-type='img' data-animation-delay='1200'
+									data-animation-duration='5000' src="assets/images/videocatalog-img1.jpg" alt="">
+							</div>
+							<span class="vastle">
+								<svg viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M29.1666 15H26.6666V11.6666C26.6666 5.23359 21.4331 0 15 0C8.56687 0 3.33336 5.23359 3.33336 11.6666V15H0.833359C0.372734 15 0 15.3727 0 15.8334V36.6667C0 38.5051 1.49492 40 3.33336 40H26.6667C28.5051 40 30 38.5051 30 36.6666V15.8334C30 15.3727 29.6273 15 29.1666 15ZM17.4952 32.408C17.5212 32.6432 17.4455 32.8792 17.2877 33.0559C17.1298 33.2324 16.9035 33.3334 16.6667 33.3334H13.3334C13.0966 33.3334 12.8703 33.2324 12.7124 33.0559C12.5545 32.8793 12.4788 32.6433 12.5049 32.408L13.0306 27.6807C12.177 27.0598 11.6667 26.0775 11.6667 25C11.6667 23.1616 13.1616 21.6666 15.0001 21.6666C16.8385 21.6666 18.3334 23.1616 18.3334 25C18.3334 26.0775 17.8232 27.0598 16.9695 27.6807L17.4952 32.408ZM21.6666 15H8.33336V11.6666C8.33336 7.9907 11.3241 5 15 5C18.6759 5 21.6666 7.9907 21.6666 11.6666V15Z"
+										fill="white" />
+								</svg>
+							</span>
+							<span class="paid" data-animation-type='clip' data-animation-duration='1200'
+								data-animation-delay='1200'>Платно</span>
+						</div>
+						<div class="video-catalog__item-info">
+							<div class="video-catalog__item-title">
+								Темпированный белый шоколад с с миндалем
+							</div>
+							<div class="video-catalog__item-text">
+								Приготовить полезные сладости стало ещё проще! Обожаете белый шоколад? Настало
+								время легкого и полезного рецепта сладости без вреда для фигуры!
+							</div>
+							<a href="product.html" class="video-catalog__item-link">
+								Подробнее
+							</a>
+						</div>
+					</div>
+					<div class="video-catalog__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-mobile-delay data-animation-delay='200'>
+						<div class="video-catalog__item-image">
+							<div>
+								<img data-animation-type='img' data-animation-delay='1400'
+									data-animation-duration='5000' src="assets/images/videocatalog-img2.jpg" alt="">
+							</div>
+							<span class="paid" data-animation-type='clip' data-animation-duration='1200'
+								data-animation-delay='1400'>Бесплатно</span>
+						</div>
+						<div class="video-catalog__item-info">
+							<div class="video-catalog__item-title">
+								Темпированный белый шоколад с с миндалем
+							</div>
+							<div class="video-catalog__item-text">
+								Приготовить полезные сладости стало ещё проще! Обожаете белый шоколад? Настало
+								время легкого и полезного рецепта сладости без вреда для фигуры!
+							</div>
+							<a href="product.html" class="video-catalog__item-link">
+								Подробнее
+							</a>
+						</div>
+					</div>
+					<div class="video-catalog__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-mobile-delay data-animation-delay='400'>
+						<div class="video-catalog__item-image">
+							<div>
+								<img data-animation-type='img' data-animation-delay='1600'
+									data-animation-duration='5000' src="assets/images/videocatalog-img3.jpg" alt="">
+							</div>
+							<span class="vastle">
+								<svg viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M29.1666 15H26.6666V11.6666C26.6666 5.23359 21.4331 0 15 0C8.56687 0 3.33336 5.23359 3.33336 11.6666V15H0.833359C0.372734 15 0 15.3727 0 15.8334V36.6667C0 38.5051 1.49492 40 3.33336 40H26.6667C28.5051 40 30 38.5051 30 36.6666V15.8334C30 15.3727 29.6273 15 29.1666 15ZM17.4952 32.408C17.5212 32.6432 17.4455 32.8792 17.2877 33.0559C17.1298 33.2324 16.9035 33.3334 16.6667 33.3334H13.3334C13.0966 33.3334 12.8703 33.2324 12.7124 33.0559C12.5545 32.8793 12.4788 32.6433 12.5049 32.408L13.0306 27.6807C12.177 27.0598 11.6667 26.0775 11.6667 25C11.6667 23.1616 13.1616 21.6666 15.0001 21.6666C16.8385 21.6666 18.3334 23.1616 18.3334 25C18.3334 26.0775 17.8232 27.0598 16.9695 27.6807L17.4952 32.408ZM21.6666 15H8.33336V11.6666C8.33336 7.9907 11.3241 5 15 5C18.6759 5 21.6666 7.9907 21.6666 11.6666V15Z"
+										fill="white" />
+								</svg>
+							</span>
+							<span class="paid" data-animation-type='clip' data-animation-duration='1200'
+								data-animation-delay='1600'>Платно</span>
+						</div>
+						<div class="video-catalog__item-info">
+							<div class="video-catalog__item-title">
+								Темпированный белый шоколад с с миндалем
+							</div>
+							<div class="video-catalog__item-text">
+								Приготовить полезные сладости стало ещё проще! Обожаете белый шоколад? Настало
+								время легкого и полезного рецепта сладости без вреда для фигуры!
+							</div>
+							<a href="product.html" class="video-catalog__item-link">
+								Подробнее
+							</a>
+						</div>
+					</div>
+					<div class="video-catalog__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-mobile-delay data-animation-delay='0'>
+						<div class="video-catalog__item-image">
+							<div>
+								<img data-animation-type='img' data-animation-delay='1200'
+									data-animation-duration='5000' src="assets/images/videocatalog-img1.jpg" alt="">
+							</div>
+							<span class="vastle">
+								<svg viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M29.1666 15H26.6666V11.6666C26.6666 5.23359 21.4331 0 15 0C8.56687 0 3.33336 5.23359 3.33336 11.6666V15H0.833359C0.372734 15 0 15.3727 0 15.8334V36.6667C0 38.5051 1.49492 40 3.33336 40H26.6667C28.5051 40 30 38.5051 30 36.6666V15.8334C30 15.3727 29.6273 15 29.1666 15ZM17.4952 32.408C17.5212 32.6432 17.4455 32.8792 17.2877 33.0559C17.1298 33.2324 16.9035 33.3334 16.6667 33.3334H13.3334C13.0966 33.3334 12.8703 33.2324 12.7124 33.0559C12.5545 32.8793 12.4788 32.6433 12.5049 32.408L13.0306 27.6807C12.177 27.0598 11.6667 26.0775 11.6667 25C11.6667 23.1616 13.1616 21.6666 15.0001 21.6666C16.8385 21.6666 18.3334 23.1616 18.3334 25C18.3334 26.0775 17.8232 27.0598 16.9695 27.6807L17.4952 32.408ZM21.6666 15H8.33336V11.6666C8.33336 7.9907 11.3241 5 15 5C18.6759 5 21.6666 7.9907 21.6666 11.6666V15Z"
+										fill="white" />
+								</svg>
+							</span>
+							<span class="paid" data-animation-type='clip' data-animation-duration='1200'
+								data-animation-delay='1200'>Платно</span>
+						</div>
+						<div class="video-catalog__item-info">
+							<div class="video-catalog__item-title">
+								Темпированный белый шоколад с с миндалем
+							</div>
+							<div class="video-catalog__item-text">
+								Приготовить полезные сладости стало ещё проще! Обожаете белый шоколад? Настало
+								время легкого и полезного рецепта сладости без вреда для фигуры!
+							</div>
+							<a href="product.html" class="video-catalog__item-link">
+								Подробнее
+							</a>
+						</div>
+					</div>
+					<div class="video-catalog__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-mobile-delay data-animation-delay='200'>
+						<div class="video-catalog__item-image">
+							<div>
+								<img data-animation-type='img' data-animation-delay='1400'
+									data-animation-duration='5000' src="assets/images/videocatalog-img2.jpg" alt="">
+							</div>
+							<span class="paid" data-animation-type='clip' data-animation-duration='1200'
+								data-animation-delay='1400'>Бесплатно</span>
+						</div>
+						<div class="video-catalog__item-info">
+							<div class="video-catalog__item-title">
+								Темпированный белый шоколад с с миндалем
+							</div>
+							<div class="video-catalog__item-text">
+								Приготовить полезные сладости стало ещё проще! Обожаете белый шоколад? Настало
+								время легкого и полезного рецепта сладости без вреда для фигуры!
+							</div>
+							<a href="product.html" class="video-catalog__item-link">
+								Подробнее
+							</a>
+						</div>
+					</div>
+					<div class="video-catalog__item" data-animation-type='bottom' data-animation-duration='1200'
+						data-animation-mobile-delay data-animation-delay='400'>
+						<div class="video-catalog__item-image">
+							<div>
+								<img data-animation-type='img' data-animation-delay='1600'
+									data-animation-duration='5000' src="assets/images/videocatalog-img3.jpg" alt="">
+							</div>
+							<span class="vastle">
+								<svg viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M29.1666 15H26.6666V11.6666C26.6666 5.23359 21.4331 0 15 0C8.56687 0 3.33336 5.23359 3.33336 11.6666V15H0.833359C0.372734 15 0 15.3727 0 15.8334V36.6667C0 38.5051 1.49492 40 3.33336 40H26.6667C28.5051 40 30 38.5051 30 36.6666V15.8334C30 15.3727 29.6273 15 29.1666 15ZM17.4952 32.408C17.5212 32.6432 17.4455 32.8792 17.2877 33.0559C17.1298 33.2324 16.9035 33.3334 16.6667 33.3334H13.3334C13.0966 33.3334 12.8703 33.2324 12.7124 33.0559C12.5545 32.8793 12.4788 32.6433 12.5049 32.408L13.0306 27.6807C12.177 27.0598 11.6667 26.0775 11.6667 25C11.6667 23.1616 13.1616 21.6666 15.0001 21.6666C16.8385 21.6666 18.3334 23.1616 18.3334 25C18.3334 26.0775 17.8232 27.0598 16.9695 27.6807L17.4952 32.408ZM21.6666 15H8.33336V11.6666C8.33336 7.9907 11.3241 5 15 5C18.6759 5 21.6666 7.9907 21.6666 11.6666V15Z"
+										fill="white" />
+								</svg>
+							</span>
+							<span class="paid" data-animation-type='clip' data-animation-duration='1200'
+								data-animation-delay='1600'>Платно</span>
+						</div>
+						<div class="video-catalog__item-info">
+							<div class="video-catalog__item-title">
+								Темпированный белый шоколад с с миндалем
+							</div>
+							<div class="video-catalog__item-text">
+								Приготовить полезные сладости стало ещё проще! Обожаете белый шоколад? Настало
+								время легкого и полезного рецепта сладости без вреда для фигуры!
+							</div>
+							<a href="product.html" class="video-catalog__item-link">
+								Подробнее
+							</a>
+						</div>
+					</div>
+					<div class="video-catalog__item video-catalog__item--hide"></div>
+				</div>
+				<div class="video-catalog__btn" data-animation-type='bottom' data-animation-duration='1200'>
+					<a href="#" class="btn btn--press">Смотреть все уроки</a>
+				</div>
+
+			</div>
+		</section>
+		<!-- /.video-catalog -->
+		<div class="color-wrap">
+			<section class="facilities" id="facilities">
+				<div class="bg"></div>
+				<div class="title-left title-left--color">
+					<div>
+						Удобства обучения
+						<div class="title-left__scrolldown">
+							<div class="title-left__line">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="big-title">
+					<span>удобства</span>
+					<span>обучения</span>
+				</div>
+				<div class="facilities__bg">
+					<!-- <div><img src="assets/images/facilities-bg.png" alt=""></div> -->
+				</div>
+				<div class="center-wrap">
+					<h2 class="simple-title" data-animation-type='bottom' data-animation-duration='1200'>
+						<span>Удобства для Вас</span> от нашего обучения
+					</h2>
+					<div class="facilities__inner">
+
+
+						<div class="facilities__img">
+							<div>
+								<img src="assets/images/facilities-girl.png" alt="">
+							</div>
+						</div>
+						<div class="facilities__item" data-animation-type='bottom' data-animation-duration='1200'>
+							<div class="facilities__item-wrap">
+								<div class="facilities__item-img">
+									<img src="assets/images/facilities-img1.png" alt="">
+								</div>
+								<div class="facilities__item-title">
+									Обучение <br> проходит онлайн
+								</div>
+								<div class="facilities__item-text">
+									Обучение шоколадному мастерству проходит онлайн. Вы можете пройти курс в любое
+									удобное
+									время
+									для Вас
+								</div>
+							</div>
+						</div>
+						<div class="facilities__item" data-animation-type='bottom' data-animation-duration='1200'>
+							<div class="facilities__item-wrap">
+								<div class="facilities__item-img">
+									<img src="assets/images/facilities-img2.png" alt="">
+								</div>
+								<div class="facilities__item-title">
+									Полезный <br> шоколад для всех
+								</div>
+								<div class="facilities__item-text">
+									Вы можете обучится на наших курсах, и готовить полезные сладости для родных и
+									близких -
+									лучший подарок!
+								</div>
+							</div>
+						</div>
+						<div class="facilities__item" data-animation-type='bottom' data-animation-duration='1200'>
+							<div class="facilities__item-wrap">
+								<div class="facilities__item-img">
+									<div><img src="assets/images/facilities-img3.png" alt=""></div>
+								</div>
+								<div class="facilities__item-title">
+									Возможность сразу <br> учится и готовить
+								</div>
+								<div class="facilities__item-text">
+									Наши видеоуроки удобны тем, что вы одновременно за просмотром видео можете повторять
+									рецепт
+									в режиме онлайн.
+								</div>
+							</div>
+						</div>
+						<div class="facilities__item" data-animation-type='bottom' data-animation-duration='1200'>
+							<div class="facilities__item-wrap">
+								<div class="facilities__item-img">
+									<div><img src="assets/images/facilities-img4.png" alt=""></div>
+								</div>
+								<div class="facilities__item-title">
+									Поддержка <br> в чате Whatsaap
+								</div>
+								<div class="facilities__item-text">
+									Для всех участников создан общий чат в WhatsApp, где можешь задать вопрос, получить
+									ответ, а
+									также порцию вдохновения.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /.facilities -->
+			<section class="after">
+				<div class="big-title">
+					<span data-animation-type="typing" data-animation-step="250" data-animation-duration='3000'
+						data-animation-text="много"></span>
+					<span data-animation-type="typing" data-animation-step="250" data-animation-duration='3000'
+						data-animation-text="выгод"></span>
+				</div>
+				<div class="title-left title-left--color">
+					<div>
+						После прохождения курса
+						<div class="title-left__scrolldown">
+							<div class="title-left__line">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="after-bg"></div>
+				<div class="center-wrap">
+					<h2 class="simple-title" data-animation-type='bottom' data-animation-duration='1200'>
+						Что вас ждет после <span>прохождения курса</span>
+					</h2>
+					<div class="after__inner">
+						<div class="after__item" data-animation-type='bottom' data-animation-duration='1200'
+							data-animation-mobile-delay data-animation-delay='0'>
+							<div class="after__item-img">
+								<img src="assets/images/after-img1.png" alt="">
+								<img src="assets/images/after-img-animate1.png" class="after__item-animate" alt="">
+							</div>
+							<div class="after__item-title">
+								Хороший доход
+							</div>
+							<div class="after__item-text">
+								После прохождения курса у тебя <br> появится возможность <br> зарабатывать на новом
+								деле.
+							</div>
+						</div>
+						<div class="after__item" data-animation-type='bottom' data-animation-duration='1200'
+							data-animation-mobile-delay data-animation-delay='200'>
+							<div class="after__item-img">
+								<img src="assets/images/after-img2.png" alt="">
+								<img src="assets/images/after-img-animate2.png" class="after__item-animate" alt="">
+							</div>
+							<div class="after__item-title">
+								Начало карьеры
+							</div>
+							<div class="after__item-text">
+								Освоив новое дело у тебя <br> появится возможность дарить <br> людям пользу и радость.
+							</div>
+						</div>
+						<div class="after__item" data-animation-type='bottom' data-animation-duration='1200'
+							data-animation-mobile-delay data-animation-delay='400'>
+							<div class="after__item-img">
+								<img src="assets/images/after-img3.png" alt="">
+								<img src="assets/images/after-img-animate3.png" class="after__item-animate" alt="">
+							</div>
+							<div class="after__item-title">
+								Свобода и развитие
+							</div>
+							<div class="after__item-text">
+								С любой точки мира ты можешь <br> заниматься любимым делом и <br> получать удовольствие.
+							</div>
+						</div>
+					</div>
+					<div class="after__link" data-animation-type='bottom' data-animation-duration='1200'>
+						<span onclick='show_popup("application")' class="btn btn--press">
+							Записаться
+						</span>
+					</div>
+				</div>
+			</section>
+			<!-- /.after-->
+		</div>
+		<!-- color-wrap -->
+		<section class="grid-wrap" id="gallery">
+			<div class="center-wrap">
+				<h2 class="simple-title" data-animation-type='bottom' data-animation-duration='1200'>
+					Вы <span>научитесь готовить</span> также
+				</h2>
+			</div>
+
+			<div class="grid">
+				<div class="grid__part grid__part--left">
+					<div class="grid__top">
+						<div class="grid__item">
+							<a href='assets/images/grid-img1.png' data-fancybox='grid-slider'>
+								<img data-animation-type='img' data-animation-duration='5000'
+									src="assets/images/grid-img1.png" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="grid__bottom">
+						<div class="grid__item">
+							<a href='assets/images/grid-img2.jpg' data-fancybox='grid-slider'>
+								<img data-animation-type='img' data-animation-duration='5000'
+									src="assets/images/grid-img2.jpg" alt="">
+							</a>
+						</div>
+						<div class="grid__item">
+							<a href='assets/images/grid-img3.jpg' data-fancybox='grid-slider'>
+								<img data-animation-type='img' data-animation-duration='5000'
+									src="assets/images/grid-img3.jpg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid__part grid__part--right">
+					<div class="grid__left">
+						<div class="grid__item">
+							<a href='assets/images/grid-img4.jpg' data-fancybox='grid-slider'>
+								<img data-animation-type='img' data-animation-duration='5000'
+									src="assets/images/grid-img4.jpg" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="grid__right">
+						<div class="grid__item">
+							<a href='assets/images/grid-img5.png' data-fancybox='grid-slider'>
+								<img data-animation-type='img' data-animation-duration='5000'
+									src="assets/images/grid-img5.png" alt="">
+							</a>
+						</div>
+						<div class="grid__item">
+							<a href='assets/images/grid-img6.jpg' data-fancybox='grid-slider'>
+								<img data-animation-type='img' data-animation-duration='5000'
+									src="assets/images/grid-img6.jpg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- grid -->
+		<section class="author" id="author">
+			<div class="title-left">
+				<div>
+					Автор и ведущая курса
+					<div class="title-left__scrolldown">
+						<div class="title-left__line">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="center-wrap">
+				<h2 class="simple-title" data-animation-type='bottom' data-animation-duration='1200'>
+					<span>Автор и ведущая</span> курсов
+				</h2>
+				<div class="author__inner">
+					<div class="author__img-wrap">
+						<div class="author__img">
+							<div>
+								<img src="assets/images/author-img.png" alt="">
+							</div>
+						</div>
+						<div class="author__img-text">
+							“Позволь себе роскошь
+							каждый день есть шоколад
+							не набирая лишний вес!”
+						</div>
+
+					</div>
+					<div class="author__info">
+						<div class="author__info-title">
+							<h3 class="author__info-name">
+								Луиза Сенина
+							</h3>
+							<p class="author__info-subtitle">
+								Шоколатье, преподаватель онлайн-курса "Полезный шоколад дома"
+							</p>
+						</div>
+						<div class="author__info-text">
+							<p>
+								Шоколад- мое любимое лакомство! Он истончает чарующий аромат и дарит хорошее настроение!
+							</p>
+							<p>
+								Раньше я, как и все, покупала шоколад в магазине. И знаете, что происходило со мной!? Я
+								заметила, что качество моей кожи ухудшилось, прибавились лишние сантиметры на талии и
+								появилась вялость. Тогда я задумалась о здоровье и научилась готовить шоколад у себя
+								дома. Теперь я и мои близкие едим вкусный и полезный шоколад, который дарит не только
+								хорошее настроение,но и самочувствие! У меня появилось много энергии и вдохновения от
+								процесса приготовления!
+							</p>
+						</div>
+
+						<a href="#" class="author__info-link">
+							Читать далее
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.author -->
+		<section class="reviews" id="reviews">
+			<div class="title-left">
+				<div>
+					Отзывы учеников
+					<div class="title-left__scrolldown">
+						<div class="title-left__line">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="center-wrap">
+				<h2 class="simple-title" data-animation-type='bottom' data-animation-duration='1200'>
+					<span>Отзывы</span> учеников курсов
+				</h2>
+				<div class="reviews__slider" data-animation-type='bottom' data-animation-duration='1200'>
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="reviews__item">
+									<div class="reviews__item-photo">
+										<svg class="circle" viewBox="0 0 100 100">
+											<defs>
+												<linearGradient id="grad1" x1="1" y2="1">
+													<stop offset="0" stop-color="#FFEC85" />
+													<stop offset="1" stop-color="#F6BF40" />
+												</linearGradient>
+											</defs>
+											<circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)"
+												stroke-width="2" />
+										</svg>
+										<div>
+											<img src="assets/images/reviews-img2.jpg" alt="">
+										</div>
+										<a class="reviews__item-instagram" href="#">
+											<svg class="inst" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M10.2103 0.000976562H3.78967C1.70001 0.000976562 0 1.70099 0 3.79065V10.2114C0 12.301 1.70001 14.001 3.78967 14.001H10.2104C12.3 14.001 14 12.301 14 10.2114V3.79065C14 1.70099 12.3 0.000976563 10.2103 0.000976563V0.000976562ZM7 10.829C4.88919 10.829 3.17198 9.11179 3.17198 7.00098C3.17198 4.89017 4.88919 3.17296 7 3.17296C9.11081 3.17296 10.828 4.89017 10.828 7.00098C10.828 9.11179 9.11081 10.829 7 10.829ZM10.9196 4.07573C10.2958 4.07573 9.78842 3.56837 9.78842 2.9446C9.78842 2.32082 10.2958 1.81335 10.9196 1.81335C11.5433 1.81335 12.0508 2.32082 12.0508 2.9446C12.0508 3.56837 11.5433 4.07573 10.9196 4.07573Z" />
+												<path
+													d="M7.00044 3.99365C5.3423 3.99365 3.99316 5.34268 3.99316 7.00093C3.99316 8.65907 5.3423 10.0082 7.00044 10.0082C8.65869 10.0082 10.0077 8.65907 10.0077 7.00093C10.0077 5.34268 8.65869 3.99365 7.00044 3.99365Z" />
+												<path
+													d="M10.9198 2.63428C10.7487 2.63428 10.6094 2.77356 10.6094 2.94467C10.6094 3.11578 10.7487 3.25507 10.9198 3.25507C11.091 3.25507 11.2303 3.11589 11.2303 2.94467C11.2303 2.77345 11.091 2.63428 10.9198 2.63428Z" />
+											</svg>
+										</a>
+									</div>
+									<div class="reviews__item-name">Светлана Крошкина</div>
+									<p class="reviews__item-text">
+										Я очень обрадовалась, когда узнала, что Луиза запустила видео курсы, ведь теперь
+										и я смогла найти дело своей мечты! А также..
+									</p>
+									<span onclick='show_popup("popup-reviews")' class="reviews__item-link">
+										Читать весь отзыв
+									</span>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="reviews__item">
+									<div class="reviews__item-photo">
+										<svg class="circle" viewBox="0 0 100 100">
+											<defs>
+												<linearGradient id="grad1" x1="1" y2="1">
+													<stop offset="0" stop-color="#FFEC85" />
+													<stop offset="1" stop-color="#F6BF40" />
+												</linearGradient>
+											</defs>
+											<circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)"
+												stroke-width="2" />
+										</svg>
+										<div>
+											<img src="assets/images/reviews-img1.jpg" alt="">
+										</div>
+										<a class="reviews__item-instagram" href="#">
+											<svg class="inst" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M10.2103 0.000976562H3.78967C1.70001 0.000976562 0 1.70099 0 3.79065V10.2114C0 12.301 1.70001 14.001 3.78967 14.001H10.2104C12.3 14.001 14 12.301 14 10.2114V3.79065C14 1.70099 12.3 0.000976563 10.2103 0.000976563V0.000976562ZM7 10.829C4.88919 10.829 3.17198 9.11179 3.17198 7.00098C3.17198 4.89017 4.88919 3.17296 7 3.17296C9.11081 3.17296 10.828 4.89017 10.828 7.00098C10.828 9.11179 9.11081 10.829 7 10.829ZM10.9196 4.07573C10.2958 4.07573 9.78842 3.56837 9.78842 2.9446C9.78842 2.32082 10.2958 1.81335 10.9196 1.81335C11.5433 1.81335 12.0508 2.32082 12.0508 2.9446C12.0508 3.56837 11.5433 4.07573 10.9196 4.07573Z" />
+												<path
+													d="M7.00044 3.99365C5.3423 3.99365 3.99316 5.34268 3.99316 7.00093C3.99316 8.65907 5.3423 10.0082 7.00044 10.0082C8.65869 10.0082 10.0077 8.65907 10.0077 7.00093C10.0077 5.34268 8.65869 3.99365 7.00044 3.99365Z" />
+												<path
+													d="M10.9198 2.63428C10.7487 2.63428 10.6094 2.77356 10.6094 2.94467C10.6094 3.11578 10.7487 3.25507 10.9198 3.25507C11.091 3.25507 11.2303 3.11589 11.2303 2.94467C11.2303 2.77345 11.091 2.63428 10.9198 2.63428Z" />
+											</svg>
+										</a>
+									</div>
+									<div class="reviews__item-name">Евгения Смирнова</div>
+									<p class="reviews__item-text">Я очень обрадовалась, когда узнала, что Луиза
+										запустила видео курсы, ведь теперь и я смогла найти дело своей мечты! А также..
+									</p>
+									<span onclick='show_popup("popup-reviews")' class="reviews__item-link">
+										Читать весь отзыв
+									</span>
+								</div>
+
+							</div>
+							<div class="swiper-slide">
+								<div class="reviews__item">
+									<div class="reviews__item-photo">
+										<svg class="circle" viewBox="0 0 100 100">
+											<defs>
+												<linearGradient id="grad1" x1="1" y2="1">
+													<stop offset="0" stop-color="#FFEC85" />
+													<stop offset="1" stop-color="#F6BF40" />
+												</linearGradient>
+											</defs>
+											<circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)"
+												stroke-width="2" />
+										</svg>
+										<div>
+											<img src="assets/images/reviews-img3.jpg" alt="">
+										</div>
+										<a class="reviews__item-instagram" href="#">
+											<svg class="inst" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M10.2103 0.000976562H3.78967C1.70001 0.000976562 0 1.70099 0 3.79065V10.2114C0 12.301 1.70001 14.001 3.78967 14.001H10.2104C12.3 14.001 14 12.301 14 10.2114V3.79065C14 1.70099 12.3 0.000976563 10.2103 0.000976563V0.000976562ZM7 10.829C4.88919 10.829 3.17198 9.11179 3.17198 7.00098C3.17198 4.89017 4.88919 3.17296 7 3.17296C9.11081 3.17296 10.828 4.89017 10.828 7.00098C10.828 9.11179 9.11081 10.829 7 10.829ZM10.9196 4.07573C10.2958 4.07573 9.78842 3.56837 9.78842 2.9446C9.78842 2.32082 10.2958 1.81335 10.9196 1.81335C11.5433 1.81335 12.0508 2.32082 12.0508 2.9446C12.0508 3.56837 11.5433 4.07573 10.9196 4.07573Z" />
+												<path
+													d="M7.00044 3.99365C5.3423 3.99365 3.99316 5.34268 3.99316 7.00093C3.99316 8.65907 5.3423 10.0082 7.00044 10.0082C8.65869 10.0082 10.0077 8.65907 10.0077 7.00093C10.0077 5.34268 8.65869 3.99365 7.00044 3.99365Z" />
+												<path
+													d="M10.9198 2.63428C10.7487 2.63428 10.6094 2.77356 10.6094 2.94467C10.6094 3.11578 10.7487 3.25507 10.9198 3.25507C11.091 3.25507 11.2303 3.11589 11.2303 2.94467C11.2303 2.77345 11.091 2.63428 10.9198 2.63428Z" />
+											</svg>
+										</a>
+									</div>
+									<div class="reviews__item-name">Анна Мазурова</div>
+									<p class="reviews__item-text">Я очень обрадовалась, когда узнала, что Луиза
+										запустила видео курсы, ведь теперь и я смогла найти дело своей мечты! А также..
+									</p>
+									<span onclick='show_popup("popup-reviews")' class="reviews__item-link">
+										Читать весь отзыв
+									</span>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+
+					<div class="reviews-button">
+						<div class="reviews-button-next"></div>
+						<div class="reviews-button-prev"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.reviews -->
+		<section class="faq" id="faq">
+			<div class="title-left">
+				<div>
+					Частые вопросы
+					<div class="title-left__scrolldown">
+						<div class="title-left__line">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="center-wrap">
+				<h2 class="simple-title" data-animation-type='bottom' data-animation-duration='1200'>
+					Часто задаваемые <span>вопросы</span>
+				</h2>
+				<div class="faq__list">
+					<div class="faq__item faq__item--active" data-animation-type='bottom'
+						data-animation-duration='1200'>
+						<h3 class="faq__item-title">
+							Как проходит обучение?
+						</h3>
+						<p class="faq__item-text">
+							Вы проходите обучение онлайн. Курс разбит на видеоуроки. Каждое видео пронумеровано от
+							легкого к более сложному. Доступ к видео открыт на 3 месяца.
+						</p>
+					</div>
+					<div class="faq__item" data-animation-type='bottom' data-animation-duration='1200'>
+						<h3 class="faq__item-title">
+							Для кого это обучение?
+						</h3>
+						<p class="faq__item-text">
+							Вы проходите обучение онлайн. Курс разбит на видеоуроки. Каждое видео пронумеровано от
+							легкого к более сложному. Доступ к видео открыт на 3 месяца.
+						</p>
+					</div>
+					<div class="faq__item" data-animation-type='bottom' data-animation-duration='1200'>
+						<h3 class="faq__item-title">
+							Сколько стоит курс?
+						</h3>
+						<p class="faq__item-text">
+							Вы проходите обучение онлайн. Курс разбит на видеоуроки. Каждое видео пронумеровано от
+							легкого к более сложному. Доступ к видео открыт на 3 месяца.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.faq -->
+		<section class="follow">
+			<div class="follow__bg" style="background-image: url(assets/images/follow-bg.png);"></div>
+
+			<h2 class="simple-title" data-animation-type='bottom' data-animation-duration='1200'>
+				Следите за нами в <span>Instagram:</span>
+			</h2>
+			<a href="#" data-animation-type='bottom' data-animation-duration='1200' class="follow-link"
+				target="_blank">@legkost_vsegda</a>
+			<div class="follow__inner">
+				<a href="" class="follow__item" target="_blank" data-animation-type='bottom'
+					data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='0'>
+					<div><img data-animation-type="img" data-animation-duration='5000'
+							src="assets/images/follow-img1.jpg" alt=""></div>
+				</a>
+				<a href="#" class="follow__item" target="_blank" data-animation-type='bottom'
+					data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='200'>
+					<div><img data-animation-type="img" data-animation-duration='5000'
+							src="assets/images/follow-img2.jpg" alt=""></div>
+				</a>
+				<a href="#" class="follow__item" target="_blank" data-animation-type='bottom'
+					data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='400'>
+					<div><img data-animation-type="img" data-animation-duration='5000'
+							src="assets/images/follow-img3.jpg" alt=""></div>
+				</a>
+				<a href="#" class="follow__item" target="_blank" data-animation-type='bottom'
+					data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='600'>
+					<div><img data-animation-type="img" data-animation-duration='5000'
+							src="assets/images/follow-img4.jpg" alt=""></div>
+				</a>
+				<a href="#" class="follow__item" target="_blank" data-animation-type='bottom'
+					data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='800'>
+					<div><img data-animation-type="img" data-animation-duration='5000'
+							src="assets/images/follow-img5.jpg" alt=""></div>
+				</a>
+				<a href="#" class="follow__item" target="_blank" data-animation-type='bottom'
+					data-animation-duration='1200' data-animation-mobile-delay data-animation-delay='1000'>
+					<div><img data-animation-type="img" data-animation-duration='5000'
+							src="assets/images/follow-img6.jpg" alt=""></div>
+				</a>
+			</div>
+
+		</section>
+		<!-- /.follow -->
+	</main>
+	<footer class='footer'>
+		<div class="center-wrap">
+			<div class="footer__inner">
+				<div class="footer__column footer__column-logo">
+					<div class="footer__logo anchors">
+						<a class="footer__logo-link" href="hero">
+							<img src="assets/images/footer-logo.svg" alt="">
+						</a>
+					</div>
+					<div class="socials">
+						<a class="socials__link socials__link--telegram" href="" target="_blank">
+							<svg viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M10.7014 16.4767L10.2671 23.4566C10.8884 23.4566 11.1574 23.1516 11.4801 22.7854L14.3927 19.6042L20.428 24.6554C21.5349 25.3604 22.3147 24.9891 22.6133 23.4916L26.5749 2.27675L26.576 2.2755C26.927 0.405505 25.9842 -0.325741 24.9058 0.133006L1.61999 10.3217C0.0307824 11.0267 0.0548447 12.0392 1.34984 12.4979L7.30309 14.6142L21.1313 4.72548C21.7821 4.23299 22.3738 4.50548 21.8871 4.99798L10.7014 16.4767Z"
+									fill="url(#paint1_linear)" />
+								<defs>
+									<linearGradient id="paint1_linear" x1="23.0233" y1="15" x2="1.36738" y2="14.1036"
+										gradientUnits="userSpaceOnUse">
+										<stop offset="0.0218751" stop-color="#FFEC85" />
+										<stop offset="1" stop-color="#F6BF40" />
+									</linearGradient>
+								</defs>
+							</svg>
+						</a>
+						<a class="socials__link" href="" target="_blank">
+							<svg viewBox="0 0 36 20" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M34.7399 17.8387C34.6457 17.681 34.0629 16.4146 31.2585 13.8118C28.3226 11.0863 28.717 11.5289 32.2532 6.81617C34.4069 3.94605 35.2679 2.19331 34.9984 1.44401C34.7421 0.729766 33.158 0.918186 33.158 0.918186L27.891 0.948858C27.891 0.948858 27.501 0.896276 27.2097 1.06936C26.927 1.24025 26.7452 1.63462 26.7452 1.63462C26.7452 1.63462 25.9104 3.85622 24.7974 5.7448C22.451 9.73011 21.511 9.94044 21.1276 9.69286C20.2359 9.11665 20.4594 7.37486 20.4594 6.13917C20.4594 2.27656 21.0444 0.666228 19.3179 0.249952C18.7439 0.111923 18.3232 0.019904 16.8575 0.00456746C14.9777 -0.0151509 13.3849 0.0111402 12.4844 0.451517C11.8841 0.745102 11.4218 1.40019 11.7044 1.43744C12.0528 1.48345 12.8415 1.64996 13.26 2.2196C13.8012 2.95356 13.7814 4.60552 13.7814 4.60552C13.7814 4.60552 14.0926 9.1517 13.0562 9.71696C12.3442 10.1048 11.3692 9.31383 9.27689 5.6966C8.20552 3.84527 7.39488 1.79675 7.39488 1.79675C7.39488 1.79675 7.23932 1.41553 6.96107 1.21177C6.62367 0.964195 6.15043 0.885322 6.15043 0.885322L1.14196 0.915995C1.14196 0.915995 0.390475 0.937904 0.114418 1.26435C-0.130967 1.55575 0.0946991 2.15606 0.0946991 2.15606C0.0946991 2.15606 4.01646 11.3295 8.45529 15.9545C12.5282 20.194 17.1511 19.9157 17.1511 19.9157H19.2456C19.2456 19.9157 19.8788 19.8456 20.2009 19.4973C20.4988 19.1774 20.4879 18.5771 20.4879 18.5771C20.4879 18.5771 20.4463 15.7661 21.752 15.352C23.0381 14.9445 24.6901 18.0688 26.4406 19.2716C27.764 20.1808 28.7696 19.9815 28.7696 19.9815L33.4516 19.9157C33.4516 19.9157 35.9011 19.7646 34.7399 17.8387Z"
+									fill="url(#paint1_linear)" />
+								<defs>
+									<linearGradient id="paint1_linear" x1="23.0233" y1="15" x2="1.36738" y2="14.1036"
+										gradientUnits="userSpaceOnUse">
+										<stop offset="0.0218751" stop-color="#FFEC85" />
+										<stop offset="1" stop-color="#F6BF40" />
+									</linearGradient>
+								</defs>
+							</svg>
+						</a>
+						<a class="socials__link socials__link--instagram" href="" target="_blank">
+							<svg viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M19.7175 0H7.33478C3.30472 0 0.026123 3.27859 0.026123 7.30865V19.6916C0.026123 23.7214 3.30472 27 7.33478 27H19.7177C23.7475 27 27.0261 23.7214 27.0261 19.6916V7.30865C27.0261 3.27859 23.7475 0 19.7175 0V0ZM13.5261 20.8826C9.45528 20.8826 6.14352 17.5708 6.14352 13.5C6.14352 9.42915 9.45528 6.11739 13.5261 6.11739C17.597 6.11739 20.9087 9.42915 20.9087 13.5C20.9087 17.5708 17.597 20.8826 13.5261 20.8826ZM21.0853 7.85845C19.8823 7.85845 18.9038 6.87998 18.9038 5.67698C18.9038 4.47398 19.8823 3.4953 21.0853 3.4953C22.2883 3.4953 23.2669 4.47398 23.2669 5.67698C23.2669 6.87998 22.2883 7.85845 21.0853 7.85845Z"
+									fill="url(#paint1_linear)" />
+								<path
+									d="M13.5266 7.69971C10.3287 7.69971 7.72681 10.3014 7.72681 13.4995C7.72681 16.6973 10.3287 19.2992 13.5266 19.2992C16.7246 19.2992 19.3263 16.6973 19.3263 13.4995C19.3263 10.3014 16.7246 7.69971 13.5266 7.69971Z"
+									fill="url(#paint1_linear)" />
+								<path
+									d="M21.0854 5.07837C20.7554 5.07837 20.4868 5.34698 20.4868 5.67699C20.4868 6.00699 20.7554 6.2756 21.0854 6.2756C21.4156 6.2756 21.6843 6.00719 21.6843 5.67699C21.6843 5.34678 21.4156 5.07837 21.0854 5.07837Z"
+									fill="url(#paint1_linear)" />
+								<defs>
+									<linearGradient id="paint1_linear" x1="23.0233" y1="15" x2="1.36738" y2="14.1036"
+										gradientUnits="userSpaceOnUse">
+										<stop offset="0.0218751" stop-color="#FFEC85" />
+										<stop offset="1" stop-color="#F6BF40" />
+									</linearGradient>
+								</defs>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="footer__column">
+					<nav class="footer__nav">
+						<ul class="footer__nav-list anchors">
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="advantages">Преимущества</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="video">Видео уроки</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="reviews">Отзывы</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="author">Об авторе</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="faq">Частые вопросы</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__column">
+					<nav class="footer__nav">
+						<ul class="footer__nav-list">
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="product.html">Шоколадный трюфель</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="product.html">Белый шоколад</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="product.html">Веганский шоколад</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="product.html">Трюфель с малиной</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="product.html">Шоколад с перцем чили</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__column footer__column-button">
+					<p class="footer__column-text">
+						Курс “Готовь дома полезный шоколад”. Места ограничены. Успей записаться!
+					</p>
+					<span onclick='show_popup("course")' class="btn btn--press">
+						Хочу на курс
+					</span>
+				</div>
+				<div class="footer__column footer__column-author anchors">
+					<a href="hero" class="footer__column-up">
+						<svg width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M11.5216 0.195521L0.199927 11.5172C-0.0666422 11.7837 -0.0666422 12.2112 0.199927 12.4778C0.466496 12.7444 0.894012 12.7444 1.16058 12.4778L11.9994 1.63902L22.8382 12.4778C23.1047 12.7444 23.5322 12.7444 23.7988 12.4778C23.9296 12.347 24 12.171 24 12C24 11.829 23.9346 11.653 23.7988 11.5222L12.4772 0.200549C12.2156 -0.0660191 11.7831 -0.0660181 11.5216 0.195521Z"
+								fill="url(#paint0_linear)" />
+							<defs>
+								<linearGradient id="paint0_linear" x1="18" y1="-1.91641" x2="17.6995" y2="11.8279"
+									gradientUnits="userSpaceOnUse">
+									<stop offset="0.0218751" stop-color="#FFEC85" />
+									<stop offset="1" stop-color="#F6BF40" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</a>
+					<a href="#" class="company__developers" target="_blank">
+						Создание сайта - <span>A&T studio</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Popup -->
+	<div class="popup-wrap" id='popup-reviews'>
+		<div class="popup popup--500">
+			<div class="popup__close" onclick="close_popup('popup-reviews')">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="popup-reviews">
+				<div class="popup-reviews__photo">
+					<svg class="circle" viewBox="0 0 100 100">
+						<defs>
+							<linearGradient id="grad1" x1="1" y2="1">
+								<stop offset="0" stop-color="#FFEC85" />
+								<stop offset="1" stop-color="#F6BF40" />
+							</linearGradient>
+						</defs>
+						<circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)" stroke-width="2" />
+					</svg>
+					<div>
+						<img src="assets/images/reviews-img2.jpg" alt="">
+					</div>
+					<a class="popup-reviews__instagram" href="#">
+						<svg class="inst" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M10.2103 0.000976562H3.78967C1.70001 0.000976562 0 1.70099 0 3.79065V10.2114C0 12.301 1.70001 14.001 3.78967 14.001H10.2104C12.3 14.001 14 12.301 14 10.2114V3.79065C14 1.70099 12.3 0.000976563 10.2103 0.000976563V0.000976562ZM7 10.829C4.88919 10.829 3.17198 9.11179 3.17198 7.00098C3.17198 4.89017 4.88919 3.17296 7 3.17296C9.11081 3.17296 10.828 4.89017 10.828 7.00098C10.828 9.11179 9.11081 10.829 7 10.829ZM10.9196 4.07573C10.2958 4.07573 9.78842 3.56837 9.78842 2.9446C9.78842 2.32082 10.2958 1.81335 10.9196 1.81335C11.5433 1.81335 12.0508 2.32082 12.0508 2.9446C12.0508 3.56837 11.5433 4.07573 10.9196 4.07573Z" />
+							<path
+								d="M7.00044 3.99365C5.3423 3.99365 3.99316 5.34268 3.99316 7.00093C3.99316 8.65907 5.3423 10.0082 7.00044 10.0082C8.65869 10.0082 10.0077 8.65907 10.0077 7.00093C10.0077 5.34268 8.65869 3.99365 7.00044 3.99365Z" />
+							<path
+								d="M10.9198 2.63428C10.7487 2.63428 10.6094 2.77356 10.6094 2.94467C10.6094 3.11578 10.7487 3.25507 10.9198 3.25507C11.091 3.25507 11.2303 3.11589 11.2303 2.94467C11.2303 2.77345 11.091 2.63428 10.9198 2.63428Z" />
+						</svg>
+					</a>
+				</div>
+				<div class="popup-reviews__title">
+					Татьяна Сереброва
+				</div>
+				<div class="popup-reviews__text">
+					<p>
+						После похода в салон “ Lucky ” , я осталась восхитительно довольна! Приятный сервис, высокое
+						качество
+						работы
+						и доступные цены.. Хотелось бы отметить высокий профессионализм всего коллектива салона. Это
+						пунктуальные,
+						вежливые и общительные люди. Здесь очень приятная атмосфера и индивидуальный подход. Каждый раз,
+						выходя
+						из
+						салона, получаешь не только красоту, заряд бодрости, но и отличное настроение. Недавно прошла
+						курс
+						классического массажа у Марины Александровны. Это специалист высокого класса, она не только
+						поспособствует
+						борьбе с лишним весом, но и облегчит боли в мышцах спины и шейного отдела. Рекомендую всем,
+						всем,
+						всем и
+						не
+						только женщинам, но и мужчинам!!!! Поверьте не пожалеете. Марина, огромное спасибо за ваш труд.
+						Также
+						спасибо всему коллективу салона красоты). Вы самые лучшие!!!!
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup-wrap" id='application'>
+		<div class="popup">
+			<div class="popup__close" onclick="close_popup('application')">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="popup__form">
+				<h2 class="popup__form-title">
+					Оставьте заявку
+				</h2>
+				<p class="popup__form-subtitle">
+					Заполните форму, и мы перезвоним<br>
+					вам в течение дня
+				</p>
+				<form action="" class='inputs'>
+					<div class="inputs__field-wrap">
+						<input type="text" name="text" class='inputs__field' autocomplete="on" required minlength="2">
+						<label for="text" class="inputs__label">
+							<div class="inputs__content">
+								<span class="inputs__content-text">Имя</span>
+							</div>
+							<span class="inputs__icon">
+								<svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
+										d="M8 0.83168C6.19455 0.83168 4.75078 2.19922 4.75078 3.86293C4.75078 5.52665 6.19455 6.89419 8 6.89419C9.80545 6.89419 11.2492 5.52665 11.2492 3.86293C11.2492 2.19922 9.80545 0.83168 8 0.83168ZM3.88592 3.86293C3.88592 1.71909 5.73882 0 8 0C10.2612 0 12.1141 1.71909 12.1141 3.86293C12.1141 6.00677 10.2612 7.72587 8 7.72587C5.73882 7.72587 3.88592 6.00677 3.88592 3.86293ZM8 10.1698C4.86643 10.1698 2.16725 11.6538 0.801379 13.8011C0.676758 13.997 0.410576 14.0587 0.206845 13.9388C0.00311314 13.819 -0.0610185 13.563 0.0636026 13.3671C1.59875 10.9537 4.58928 9.33816 8 9.33816C11.4107 9.33816 14.4012 10.9537 15.9364 13.3671C16.061 13.563 15.9969 13.819 15.7932 13.9388C15.5894 14.0587 15.3232 13.997 15.1986 13.8011C13.8328 11.6538 11.1336 10.1698 8 10.1698Z" />
+								</svg>
+							</span>
+						</label>
+					</div>
+					<div class="inputs__field-wrap">
+						<input type="tel" name="phone" class='inputs__field' required>
+						<label for="phone" class="inputs__label">
+							<div class="inputs__content inputs__content--required">
+								Телефон
+							</div>
+							<span class="inputs__icon">
+								<svg width="11" height="18" viewBox="0 0 11 18" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<g opacity="0.5">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M0 1.76471C0 0.790086 0.735055 0 1.64179 0H9.35821C10.2649 0 11 0.790086 11 1.76471V16.2353C11 17.2099 10.2649 18 9.35821 18H1.64179C0.735055 18 0 17.2099 0 16.2353V1.76471ZM1.64179 0.882353C1.18842 0.882353 0.820896 1.2774 0.820896 1.76471V16.2353C0.820896 16.7226 1.18842 17.1176 1.64179 17.1176H9.35821C9.81158 17.1176 10.1791 16.7226 10.1791 16.2353V1.76471C10.1791 1.2774 9.81158 0.882353 9.35821 0.882353H9.0709C8.78972 1.13186 8.65124 1.64678 8.5732 2.22721C8.51161 2.68523 8.16277 3.04412 7.73223 3.04412H3.26777C2.83723 3.04412 2.48839 2.68523 2.4268 2.22721C2.34876 1.64678 2.21028 1.13186 1.9291 0.882353H1.64179ZM3.0246 1.12619C3.13192 1.43995 3.19627 1.78126 3.23926 2.101C3.24307 2.12937 3.25516 2.14863 3.26452 2.15787C3.26653 2.15986 3.26909 2.16176 3.26909 2.16176H7.73091C7.73091 2.16176 7.73347 2.15986 7.73548 2.15787C7.74484 2.14863 7.75693 2.12937 7.76074 2.101C7.80374 1.78126 7.86808 1.43995 7.97541 1.12619C8.00238 1.04733 8.03373 0.965262 8.0705 0.882353H2.9295C2.96627 0.965262 2.99762 1.04733 3.0246 1.12619Z" />
+										<path
+											d="M4.02239 1.54412C4.02239 1.37356 4.15102 1.23529 4.3097 1.23529H5.62313C5.78181 1.23529 5.91045 1.37356 5.91045 1.54412C5.91045 1.71468 5.78181 1.85294 5.62313 1.85294H4.3097C4.15102 1.85294 4.02239 1.71468 4.02239 1.54412Z" />
+										<path
+											d="M6.23881 1.54412C6.23881 1.37356 6.36744 1.23529 6.52612 1.23529C6.6848 1.23529 6.81343 1.37356 6.81343 1.54412C6.81343 1.71468 6.6848 1.85294 6.52612 1.85294C6.36744 1.85294 6.23881 1.71468 6.23881 1.54412Z" />
+									</g>
+								</svg>
+							</span>
+						</label>
+					</div>
+					<div class="inputs__field-wrap">
+						<div class="inputs__field-checkbox">
+							<input type="checkbox" id="checkbox">
+							<label for="checkbox" class="inputs__label-checkbox"></label>
+							<div class="inputs__field-privacy">
+								<span>
+									Я подтверждаю свое согласие с
+								</span>
+								<!-- <p class="inputs__field-popup">ПОЛЬЗОВАТЕЛЬСКИМ СОГЛАШЕНИЕМ</p> -->
+								<span onclick='show_popup("popup-privacy")' class="inputs__field-popup">
+									ПОЛЬЗОВАТЕЛЬСКИМ СОГЛАШЕНИЕМ
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="inputs__btn">
+						<a href="" class="btn btn--press">Позвоните мне</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup-wrap" id='course'>
+		<div class="popup">
+			<div class="popup__close" onclick="close_popup('course')">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="popup__form">
+				<h2 class="popup__form-title">
+					Хочу на курс
+				</h2>
+				<p class="popup__form-subtitle">
+					Заполните форму, и мы перезвоним<br>
+					вам в течение дня
+				</p>
+			</div>
+			<form action="" class='inputs'>
+				<div class="inputs__field-wrap">
+					<input type="text" name="text" class='inputs__field' autocomplete="on" required minlength="2">
+					<label for="text" class="inputs__label">
+						<div class="inputs__content">
+							<span class="inputs__content-text">Имя</span>
+						</div>
+						<span class="inputs__icon">
+							<svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
+									d="M8 0.83168C6.19455 0.83168 4.75078 2.19922 4.75078 3.86293C4.75078 5.52665 6.19455 6.89419 8 6.89419C9.80545 6.89419 11.2492 5.52665 11.2492 3.86293C11.2492 2.19922 9.80545 0.83168 8 0.83168ZM3.88592 3.86293C3.88592 1.71909 5.73882 0 8 0C10.2612 0 12.1141 1.71909 12.1141 3.86293C12.1141 6.00677 10.2612 7.72587 8 7.72587C5.73882 7.72587 3.88592 6.00677 3.88592 3.86293ZM8 10.1698C4.86643 10.1698 2.16725 11.6538 0.801379 13.8011C0.676758 13.997 0.410576 14.0587 0.206845 13.9388C0.00311314 13.819 -0.0610185 13.563 0.0636026 13.3671C1.59875 10.9537 4.58928 9.33816 8 9.33816C11.4107 9.33816 14.4012 10.9537 15.9364 13.3671C16.061 13.563 15.9969 13.819 15.7932 13.9388C15.5894 14.0587 15.3232 13.997 15.1986 13.8011C13.8328 11.6538 11.1336 10.1698 8 10.1698Z" />
+							</svg>
+						</span>
+					</label>
+				</div>
+				<div class="inputs__field-wrap">
+					<input type="tel" name="phone" class='inputs__field' required>
+					<label for="phone" class="inputs__label">
+						<div class="inputs__content inputs__content--required">
+							Телефон
+						</div>
+						<span class="inputs__icon">
+							<svg width="11" height="18" viewBox="0 0 11 18" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<g opacity="0.5">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M0 1.76471C0 0.790086 0.735055 0 1.64179 0H9.35821C10.2649 0 11 0.790086 11 1.76471V16.2353C11 17.2099 10.2649 18 9.35821 18H1.64179C0.735055 18 0 17.2099 0 16.2353V1.76471ZM1.64179 0.882353C1.18842 0.882353 0.820896 1.2774 0.820896 1.76471V16.2353C0.820896 16.7226 1.18842 17.1176 1.64179 17.1176H9.35821C9.81158 17.1176 10.1791 16.7226 10.1791 16.2353V1.76471C10.1791 1.2774 9.81158 0.882353 9.35821 0.882353H9.0709C8.78972 1.13186 8.65124 1.64678 8.5732 2.22721C8.51161 2.68523 8.16277 3.04412 7.73223 3.04412H3.26777C2.83723 3.04412 2.48839 2.68523 2.4268 2.22721C2.34876 1.64678 2.21028 1.13186 1.9291 0.882353H1.64179ZM3.0246 1.12619C3.13192 1.43995 3.19627 1.78126 3.23926 2.101C3.24307 2.12937 3.25516 2.14863 3.26452 2.15787C3.26653 2.15986 3.26909 2.16176 3.26909 2.16176H7.73091C7.73091 2.16176 7.73347 2.15986 7.73548 2.15787C7.74484 2.14863 7.75693 2.12937 7.76074 2.101C7.80374 1.78126 7.86808 1.43995 7.97541 1.12619C8.00238 1.04733 8.03373 0.965262 8.0705 0.882353H2.9295C2.96627 0.965262 2.99762 1.04733 3.0246 1.12619Z" />
+									<path
+										d="M4.02239 1.54412C4.02239 1.37356 4.15102 1.23529 4.3097 1.23529H5.62313C5.78181 1.23529 5.91045 1.37356 5.91045 1.54412C5.91045 1.71468 5.78181 1.85294 5.62313 1.85294H4.3097C4.15102 1.85294 4.02239 1.71468 4.02239 1.54412Z" />
+									<path
+										d="M6.23881 1.54412C6.23881 1.37356 6.36744 1.23529 6.52612 1.23529C6.6848 1.23529 6.81343 1.37356 6.81343 1.54412C6.81343 1.71468 6.6848 1.85294 6.52612 1.85294C6.36744 1.85294 6.23881 1.71468 6.23881 1.54412Z" />
+								</g>
+							</svg>
+						</span>
+					</label>
+				</div>
+				<div class="inputs__field-wrap">
+					<div class="inputs__field-checkbox">
+						<input type="checkbox" id="checkbox">
+						<label for="checkbox" class="inputs__label-checkbox"></label>
+						<div class="inputs__field-privacy">
+							<span>
+								Я подтверждаю свое согласие с
+							</span>
+							<span onclick='show_popup("popup-privacy")' class="inputs__field-popup">
+								ПОЛЬЗОВАТЕЛЬСКИМ СОГЛАШЕНИЕМ
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="inputs__btn">
+					<a href="" class="btn btn--press">Позвоните мне</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="popup-wrap" id='communication'>
+		<div class="popup">
+			<div class="popup__close" onclick="close_popup('communication')">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="popup__form">
+				<h2 class="popup__form-title">
+					Обратная связь
+				</h2>
+				<p class="popup__form-subtitle">
+					Заполните форму, и мы перезвоним<br>
+					вам в течение дня
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="popup-wrap" id='popup-privacy'>
+		<div class="popup popup--1000">
+			<div class="popup__close" onclick="close_popup('popup-privacy')">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="privacy">
+				<div class="privacy__title">
+					PRIVACY POLICY
+				</div>
+				<div class="privacy__text">
+					<p>Company Mishyn Auto Design operates the Website mishynautodesign.com, which provides the SERVICE.
+					</p>
+					<p>This page is used to inform website visitors regarding our policies with the collection, use, and
+						disclosure of Personal Information if anyone decided to use our Service, the Website Name
+						website.</p>
+					<p>If you choose to use our Service, then you agree to the collection and use of information in
+						relation with this policy. The Personal Information that we collect are used for providing and
+						improving the Service. We will not use or share your information with anyone except as described
+						in this Privacy Policy.</p>
+					<p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions,
+						which is accessible at Website URL https://mishynautodesign.com/, unless otherwise defined in
+						this Privacy Policy.</p>
+					<p>Information Collection and Use</p>
+					<p>For a better experience while using our Service, we may require you to provide us with certain
+						personally identifiable information, including but not limited to your name, phone number, and
+						postal address. The information that we collect will be used to contact or identify you.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Mobile-menu -->
+	<div class="mobile-menu">
+		<div class="mobile-menu__wrap">
+			<div class="mobile-menu__header">
+				<div class="mobile-menu__act mobile-menu__act--close">
+					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path opacity="0.79" fill-rule="evenodd" clip-rule="evenodd"
+							d="M15 1.5L13.5 0L7.5 6L1.5 0L0 1.5L6 7.5L0 13.5L1.5 15L7.5 9L13.5 15L15 13.5L9 7.5L15 1.5Z"
+							fill="#575757" />
+					</svg>
+				</div>
+			</div>
+			<nav class="mobile-menu__nav anchors">
+				<ul class="mobile-menu__nav-list">
+					<li class="mobile-menu__nav-item"><a href="video" class="mobile-menu__nav-link">О курсе</a></li>
+					<li class="mobile-menu__nav-item"><a href="gallery" class="mobile-menu__nav-link">Галерея</a></li>
+					<!-- <li class="mobile-menu__nav-item"><a href="masters" class="mobile-menu__nav-link">Отзывы</a></li> -->
+					<li class="mobile-menu__nav-item"><a href="reviews" class="mobile-menu__nav-link">Отзывы</a></li>
+					<li class="mobile-menu__nav-item"><a href="facilities" class="mobile-menu__nav-link">Курсы</a></li>
+					<!-- <li class="mobile-menu__nav-item"><a href="contacts" class="mobile-menu__nav-link">Контакты</a></li> -->
+				</ul>
+			</nav>
+			<span class="btn btn--border" onclick='show_popup("communication")'>Обратная связь</span>
+			<div class="mobile-menu__phones">
+				<a href="tel:79116030066" class="mobile-menu__phone">+ 7 (911) 603 00 66</a>
+			</div>
+			<div class="socials">
+				<a class="socials__link socials__link--telegram" href="" target="_blank">
+					<svg viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M10.7014 16.4767L10.2671 23.4566C10.8884 23.4566 11.1574 23.1516 11.4801 22.7854L14.3927 19.6042L20.428 24.6554C21.5349 25.3604 22.3147 24.9891 22.6133 23.4916L26.5749 2.27675L26.576 2.2755C26.927 0.405505 25.9842 -0.325741 24.9058 0.133006L1.61999 10.3217C0.0307824 11.0267 0.0548447 12.0392 1.34984 12.4979L7.30309 14.6142L21.1313 4.72548C21.7821 4.23299 22.3738 4.50548 21.8871 4.99798L10.7014 16.4767Z"
+							fill="url(#paint1_linear)" />
+						<defs>
+							<linearGradient id="paint1_linear" x1="23.0233" y1="15" x2="1.36738" y2="14.1036"
+								gradientUnits="userSpaceOnUse">
+								<stop offset="0.0218751" stop-color="#FFEC85" />
+								<stop offset="1" stop-color="#F6BF40" />
+							</linearGradient>
+						</defs>
+					</svg>
+				</a>
+				<a class="socials__link" href="" target="_blank">
+					<svg viewBox="0 0 36 20" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M34.7399 17.8387C34.6457 17.681 34.0629 16.4146 31.2585 13.8118C28.3226 11.0863 28.717 11.5289 32.2532 6.81617C34.4069 3.94605 35.2679 2.19331 34.9984 1.44401C34.7421 0.729766 33.158 0.918186 33.158 0.918186L27.891 0.948858C27.891 0.948858 27.501 0.896276 27.2097 1.06936C26.927 1.24025 26.7452 1.63462 26.7452 1.63462C26.7452 1.63462 25.9104 3.85622 24.7974 5.7448C22.451 9.73011 21.511 9.94044 21.1276 9.69286C20.2359 9.11665 20.4594 7.37486 20.4594 6.13917C20.4594 2.27656 21.0444 0.666228 19.3179 0.249952C18.7439 0.111923 18.3232 0.019904 16.8575 0.00456746C14.9777 -0.0151509 13.3849 0.0111402 12.4844 0.451517C11.8841 0.745102 11.4218 1.40019 11.7044 1.43744C12.0528 1.48345 12.8415 1.64996 13.26 2.2196C13.8012 2.95356 13.7814 4.60552 13.7814 4.60552C13.7814 4.60552 14.0926 9.1517 13.0562 9.71696C12.3442 10.1048 11.3692 9.31383 9.27689 5.6966C8.20552 3.84527 7.39488 1.79675 7.39488 1.79675C7.39488 1.79675 7.23932 1.41553 6.96107 1.21177C6.62367 0.964195 6.15043 0.885322 6.15043 0.885322L1.14196 0.915995C1.14196 0.915995 0.390475 0.937904 0.114418 1.26435C-0.130967 1.55575 0.0946991 2.15606 0.0946991 2.15606C0.0946991 2.15606 4.01646 11.3295 8.45529 15.9545C12.5282 20.194 17.1511 19.9157 17.1511 19.9157H19.2456C19.2456 19.9157 19.8788 19.8456 20.2009 19.4973C20.4988 19.1774 20.4879 18.5771 20.4879 18.5771C20.4879 18.5771 20.4463 15.7661 21.752 15.352C23.0381 14.9445 24.6901 18.0688 26.4406 19.2716C27.764 20.1808 28.7696 19.9815 28.7696 19.9815L33.4516 19.9157C33.4516 19.9157 35.9011 19.7646 34.7399 17.8387Z"
+							fill="url(#paint1_linear)" />
+						<defs>
+							<linearGradient id="paint1_linear" x1="23.0233" y1="15" x2="1.36738" y2="14.1036"
+								gradientUnits="userSpaceOnUse">
+								<stop offset="0.0218751" stop-color="#FFEC85" />
+								<stop offset="1" stop-color="#F6BF40" />
+							</linearGradient>
+						</defs>
+					</svg>
+				</a>
+				<a class="socials__link socials__link--instagram" href="" target="_blank">
+					<svg viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M19.7175 0H7.33478C3.30472 0 0.026123 3.27859 0.026123 7.30865V19.6916C0.026123 23.7214 3.30472 27 7.33478 27H19.7177C23.7475 27 27.0261 23.7214 27.0261 19.6916V7.30865C27.0261 3.27859 23.7475 0 19.7175 0V0ZM13.5261 20.8826C9.45528 20.8826 6.14352 17.5708 6.14352 13.5C6.14352 9.42915 9.45528 6.11739 13.5261 6.11739C17.597 6.11739 20.9087 9.42915 20.9087 13.5C20.9087 17.5708 17.597 20.8826 13.5261 20.8826ZM21.0853 7.85845C19.8823 7.85845 18.9038 6.87998 18.9038 5.67698C18.9038 4.47398 19.8823 3.4953 21.0853 3.4953C22.2883 3.4953 23.2669 4.47398 23.2669 5.67698C23.2669 6.87998 22.2883 7.85845 21.0853 7.85845Z"
+							fill="url(#paint1_linear)" />
+						<path
+							d="M13.5266 7.69971C10.3287 7.69971 7.72681 10.3014 7.72681 13.4995C7.72681 16.6973 10.3287 19.2992 13.5266 19.2992C16.7246 19.2992 19.3263 16.6973 19.3263 13.4995C19.3263 10.3014 16.7246 7.69971 13.5266 7.69971Z"
+							fill="url(#paint1_linear)" />
+						<path
+							d="M21.0854 5.07837C20.7554 5.07837 20.4868 5.34698 20.4868 5.67699C20.4868 6.00699 20.7554 6.2756 21.0854 6.2756C21.4156 6.2756 21.6843 6.00719 21.6843 5.67699C21.6843 5.34678 21.4156 5.07837 21.0854 5.07837Z"
+							fill="url(#paint1_linear)" />
+						<defs>
+							<linearGradient id="paint1_linear" x1="23.0233" y1="15" x2="1.36738" y2="14.1036"
+								gradientUnits="userSpaceOnUse">
+								<stop offset="0.0218751" stop-color="#FFEC85" />
+								<stop offset="1" stop-color="#F6BF40" />
+							</linearGradient>
+						</defs>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
