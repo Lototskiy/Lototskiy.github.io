@@ -1,0 +1,30 @@
+.socials {
+    display: flex;
+
+    @media screen and (max-width:$large_tablet) {
+        justify-content: center;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s;
+        width: 2rem;
+
+        svg {
+            fill: #fff;
+            transition: all .5s;
+            width: 100%;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+
+        &+.socials__link {
+            margin: 0 0 0 2.7rem;
+
+        }
+    }
+}

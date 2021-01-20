@@ -1,0 +1,72 @@
+.search {
+    display: table;
+
+    input {
+        background: none;
+        border: none;
+        outline: none;
+        width: 2.8rem;
+        min-width: 0;
+        padding: 0;
+        z-index: 1;
+        position: relative;
+        line-height: 1.8rem;
+        margin: 10px 0;
+        font-size: 1.4rem;
+        transition: all .6s ease;
+        cursor: pointer;
+        color: $color-primary;
+
+        &+div {
+            position: relative;
+            height: 2.8rem;
+            width: 100%;
+            margin: -2.8rem 0 0 0;
+
+            svg {
+                display: block;
+                position: absolute;
+                height: 2.8rem;
+                width: 14rem;
+                right: 0;
+                top: 0;
+                fill: none;
+                stroke: $color-primary;
+                stroke-width: 1.5px;
+                stroke-dashoffset: 212.908 + 59;
+                stroke-dasharray: 59 212.908;
+                transition: all .6s ease;
+
+                @media screen and (max-width:$large_tablet) {
+                    width: 12rem;
+                }
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        &:not(:placeholder-shown),
+        &:focus {
+            width: 8rem;
+            padding: 0 0.4rem;
+            cursor: text;
+
+            &+div {
+                svg {
+                    stroke-dasharray: 150 212.908;
+                    stroke-dashoffset: 300;
+                }
+            }
+        }
+    }
+}
+
+::selection {
+    background: rgba(#fff, .2);
+}
+
+::-moz-selection {
+    background: rgba(#fff, .2);
+}

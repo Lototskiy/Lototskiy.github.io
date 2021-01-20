@@ -1,0 +1,306 @@
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Kubachi-каталог1</title>
+    <meta name="theme-color" content="#3D4356">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+  <link href="assets/css/app.css" rel="stylesheet"></head>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+  setTimeout(function(){
+  hideLoader();
+  },4000); //4000
+  });
+  function hideLoader() {
+  scrollbar.scrollTo(0, 0, 0);
+  window.initScrollApp();
+  document.querySelector('.preloader').classList.add('preloader--opacity0');
+  document.querySelector('.preloader').addEventListener('transitionend', function(){
+  console.log(document.querySelector('.preloader'));
+      document.querySelector('.preloader').classList.add('preloader--none');
+  });
+  }
+</script>
+<div class="preloader">
+  <div class="preloader__wrap">
+    <div class="text-circle">
+      <svg viewBox="0 0 100 100">
+        <path id="circle" d="M 50, 50 m -50, 0 a 50,50 0 1,0 100,0 a 50,50 0 1,0 -100,0"></path>
+        <text>
+          <textpath xlink:href="#circle">kubachi jewel</textpath>
+        </text>
+      </svg>
+    </div><img class="preloader__logo" src="assets/images/logo.svg" alt="">
+  </div>
+</div>
+  <body id="catalog1-page">
+<header class="header">
+  <div class="center-wrap">
+    <div class="header__wrap">
+      <nav class="header__nav mobile--hide anchors">
+        <ul class="header__nav-list">
+          <div class="header__nav-search">
+            <div class="search">
+              <input type="text" placeholder=" ">
+              <div>
+                <svg>
+                  <use xlink:href="#path"></use>
+                </svg>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28">
+                  <path d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562" transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
+                </symbol>
+              </svg>
+            </div>
+          </div>
+          <li class="header__nav-item"><a class="header__nav-link" href="/catalog.html" data-anchors="false">каталог</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="/catalog1.html" data-anchors="false">Lookbook </a></li><a class="header__nav-logo" href="/index.html" data-anchors><img src="assets/images/logo.png" alt=""></a>
+          <li class="header__nav-item"><a class="header__nav-link" href="/about.html" data-anchors="false">Инфо</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="/contacts.html" data-anchors="false">Контакты</a></li>
+          <div class="header__basket"><span class="header__basket-quantity">1</span>
+            <svg viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.81811 9.36559V6.43814C8.81811 4.21732 10.7439 2.09745 13.1765 2.09745C15.609 2.09745 17.5349 4.21732 17.5349 6.43814V9.36559H8.81811ZM1.52036 31.1701V10.7788H7.39907V14.4129C7.39907 14.8167 7.70315 15.1195 8.10859 15.1195C8.51402 15.1195 8.81811 14.8167 8.81811 14.4129V10.7788H17.5349V14.4129C17.5349 14.8167 17.8389 15.1195 18.2443 15.1195C18.6498 15.1195 18.9538 14.8167 18.9538 14.4129V10.7788H24.8326V31.1701H1.52036ZM0.101333 31.8767C0.101333 32.3813 0.304059 32.5833 0.810845 32.5833H25.6433C26.1502 32.5833 26.3529 32.3813 26.3529 31.8767V10.0722C26.3529 9.56748 26.1502 9.36559 25.6433 9.36559H19.0552V6.43814C19.0552 3.20786 16.5212 0.583252 13.1765 0.583252C9.83166 0.583252 7.29773 3.20786 7.29773 6.43814V9.36559H0.709514C0.202727 9.36559 0 9.56748 0 10.0722V31.8767H0.101333Z"></path>
+            </svg>
+          </div>
+        </ul>
+      </nav><a class="header__logo desktop--hide" href="index.html"><img src="assets/images/logo.png" alt=""></a>
+      <div class="header__nav-search desktop--hide">
+        <div class="search">
+          <input type="text" placeholder=" ">
+          <div>
+            <svg>
+              <use xlink:href="#path"></use>
+            </svg>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28">
+              <path d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562" transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
+            </symbol>
+          </svg>
+        </div>
+      </div>
+      <div class="header__basket desktop--hide"><span class="header__basket-quantity">1</span>
+        <svg viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.81811 9.36559V6.43814C8.81811 4.21732 10.7439 2.09745 13.1765 2.09745C15.609 2.09745 17.5349 4.21732 17.5349 6.43814V9.36559H8.81811ZM1.52036 31.1701V10.7788H7.39907V14.4129C7.39907 14.8167 7.70315 15.1195 8.10859 15.1195C8.51402 15.1195 8.81811 14.8167 8.81811 14.4129V10.7788H17.5349V14.4129C17.5349 14.8167 17.8389 15.1195 18.2443 15.1195C18.6498 15.1195 18.9538 14.8167 18.9538 14.4129V10.7788H24.8326V31.1701H1.52036ZM0.101333 31.8767C0.101333 32.3813 0.304059 32.5833 0.810845 32.5833H25.6433C26.1502 32.5833 26.3529 32.3813 26.3529 31.8767V10.0722C26.3529 9.56748 26.1502 9.36559 25.6433 9.36559H19.0552V6.43814C19.0552 3.20786 16.5212 0.583252 13.1765 0.583252C9.83166 0.583252 7.29773 3.20786 7.29773 6.43814V9.36559H0.709514C0.202727 9.36559 0 9.56748 0 10.0722V31.8767H0.101333Z"></path>
+        </svg>
+      </div>
+      <div class="header__burger desktop--hide">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</header>
+    <main id="scrollbar">
+      <div class="header__space"></div>
+<section class="catalog">
+  <div class="center-wrap">
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item"><span>Магазин</span></li>
+      </ul>
+    </div>
+    <ul class="catalog__menu mobile--hide">
+      <li class="catalog__menu-item" data-animation-type="bottom" data-animation-duration="1500" data-animation-delay="0"><a class="catalog__menu-link" href="/catalog1.html">все изделия</a></li>
+      <li class="catalog__menu-item" data-animation-type="bottom" data-animation-duration="1500" data-animation-delay="100"><a class="catalog__menu-link" href="/catalog1.html">Коллекции</a></li>
+      <li class="catalog__menu-item" data-animation-type="bottom" data-animation-duration="1500" data-animation-delay="200"><a class="catalog__menu-link" href="/catalog1.html">кольца</a></li>
+      <li class="catalog__menu-item" data-animation-type="bottom" data-animation-duration="1500" data-animation-delay="300"><a class="catalog__menu-link" href="/catalog1.html">серьги</a></li>
+      <li class="catalog__menu-item" data-animation-type="bottom" data-animation-duration="1500" data-animation-delay="400"><a class="catalog__menu-link" href="/catalog1.html">подвески</a></li>
+      <li class="catalog__menu-item" data-animation-type="bottom" data-animation-duration="1500" data-animation-delay="500"><a class="catalog__menu-link" href="/catalog1.html">gift card</a></li>
+      <li class="catalog__menu-item" data-animation-type="bottom" data-animation-duration="1500" data-animation-delay="600"><a class="catalog__menu-link" href="/catalog1.html">new</a></li>
+    </ul>
+    <div class="catalog__list catalog__list--all"><a class="catalog__item" href="/product.html" data-animation-type="bottom" data-animation-duration="1200" data-animation-delay="0">
+        <div class="catalog__item-img">
+          <div><img src="assets/images/catalog__item-img1.png" data-animation-type="img" data-animation-duration="5000"></div>
+        </div>
+        <div class="catalog__item-title">КОЛЬЦО  “ АУЛ ”</div>
+        <div class="catalog__item-price">25 000 руб.</div></a><a class="catalog__item" href="/product.html" data-animation-type="bottom" data-animation-duration="1200" data-animation-delay="250">
+        <div class="catalog__item-img">
+          <div><img src="assets/images/catalog__item-img2.png" data-animation-type="img" data-animation-duration="5000"></div>
+        </div>
+        <div class="catalog__item-title">КОЛЬЦО  “ ПОЛУМЕСЯЦ ”</div>
+        <div class="catalog__item-price">32 000 руб.</div></a><a class="catalog__item" href="/product.html" data-animation-type="bottom" data-animation-duration="1200" data-animation-delay="500">
+        <div class="catalog__item-img">
+          <div><img src="assets/images/catalog__item-img3.png" data-animation-type="img" data-animation-duration="5000"></div>
+        </div>
+        <div class="catalog__item-title">КОЛЬЦО  “ наследие ”</div>
+        <div class="catalog__item-price">16 000 руб.</div></a><a class="catalog__item" href="/product.html" data-animation-type="bottom" data-animation-duration="1200" data-animation-delay="0">
+        <div class="catalog__item-img">
+          <div><img src="assets/images/catalog__item-img4.png" data-animation-type="img" data-animation-duration="5000"></div>
+        </div>
+        <div class="catalog__item-title">СЕРЕЖКИ  “ КИНЖАЛ ”</div>
+        <div class="catalog__item-price">16 000 руб.</div></a><a class="catalog__item" href="/product.html" data-animation-type="bottom" data-animation-duration="1200" data-animation-delay="250">
+        <div class="catalog__item-img">
+          <div><img src="assets/images/catalog__item-img5.png" data-animation-type="img" data-animation-duration="5000"></div>
+        </div>
+        <div class="catalog__item-title">КОЛЬЦО  “ АУЛ ”</div>
+        <div class="catalog__item-price">16 000 руб.</div></a><a class="catalog__item" href="/product.html" data-animation-type="bottom" data-animation-duration="1200" data-animation-delay="500">
+        <div class="catalog__item-img">
+          <div><img src="assets/images/catalog__item-img6.png" data-animation-type="img" data-animation-duration="5000"></div>
+        </div>
+        <div class="catalog__item-title">КУЛОН  “ ГОРЯНКА ”</div>
+        <div class="catalog__item-price">16 000 руб.</div></a><a class="catalog__item" href="/product.html" data-animation-type="bottom" data-animation-duration="1200" data-animation-delay="0">
+        <div class="catalog__item-img">
+          <div><img src="assets/images/catalog__item-img1.png" data-animation-type="img" data-animation-duration="5000"></div>
+        </div>
+        <div class="catalog__item-title">КОЛЬЦО  “ АУЛ ”</div>
+        <div class="catalog__item-price">25 000 руб.</div></a><a class="catalog__item" href="/product.html" data-animation-type="bottom" data-animation-duration="1200" data-animation-delay="250">
+        <div class="catalog__item-img">
+          <div><img src="assets/images/catalog__item-img4.png" data-animation-type="img" data-animation-duration="5000"></div>
+        </div>
+        <div class="catalog__item-title">КОЛЬЦО  “ ПОЛУМЕСЯЦ ”</div>
+        <div class="catalog__item-price">32 000 руб.</div></a><a class="catalog__item" href="/product.html" data-animation-type="bottom" data-animation-duration="1200" data-animation-delay="500">
+        <div class="catalog__item-img">
+          <div><img src="assets/images/catalog__item-img3.png" data-animation-type="img" data-animation-duration="5000"></div>
+        </div>
+        <div class="catalog__item-title">КОЛЬЦО  “ наследие ”</div>
+        <div class="catalog__item-price">16 000 руб.</div></a><a class="catalog__item" href="/product.html" data-animation-type="bottom" data-animation-duration="1200" data-animation-delay="0">
+        <div class="catalog__item-img">
+          <div><img src="assets/images/catalog__item-img4.png" data-animation-type="img" data-animation-duration="5000"></div>
+        </div>
+        <div class="catalog__item-title">СЕРЕЖКИ  “ КИНЖАЛ ”</div>
+        <div class="catalog__item-price">16 000 руб.</div></a><a class="catalog__item" href="/product.html" data-animation-type="bottom" data-animation-duration="1200" data-animation-delay="250">
+        <div class="catalog__item-img">
+          <div><img src="assets/images/catalog__item-img6.png" data-animation-type="img" data-animation-duration="5000"></div>
+        </div>
+        <div class="catalog__item-title">КУЛОН  “ ГОРЯНКА ”</div>
+        <div class="catalog__item-price">16 000 руб.</div></a><a class="catalog__item" href="/product.html" data-animation-type="bottom" data-animation-duration="1200" data-animation-delay="500">
+        <div class="catalog__item-img">
+          <div><img src="assets/images/catalog__item-img5.png" data-animation-type="img" data-animation-duration="5000"></div>
+        </div>
+        <div class="catalog__item-title">КОЛЬЦО  “ АУЛ ”</div>
+        <div class="catalog__item-price">16 000 руб.</div></a><a class="catalog__item catalog__item--hide" href="#"></a><a class="catalog__item catalog__item--hide" href="#"></a></div>
+  </div>
+</section>
+      <div class="footer__space"></div>
+    </main>
+<footer class="footer">
+  <div class="center-wrap">
+    <div class="footer__wrap">
+      <div class="footer__column"><a class="footer__logo" href="index.html"><img src="assets/images/footer-logo.svg" alt=""></a>
+        <div class="socials"><a class="socials__link" href="https://web.telegram.org" target="_blank">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.82799 12.5252L7.49798 17.83C7.97013 17.83 8.17462 17.5982 8.41984 17.3198L10.6334 14.9021L15.2203 18.741C16.0615 19.2768 16.6542 18.9947 16.8811 17.8566L19.8919 1.73326L19.8927 1.73231C20.1595 0.311113 19.443 -0.244634 18.6234 0.104014L0.926156 7.84742C-0.281644 8.38322 -0.263357 9.15272 0.720838 9.50137L5.24531 11.1097L15.7547 3.5943C16.2493 3.22 16.699 3.4271 16.3291 3.8014L7.82799 12.5252Z"></path>
+            </svg></a><a class="socials__link" href="https://www.instagram.com" target="_blank">
+            <svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.5354 0.50293H6.36304C3.37781 0.50293 0.949219 2.93152 0.949219 5.91675V15.0893C0.949219 18.0743 3.37781 20.5029 6.36304 20.5029H15.5356C18.5206 20.5029 20.9492 18.0743 20.9492 15.0893V5.91675C20.9492 2.93152 18.5206 0.50293 15.5354 0.50293V0.50293ZM10.9492 15.9715C7.93378 15.9715 5.48062 13.5184 5.48062 10.5029C5.48062 7.48749 7.93378 5.03433 10.9492 5.03433C13.9647 5.03433 16.4178 7.48749 16.4178 10.5029C16.4178 13.5184 13.9647 15.9715 10.9492 15.9715ZM16.5486 6.32401C15.6575 6.32401 14.9327 5.59921 14.9327 4.7081C14.9327 3.81699 15.6575 3.09204 16.5486 3.09204C17.4397 3.09204 18.1646 3.81699 18.1646 4.7081C18.1646 5.59921 17.4397 6.32401 16.5486 6.32401Z"></path>
+              <path d="M10.9494 6.20654C8.58066 6.20654 6.65332 8.13373 6.65332 10.5027C6.65332 12.8714 8.58066 14.7988 10.9494 14.7988C13.3184 14.7988 15.2455 12.8714 15.2455 10.5027C15.2455 8.13373 13.3184 6.20654 10.9494 6.20654Z"></path>
+              <path d="M16.5489 4.26465C16.3044 4.26465 16.1055 4.46362 16.1055 4.70807C16.1055 4.95251 16.3044 5.15149 16.5489 5.15149C16.7935 5.15149 16.9925 4.95267 16.9925 4.70807C16.9925 4.46347 16.7935 4.26465 16.5489 4.26465Z"></path>
+            </svg></a></div>
+        <div class="footer__payment mobile--hide">
+          <div class="payment">
+            <div class="payment__title">Способы оплаты</div>
+            <div class="payment__list">
+              <div class="payment__item"><img src="assets/images/payment-img1.svg" alt=""></div>
+              <div class="payment__item"><img src="assets/images/payment-img2.svg" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__column">
+        <div class="footer__column-title">Покупателям</div>
+        <ul class="footer__column-list">
+          <li class="footer__column-item"><a class="footer__column-link" href="/delivery.html">Оплата и доставка</a></li>
+          <li class="footer__column-item"><a class="footer__column-link" href="/delivery.html">Возврат</a></li>
+          <li class="footer__column-item"><a class="footer__column-link" href="/contacts.html ">Наши магазины</a></li>
+          <li class="footer__column-item"><a class="footer__column-link" href="/delivery.html">Гарантия</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <div class="footer__column-title">Продукция</div>
+        <ul class="footer__column-list">
+          <li class="footer__column-item"><a class="footer__column-link" href="/catalog1.html">Столовое серебро</a></li>
+          <li class="footer__column-item"><a class="footer__column-link" href="/catalog1.html">Украшения</a></li>
+          <li class="footer__column-item"><a class="footer__column-link" href="/catalog1.html">Сувениры</a></li>
+          <li class="footer__column-item"><a class="footer__column-link" href="/catalog1.html">Аксессуары</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <div class="footer__column-title">Контакты</div>
+        <div class="footer__column-tel"><a href="tel:0800777008">0 800 777 008</a></div><a class="footer__column-email" href="mailto:kubachijewel@mail.ru">kubachijewel@mail.ru</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2020 Все права защищены</p>
+      <div class="footer__bottom-box"> 
+        <div class="footer__agreement"><a href="">Пользовательское соглашение</a></div><span></span>
+        <div class="footer__personal"><a href="">Политика обработки персональных данных</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="mobile-menu">
+  <div class="mobile-menu__wrap">
+    <div class="mobile-menu__header">
+      <div class="mobile-menu__act mobile-menu__act--close">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.79" fill-rule="evenodd" clip-rule="evenodd" d="M15 1.5L13.5 0L7.5 6L1.5 0L0 1.5L6 7.5L0 13.5L1.5 15L7.5 9L13.5 15L15 13.5L9 7.5L15 1.5Z" fill="#575757"></path>
+        </svg>
+      </div>
+    </div>
+    <nav class="mobile-menu__nav anchors">
+      <ul class="mobile-menu__nav-list">
+        <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="/catalog.html" data-anchors="false">каталог</a></li>
+        <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="services">Lookbook</a></li>
+        <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="/about.html" data-anchors="false">Инфо</a></li>
+        <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="/contacts.html" data-anchors="false">контакты</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__phones"><a class="mobile-menu__phone" href="tel:79999999999">+79999999999</a></div>
+  </div>
+</div>
+<div class="mobile-basket">
+  <div class="mobile-basket__wrap">
+    <div class="mobile-basket__top">
+      <div class="mobile-basket__act mobile-basket__act--close">
+        <svg viewBox="0 0 27 28" xmlns="http://www.w3.org/2000/svg">
+          <rect width="18.9893" height="1.58244" transform="matrix(0.688726 -0.725022 0.688726 0.725022 5.99414 20.3097)"></rect>
+          <rect width="18.9893" height="1.58244" transform="matrix(-0.688726 -0.725022 0.688726 -0.725022 19.0723 21.4572)"></rect>
+        </svg>
+      </div>
+    </div>
+    <h2 class="mobile-basket__title simple-title">корзина</h2>
+    <div class="basket__payment-body">
+      <div class="basket__payment-wrap"><a class="basket__payment-img" href="catalog.html">
+          <div><img src="assets/images/basket__payment-img.png" alt=""></div></a>
+        <div class="basket__payment-info">
+          <div class="basket__payment-top"><a class="basket__payment-title" href="catalog.html">Кольцо<br class="mobile--hide"> “ Традиция ”</a>
+            <div class="basket__payment-delete">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="basket__payment-item">
+            <div class="basket__payment-descr">Количество</div>
+            <div class="amount"><span class="amount__minus">
+                <svg viewBox="0 0 13 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="0.458336" width="13" height="1.08333"></rect>
+                </svg></span>
+              <input class="amount__input" type="text" value="2"><span class="amount__plus">
+                <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="5.49961" width="12" height="1"></rect>
+                  <rect x="5.5" y="12" width="12" height="1" transform="rotate(-90 5.5 12)"></rect>
+                </svg></span>
+            </div>
+          </div>
+          <div class="price">22 500 ₽</div>
+        </div>
+      </div>
+    </div>
+    <p class="mobile-basket__quantity">1 ПРЕДМЕТ В КОРЗИНЕ</p>
+    <div class="mobile-basket__btn"><a class="btn btn--filled" href="/basket.html">Перейти к оформлению</a></div>
+  </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+  <script type="text/javascript" src="js/app.js"></script></body>
+</html>

@@ -1,0 +1,80 @@
+.information {
+    padding-bottom: 13rem;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-bottom: 7rem;
+    }
+
+    &__title {
+        font-family: $font-secondary;
+        font-weight: bold;
+        font-size: 3.4rem;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-bottom: 3.5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+
+        @media screen and (max-width:$large_tablet) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__text {
+        max-width: 55.3rem;
+        width: 100%;
+        margin-right: 10.7rem;
+        font-size: 1.9rem;
+        line-height: 163%;
+        color: $color-secondary;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-right: 0;
+            margin-bottom: 3rem;
+
+            p {
+                margin-bottom: 3rem;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        a {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                bottom: 2px;
+                width: 0%;
+                height: 1px;
+                background: $color-secondary;
+                opacity: 0;
+                transition: all 0.5s;
+            }
+
+            &:hover::before {
+                width: 100%;
+                opacity: 1;
+            }
+
+        }
+    }
+
+    &__form {
+        width: calc(100% - 55.3rem - 10.7rem);
+
+        @media screen and (max-width:$large_tablet) {
+            width: 100%;
+        }
+    }
+}

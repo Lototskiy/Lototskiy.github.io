@@ -1,0 +1,124 @@
+section.basket
+    .center-wrap
+        h2.basket__title.simple-title Корзина
+        .basket__payment
+            .basket__payment-header.mobile--hide
+                .basket__payment-item.basket__payment-item--product Продукт
+                .basket__payment-item Цена
+                .basket__payment-item.basket__payment-item--amount Количество
+                .basket__payment-item Сумма
+                span.basket__payment-item--hide
+            .basket__payment-body.mobile--hide
+                .basket__payment-wrap
+                    a(href="catalog.html").basket__payment-img
+                        div
+                            img(src="assets/images/basket__payment-img.png" alt="")
+                    .basket__payment-info
+                        a(href="catalog.html").basket__payment-title Кольцо “ Традиция ”
+                        .basket__payment-size
+                            p Размер:
+                                span Диаметр круга 3 см, длина 50 см
+                .price 22 500 ₽
+                .basket__payment-item.basket__payment-item--amount
+                    .amount
+                        span.amount__minus
+                            svg(viewBox='0 0 13 2' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                rect(y='0.458336' width='13' height='1.08333')
+                        input.amount__input(type='text' value='2')
+                        span.amount__plus
+                            svg(viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                rect(y='5.49961' width='12' height='1')
+                                rect(x='5.5' y='12' width='12' height='1' transform='rotate(-90 5.5 12)')
+                .price 45 000 ₽
+                .basket__payment-delete
+                    div
+                    div
+            .basket__payment-body.desktop--hide
+                .basket__payment-wrap
+                    a(href="catalog.html").basket__payment-img
+                        div 
+                            img(src="assets/images/basket__payment-img.png" alt="")
+                    .basket__payment-info
+                        .basket__payment-top
+                            a(href="catalog.html").basket__payment-title Кольцо “ Традиция ”
+                            .basket__payment-delete
+                                div
+                                div
+                        .basket__payment-item.basket__payment-item--amount
+                            .amount
+                                span.amount__minus
+                                    svg(viewBox='0 0 13 2' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        rect(y='0.458336' width='13' height='1.08333')
+                                input.amount__input(type='text' value='2')  
+                                span.amount__plus
+                                    svg(viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        rect(y='5.49961' width='12' height='1')
+                                        rect(x='5.5' y='12' width='12' height='1' transform='rotate(-90 5.5 12)')
+                        .price 22 500 ₽
+            .basket__payment-bottom
+                .basket__payment-cost Общая стоимость заказа/покупки:
+                .price 45 000 ₽
+
+        .basket__box
+            .basket__box-title Выберите способ доставки:
+            .basket__radio
+                label.radio__label
+                    input.radio__input(type='radio' name='radio-delivery' checked)
+                    span.radio__content
+                    | Доставка Почтой Росии
+                label.radio__label
+                    input.radio__input(type='radio' name='radio-delivery')
+                    span.radio__content
+                    | Доставка курьером службы СДЭК
+                label.radio__label
+                    input.radio__input(type='radio' name='radio-delivery')
+                    span.radio__content
+                    | Международная курьерская служба доставки EMS
+            .basket__box-text * Бесплатная доставка от 5 000 ₽
+        .basket__box
+            .basket__box-title Выберите способ оплаты:
+            .basket__radio
+                label.radio__label
+                    input.radio__input(type='radio' name='radio-payment' checked)
+                    span.radio__content
+                    | Наличными (при получении заказа)
+                label.radio__label
+                    input.radio__input(type='radio' name='radio-payment')
+                    span.radio__content
+                    | Оплата с произвольной банковской карты
+                label.radio__label
+                    input.radio__input(type='radio' name='radio-payment')
+                    span.radio__content
+                    | Оплата из кошелька в Яндекс.Деньгах
+    .present
+        .center-wrap
+            .present__wrap
+                .present__info
+                    .present__title это подарок?
+                    .present__text Мы бесплатно уберем цену с бирки и подпишем открытку!
+                    .product__input
+                        form.inputs(action='' autocomplete='off')
+                            .inputs__field-wrap
+                                input.inputs__field(type='text' name='text' required='' minlength='2' autocomplete='off')
+                                label.inputs__label(for='text')
+                                    span.inputs__content
+                                        | Подпись на открытку
+                                    svg(viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        rect(x='0.5' y='7.33269' width='16' height='1.33333' fill='black')
+                                        rect(x='7.83337' y='16' width='16' height='1.33333' transform='rotate(-90 7.83337 16)' fill='black')
+                    .product__input-descr Введите в пределах 100-200 символов для открытки.
+                    .basket__checkbox
+                        label.radio__label.radio__label--checkbox
+                            input.radio__input(type='checkbox' name='checkbox' checked)
+                            span.radio__checkbox
+                            | Добавить подарочную коробку<br class='desktop--hide'> в Ваш заказ для ювелирного изделия
+                            span.price +500 ₽                  
+                .present__img
+                    div
+                        img(src="assets/images/present__img.png" alt="")
+    .basket__total
+        .center-wrap
+            .basket__total-wrap
+                .basket__total-text.mobile--hide Итоговая сумма к оплате:
+                .basket__total-text.desktop--hide Итоговая стоимость заказа/покупки:
+                .price 55 000 ₽
