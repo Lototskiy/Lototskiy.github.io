@@ -1,0 +1,26 @@
+.recommended {
+    padding: 6.5rem 0 10rem;
+    border-bottom: 1px solid #E2E6F0;
+
+    &__title {
+        margin-bottom: 3.5rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media screen and (max-width:1400px) {
+        margin-bottom: -1.8rem;
+        }
+        .card {
+            width: calc((100% - 1.8rem * 4)/5);
+            margin-bottom: 2.8rem;
+
+            @media screen and (max-width: 1400px) {
+                width: calc((100% - 1.8rem * 3)/4);
+                margin-bottom: 1.8rem;
+            }
+        }
+    }
+}

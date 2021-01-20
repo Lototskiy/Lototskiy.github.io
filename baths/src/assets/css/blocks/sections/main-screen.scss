@@ -1,0 +1,95 @@
+.main-screen {
+    position: relative;
+    padding: 9rem 0 17rem;
+    @media screen and (max-width:$large_tablet) {
+        padding: 6.6rem 0 14rem;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 4.3rem;
+        color: #fff;
+        max-width: 52rem;
+        width: 100%;
+        line-height: 1.2;
+        position: relative;
+        z-index: 3;
+        margin-bottom: 3rem;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 2.7rem;
+            max-width: 37rem;
+        }
+    }
+
+    &__subtitle {
+        max-width: 45rem;
+        width: 100%;
+        line-height: 1.3;
+        font-size: 2rem;
+        color: #F0F0F0;
+        position: relative;
+        z-index: 3;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 1.6rem;
+            font-family: Geometria;
+            font-weight: 400;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, #002263, #002263);
+            opacity: 0.17;
+            z-index: 2;
+        }
+
+        &--mobile {
+            &::before {
+                opacity: 0.43;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                bottom: -1px;
+                height: 13.5rem;
+                background: url("~img/main-screen__wave.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                z-index: 5;
+
+                @media screen and (max-width:$large_mobile) {
+                    height: 5.5rem;
+                }
+            }
+        }
+
+    }
+}

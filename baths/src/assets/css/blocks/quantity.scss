@@ -1,0 +1,42 @@
+.quantity {
+    background: #F5F7F8;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width:$large_mobile) {
+    border-radius: 3px 0 0 3px;
+    }
+
+    input {
+        font-family: Geometria;
+        font-weight: normal;
+        font-size: 1.4rem;
+        text-align: center;
+        color: #737373;
+        border: none;
+        width: 33.33%;
+        line-height: 4.2rem;
+        background: #F5F7F8;
+    }
+    &__up,
+    &__down {
+        cursor: pointer;
+        width: 33.33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg{
+            fill:#5F6368;
+            transition: all 0.5s;
+        }
+        &:hover{
+            svg{
+                fill:#000;
+            }
+        }
+    }
+}

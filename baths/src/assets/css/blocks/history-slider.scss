@@ -1,0 +1,35 @@
+.history-slider {
+    padding-left: calc((100% - 600px)/2 + 15px);
+
+    @media screen and (max-width:$large_mobile) {
+        padding-left: 15px;
+    }
+
+    .swiper-container {
+        padding-right: 24%;
+        @media screen and (max-width:$large_mobile) {
+            padding-right: 28%;
+        }
+    }
+
+    .card {
+        padding: 0.6rem 0.4rem;
+        border: none;
+
+        &__img {
+            width: 11.7rem;
+
+            >div {
+                padding-bottom: 95.72%;
+            }
+        }
+
+        &__price {
+            font-size: 1.6rem;
+        }
+
+        &__title {
+            text-decoration: none;
+        }
+    }
+}

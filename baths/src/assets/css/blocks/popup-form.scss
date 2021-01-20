@@ -1,0 +1,64 @@
+.popup-form {
+    &::-webkit-scrollbar {
+        appearance: none;
+        width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background-color: #2C2C2C;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 1.27;
+        color: #000;
+        margin-bottom: 2rem;
+        margin-right: auto;
+
+        .popup--300 & {
+            font-weight: normal;
+            font-size: 1.8rem;
+            line-height: 22/18*1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        line-height: 1.25;
+        color: #000;
+        margin-top: 30px;
+
+        .popup--300 & {
+            max-width: 20rem;
+            width: 100%;
+            margin: 0 auto 3.3rem;
+            font-weight: normal;
+            font-size: 14px;
+            color: #9D9D9D;
+            position: relative;
+        }
+
+        P {
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    &__btn {
+        .btn {
+            padding: 0 1.2rem;
+        }
+    }
+    &__img{
+        position: absolute;
+        bottom: 4px;
+        right: calc(100% - 15rem);
+        width: 20rem;
+    }
+}

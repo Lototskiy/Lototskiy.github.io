@@ -1,0 +1,32 @@
+section.contact#contact
+    img(src="assets/images/contact__img.png" alt="").contact__img
+    .center-wrap
+        .contact__wrap
+            .contact__form
+                .contact__title Получите помощь специалиста
+                form.inputs(action='')
+                    .inputs__row
+                        .inputs__field-wrap
+                            input.inputs__field(type='text' name='text' required='' minlength='2')
+                            label.inputs__label(for='text')
+                                span.inputs__content
+                                    | Имя
+                        .inputs__field-wrap
+                            input.inputs__field(type='tel' name='phone' required='')
+                            label.inputs__label(for='phone')
+                                span.inputs__content.inputs__content--required
+                                    | Телефон
+                    .inputs__row
+                        .inputs__field-wrap
+                            input.btn.btn--black(type='submit' value='Отправить заявку')
+                        .inputs__field-wrap.mobile--hide
+                            .inputs__personal
+                                p Нажимая на кнопку “Отправить заявку”, я соглашаюст с условиями на передачу
+                                a(href="").inputs__personal-link персональных данных
+                
+            .contact__constructor.mobile--hide
+                .contact__title.contact__title--constructor Посетите конструктор  
+                .contact__text
+                    p Соберите свой бассейн онлайн<br> и получите коммерческое предложение
+                .btn Приступить
+

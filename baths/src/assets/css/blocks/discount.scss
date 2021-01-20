@@ -1,0 +1,23 @@
+.discount {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 2.4rem;
+        fill: #FFD600;
+        margin-right: 1.5rem;
+    }
+
+    &__link {
+        max-width: 12.3rem;
+        font-size: 1.2rem;
+        line-height: 119.4%;
+        text-decoration-line: underline;
+        color: #777777;
+        transition: all 0.5s;
+        &:hover{
+            color:#000;
+        }
+    }
+}

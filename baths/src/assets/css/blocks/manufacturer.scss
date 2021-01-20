@@ -1,0 +1,58 @@
+.manufacturer {
+    border: 1px solid #EEEEEE;
+    border-radius: 2px;
+    width: 100%;
+    padding: 3rem;
+
+    &__logo {
+        width: 84px;
+        display: block;
+        margin-bottom: 2rem;
+
+        >div {
+            position: relative;
+            padding-bottom: 25%;
+
+            img {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 1.3rem;
+        line-height: 16/13*1;
+        color: #484848;
+        max-width: 15rem;
+        margin-bottom: 8rem;
+    }
+
+    &__link {
+        font-size: 1.3rem;
+        line-height: 142.3%;
+        color: #2D68DB;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 0%;
+            height: 1px;
+            background:#2D68DB ;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+
+        &:hover::before {
+            width: 100%;
+            opacity: 1;
+        }
+
+    }
+}

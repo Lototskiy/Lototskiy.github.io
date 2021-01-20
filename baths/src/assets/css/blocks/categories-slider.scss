@@ -1,0 +1,17 @@
+.categories-slider {
+    padding-left: calc(( 100% - 600px )/2 + 15px);
+    @media screen and (max-width:$large_mobile) {
+		padding-left: 15px;
+	}
+
+    .swiper-container {
+        padding-right: 15%;
+        @media screen and (max-width:$large_mobile) {
+            padding-right: 10%;
+        }
+    }
+
+    .popular-categories__item {
+        width: 100%;
+    }
+}

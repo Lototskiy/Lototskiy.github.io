@@ -1,0 +1,144 @@
+.collection {
+    padding: 6.5rem 0 17rem;
+
+    #product-page &,
+    #filter-page & {
+        padding: 6.5rem 0 13rem;
+    }
+    @media screen and (max-width:$large_tablet) {
+        padding: 5.5rem 0 7rem;
+
+        #product-page & {
+            padding: 5.5rem 0 10rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 4.5rem; 
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 2.2rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: calc((100% - 1.8rem * 4) /5);
+        background: #F4F4F6;
+        border-radius: 0.3rem;
+        text-align: center;
+        padding: 3rem 2rem 2rem 2rem;
+        cursor: pointer;
+        display: block;
+
+        &:hover {
+            .collection__img img {
+                transform: scale(1.08);
+            }
+
+            .collection__item-title {
+                color: #000;
+            }
+
+        }
+
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        &--hide {
+            margin-bottom: 0px !important;
+            padding: 0px !important;
+            opacity: 0 !important;
+            height: 0px !important;
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 113.5%;
+            text-align: center;
+            color: #6F6F6F;
+            transition: all 0.5s;
+            max-width: 18rem;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+
+            &:hover {}
+        }
+    }
+
+    &__img {
+        max-width: 13.7rem;
+        width: 100%;
+        margin: 0 auto 2.6rem;
+        position: relative;
+        
+        z-index: 1;
+
+        >div {
+            position: relative;
+            padding-bottom: 88.32%;
+            z-index: 3;
+            overflow: hidden;
+            img {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) transform;
+
+                &:hover {}
+            }
+        }
+
+        &-oval {
+            width: 3.5rem;
+            height: 2.5rem;
+            background: #F4F4F6;
+            position: absolute;
+            border-radius: 50%;
+            bottom: calc(100% - 1.25rem);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            @media screen and (max-width:$large_tablet) {
+                background: #FFFFFF;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: linear-gradient(0deg, #E1E1E5, #E1E1E5), #E8E8E9;
+            border-radius: 0.4rem;
+            bottom: -5px;
+            width: calc(100% - 1.2rem);
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background: linear-gradient(0deg, #EFEFF1, #EFEFF1), #E8E8E9;
+            border-radius: 0.4rem;
+            bottom: -8px;
+            width: calc(100% - 1.8rem);
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+    }
+}

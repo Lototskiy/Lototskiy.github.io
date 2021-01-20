@@ -1,0 +1,20 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Твой басейн';
+    - var pageClass = 'product-page';
+    
+block header
+    +header({class:'header--product'})
+block sidebar
+    +sidebar({class:'sidebar--product',title:'Строительство бассейнов'})
+block content
+    include ../includes/product
+    div.wrap-section
+        include ../includes/kit
+        include ../includes/articles
+    +collection({class:'collection--product'})
+    include ../includes/contact
+
+    +mobile-menu({class:'mobile-menu--product',title:'Строительство бассейнов'})
+    include ../includes/popup
