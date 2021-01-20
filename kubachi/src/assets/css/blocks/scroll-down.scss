@@ -1,0 +1,111 @@
+.scroll-down {
+    z-index: 5;
+    display: inline-block;
+    color: rgba(117, 117, 117, 0.2);
+    transition: all .5s;
+    position: absolute;
+    bottom: 5.8rem;
+    left: calc(50% - 16px);
+
+    @media screen and (max-width:$large_tablet) {
+        bottom: 1rem;
+        left: calc(50% - 9px);
+    }
+
+    &:hover {
+        transform: translateY(5px);
+    }
+
+    span {
+        height: 10px;
+        width: 16px;
+        display: block;
+
+        @media screen and (max-width:$large_tablet) {
+            width: 9px;
+        }
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    &__scrolldown {
+        width: 2px;
+        height: 80px;
+        margin: 0px auto -6px;
+
+        @media screen and (max-width:$large_tablet) {
+            height: 30px;
+            margin: 0px auto -3px;
+            width: 1px;
+        }
+    }
+
+    &__line {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: linear-gradient(to bottom, rgba(117, 117, 117, 0.2) 50%, rgba(117, 117, 117, 0) 50%);
+        background-position: 0 -80px;
+        background-size: 100% 200%;
+        animation: scrolldown 3s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+
+        @media screen and (max-width:$large_tablet) {
+            background-position: 0 -30px;
+            background: linear-gradient(to bottom, rgba(117, 117, 117, 0.2) 50%, rgba(117, 117, 117, 0) 50%);
+            background-size: 100% 200%;
+            animation: scrolldown 3s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scrolldown {
+    0% {
+        background-position: 0 -80px;
+    }
+
+    75% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 80px;
+    }
+}
+
+@media screen and (max-width:$large_tablet) {
+    @keyframes scrolldown {
+        0% {
+            background-position: 0 -30px;
+        }
+
+        75% {
+            background-position: 0 0;
+        }
+
+        100% {
+            background-position: 0 30px;
+        }
+    }
+}

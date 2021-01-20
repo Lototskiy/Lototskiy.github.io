@@ -1,0 +1,42 @@
+section.information
+    .center-wrap
+        .information__title Важная информация
+        .information__wrap
+            .information__text
+                p Вы можете оформить заказ, оставив контактную информацию. 
+                p После этого мы свяжемся с Вами в ближайшее время, обсудим детали и время доставки. Если у Вас остались вопросы, напишите нам kubachi@jewel.com или позвоните по номеру 
+                    a(href="tel:79999999999") +79999999999.
+            .information__form
+                form.inputs(action='' autocomplete="off")
+                    input.inputs__field--hidden(name='fake_email' type='text')
+                    input.inputs__field--hidden(name='fake_password' type='password')
+                    .inputs__field-wrap
+                        input.inputs__field(type='text' name='text' autocomplete='someRandomString' required='' minlength='2')
+                        label.inputs__label(for='text')
+                            span.inputs__content
+                                | Ваше ФИО*
+                    .inputs__field-wrap
+                        input.inputs__field(type='text' name='email' autocomplete='someRandomString' required='' )
+                        label.inputs__label(for='email')
+                            span.inputs__content
+                                | E-mail*
+                    .inputs__field-wrap
+                        input.inputs__field(type='tel' name='tel' autocomplete='someRandomString' required='' )
+                        label.inputs__label(for='tel')
+                            span.inputs__content
+                                | Телефон*
+                    .inputs__field-wrap
+                        input.inputs__field(type='text' name='text1' autocomplete='someRandomString' required='' )
+                        label.inputs__label(for='text1')
+                            span.inputs__content
+                                | Город*
+                    .inputs__field-wrap
+                        input.inputs__field(type='text' name='text2' autocomplete='someRandomString' required='' )
+                        label.inputs__label(for='text2')
+                            span.inputs__content
+                                | Улица, номер дома и квартиры*
+                    .inputs__field-wrap
+                        textarea.inputs__field.inputs__field--textarea(name='textarea' placeholder='Сообщение')
+                    .inputs__btn
+                        button.btn.btn--filled.mobile--hide Оформить покупку
+                        button.btn.btn--filled.desktop--hide Отправить

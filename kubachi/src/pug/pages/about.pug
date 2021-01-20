@@ -1,0 +1,16 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Kubachi-о нас';
+    - var pageClass = 'about-page';
+
+block content
+    +main-screen({class:'main-screen--about'})
+    include ../includes/advantage
+    +history({class:'history--about'})
+    //- include ../includes/history
+    include ../includes/uniqueness
+    +production({class:'production--about'})
+    include ../includes/packaging
+
+//- block script

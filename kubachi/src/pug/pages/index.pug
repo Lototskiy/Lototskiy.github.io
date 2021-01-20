@@ -1,0 +1,16 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Kubachi';
+    - var pageClass = 'index-page';
+
+block content
+    +production({class:'production--index'})
+    include ../includes/hit
+    include ../includes/novelty
+    include ../includes/best-deals
+    +history({class:'history--index'})
+    include ../includes/uniqueness
+    include ../includes/instagram
+
+//- block script

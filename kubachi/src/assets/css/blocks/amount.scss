@@ -1,0 +1,77 @@
+.amount {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+
+
+    @media screen and (max-width:$large_tablet) {
+        height: 3rem;
+    }
+
+    .mobile-basket & {
+        margin-left: auto;
+
+        @media screen and (max-width:$large_tablet) {
+            height: 20px;
+        }
+    }
+
+    &__input {
+        width: 4rem;
+        height: 100%;
+        border: 1px solid #E5E5E5;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-weight: normal;
+        font-size: 1.4rem;
+        font-family: $font-primary;
+
+        @media screen and (max-width:$large_tablet) {
+            width: 3rem;
+            font-size: 1.2rem;
+
+            .mobile-basket & {
+                width: 20px;
+                font-size: 8px;
+            }
+        }
+    }
+
+    &__minus,
+    &__plus {
+        cursor: pointer;
+        height: 100%;
+        width: 4rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        transition: all 0.5s;
+
+        @media screen and (max-width:$large_tablet) {
+            width: 3rem;
+
+            .mobile-basket & {
+                width: 20px;
+            }
+        }
+
+        svg {
+            fill: #999999;
+            width: 1.3rem;
+
+            @media screen and (max-width:$large_tablet) {
+                width: 1rem;
+
+                .mobile-basket & {
+                    width: 10px;
+                }
+            }
+        }
+
+        &:hover {
+            transform: scale(0.8);
+        }
+    }
+}
