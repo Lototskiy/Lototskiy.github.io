@@ -1,0 +1,39 @@
+.guarantee-slider {
+    position: relative;
+    padding: 0 5rem;
+
+    .swiper-button-wrap {
+        position: absolute;
+        width: calc(100% - 10rem);
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+
+        >div {
+            position: relative;
+            padding-bottom: 77.04%;
+
+            .swiper-button {
+                &-next {
+                    right: auto;
+                    left: calc(100% + 1.2rem);
+                }
+
+                &-prev {
+                    left: auto;
+                    right: calc(100% + 1.2rem);
+
+                }
+            }
+        }
+    }
+
+    .swiper-button {
+        height: 3.8rem;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+}

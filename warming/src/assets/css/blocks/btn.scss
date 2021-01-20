@@ -1,0 +1,36 @@
+.btn {
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	line-height: 3.3rem;
+	display: inline-block;
+	white-space: nowrap;
+	text-align: center;
+	background: $color2;
+	font-weight: 500;
+	color: $color3;
+	padding: 0 2rem;
+	transition: all 0.5s;
+	border-radius: 3.4rem;
+	font-size: 1.4rem;
+	transition: all 0.5s;
+	border: 2px solid rgba($color2, 0);
+
+	&:hover {
+		border: 2px solid $color2;
+		background-color: inherit;
+		color: $color2;
+	}
+
+	&--empty {
+		background-color: inherit;
+		border: 2px solid $color2;
+		line-height: 3.3rem;
+
+
+		&:hover {
+			background-color: $color2;
+			color: $color3;
+		}
+	}
+}

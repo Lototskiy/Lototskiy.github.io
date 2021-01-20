@@ -1,0 +1,20 @@
+.materials-slider {
+    position: relative;
+    padding: 0 7.4rem;
+
+    .swiper-container {
+        padding-top: 4.5rem;
+    }
+
+    .swiper-button {
+        top: calc(50% + 4.5rem / 2);
+
+        &-next {
+            right: 0;
+        }
+
+        &-prev {
+            left: 0;
+        }
+    }
+}

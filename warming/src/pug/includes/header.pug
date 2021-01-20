@@ -1,0 +1,40 @@
+header.header
+  .center-wrap
+    .header__wrap.anchors
+      a(href="main-screen").header__logo
+        img(src='assets/images/logo.png' alt='')
+      nav.header__nav.mobile--hide
+        p.header__nav-city Санкт-Петербург, ул. Марата 75
+        ul.header__nav-list
+          li.header__nav-item.header__nav-item--insulate
+            .header__nav-burger
+              div
+              div
+              div
+            a.header__nav-link.header__nav-link--insulate(href='') Что утепляем
+          li.header__nav-item
+            a.header__nav-link(href='') Наши работы
+          li.header__nav-item
+            a.header__nav-link(href="") Технологии
+          li.header__nav-item
+            a.header__nav-link(href="materials") Материалы
+          li.header__nav-item
+            a.header__nav-link(href="guarantee") Гарантии
+          li.header__nav-item
+            a.header__nav-link(href="reviews") Отзывы
+          li.header__nav-item
+            a.header__nav-link(href="contacts") Контакты
+      .header__right.mobile--hide
+        .header__phone
+          svg(viewBox='0 0 12 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M2.13571 1.03248L3.03287 0.745806C3.87356 0.47718 4.77176 0.911305 5.13178 1.76026L5.84823 3.44971C6.16044 4.18592 5.98719 5.05168 5.41991 5.59012L3.84132 7.08846C3.93872 7.98469 4.23998 8.86719 4.74509 9.73595C5.25021 10.6047 5.88106 11.3254 6.63765 11.898L8.53364 11.2657C9.25231 11.0261 10.035 11.3015 10.4758 11.9491L11.5028 13.4579C12.0152 14.2108 11.923 15.2494 11.2872 15.8877L10.6058 16.5718C9.92749 17.2528 8.9587 17.4998 8.06253 17.2202C5.94681 16.5603 4.00155 14.6009 2.22674 11.3422C0.44935 8.07873 -0.177941 5.3099 0.344869 3.03573C0.564866 2.0788 1.24613 1.31673 2.13571 1.03248Z')
+          .header__phone-tel
+            a(href="tel: 79990636003" data-anchors='false') +7 999 063 60 03
+        .btn.mobile--hide(onclick='show_popup("call")') Перезвоните мне
+      a.header__phone.desktop--hide(href='tel:79990636003' data-anchors='false')
+        svg(viewBox='0 0 12 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M2.13571 1.03248L3.03287 0.745806C3.87356 0.47718 4.77176 0.911305 5.13178 1.76026L5.84823 3.44971C6.16044 4.18592 5.98719 5.05168 5.41991 5.59012L3.84132 7.08846C3.93872 7.98469 4.23998 8.86719 4.74509 9.73595C5.25021 10.6047 5.88106 11.3254 6.63765 11.898L8.53364 11.2657C9.25231 11.0261 10.035 11.3015 10.4758 11.9491L11.5028 13.4579C12.0152 14.2108 11.923 15.2494 11.2872 15.8877L10.6058 16.5718C9.92749 17.2528 8.9587 17.4998 8.06253 17.2202C5.94681 16.5603 4.00155 14.6009 2.22674 11.3422C0.44935 8.07873 -0.177941 5.3099 0.344869 3.03573C0.564866 2.0788 1.24613 1.31673 2.13571 1.03248Z')
+      .header__burger.desktop--hide
+        div
+        div
+        div

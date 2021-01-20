@@ -1,0 +1,27 @@
+.socials {
+    display: flex;
+
+    @media screen and (max-width:$large_tablet) {
+        justify-content: center;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s;
+
+        svg {
+            transition: all .5s;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+
+        &+.socials__link {
+            margin: 0 0 0 1rem;
+
+        }
+    }
+}

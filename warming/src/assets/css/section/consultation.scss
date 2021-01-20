@@ -1,0 +1,67 @@
+.consultation {
+    padding-top: 7rem;
+    padding-bottom: 9rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 3.2rem;
+        line-height: 132.9%;
+        margin-bottom: 1rem;
+        color: $color2;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__subtitle {
+        color: $color1;
+        font-weight: normal;
+        font-size: 1.8rem;
+        line-height: 22/18*1;
+        margin-bottom: 4rem;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 1.4rem;
+            max-width: 27rem;
+            width: 100%;
+            margin: 0 auto 4rem;
+        }
+    }
+
+    &__btn {
+        margin-bottom: 2rem;
+
+        .btn {
+            color: $color1;
+        }
+    }
+
+    &__text {
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 143.4%;
+        color: #757575;
+        max-width: 27rem;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        padding-left: 0.4rem;
+
+        span {
+            position: absolute;
+            left: 0;
+            top: -1px;
+            color: #EB5757;
+        }
+    }
+}

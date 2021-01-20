@@ -1,0 +1,124 @@
+.faq {
+    padding: 7rem 0 8rem;
+    position: relative;
+    background: linear-gradient(99.31deg, rgba(201, 127, 15, 0.04) 18.32%, rgba(83, 120, 14, 0.04) 87.03%);
+
+    @media screen and (max-width:$large_tablet) {
+        padding: 3rem 0 5rem;
+    }
+
+    &__title {
+        margin-bottom: 6rem;
+        color: $color2;
+
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .select__value {
+        min-width: 170px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+        margin-bottom: 5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__right,
+    &__left {
+        width: calc(50% - 3rem);
+
+        @media screen and (max-width:$large_tablet) {
+            width: 100%;
+        }
+    }
+
+    &__item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        width: 100%;
+
+        &--active {
+            .faq__item-text {
+                display: block;
+            }
+
+            .faq__item-title {
+                span {
+                    &::after {
+                        opacity: 0;
+                    }
+                }
+
+            }
+        }
+
+        &-title {
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.8rem;
+            color: #494949;
+            padding: 3rem 3rem 1.5rem 0;
+            position: relative;
+            text-transform: uppercase;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 1.4rem;
+            }
+
+            span {
+                width: 2.7rem;
+                height: 2.7rem;
+                background-color: $color2;
+                position: absolute;
+                right: 0;
+                top: 3rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 1.4rem;
+                    height: 1.5px;
+                    background-color: $color3;
+                }
+
+                &::after {
+                    transform: rotate(90deg);
+                    opacity: 1;
+                    transition: all 0.5s;
+                }
+            }
+        }
+
+        &-text {
+            font-weight: normal;
+            font-size: 1.4rem;
+            line-height: 23/14*1;
+            display: none;
+            color: #5C5C5C;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__btn {
+        text-align: center;
+
+        .btn {
+            color: $color1;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.questions {
+    background: linear-gradient(99.31deg, rgba(201, 127, 15, 0.04) 18.32%, rgba(83, 120, 14, 0.04) 87.03%);
+    padding-top: 10.5rem;
+    padding-bottom: 12rem;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-top: 3.5rem;
+        padding-bottom: 9rem;
+    }
+
+
+    &__wrap {
+        max-width: 92rem;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 4rem;
+        padding-bottom: 5.5rem;
+        background: $color3;
+        box-shadow: 0px 0px 61px rgba(0, 0, 0, 0.13);
+        border-radius: 1.5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            box-shadow: none;
+            background: inherit;
+            padding: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__subtitle {
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 17/14*1;
+        text-align: center;
+        color: #434343;
+        max-width: 41rem;
+        width: 100%;
+        margin: 0 auto 3.5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            color: $color1;
+            max-width: 29rem;
+            width: 100%;
+            margin: 0 auto 3rem;
+        }
+    }
+
+    &__form {
+        max-width: 60rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__btn {
+        text-align: center;
+    }
+}

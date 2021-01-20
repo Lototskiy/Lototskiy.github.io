@@ -1,0 +1,61 @@
+.popup-form {
+    width: 100%;
+    padding: 5rem 5.5rem 5.5rem;
+
+    #product & {
+        padding: 3rem 5.5rem 6rem;
+
+        @media screen and (max-width:$large_tablet) {
+            padding: 3rem 1.5rem;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 2.2rem;
+        line-height: 132.9%;
+        text-align: left;
+        color: $color1;
+        margin-bottom: 7rem;
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 146.9%;
+        color: #4F4F4F;
+        margin-bottom: 4rem;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__box {
+        padding-bottom: 2.5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+        margin-bottom: 2rem;
+
+        span,
+        p {
+            font-weight: normal;
+            line-height: 154.9%;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 1.2rem;
+            }
+        }
+
+        &:last-child {
+            border: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+}

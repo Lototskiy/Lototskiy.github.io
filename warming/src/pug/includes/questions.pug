@@ -1,0 +1,22 @@
+section.questions
+    .center-wrap
+        .questions__wrap
+            h2.simple-title.questions__title Остались вопросы? 
+            h3.questions__subtitle Напишите нам. мы обязательно свяжемся с вами<br class='mobile--hide'> в ближайшее время и ответим на возникшие вопросы
+            .questions__form
+                form.inputs(action='' autocomplete="off")
+                    .inputs__wrap
+                        .inputs__field-wrap.inputs__field-wrap--50
+                            input.inputs__field(type='text' name='text' required='' minlength='2' autocomplete="off")
+                            label.inputs__label(for='text')
+                                span.inputs__content
+                                    | Ваше имя
+                        .inputs__field-wrap.inputs__field-wrap--50
+                            input.inputs__field(type='tel' name='phone' required='' autocomplete="off")
+                            label.inputs__label(for='phone')
+                                span.inputs__content
+                                    | Ваш телефон
+                    .inputs__field-wrap
+                        textarea.inputs__field.inputs__field--textarea(name='textarea' placeholder='Cообщение')
+                    .inputs__btn
+                        button.btn Отправить

@@ -1,0 +1,92 @@
+.video {
+    // padding-left: calc(7.6rem + (4.5rem * 2));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 95;
+
+    @media screen and (max-width:$large_tablet) {
+        // padding-left: calc(5.2rem + (4.5rem * 2));
+    }
+
+    &:hover {
+        .video {
+            &__video {
+                display: block;
+            }
+
+            &__play {
+                width: 10rem;
+                height: 10rem;
+
+                @media screen and (max-width:$large_tablet) {
+                    width: 7rem;
+                    height: 7rem;
+                }
+
+                svg {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__play {
+        cursor: pointer;
+        width: 7.6rem;
+        height: 7.6rem;
+        // left: calc((7.6rem + (4.5rem * 2))/2);
+        left: 50%;
+        border-radius: 50%;
+        flex-shrink: 0;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+        overflow: hidden;
+        z-index: 999;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid $color3;
+
+        @media screen and (max-width:$large_tablet) {
+            width: 5.2rem;
+            height: 5.2rem;
+            // left: calc((5.2rem + (4.5rem * 2))/2);
+        }
+
+        &-img {
+            max-width: 1.1rem;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @media screen and (max-width:$large_tablet) {
+                width: 0.7rem;
+            }
+
+            img {
+                display: block !important;
+            }
+        }
+
+    }
+
+    &__video {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        pointer-events: none;
+
+        @media screen and (max-width:$large_tablet) {
+            width: 150px;
+            height: 150px;
+        }
+    }
+}

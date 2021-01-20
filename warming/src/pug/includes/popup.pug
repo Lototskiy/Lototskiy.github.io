@@ -1,0 +1,76 @@
+#question.popup-wrap
+    .popup
+        .popup__close(onclick="close_popup('question')")
+            div
+            div
+        .popup-form
+            h2.popup-form__title Задать вопрос
+            form.inputs(action='' autocomplete="off")
+                .inputs__wrap
+                    .inputs__field-wrap
+                        input.inputs__field(type='text' name='text' required='' minlength='2' autocomplete="off")
+                        label.inputs__label(for='text')
+                            span.inputs__content
+                                | Ваше имя
+                    .inputs__field-wrap
+                        input.inputs__field(type='tel' name='phone' required='' autocomplete="off")
+                        label.inputs__label(for='phone')
+                            span.inputs__content.inputs__content--required
+                                | Ваш телефон
+                    .inputs__field-wrap
+                        input.inputs__field(type='text' name='text' required='' minlength='2' autocomplete="off")
+                        label.inputs__label(for='text')
+                            span.inputs__content
+                                | Cообщение
+                .inputs__btn
+                    button.btn Отправить
+#call.popup-wrap
+    .popup
+        .popup__close(onclick="close_popup('call')")
+            div
+            div
+        .popup-form
+            h2.popup-form__title В какое время вам позвонить?
+            form.inputs(action='' autocomplete="off")
+                .inputs__wrap
+                    .inputs__field-wrap
+                        input.inputs__field(type='text' name='text' required='' minlength='2' autocomplete="off")
+                        label.inputs__label(for='text')
+                            span.inputs__content
+                                | Ваше имя
+                    .inputs__field-wrap
+                        input.inputs__field(type='tel' name='phone' required='' autocomplete="off")
+                        label.inputs__label(for='phone')
+                            span.inputs__content.inputs__content--required
+                                | Ваш телефон
+                    .inputs__field-wrap
+                        input.inputs__field(type='text' name='text' required='' minlength='2' autocomplete="off")
+                        label.inputs__label(for='text')
+                            span.inputs__content
+                                | Cообщение
+                .inputs__btn
+                    button.btn Отправить
+#product.popup-wrap
+    .popup
+        .popup__close(onclick="close_popup('product')")
+            div
+            div
+        .popup-form
+            .popup-form__top
+                .materials__item-img
+                    div
+                        img(src="assets/images/materials-img1.png" alt="")
+                .popup-form__info
+                    .materials__item-title Мягкий ППУ
+                    .materials__item-subtitle Экотермикс 600
+            .popup-form__box
+                h3.materials__item__headline Плотность: 
+                    span 9-12кг/м3
+                h3.materials__item__headline Теплопроводность: 
+                    span 0,035 Вт/(м·K)
+            .popup-form__box
+                h3.materials__item__headline Основное применение:
+                p Утепление кровли, мансарды, чердака, каркасных домов, межкомнатных перегородок и перекрытий. Подходит для деревянных поверхностей. Может использоваться в системе вентилируемого фасада.
+            .popup-form__box
+                h3.materials__item__headline Основное применение:
+                p Выступает полноценной шумоизоляцией. Эластичен и гибок, принимает форму конструкций, не трескается при усадке конструкции. Дышащий материал. Требуется пароизоляция.
