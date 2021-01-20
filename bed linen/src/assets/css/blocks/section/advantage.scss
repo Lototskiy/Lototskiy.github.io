@@ -1,0 +1,124 @@
+.advantage {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-color: #fff;
+    z-index: 2;
+    position: relative;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-top: 6rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url('~img/advantage-bg1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @media screen and (max-width:$large_mobile) {
+            background: url('~img/advantage-bg--mobile.png');
+            background-repeat: no-repeat;
+            background-position: center top -2rem;
+            background-size: cover;
+        }
+    }
+
+    &__wrap {
+        background: linear-gradient(180deg, rgba(209, 97, 98, 0.5), rgb(255, 255, 255));
+    }
+
+    &__img {
+        position: relative;
+        max-width: 18.5rem;
+        width: 100%;
+        margin: 0 auto 2rem;
+
+        @media screen and (max-width:$large_mobile) {
+            margin: 0 auto;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('~img/advantage-clouds.png');
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center bottom -4rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 5rem;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: -7rem;
+        position: relative;
+        z-index: 1;
+
+
+    }
+
+    &__item {
+        width: calc((100% - 5.4rem * 2) / 3);
+        text-align: center;
+        margin-bottom: 7rem;
+
+        @media screen and (max-width:$large_tablet) {
+            width: 100%;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+
+        &-title {
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            color: #D16162;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            position: relative;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 1.4rem;
+                margin-bottom: 0.6rem;
+            }
+        }
+
+        &-text {
+            font-size: 1.4rem;
+            line-height: 146.9%;
+            max-width: 26rem;
+            width: 100%;
+            margin: 0 auto;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 1.2rem;
+                max-width: 33rem;
+            }
+
+            @media screen and (max-width:$large_mobile) {
+                max-width: 100%;
+            }
+        }
+
+        &--hide {
+            margin-bottom: 0px !important;
+            padding: 0px !important;
+            opacity: 0 !important;
+            height: 0px !important;
+        }
+    }
+}

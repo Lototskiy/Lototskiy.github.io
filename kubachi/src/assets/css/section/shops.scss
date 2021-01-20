@@ -1,0 +1,36 @@
+.shops {
+    background-color: #F2F2F2;
+    padding-top: 9.7rem;
+
+    @media screen and (max-width:$large_tablet) {
+        background-color: #fff;
+        padding-top: 5rem;
+    }
+
+    &__title {
+        font-family: $font-secondary;
+        font-weight: bold;
+        font-size: 4.2rem;
+        line-height: 114%;
+        text-transform: uppercase;
+        margin-bottom: 7rem;
+        text-align: center;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 3.2rem;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__img {
+        background-image: url('~img/shops-img.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 58.9rem;
+
+        @media screen and (max-width:$large_tablet) {
+            min-height: 22rem;
+        }
+    }
+}

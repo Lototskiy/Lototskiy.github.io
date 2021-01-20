@@ -1,0 +1,15 @@
+extends ../layout/main
+block variables
+    - var title = 'Твой басейн';
+    - var pageClass = 'catalog-page';
+block header
+    +header({class:'header--catalog'})
+block sidebar
+    +sidebar({class:'sidebar--catalog',title:'Перейти на сайт'})
+block content
+    include ../includes/pool-filters
+    include ../includes/recommended
+    +collection({class:'collection--catalog'})
+    include ../includes/contact
+    +mobile-menu({class:'mobile-menu--catalog',title:'Перейти на сайт'})
+    include ../includes/popup

@@ -1,0 +1,48 @@
+mixin card(params)
+    a(href="").card(class!=attributes.class)
+        if params.hit == false
+        else
+            p.card__filter хит
+        if params.delivery == false
+        else
+            p.card__filter.card__filter--bg доставка безплатная
+        .card__img
+            div
+                if src= params.src
+                    img(src= params.src alt="")
+                else
+                    img(src="assets/images/card__img1.png", alt="")
+        p.card__price #{params.price}
+            span.card__price-old #{params.price_old}
+            if params.price_discont == true
+                span.card__price-discount #{params.discont}
+            else
+        if params.card_discont == true
+            .card__price-discount -15%
+        else
+        .card__title #{params.title}
+        if params.bottom == false
+        else
+            .card__bottom
+                .basket-wrap
+                    .basket
+                        svg(viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(fill-rule='evenodd' clip-rule='evenodd' d='M6.76598 13.5765L6.76934 13.5763H17.9238C18.1984 13.5763 18.4399 13.3941 18.5154 13.1301L20.9763 4.51681C21.0293 4.33112 20.9922 4.13148 20.876 3.97736C20.7597 3.82323 20.5778 3.73254 20.3848 3.73254H5.34709L4.9073 1.75338C4.84465 1.47188 4.59503 1.27161 4.30664 1.27161H0.615234C0.275414 1.27161 0 1.54702 0 1.88684C0 2.22666 0.275414 2.50208 0.615234 2.50208H3.81317L6.03442 12.498C6.21923 13.2621 6.36006 13.5636 6.76598 13.5765ZM17.4597 12.3458L19.5691 4.96301H5.62042L7.26105 12.3458H17.4597Z')
+                            path(d='M6 17C6 18.1028 6.89722 19 8 19C9.10278 19 10 18.1028 10 17C10 15.8972 9.10278 15 8 15C6.89722 15 6 15.8972 6 17ZM8 16.3333C8.36753 16.3333 8.66667 16.6325 8.66667 17C8.66667 17.3675 8.36753 17.6667 8 17.6667C7.63247 17.6667 7.33333 17.3675 7.33333 17C7.33333 16.6325 7.63247 16.3333 8 16.3333Z')
+                            path(d='M15 17C15 18.1028 15.8972 19 17 19C18.1028 19 19 18.1028 19 17C19 15.8972 18.1028 15 17 15C15.8972 15 15 15.8972 15 17ZM17 16.3333C17.3675 16.3333 17.6667 16.6325 17.6667 17C17.6667 17.3675 17.3675 17.6667 17 17.6667C16.6325 17.6667 16.3333 17.3675 16.3333 17C16.3333 16.6325 16.6325 16.3333 17 16.3333Z')
+                        span В корзину
+                if params.plus == false
+                else
+                    .card__plus
+                        svg(width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(fill-rule='evenodd' clip-rule='evenodd' d='M0.125 2.25004V0.833374H12.875V2.25004H0.125ZM0.125 7.20837V5.79171H12.875V7.20837H0.125ZM0.125 12.1667V10.75H5.79167V12.1667H0.125ZM12.875 10.75V12.1667H11.1042V13.9375H9.6875V12.1667H7.91667V10.75H9.6875V8.97921H11.1042V10.75H12.875Z')
+                .card__plus   
+                    svg(width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(fill-rule='evenodd' clip-rule='evenodd' d='M0.125 2.25004V0.833374H12.875V2.25004H0.125ZM0.125 7.20837V5.79171H12.875V7.20837H0.125ZM0.125 12.1667V10.75H5.79167V12.1667H0.125ZM12.875 10.75V12.1667H11.1042V13.9375H9.6875V12.1667H7.91667V10.75H9.6875V8.97921H11.1042V10.75H12.875Z')
+                .card__heart
+                    svg(width='15' height='13' viewBox='0 0 15 13' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(d='M7.11941 1.92959L7.50008 2.37662L7.88076 1.92959C8.56104 1.13072 9.60647 0.625 10.6876 0.625C12.5931 0.625 14.0834 2.11531 14.0834 4.02083C14.0834 5.19534 13.5597 6.30011 12.5362 7.55141C11.507 8.80972 10.0253 10.1544 8.19129 11.8175L8.19058 11.8182L7.4988 12.4479L6.80926 11.825L6.80834 11.8241C4.97463 10.1578 3.4932 8.81153 2.46404 7.55242C1.44045 6.30014 0.916748 5.19535 0.916748 4.02083C0.916748 2.11531 2.40706 0.625 4.31258 0.625C5.39369 0.625 6.43912 1.13072 7.11941 1.92959Z')
+        if params.article == false
+        else
+            p.card__article Артикул:
+                span 283323

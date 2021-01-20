@@ -1,0 +1,90 @@
+section.best-offers
+    .center-wrap.toogles__wrap
+        .best-offers__top
+            .simple-title.best-offers__title Лучшие предложения
+            .best-offers__filter
+                .best-offers__filter-link.toogles__item-title(data-toogles="1") Хит
+                .best-offers__filter-link.toogles__item-title.toogles__item-title--active(data-toogles="2") Доставка бесплтная
+                .best-offers__filter-link.toogles__item-title(data-toogles="3") Новинка 
+            a(href="").best-offers__catalog.mobile--hide Весь каталог
+        .toogles__item(data-toogles="1")
+            .toogles__item-content
+                div
+                    .best-offers__list.mobile--hide
+                        - var cards = [];
+                        - cards.push({price_old:'357 000 ₽',price:'357 000 ₽',title:'Фильтровальная установка 6,0 м3/ч Kripsol Granada (GTN406-33)'});
+                        - cards.push({price:'357 000 ₽',src:"assets/images/card__img2.png",title:'Фильтровальная установка 6,0 м3/ч Kripsol Granada (GTN406-33)'});
+                        - cards.push({price:'357 000 ₽',title:'Фильтровальная установка 6,0 м3/ч Kripsol Granada (GTN406-33)'});
+                        - cards.push({price:'357 000 ₽',title:'Фильтровальная установка 6,0 м3/ч Kripsol Granada (GTN406-33)'});
+                        - cards.push({class:'card--hide'});
+                        - cards.push({class:'card--hide'});
+                        - cards.push({class:'card--hide'});
+                        each val in cards
+                            +card(val)(class=val.class)
+                    .best-offers-slider.desktop--hide
+                        .swiper-container
+                            .swiper-wrapper
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})   
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})                   
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})                 
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})            
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})
+        .toogles__item.toogles__item--active(data-toogles="2")
+            .toogles__item-content(style='display: block;')
+                div
+                    .best-offers__list.mobile--hide
+                        - var cards = [];
+                        - cards.push({price_old:'357 000 ₽',price:'357 000 ₽',title:'Фильтровальная установка 6,0 м3/ч Kripsol Granada (GTN406-33)'});
+                        - cards.push({price:'357 000 ₽',src:"assets/images/card__img2.png",title:'Фильтровальная установка 6,0 м3/ч Kripsol Granada (GTN406-33)'});
+                        - cards.push({price:'357 000 ₽',title:'Фильтровальная установка 6,0 м3/ч Kripsol Granada (GTN406-33)'});
+                        - cards.push({price:'357 000 ₽',title:'Фильтровальная установка 6,0 м3/ч Kripsol Granada (GTN406-33)'});
+                        - cards.push({price:'357 000 ₽',title:'Фильтровальная установка 6,0 м3/ч Kripsol Granada (GTN406-33)'});
+                        - cards.push({class:'card--hide'});
+                        - cards.push({class:'card--hide'});
+                        each val in cards
+                            +card(val)(class=val.class)
+                    .best-offers-slider.desktop--hide
+                        .swiper-container
+                            .swiper-wrapper
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})   
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})                   
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})                 
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})            
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})
+        .toogles__item(data-toogles="3")
+            .toogles__item-content
+                div
+                    .best-offers__list.mobile--hide
+                        - var cards = [];
+                        - cards.push({price_old:'357 000 ₽',price:'357 000 ₽',title:'Фильтровальная установка 6,0 м3/ч Kripsol Granada (GTN406-33)'});
+                        - cards.push({price:'357 000 ₽',src:"assets/images/card__img2.png",title:'Фильтровальная установка 6,0 м3/ч Kripsol Granada (GTN406-33)'});
+                        - cards.push({price:'357 000 ₽',title:'Фильтровальная установка 6,0 м3/ч Kripsol Granada (GTN406-33)'});
+                        - cards.push({class:'card--hide'});
+                        - cards.push({class:'card--hide'});
+                        - cards.push({class:'card--hide'});
+                        each val in cards
+                            +card(val)(class=val.class)
+                    .best-offers-slider.desktop--hide
+                        .swiper-container
+                            .swiper-wrapper
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})   
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})                   
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})                 
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})            
+                                .swiper-slide
+                                    +card({price:'1 100 ₽',src:"assets/images/product__slider-img2.png",title:"Песок кварцевый фракция 0,5-1,0 мм (мешок 25 кг)",hit:false,delivery:false,bottom:false})
+        .best-offers__btn.btn.btn--border.mobile--hide загрузить еще

@@ -1,0 +1,111 @@
+.popular-categories {
+    background: #F9F9FA;
+    padding: 6.5rem 0 7rem;
+
+    @media screen and (max-width:$large_tablet) {
+        padding: 5rem 0;
+    }
+
+    &__title {
+        margin-bottom: 4.5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &__wrap {
+        position: relative;
+        display: flex;
+    }
+
+    &__banner {
+        max-width: 22.5rem;
+        width: 100%;
+
+    }
+
+    &__list {
+        width: calc(100% - 22.5rem - 1.8rem);
+        margin-right: 1.8rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: -1.8rem;
+
+        .categorie {
+            width: calc((100% - 1.8rem * 3)/ 4);
+            margin-bottom: 1.8rem;
+        }
+    }
+
+    &__item {
+        width: calc((100% - 1.8rem * 3)/ 4);
+        background: #FFFFFF;
+        border-radius: 0.3rem;
+        border: 1px solid #ECECEC;
+        padding: 4rem 1.5rem 5.5rem;
+        text-align: center;
+        margin-bottom: 1.8rem;
+
+        &:hover {
+            .popular-categories__item-title::before {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+
+        @media screen and (max-width:$large_tablet) {
+            padding: 0.9rem 0.9rem 2.2rem;
+        }
+
+        &--hide {
+            margin-bottom: 0px !important;
+            padding: 0px !important;
+            opacity: 0 !important;
+            height: 0px !important;
+        }
+
+        &-title {
+            font-family: Geometria;
+            font-weight: normal;
+            font-size: 1.4rem;
+            line-height: 113.5%;
+            color: #3F3F3F;
+            position: relative;
+            display: inline-block;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                width: 0%;
+                height: 1px;
+                background: #3F3F3F;
+                opacity: 0;
+                transition: all 0.5s;
+            }
+        }
+    }
+
+    &__img {
+        max-width: 13.7rem;
+        width: 100%;
+        margin: 0 auto 1.3rem;
+
+        >div {
+            position: relative;
+            padding-bottom: 80.29%;
+
+            img {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

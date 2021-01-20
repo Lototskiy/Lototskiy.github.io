@@ -1,0 +1,75 @@
+.basket {
+    height: 3.3rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    border: 1px solid #E2E6F0;
+    border-radius: 2px;
+    transition: .65s cubic-bezier(0.77, 0, 0.175, 1);
+    overflow: hidden;
+    width: 5.1rem;
+    background-color: transparent;
+    cursor: pointer;
+
+    &-wrap {
+        display: flex;
+        justify-content: flex-start;
+        margin-right: auto;
+        cursor: pointer;
+        border-radius:2px;
+    }
+
+    span {
+        white-space: nowrap;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        transition: 0.65s cubic-bezier(0.77, 0, 0.175, 1) opacity;
+        opacity: 0;
+    }
+
+    svg {
+        width: 2.1rem;
+        fill: #C5CCDD;
+        flex-shrink: 0;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        transition: 0.65s cubic-bezier(0.77, 0, 0.175, 1) fill;
+    }
+    &--blue {
+        background: #4081FF;
+        border-radius: 3px;
+        border: none;
+        width: 100%;
+        height: auto;
+        line-height: 4.2rem;
+        transition: all 0.5s;
+        border: 1px solid #4081FF;
+        svg {
+            width: 1.6rem;
+            margin-left: 0;
+            margin-right: 1rem;
+            fill: #fff;
+        }
+
+        span {
+            position: relative;
+            opacity: 1;
+            transition: all 0.5s;
+        }
+
+        &:hover {
+            background-color: #F5F7F8;
+
+            span {
+                color: #4081FF;
+            }
+
+            svg {
+                fill: #4081FF;
+            }
+        }
+    }
+}

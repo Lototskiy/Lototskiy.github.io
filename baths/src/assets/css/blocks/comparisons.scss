@@ -1,0 +1,44 @@
+.comparisons {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    line-height: 119.4%;
+    color: #454545;
+    cursor: pointer;
+    transition: all 0.5s;
+    svg {
+        width: 1.3rem;
+        margin-right: 0.6rem;
+        fill: #CCCCCC;
+        transition: all 0.5s;
+    }
+    &:hover{
+        color: #000;
+        svg{
+            fill:#000;
+        }
+    }
+    &--bg {
+        background: #F5F7F8;
+        border-radius: 2px;
+        font-size: 1.2rem;
+        text-transform: lowercase;
+        color: #6D6D6D;
+        padding: 0.6rem 1.2rem;
+        svg {
+            width: 1.2rem;
+            fill: #5F6368;
+            margin-right: 1rem;
+        }
+    }
+    &--heart{
+        &:hover{
+            svg{
+                stroke:#000;
+            }
+        }
+        svg{
+            stroke:#6D6D6D;
+        }
+    }
+}

@@ -1,0 +1,136 @@
+mixin collection(params)
+    section.collection(class=params.class)
+        .center-wrap
+            .simple-title.collection__title Коллекции
+            .collection__list.mobile--hide
+                if params.class == 'collection--build'
+                    a(href="").collection__item
+                        .collection__img
+                            div
+                                img(src="assets/images/collection__img1.png" alt="")
+                            span.collection__img-oval
+                        .collection__item-title Топ-10 лучших роботов-пылесосов
+
+                    a(href="").collection__item
+                        .collection__img
+                            div
+                                img(src="assets/images/collection__img2.png" alt="")
+                            span.collection__img-oval
+                        .collection__item-title Распродажа<br> химии для бассейна
+                    a(href="").collection__item.collection__item--hide
+                    a(href="").collection__item.collection__item--hide
+                    a(href="").collection__item.collection__item--hide
+                else if params.class != 'collection--build'
+                    a(href="").collection__item
+                        .collection__img
+                            div
+                                img(src="assets/images/collection__img3.png" alt="")
+                            span.collection__img-oval
+                        .collection__item-title Испанская фильтрация 2020 года
+                    a(href="").collection__item.collection__item--hide
+                    a(href="").collection__item.collection__item--hide
+                    a(href="").collection__item.collection__item--hide
+                    a(href="").collection__item.collection__item--hide
+            .collection-slider.desktop--hide
+                .swiper-container
+                    .swiper-wrapper
+                        if params.class == 'collection--build'
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img1.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Топ-10 лучших роботов-пылесосов
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img2.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Распродажа<br> химии для бассейна
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img1.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Топ-10 лучших роботов-пылесосов
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img2.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Распродажа<br> химии для бассейна
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img2.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Распродажа<br> химии для бассейна
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img2.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Распродажа<br> химии для бассейна
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img2.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Распродажа<br> химии для бассейна
+                        else if params.class != 'collection--build'
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img3.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Испанская фильтрация 2020 года
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img3.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Испанская фильтрация 2020 года
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img3.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Испанская фильтрация 2020 года
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img3.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Испанская фильтрация 2020 года
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img3.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Испанская фильтрация 2020 года
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img3.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Испанская фильтрация 2020 года
+                            .swiper-slide
+                                .collection__item
+                                    .collection__img
+                                        div
+                                            img(src="assets/images/collection__img3.png" alt="")
+                                        span.collection__img-oval
+                                    a(href="").collection__item-title Испанская фильтрация 2020 года

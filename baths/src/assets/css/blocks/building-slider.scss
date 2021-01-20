@@ -1,0 +1,169 @@
+.building-slider {
+    position: relative;
+
+    .center-wrap {
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: 1;
+
+        @media screen and (max-width:$large_mobile) {
+            border-radius: 0 0 4px 0;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 4;
+        padding: 3.5rem 0 7.5rem 5rem;
+
+        @media screen and (max-width:$large_mobile) {
+            padding: 3.5rem 0 7.5rem 2.8rem;
+        }
+
+    }
+
+    &__title {
+        font-family: Geometria;
+        font-weight: bold;
+        font-size: 3.2rem;
+        line-height: 113.5%;
+        color: #FFFFFF;
+        margin-bottom: 1rem;
+        max-width: 24.1rem;
+        width: 100%;
+    }
+
+    &__subtitle {
+        font-family: Geometria;
+        font-weight: normal;
+        font-size: 1.6rem;
+        line-height: 113.5%;
+        color: #FFFFFF;
+        margin-bottom: 3.5rem;
+        max-width: 29rem;
+        width: 100%;
+    }
+
+    .btn {
+        line-height: 4.1rem;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        color: #292929;
+        font-family: Geometria;
+        padding: 0 3.5rem;
+        border: none;
+        font-size: 1.6rem;
+
+        &:hover {
+            background-color: #4081FF;
+            color: #fff;
+        }
+    }
+
+
+    .swiper-slide {
+        position: relative;
+        padding: 3.2rem 1.5rem;
+
+        @media screen and (max-width:$large_tablet) {
+            padding: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(250, 250, 250, 0.35);
+            backdrop-filter: blur(39px);
+            z-index: 2;
+        }
+
+        .center-wrap {
+            position: relative;
+            max-width: 1200px;
+            padding: 0;
+            z-index: 3;
+
+            @media screen and (max-width:$large_tablet) {
+                max-width: 570px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-image: url("~img/building-slider__wave.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                max-width: 54rem;
+                width: 100%;
+                height: 100%;
+                z-index: 3;
+                top: 0;
+                left: 0;
+
+                @media screen and (max-width:$large_mobile) {
+                    width: calc(100% + 16rem);
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, rgba(0, 56, 165, 0.63) 0%, rgba(0, 56, 165, 0) 71.36%);
+                border-radius: 0.4rem;
+                z-index: 2;
+            }
+        }
+
+    }
+
+    .swiper-pagination {
+        top: calc(100% - 6.5rem);
+        z-index: 1;
+
+        @media screen and (max-width:$large_tablet) {
+            top: calc(100% - 3.5rem);
+
+        }
+
+        @media screen and (max-width:$large_mobile) {
+            left: 2.8rem;
+        }
+
+        left: 6.5rem;
+
+        &-bullet {
+            width: 0.9rem;
+            height: 0.9rem;
+            background: rgba(255, 255, 255, 0.6);
+            margin-right: 0.8rem;
+            transition: all 0.5s;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+
+            &-active {
+                width: 1.8rem;
+                background: #FFFFFF;
+                border-radius: 1rem;
+            }
+        }
+    }
+}

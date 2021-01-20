@@ -1,0 +1,174 @@
+.guarantee {
+    background: url('~img/guarantee_bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+
+    @media screen and (max-width:$large_mobile) {
+        background-position: center top 0rem;
+        padding-bottom: 0rem;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url('~img/guarantee_clouds.png');
+        background-repeat: no-repeat;
+        bottom: 0;
+        width: 100%;
+        height: 40rem;
+        z-index: 1;
+
+        @media screen and (max-width:$large_mobile) {
+            top: 13rem;
+            bottom: auto;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 14rem;
+        max-width: 67.3rem;
+        width: 100%;
+
+        @media screen and (max-width:$large_tablet) {
+            top: 11rem;
+            max-width: 26.3rem;
+        }
+
+        @media screen and (max-width:$large_mobile) {
+            background-image: url('~img/guarantee_bg--mobile.png');
+            background-repeat: no-repeat;
+            background-position: center top;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: center;
+        padding-top: 15rem;
+        padding-bottom: 30rem;
+
+        @media screen and (max-width:$large_tablet) {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 27rem;
+            padding-bottom: 0;
+        }
+    }
+
+    &__item {
+        max-width: 43.5rem;
+        width: 100%;
+        background: #FFFFFF;
+        box-shadow: 25px 16px 73px rgba(232, 190, 191, 0.2);
+        border-radius: 2rem;
+        padding: 3rem 2.3rem;
+        position: relative;
+        z-index: 1;
+
+        @media screen and (max-width:$large_tablet) {
+            padding: 1.5rem;
+            margin-bottom: 1.4rem;
+
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        @media screen and (max-width:$large_mobile) {
+            border-radius: 1.2rem;
+        }
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url('~img/guarantee_ellipse.png');
+            width: 7.5rem;
+            height: 7.5rem;
+            right: calc(100% - 6rem);
+            top: 6rem;
+            z-index: 1;
+
+            @media screen and (max-width:$large_tablet) {
+                width: 0;
+            }
+        }
+
+        &--left {
+            margin-right: 32.2rem;
+
+            @media screen and (max-width:$large_tablet) {
+                margin-right: 0;
+            }
+
+            &::before {
+                right: auto;
+                left: calc(100% - 6rem);
+            }
+        }
+
+        &-wrap {
+            background: #FFFFFF;
+            border: 1px solid rgba(217, 124, 125, 0.3);
+            box-shadow: 0px 0px 14px 1px rgba(232, 190, 191, 0.31);
+            border-radius: 2rem;
+            padding: 0 0 2.5rem 3.5rem;
+            position: relative;
+
+            @media screen and (max-width:$large_tablet) {
+                padding: 0 0 2rem 1.5rem;
+            }
+
+            @media screen and (max-width:$large_mobile) {
+                border-radius: 1.2rem;
+            }
+        }
+
+        &-img {
+            max-width: 30rem;
+            width: 100%;
+            margin-top: -3rem;
+
+            @media screen and (max-width:$large_tablet) {
+                max-width: 19rem;
+                margin-top: -2rem;
+            }
+
+            @media screen and (max-width:$large_mobile) {
+                margin-top: 0rem;
+            }
+        }
+
+        &-title {
+            font-weight: 600;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            color: #D16162;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        &-text {
+            font-weight: normal;
+            font-size: 1.4rem;
+            line-height: 146.9%;
+            color: #303030;
+            max-width: 31rem;
+            width: 100%;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

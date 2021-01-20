@@ -1,0 +1,122 @@
+.consultation {
+    padding: 12.5rem 0;
+    background-image: url('~img/consultation-clouds.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+
+    @media screen and (max-width:$large_tablet) {
+        padding: 8rem 0 7rem;
+    }
+
+    .btn {
+        padding: 0 6.9rem;
+
+        @media screen and (max-width:$large_tablet) {
+            line-height: 5.8rem;
+            font-size: 1.4rem;
+            padding: 0 5rem;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    &__img {
+        position: absolute;
+        right: 3rem;
+        top: calc(100% - 35.1rem);
+        max-width: 49.5rem;
+        width: 100%;
+        z-index: 2;
+        pointer-events: none;
+
+        @media screen and (max-width:$large_tablet) {
+
+            top: 1.4rem;
+            right: -6.5rem;
+        }
+
+        @media screen and (max-width:$large_mobile) {
+            top: calc(100% - 18.8rem);
+            right: -2rem;
+        }
+    }
+
+    &__fluff {
+        position: absolute;
+        right: calc(100% - 12rem);
+        top: calc(100% - 48rem);
+        max-width: 27.5rem;
+        width: 100%;
+        z-index: 2;
+
+        @media screen and (max-width:$large_mobile) {
+            top: calc(100% - 40.5rem);
+            max-width: 10rem;
+            width: 100%;
+            z-index: 2;
+            left: -2rem;
+            right: auto;
+        }
+    }
+
+    &__wrap {
+        max-width: 86.4rem;
+        width: 100%;
+        background: #FFFFFF;
+        margin: 0 auto;
+        box-shadow: 2px 0px 12px rgba(221, 221, 221, 0.41);
+        border-radius: 1.6rem;
+        padding: 1.2rem;
+        position: relative;
+    }
+
+    &__info {
+        padding: 4rem 0 4rem 4.5rem;
+        position: relative;
+        z-index: 1;
+
+        @media screen and (max-width:$large_tablet) {
+            padding: 2rem 1.7rem 12rem;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 111.4%;
+        letter-spacing: 0.005em;
+        background: linear-gradient(104.08deg, #D97C7D 30.82%, #E9BFC0 70.92%);
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-bottom: 1.4rem;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__text {
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        color: #303030;
+        margin-bottom: 3.7rem;
+        max-width: 23.8rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 2.6rem;
+
+        }
+
+        @media screen and (max-width:$large_mobile) {
+            text-align: center;
+        }
+    }
+}

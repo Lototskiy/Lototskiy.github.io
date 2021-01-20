@@ -1,0 +1,20 @@
+mixin card(params)
+    a(href="").card(class!=attributes.class)
+        .card__img
+            div
+                if src= params.src
+                    img(src= params.src alt="")
+                else
+                    img(src="assets/images/card-img.png" alt="")
+        .card__title #{params.title}
+        .card__text #{params.text}
+        if sale == params.sale
+            .card__sale -60%
+        else
+            .card__sale #{params.sale}
+        p.card__price 
+            span.card__price-new #{params.price_new}
+            span.card__price-old #{params.price_old}
+        .btn.btn--empty(onclick='show_popup("card")') Подробнее
+            span
+

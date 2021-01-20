@@ -1,0 +1,18 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Твой басейн';
+    - var pageClass = 'index-page';
+block header
+    +header({class:'header--index'})
+block sidebar
+    +sidebar({class:'sidebar--index',title:'Интернет-Магазин'})
+block content
+    include ../includes/main-screen
+    include ../includes/services
+    include ../includes/information
+    include ../includes/contact
+    +mobile-menu({class:'mobile-menu--index',title:'Интернет-Магазин'})
+    include ../includes/popup
+
+    

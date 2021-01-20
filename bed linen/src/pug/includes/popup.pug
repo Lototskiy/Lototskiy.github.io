@@ -1,0 +1,195 @@
+#call.popup-wrap
+    .popup
+        .popup__close(onclick="close_popup('call')")
+            .popup__close-cross
+                div
+                div
+        .popup-form
+            h2.popup-form__title Заказать<br class="desktop--hide"> обратный звонок
+            .popup-form__subtitle Заполните Ваши контактные данные в форме ниже
+            form.inputs(action='')
+                .inputs__wrap
+                    input.inputs__input(type='text' placeholder='Ваше имя')
+                .inputs__wrap
+                    input.inputs__input(type='tel' name='phone' placeholder='Ваш телефон')
+                .inputs__wrap
+                    button.btn.inputs__input Заказать звонок
+                        span
+
+            p.popup-form__descr Нажимая на кнопку, вы даете согласие на обработку персональных данных
+            .popup-form__img
+                div
+                    img(src="assets/images/popup-img.png" alt="")  
+
+
+#application.popup-wrap
+    .popup
+        .popup__close(onclick="close_popup('application')")
+            .popup__close-cross
+                div
+                div 
+        .popup-form
+            h2.popup-form__title Оставить заявку
+            .popup-form__subtitle Заполните Ваши контактные данные в форме ниже
+            form.inputs(action='')
+                .inputs__wrap
+                    input.inputs__input(type='text' placeholder='Ваше имя')
+                .inputs__wrap
+                    input.inputs__input(type='tel' name='phone' placeholder='Ваш телефон')
+                .inputs__wrap
+                    button.btn.inputs__input Отправить заявку
+                        span
+            p.popup-form__descr Нажимая на кнопку, вы даете согласие на обработку персональных данных
+            .popup-form__img
+                div
+                    img(src="assets/images/popup-img.png" alt="")
+
+#manager.popup-wrap
+    .popup
+        .popup__close(onclick="close_popup('manager')")
+            .popup__close-cross
+                div
+                div 
+        .popup-form
+            h2.popup-form__title Связаться с менеджером
+            .popup-form__subtitle Заполните Ваши контактные данные в форме ниже 
+            form.inputs(action='')
+                .inputs__wrap
+                    input.inputs__input(type='text' placeholder='Ваше имя')
+                .inputs__wrap
+                    input.inputs__input(type='tel' name='phone' placeholder='Ваш телефон')
+                .inputs__wrap
+                    button.btn.inputs__input Отправить заявку
+                        span
+            p.popup-form__descr Нажимая на кнопку, вы даете согласие на обработку персональных данных
+            .popup-form__img
+                div
+                    img(src="assets/images/popup-img.png" alt="")
+
+#question.popup-wrap
+    .popup
+        .popup__close(onclick="close_popup('question')")
+            .popup__close-cross
+                div
+                div 
+        .popup-form
+            .popup-form__wrap
+                h2.popup-form__title Задайте вопрос нашему специалисту
+                .popup-form__subtitle Заполните Ваши контактные данные в форме ниже
+                form.inputs.inputs--column(action='')
+                    .inputs__wrap
+                        input.inputs__input(type='text' placeholder='Ваше имя')
+                    .inputs__wrap
+                        input.inputs__input(type='tel' name='phone' placeholder='Ваш телефон')
+                    .inputs__wrap
+                        input.inputs__input(type='text' placeholder='Ваш вопрос')
+                    .inputs__wrap
+                        button.btn.inputs__input Задать вопрос
+                            span
+                p.popup-form__descr Нажимая на кнопку, вы даете согласие на обработку персональных данных
+                .popup-form__img.popup-form__img--big
+                    div
+                        img(src="assets/images/popup-img--big.png" alt="")
+#card.popup-wrap
+    .popup.popup--card
+        .popup__close(onclick="close_popup('card')")
+            .popup__close-cross
+                div
+                div 
+        .popup-form
+            .popup-form__wrap
+                .popup-form__img
+                    div
+                        img(src="assets/images/card-img.png" alt="")
+                    span.card__sale -60%
+                .popup-form__box
+                    .popup-form__title ЗЕМФИРА
+                    .popup-form__price
+                        .popup-form__price-new 365 грн
+                        .popup-form__price-old 600 грн
+                    .popup-form__select
+                        .popup-form__select-title Размер белья
+                        .select.select--first
+                            .select__value
+                                div
+                                    | Выберите размер белья
+                            .select__variants
+                                label.select__variant.select__variant--active(for='')
+                                    span Полуторный
+                                label.select__variant(for='')
+                                    span Двуспальный
+                                label.select__variant(for='')
+                                    span Евростандарт
+                                label.select__variant(for='')
+                                    span Семейный
+                    .popup-form__select
+                        .popup-form__select-title Размер наволочек 
+                        .select
+                            .select__value
+                                div
+                                    | Выберите размер наволочки
+                            .select__variants
+                                label.select__variant.select__variant--active(for='')
+                                    span 70Х70 см
+                                label.select__variant(for='')
+                                    span 50Х70 см
+                    .btn(onclick="close_popup('card');show_popup('application')") Оформить заявку
+                        span
+
+            .popup-form__wrap.popup-form__wrap--bottom
+                .popup-form__descr
+                    .popup-form__descr-title Ткань - БЯЗЬ (82% хлопок<br class='desktop--hide'> 18% полиэстер)
+                    p Постельное белье из бязи - сдержанность, элегантность и образцовость. Традиционная ткань текстиля, дарит уют и заботу во время сна!
+                    p В составе плетения идеальное соотношение хлопка и полиэстера 88/12. Такая формула предотвращает усадку, деформацию и выцветание ткани
+                    p Постельное белье из Бязи комфортное, мягкое и долговечное. Не требующая особого ухода гипоаллергенная ткань подходит для всех типов кожи.
+                .popup-form__size
+                    .popup-form__size-title Размеры постельного белья
+                    .popup-form__size-row
+                        .popup-form__size-set Комплект полуторный
+                        .popup-form__size-name
+                            p Пододеяльник 
+                            span 150x220 см
+                        .popup-form__size-name
+                            p Простынь
+                            span 150x220 см
+                        .popup-form__size-name
+                            p Наволочки
+                            span.popup-form__size-quantity (2 шт.)
+                            span 70x70 см или 50x70 см
+                    .popup-form__size-row
+                        .popup-form__size-set Комплект двуспальный
+                        .popup-form__size-name
+                            p Пододеяльник 
+                            span 180x220 см
+                        .popup-form__size-name
+                            p Простынь
+                            span 200x220 см
+                        .popup-form__size-name
+                            p Наволочки
+                            span.popup-form__size-quantity (2 шт.)
+                            span 70x70 см или 50x70 см
+                    .popup-form__size-row
+                        .popup-form__size-set Комплект евростандарт
+                        .popup-form__size-name
+                            p Пододеяльник 
+                            span 200x220 см
+                        .popup-form__size-name
+                            p Простынь
+                            span 220x220 см
+                        .popup-form__size-name
+                            p Наволочки
+                            span.popup-form__size-quantity (2 шт.)
+                            span 70x70 см или 50x70 см
+                    .popup-form__size-row
+                        .popup-form__size-set Комплект семейный
+                        .popup-form__size-name
+                            p Пододеяльник
+                            span.popup-form__size-quantity (2 шт.)
+                            span 150x220 см
+                        .popup-form__size-name
+                            p Простынь
+                            span 220x220 см
+                        .popup-form__size-name
+                            p Наволочки
+                            span.popup-form__size-quantity (2 шт.)
+                            span 70x70 см или 50x70 см

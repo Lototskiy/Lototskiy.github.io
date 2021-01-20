@@ -1,0 +1,176 @@
+.popup-wrap {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(217, 124, 125, 0.6);
+	z-index: 999;
+	display: none;
+
+
+	&--active {
+		display: flex;
+	}
+
+	opacity: 0;
+	transition: opacity 0.5s;
+
+	&--menu {
+		touch-action: none;
+
+	}
+
+	&--opacity1 {
+		opacity: 1;
+	}
+
+	.popup {
+		background: #FFFFFF;
+		box-shadow: 2px 0px 12px rgba(221, 221, 221, 0.41);
+		border-radius: 1.6rem;
+		box-sizing: border-box;
+		max-width: calc(100% - 30px);
+		width: 113.5rem;
+		position: relative;
+		padding: 1.5rem;
+		justify-content: space-between;
+		max-height: 95%;
+		overflow: auto;
+		opacity: 0;
+		top: -15%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: opacity 0.6s, top 0.6s;
+
+
+		&::-webkit-scrollbar-thumb {
+			background: linear-gradient(104.08deg, #D97C7D 30.82%, #E9BFC0 70.92%) !important;
+		}
+
+		@media screen and (max-width:$large_tablet) {
+			width: 32rem;
+		}
+
+		&--card {
+			background: #FFFFFF;
+			box-shadow: 25px 16px 73px rgba(232, 190, 191, 0.2);
+			border-radius: 0.6rem;
+			padding: 0;
+
+			.btn {
+				padding: 0 5.4rem;
+				margin-top: auto;
+
+				@media screen and (max-width:$large_mobile) {
+					padding: 0 2.4rem;
+				}
+			}
+
+			.popup__close {
+				background: rgba(217, 124, 125, 0.2);
+
+				&-cross {
+					div {
+						background-color: #F9A7A8;
+					}
+				}
+
+			}
+
+		}
+
+		&--menu {
+			box-shadow: none;
+			background: transparent;
+			padding: 0px;
+			flex-grow: 1;
+			height: 100%;
+			width: 100%;
+			max-height: 100%;
+			display: flex;
+		}
+
+		&--opacity1 {
+			opacity: 1;
+			top: 0px;
+		}
+
+		&::-webkit-scrollbar {
+			width: 5px;
+		}
+
+		&::-webkit-scrollbar-track {
+			border-radius: 100px;
+			background: #5F6061;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 100px;
+
+		}
+
+		&::-webkit-scrollbar-thumb:hover {
+			background: orange;
+		}
+
+		&__close {
+			position: absolute;
+			top: 2.5rem;
+			right: 2.5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			transition: all 0.3s;
+			opacity: 1;
+			width: 4.8rem;
+			height: 4.8rem;
+			background: rgba(255, 255, 255, 0.2);
+			border-radius: 50%;
+
+			@media screen and (max-width:$large_tablet) {
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+			}
+
+			&-cross {
+				width: 3rem;
+				height: 3rem;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				div {
+					transition: background 0.2s;
+					width: 100%;
+					height: 3px;
+					border-radius: 25%;
+					position: absolute;
+					background: #ffffff;
+
+					&:nth-child(1) {
+						transform: rotate(45deg);
+					}
+
+					&:nth-child(2) {
+						transform: rotate(-45deg);
+					}
+				}
+			}
+
+			&:hover {
+				opacity: 0.3;
+			}
+
+
+		}
+	}
+}

@@ -1,0 +1,142 @@
+.mobile-menu {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	z-index: 102;
+	overflow: hidden;
+	background: rgba(111, 111, 111, 0.75);
+	display: none;
+	transition: all 0.5s;
+	opacity: 0;
+	touch-action: none;
+
+	&--active {
+		display: flex;
+	}
+
+	&--opacity0 {
+		opacity: 0;
+	}
+
+	&--opacity1 {
+		opacity: 1;
+	}
+
+	&__wrap {
+		background: #fff;
+		width: 32rem;
+		height: 100%;
+		position: absolute;
+		left: -32rem;
+		transition: left 0.5s;
+		display: flex;
+		flex-direction: column;
+		padding: 2rem 2rem 4rem;
+
+		&--left0 {
+			left: 0px;
+		}
+
+		&--left300 {
+			left: -300px;
+		}
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 3rem;
+	}
+
+	&__title {
+		font-weight: normal;
+		font-size: 2rem;
+		line-height: 111.4%;
+		letter-spacing: 0.005em;
+		background: linear-gradient(104.08deg, #D97C7D 30.82%, #E9BFC0 70.92%);
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+
+	&__phones {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 3rem;
+		margin-top: auto;
+	}
+
+	&__phone {
+		width: 4.4rem;
+		height: 4.4rem;
+		background: linear-gradient(104.08deg, #D97C7D 30.82%, #E9BFC0 70.92%);
+		box-shadow: 0px 0px 20px 15px rgba(232, 190, 191, 0.5);
+		border-radius: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 1.7rem;
+	}
+
+	&__tel {
+		font-weight: 500;
+		font-size: 1.6rem;
+		line-height: 2rem;
+		color: #4F4F4F;
+	}
+
+	&__call {
+		text-align: center;
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 1.7rem;
+		text-decoration-line: underline;
+		color: #D16162;
+		cursor: pointer;
+	}
+
+	&__act {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 4.8rem;
+		height: 4.8rem;
+		background: rgba(217, 124, 125, 0.2);
+		border-radius: 50%;
+
+	}
+
+	&__nav {
+		position: relative;
+
+		&-list {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			list-style: none;
+		}
+
+		&-item {
+			margin-bottom: 3rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&-link {
+			text-decoration: none;
+			font-size: 1.6rem;
+			padding: 0px 15px;
+			display: block;
+			position: relative;
+			line-height: 111.4%;
+			letter-spacing: 0.005em;
+			color: #303030;
+		}
+	}
+}

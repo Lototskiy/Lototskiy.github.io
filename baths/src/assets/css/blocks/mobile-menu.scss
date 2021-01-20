@@ -1,0 +1,147 @@
+.mobile-menu {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	z-index: 102;
+	overflow: hidden;
+	background: rgba(64, 129, 255, 0.55);
+	display: none;
+	transition: all 0.5s;
+	opacity: 0;
+	touch-action: none;
+
+	.sidebar__nav-link {
+		color: #000;
+
+		&:hover {
+			color: #fff;
+		}
+
+	}
+
+	&--build,
+	&--catalog,
+	&--product {
+		.sidebar__nav-item {
+			padding: 0 3rem;
+		}
+
+		.sidebar__bottom-shop {
+			font-size: 1.4rem;
+		}
+
+		.sidebar__nav-link {
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 1px solid #535A65;
+			padding: 1.8rem 0;
+			color: #535A65;
+			font-size: 1.6rem;
+
+			&:hover {
+				background-color: transparent;
+				color: #000;
+
+				svg {
+					fill: #000;
+				}
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0px;
+				bottom: -1px;
+				width: 0%;
+				height: 2px;
+				background: #000;
+				opacity: 0;
+				transition: all 0.5s;
+			}
+
+			&:hover::before {
+				width: 100%;
+				opacity: 1;
+			}
+
+			svg {
+				width: 0.7rem;
+				margin-right: 0;
+				fill: #535A65;
+				transition: all 0.5s;
+
+				.mobile-menu & {
+					width: 0.5rem;
+				}
+			}
+		}
+	}
+
+	&--active {
+		display: flex;
+	}
+
+	&--opacity0 {
+		opacity: 0;
+	}
+
+	&--opacity1 {
+		opacity: 1;
+	}
+
+	&__list {
+		justify-content: space-between;
+		flex-direction: column;
+		display: flex;
+		height: 100vh;
+	}
+
+	&__wrap {
+		background: #fff;
+		width: 27rem;
+		height: 100%;
+		position: absolute;
+		left: -30rem;
+		transition: left 0.5s;
+		display: flex;
+		flex-direction: column;
+		overflow-y: auto;
+		&::-webkit-scrollbar {
+			-webkit-appearance: none;
+			width: 5px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 2px;
+			background-color: rgba(64, 129, 255, 0.5);
+		}
+
+		&--left0 {
+			left: 0px;
+		}
+
+		&--left300 {
+			left: -30rem;
+		}
+	}
+
+	&__header {
+		height: 5rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__act {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 5rem;
+		border-left: 1px solid rgba(87, 87, 87, 0.1);
+	}
+}

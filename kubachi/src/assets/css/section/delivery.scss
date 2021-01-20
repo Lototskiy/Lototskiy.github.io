@@ -1,0 +1,93 @@
+.delivery {
+    padding-top: 14rem;
+    padding-bottom: 7.4rem;
+    background-color: #F2F2F2;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-top: 9rem;
+    }
+
+    &__title {
+        text-align: left;
+        margin-bottom: 3.2rem;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 4.5rem;
+        }
+
+        &::before {
+            width: 0;
+            height: 0;
+        }
+    }
+
+    &__list {
+        margin-bottom: 10rem;
+
+        .delivery__item {
+            padding-left: 1.2rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 1.5rem;
+                left: 0;
+                width: 0.4rem;
+                height: 1px;
+                background-color: #757575;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__info {
+        margin-left: auto;
+        max-width: 88.4rem;
+        width: 100%;
+        margin-bottom: 12rem;
+
+        &-title {
+            font-weight: normal;
+            font-size: 2rem;
+            line-height: 155%;
+            margin-bottom: 4rem;
+        }
+
+        &--payment {
+            .delivery__list {
+                margin-bottom: 3rem;
+            }
+        }
+
+    }
+
+    &__item {
+        color: $color-secondary;
+        font-size: 1.9rem;
+        line-height: 163%;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        font-size: 1.9rem;
+        line-height: 163%;
+    }
+
+    &__form {
+        margin-top: 8rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-top: 6rem;
+        }
+    }
+}

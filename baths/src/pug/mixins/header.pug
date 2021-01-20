@@ -1,0 +1,71 @@
+mixin header(params)
+    header.header.anchors(class=params.class)
+        .header__wrap
+            .header__burger.desktop--hide
+                div
+                div
+                div
+            if params.class == 'header--index'
+                a(href="main-screen").header__logo
+                    img(src='assets/images/logo.png' alt='').mobile--hide
+                    p Твой Бассейн
+            else if params.class != 'header--index'
+                a(href="index.html").header__logo.mobile--hide
+                    img(src="assets/images/logo1.png" alt="")
+                a(href="index.html").header__logo.desktop--hide
+                    p Твой Бассейн
+            .header__points.desktop--hide
+                svg(viewBox='0 0 16 4' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M7.62426 0C8.52132 0 9.24852 0.727207 9.24852 1.62426C9.24852 2.52132 8.52132 3.24852 7.62426 3.24852C6.72721 3.24852 6 2.52132 6 1.62426C6 0.727207 6.72721 0 7.62426 0ZM13.6243 0C14.5213 0 15.2485 0.727207 15.2485 1.62426C15.2485 2.52132 14.5213 3.24852 13.6243 3.24852C12.7272 3.24852 12 2.52132 12 1.62426C12 0.727207 12.7272 0 13.6243 0ZM1.62426 0C2.52132 0 3.24852 0.727207 3.24852 1.62426C3.24852 2.52132 2.52132 3.24852 1.62426 3.24852C0.727207 3.24852 0 2.52132 0 1.62426C0 0.727207 0.727207 0 1.62426 0Z')
+            a(href="tel:+78129707171" data-anchors="false").header__phone.desktop--hide
+                svg(viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M17 12.5C15.8 12.5 14.6 12.3 13.4 11.9C13.1 11.8 12.7 11.9 12.4 12.1L10.2 14.3C7.40004 12.9 5.1 10.5 3.6 7.7L5.8 5.5C6.1 5.2 6.2 4.8 6 4.5C5.7 3.4 5.5 2.2 5.5 1C5.5 0.4 5.1 0 4.5 0H1C0.4 0 0 0.4 0 1C0 10.4 7.6 18 17 18C17.6 18 18 17.6 18 17V13.5C18 12.9 17.6 12.5 17 12.5ZM16 9H18C18 4 14 0 9 0V2C12.9 2 16 5.1 16 9ZM12 9H14C14 6.2 11.8 4 9 4V6C10.7 6 12 7.3 12 9Z')
+            .header__basket.desktop--hide(onclick='show_popup("basket")')
+                svg(viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M5.4 14.4C4.41 14.4 3.6 15.21 3.6 16.2C3.6 17.19 4.41 18 5.4 18C6.39 18 7.2 17.19 7.2 16.2C7.2 15.21 6.39 14.4 5.4 14.4ZM0 0V1.8H1.8L5.04 8.64L3.78 10.8C3.69 11.07 3.6 11.43 3.6 11.7C3.6 12.69 4.41 13.5 5.4 13.5H16.2V11.7H5.76C5.67 11.7 5.58 11.61 5.58 11.52V11.43L6.39 9.89997H13.05C13.77 9.89997 14.31 9.53996 14.58 8.99996L17.82 3.15C18 2.97 18 2.88 18 2.7C18 2.16 17.64 1.8 17.1 1.8H3.78L2.97 0H0ZM14.4 14.4C13.41 14.4 12.6 15.21 12.6 16.2C12.6 17.19 13.41 18 14.4 18C15.39 18 16.2 17.19 16.2 16.2C16.2 15.21 15.39 14.4 14.4 14.4Z')
+            
+            .header__content.mobile--hide
+                .center-wrap
+                    .header__form
+                        form.search(action="")
+                            input.search__input(type='search' placeholder='Я ищу ...')
+                            button.btn.btn--blue.search__btn(type='submit') Найти
+                    .header__select.mobile--hide
+                        .select-phone
+                            .select-phone__value
+                                | +7 (812) 970-71-71
+                                svg(viewBox='0 0 6 4' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M2.86243 4L0.643236 0.25L5.08162 0.25L2.86243 4Z')
+                            .select-phone__variants
+                                .select-phone__variant
+                                    a(href="tel:78129707171" data-anchors="false") +7 (812) 970-71-71
+                                    span Главный офис
+                                .select-phone__variant
+                                    a(href="tel:78127167711" data-anchors="false") +7 (812) 716-77-11
+                                    span Бухгалтерия
+                                .select-phone__btn
+                                    .btn.btn--blue Заказать звонок
+                        if params.class == 'header--product'
+                            a(href="").header__select-link Заказать звонок
+                    .header__right
+                        p.header__city Санкт-Петербург
+                            svg(viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(fill-rule='evenodd' clip-rule='evenodd' d='M0 5.14286L5.14286 6.85714L6.85714 12L12 0L0 5.14286Z')
+                        svg.header__price(width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(d='M4.64 8.336V9.232H8.096V10.56H4.64V12H2.032V10.56H0.48V9.232H2.032V0.799999H6.88C8.40533 0.799999 9.59467 1.12 10.448 1.76C11.312 2.4 11.744 3.33867 11.744 4.576C11.744 5.80267 11.312 6.736 10.448 7.376C9.59467 8.016 8.40533 8.336 6.88 8.336H4.64ZM9.12 4.592C9.12 4.048 8.92267 3.632 8.528 3.344C8.144 3.056 7.58933 2.912 6.864 2.912H4.64V6.304H6.864C7.58933 6.304 8.144 6.16 8.528 5.872C8.92267 5.57333 9.12 5.14667 9.12 4.592Z')
+                        if params.class != 'header--index'
+                            p.header__favorites.comparisons
+                                svg(viewBox='0 0 15 13' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M7.11941 1.92959L7.50008 2.37662L7.88076 1.92959C8.56104 1.13072 9.60647 0.625 10.6876 0.625C12.5931 0.625 14.0834 2.11531 14.0834 4.02083C14.0834 5.19534 13.5597 6.30011 12.5362 7.55141C11.507 8.80972 10.0253 10.1544 8.19129 11.8175L8.19058 11.8182L7.4988 12.4479L6.80926 11.825L6.80834 11.8241C4.97463 10.1578 3.4932 8.81153 2.46404 7.55242C1.44045 6.30014 0.916748 5.19535 0.916748 4.02083C0.916748 2.11531 2.40706 0.625 4.31258 0.625C5.39369 0.625 6.43912 1.13072 7.11941 1.92959Z')
+                                | Избранное
+                        else
+                        if params.class != 'header--index'
+                            p.comparisons
+                                svg(viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    path(fill-rule='evenodd' clip-rule='evenodd' d='M0.125 2.25004V0.833374H12.875V2.25004H0.125ZM0.125 7.20837V5.79171H12.875V7.20837H0.125ZM0.125 12.1667V10.75H5.79167V12.1667H0.125ZM12.875 10.75V12.1667H11.1042V13.9375H9.6875V12.1667H7.91667V10.75H9.6875V8.97921H11.1042V10.75H12.875Z')
+                                | Сравнение
+
+                        if params.class != 'header--index'
+                            .header__basket(onclick='show_popup("basket")')
+                                svg(viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M5.4 14.4C4.41 14.4 3.6 15.21 3.6 16.2C3.6 17.19 4.41 18 5.4 18C6.39 18 7.2 17.19 7.2 16.2C7.2 15.21 6.39 14.4 5.4 14.4ZM0 0V1.8H1.8L5.04 8.64L3.78 10.8C3.69 11.07 3.6 11.43 3.6 11.7C3.6 12.69 4.41 13.5 5.4 13.5H16.2V11.7H5.76C5.67 11.7 5.58 11.61 5.58 11.52V11.43L6.39 9.89997H13.05C13.77 9.89997 14.31 9.53996 14.58 8.99996L17.82 3.15C18 2.97 18 2.88 18 2.7C18 2.16 17.64 1.8 17.1 1.8H3.78L2.97 0H0ZM14.4 14.4C13.41 14.4 12.6 15.21 12.6 16.2C12.6 17.19 13.41 18 14.4 18C15.39 18 16.2 17.19 16.2 16.2C16.2 15.21 15.39 14.4 14.4 14.4Z')

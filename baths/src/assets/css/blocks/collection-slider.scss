@@ -1,0 +1,13 @@
+@import "../media";
+
+.collection-slider {
+    .collection__item {
+        width: 100%;
+        background-color: inherit;
+        padding: 1.5rem 0.5rem 0;
+    }
+
+    @media screen and (max-width:$large_mobile) {
+        margin-right: -15px;
+    }
+}

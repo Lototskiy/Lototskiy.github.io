@@ -1,0 +1,22 @@
+.reviews {
+    background-image: url('~img/reviews-slider__bg.png');
+    background-repeat: no-repeat;
+    background-position: center top -48rem;
+    padding-top: 7rem;
+
+    @media screen and (max-width:$large_mobile) {
+        background-position: center top -36rem;
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 2.6rem;
+        }
+
+        @media screen and (max-width:$large_mobile) {
+            margin-bottom: 0.6rem;
+        }
+    }
+}

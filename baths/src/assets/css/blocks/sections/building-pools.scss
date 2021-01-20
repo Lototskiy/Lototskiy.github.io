@@ -1,0 +1,20 @@
+.building-pools {
+    position: relative;
+    @media screen and (max-width:$large_tablet) {
+        padding: 0;
+    }
+
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: 1;
+
+        @media screen and (max-width:$large_mobile) {
+            display: none;
+        }
+    }
+}

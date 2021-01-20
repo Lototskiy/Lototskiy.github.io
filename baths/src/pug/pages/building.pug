@@ -1,0 +1,18 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Строительство бассейнов';
+    - var pageClass = 'building-page';
+block header
+    +header({class:'header--build'})
+block sidebar
+    +sidebar({class:'sidebar--build',title:'Строительство бассейнов'})
+block content
+    include ../includes/building-pools
+    include ../includes/history
+    include ../includes/popular-categories
+    include ../includes/best-offers
+    +collection({class:'collection--build'})
+    include ../includes/contact
+    +mobile-menu({class:'mobile-menu--build',title:'Строительство бассейнов'})
+    include ../includes/popup

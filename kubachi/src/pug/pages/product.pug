@@ -1,0 +1,14 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Kubachi-товар';
+    - var pageClass = 'product-page';
+
+block content
+    +main-screen({class:'main-screen--product'})
+    include ../includes/product
+    +reviews-video({class:'reviews-video--product'})
+    include ../includes/composition
+
+
+//- block script

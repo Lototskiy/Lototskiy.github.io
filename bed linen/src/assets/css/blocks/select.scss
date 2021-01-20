@@ -1,0 +1,110 @@
+.select {
+    max-width: 35.8rem;
+    width: 100%;
+    font-size: 1.4rem;
+    position: relative;
+    user-select: none;
+    display: inline-block;
+    z-index: 4;
+
+    &--first {
+        z-index: 5;
+    }
+
+    &__down {
+        margin-right: 3.3rem;
+        fill: #4081FF;
+    }
+
+
+
+    &--active {
+
+        // .select__value {
+        //     z-index: 4;
+        // }
+
+        .select__variants {
+            display: flex;
+        }
+
+        .select__value::before {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__value {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 21px rgba(233, 233, 233, 0.51);
+        border-radius: 6rem;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 7rem;
+        color: rgba(209, 97, 98, 0.4);
+        padding-left: 3.3rem;
+        padding-right: 6.3rem;
+        cursor: pointer;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        transition: all .5s;
+        position: relative;
+        // z-index: 2;
+        z-index: 4;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('~img/select__arrow.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 1rem;
+            height: 0.5rem;
+            right: 3.3rem;
+            transition: all 0.5s;
+        }
+
+        >div {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__variants {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(237, 237, 237, 0.25);
+        border-radius: 6rem 6rem 2rem 2rem;
+        transform: translateY(-7rem);
+        padding-top: 8rem;
+        position: absolute;
+        // z-index: 3;
+        top: 100%;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        overflow: auto;
+        padding-left: 3.3rem;
+    }
+
+    &__variant {
+        padding: 1rem 0;
+        display: block;
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.5s;
+        position: relative;
+
+        span {
+            color: #727272;
+            transition: all .5s;
+        }
+
+        // &:hover {
+        //     border-color: #4081FF;
+
+        //     span {
+        //         color: #000;
+        //     }
+        // }
+    }
+}
