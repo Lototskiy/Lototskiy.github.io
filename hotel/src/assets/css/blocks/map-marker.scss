@@ -1,0 +1,80 @@
+.map-marker {
+    position: absolute;
+    top: 16.6rem;
+    left: 116.8rem;
+    background-color: $green;
+    display: flex;
+    border-radius: 0.8rem;
+    padding: 1.5rem 2rem 0 2.4rem;
+
+    @media screen and (max-width:$large_tablet) {
+        top: 12%;
+        left: 60%;
+        padding: 0.6rem 1rem 0 1rem;
+        align-items: center;
+        border-radius: 0.3rem;
+    }
+
+    @media screen and (max-width:$large_mobile) {
+        top: 5.6rem;
+        left: 19.5rem;
+    }
+
+    &--small {
+        top: 41.1rem;
+        left: 71.5rem;
+
+        .map-marker__text {
+            max-width: 10.2rem;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: calc(100% - 2.8rem);
+        left: 1.8rem;
+        width: 4rem;
+        height: 4rem;
+        background-color: $green;
+        transform: rotate(45deg);
+        border-radius: 0.4rem;
+
+        @media screen and (max-width:$large_tablet) {
+            width: 1.6rem;
+            height: 1.6rem;
+            top: calc(100% - 1rem);
+            left: 0.9rem;
+        }
+    }
+
+    svg {
+        fill: $white;
+        width: 2.8rem;
+        margin-right: 1.2rem;
+        position: relative;
+        z-index: 1;
+
+        @media screen and (max-width:$large_tablet) {
+            width: 1.2rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__text {
+        margin-top: 0.7rem;
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 119.4%;
+        color: $white;
+        text-transform: uppercase;
+        max-width: 16rem;
+        font-family: $fontP;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 0.8rem;
+            max-width: 6rem;
+            margin-top: 0;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+extends ../layout/main
+
+block variables
+    - var title = 'АДАЖИО НА ЖУКОВСКОГО';
+    - var pageClass = 'services-page';
+
+block content
+    +main-screen({class:'main-screen--services'})
+
+    include ../includes/invitation
+    include ../includes/rooms
+    include ../includes/availability
+    include ../includes/reviews
+    include ../includes/contact
+
+
+//- block script

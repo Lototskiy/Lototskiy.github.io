@@ -1,0 +1,37 @@
+.reviews {
+    background-color: #F8F8FA;
+    padding: 7.9rem 0 11rem;
+    position: relative;
+
+    @media screen and (max-width:$large_tablet) {
+        padding: 4.5rem 0 5rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url('~img/reviews-before.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+
+        @media screen and (max-width:$large_tablet) {
+            background-size: cover;
+        }
+
+        @media screen and (max-width:$large_mobile) {
+            width: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 4rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 1.9rem;
+        }
+    }
+}

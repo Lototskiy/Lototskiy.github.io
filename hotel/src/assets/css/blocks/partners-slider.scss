@@ -1,0 +1,12 @@
+.partners-slider {
+    position: relative;
+    padding-left: calc((100% - 600px)/2 + 15px);
+
+    @media screen and (max-width:$large_mobile) {
+        padding-left: 15px;
+    }
+
+    .swiper-container {
+        padding-right: 28%;
+    }
+}

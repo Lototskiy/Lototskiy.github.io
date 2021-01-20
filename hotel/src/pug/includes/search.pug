@@ -1,0 +1,28 @@
+section.search
+    .center-wrap
+        .simple-title.search__title.desktop--hide Бронирование
+        .search__wrap
+            .search__form(autocomplete='off')
+                form.inputs(action='')#search__form
+                    .inputs__select
+                        .select__title Объект размещения
+                        .select
+                            .select__value
+                                div
+                                    span Любой
+                            .select__variants
+                                label.select__variant.select__variant--active(for='')
+                                    span Любой
+                                label.select__variant(for='')
+                                    span 1
+                                label.select__variant(for='')
+                                    span 2
+                    .inputs__field-wrap
+                        label.inputs__label(for='date1') Заезд
+                        input.inputs__field(type='date' name='date1' value="2018-07-22")
+                    .inputs__field-wrap
+                        label.inputs__label(for='date2') Выезд
+                        input.inputs__field(type='date' name='date2' value="2018-07-22")
+                    .inputs__field-wrap
+                        button.btn.inputs__btn(type='submit' form='search__form') Найти
+            include invitation

@@ -1,0 +1,49 @@
+.availability {
+    background-image: url('~img/availability-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6.7rem 0;
+
+    @media screen and (max-width:$large_tablet) {
+        padding: 4.5rem 0;
+    }
+
+    &__title {
+        margin-bottom: 5.7rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: calc((100% - 9.2rem * 5) / 6);
+
+        @media screen and (max-width:$large_tablet) {
+            width: 100%;
+            text-align: center;
+        }
+
+        &-icon {
+            margin-bottom: 1.9rem;
+        }
+
+        &-text {
+            font-family: $fontM;
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 113.9%;
+            color: $white;
+            max-width: 15rem;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+mixin main-screen(params)
+    if params.class == 'main-screen--index'
+        section.main-screen#main-screen(class=params.class)
+            .main-screen__img
+                div
+                    img(src="assets/images/main-screen__img.png" alt="")
+    else
+        section.main-screen#main-screen(class=params.class)
+            .center-wrap
+                .main-screen__wrap
+                    .main-screen__info
+                        .main-screen__title АДАЖИО НА ЖУКОВСКОГО
+                        .main-screen__subtitle ул. Жуковского, д.41
+                    .main-screen__btn
+                        .btn Забронировать
+                    .main-screen__price
+                        a(href="") Прайс-лист
+                    a(href="").main-screen__link.main-screen__link--home На главную
+                        svg(viewBox='0 0 148 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(d='M0.646454 3.64645C0.451187 3.84171 0.451187 4.15829 0.646454 4.35355L3.82843 7.53553C4.0237 7.7308 4.34027 7.7308 4.53554 7.53553C4.73079 7.34027 4.73079 7.02369 4.53554 6.82843L1.70711 4L4.53554 1.17157C4.73079 0.976311 4.73079 0.659728 4.53554 0.464466C4.34027 0.269204 4.0237 0.269204 3.82843 0.464466L0.646454 3.64645ZM148 3.5L1 3.5V4.5L148 4.5V3.5Z')
+                    a(href="").main-screen__link Адажио Star.5
+                        svg(viewBox='0 0 175 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(d='M174.354 4.35357C174.549 4.15831 174.549 3.84172 174.354 3.64646L171.172 0.464481C170.976 0.269219 170.66 0.269219 170.464 0.464481C170.269 0.659743 170.269 0.976326 170.464 1.17159L173.293 4.00002L170.464 6.82844C170.269 7.0237 170.269 7.34029 170.464 7.53555C170.66 7.73081 170.976 7.73081 171.172 7.53555L174.354 4.35357ZM-4.37114e-08 4.5L174 4.50002L174 3.50002L4.37114e-08 3.5L-4.37114e-08 4.5Z')

@@ -1,0 +1,197 @@
+.header {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	opacity: 0;
+	z-index: 2;
+	animation: header-opacity 1s;
+	animation-fill-mode: forwards !important;
+	background-color: #F8F8FA;
+	padding: 0.8rem 0;
+
+	@media screen and (max-width:$large_tablet) {
+		padding: 0;
+	}
+
+	&__wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+
+		@media screen and (max-width:$large_tablet) {
+			padding-bottom: 1rem;
+		}
+
+	}
+
+	&--fixed {
+		position: fixed;
+		opacity: 1;
+		width: 100%;
+		top: 0px;
+		left: 0px;
+		background-color: #F8F8FA;
+		box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+		overflow: hidden;
+		height: 0px;
+		animation: header-height 0.5s !important;
+		animation-fill-mode: forwards !important;
+		padding: 0px;
+		z-index: 98;
+		display: flex;
+		align-items: center;
+
+		.header__logo {
+			max-width: 12rem;
+		}
+
+		.header__img {
+			max-width: 20rem;
+		}
+	}
+
+	&--height0 {
+		height: 72px;
+		animation: header-height0 0.5s !important;
+
+		@media screen and (max-width: 1100px) {
+			height: 60px;
+		}
+	}
+
+
+	@keyframes header-height {
+		100% {
+			height: 72px;
+		}
+	}
+
+	@media screen and (max-width: 1100px) {
+		@keyframes header-height {
+			100% {
+				height: 60px;
+			}
+		}
+	}
+
+
+	@keyframes header-height0 {
+		100% {
+			height: 0px;
+		}
+	}
+
+
+	@keyframes header-opacity {
+		100% {
+			opacity: 1;
+		}
+	}
+
+	&__logo {
+		max-width: 19.2rem;
+		width: 100%;
+
+		@media screen and (max-width:$large_tablet) {
+			max-width: 12.5rem;
+			margin-right: 1.5rem;
+		}
+
+		>div {
+			position: relative;
+			padding-bottom: 51.04%;
+
+			img {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+	}
+
+	&__img {
+		max-width: 30.5rem;
+		width: 100%;
+
+		@media screen and (max-width:$large_tablet) {
+			max-width: 21.3rem;
+		}
+
+		>div {
+			position: relative;
+			padding-bottom: 18.36%;
+
+			img {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+	}
+
+	&__phone {
+		font-weight: 600;
+		font-size: 1.8rem;
+		line-height: 22/18*1;
+		color: $black;
+		display: flex;
+		align-items: center;
+		font-family: $fontM;
+
+		a {
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				width: 0%;
+				height: 2px;
+				background: $black;
+				opacity: 0;
+				transition: all 0.5s;
+			}
+
+			&:hover::before {
+				width: 100%;
+				opacity: 1;
+			}
+		}
+
+
+		svg {
+			fill: $black;
+			width: 1.1rem;
+			margin-right: 0.8rem;
+		}
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+
+
+		@media screen and (max-width:$large_tablet) {
+			width: 100%;
+		}
+	}
+
+	&__bottom {
+		background-color: $white;
+		padding: 1rem 0;
+
+		&-wrap {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}

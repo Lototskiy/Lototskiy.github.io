@@ -1,0 +1,217 @@
+.main-screen {
+    width: 100%;
+    padding-top: 11.2rem;
+    text-align: center;
+
+    .btn {
+        border-radius: 0.3rem;
+        text-transform: capitalize;
+
+        @media screen and (max-width:$large_tablet) {
+            text-transform: uppercase;
+        }
+    }
+
+    &__wrap {
+        position: relative;
+        padding: 14.7rem 0 6.7rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-top: 11.5rem;
+            padding: 5.5rem 0 13.2rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+
+        >div {
+            position: relative;
+            padding-bottom: 17.55%;
+
+            @media screen and (max-width:$large_tablet) {
+                padding-bottom: 24%;
+            }
+
+            img {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &--services {
+        padding: 0;
+        background-image: url('~img/main-screen__img1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        margin-top: 11.2rem;
+        position: relative;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-top: 11.5rem;
+            background-image: url('~img/main-screen__img1--mobile.png');
+            background-repeat: no-repeat;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44));
+        }
+    }
+
+    &__info {
+        padding: 4rem 0;
+        position: relative;
+        margin-bottom: 4rem;
+        display: inline-block;
+
+        @media screen and (max-width:$large_tablet) {
+            padding: 2.3rem 0;
+            margin-bottom: 2.3rem;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 0.5rem;
+            background-color: #EBEBEB;
+            margin: 0 auto;
+
+            @media screen and (max-width:$large_tablet) {
+                height: 1px;
+            }
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+    }
+
+    &__title {
+        font-family: $fontO;
+        font-weight: normal;
+        font-size: 5.3rem;
+        line-height: 119.4%;
+        color: #EBEBEB;
+        margin-bottom: 0.7rem;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__subtitle {
+        font-family: $fontO;
+        font-weight: normal;
+        font-size: 3.4rem;
+        line-height: 119.4%;
+        color: #EBEBEB;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__btn {
+        margin-bottom: 1.6rem;
+    }
+
+    &__price {
+        font-family: $fontP;
+        font-weight: bold;
+        font-size: 1.9rem;
+        line-height: 119.4%;
+        color: #EBEBEB;
+
+        a {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                bottom: 3px;
+                width: 100%;
+                height: 1px;
+                background: #EBEBEB;
+                opacity: 1;
+                transition: all 0.5s;
+            }
+
+            &:hover::before {
+                width: 0%;
+                opacity: 0;
+            }
+        }
+    }
+
+    &__link {
+        position: absolute;
+        top: 43%;
+        font-family: $fontO;
+        font-weight: normal;
+        font-size: 2.8rem;
+        line-height: 119.4%;
+        color: $white;
+        right: 0;
+        transition: all 0.5s;
+        display: inline-block;
+        background: linear-gradient(to right, $green, $green 50%, $white 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 1.6rem;
+            bottom: 6.7rem;
+            top: auto;
+
+        }
+
+        &:hover {
+            background-position: 0 100%;
+        }
+
+        svg {
+            fill: $white;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -1rem;
+            transition: all 0.5s;
+        }
+
+        &:hover {
+            svg {
+                fill: $green;
+            }
+        }
+
+        &--home {
+            left: 0;
+            right: auto;
+        }
+    }
+}

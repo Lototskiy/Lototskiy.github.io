@@ -1,0 +1,19 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Туристическое жилье';
+    - var pageClass = 'index-page';
+
+block content
+    +main-screen({class:'main-screen--index'})
+    include ../includes/search
+    include ../includes/services
+
+    include ../includes/map
+    include ../includes/news
+    include ../includes/partners
+
+
+    include ../includes/mobile-menu
+
+//- block script

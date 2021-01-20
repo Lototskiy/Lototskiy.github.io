@@ -1,0 +1,203 @@
+.reviews-slider {
+    max-width: 83.4rem;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    &__item {
+        background: #FFFFFF;
+        border-radius: 3.4rem;
+        padding: 2.7rem 1.8rem 4rem;
+        display: flex;
+        align-items: center;
+        font-family: $fontM;
+
+        @media screen and (max-width:$large_tablet) {
+            flex-direction: column;
+            padding: 2.7rem 1.8rem;
+        }
+    }
+
+    &__user {
+        padding-right: 1.5rem;
+        position: relative;
+        width: 12.8rem;
+
+        @media screen and (max-width:$large_tablet) {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 2.3rem;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 1px;
+            background-color: rgba(0, 0, 0, 0.16);
+            height: calc(100% + 2rem);
+
+            @media screen and (max-width:$large_tablet) {
+                width: 0;
+            }
+        }
+
+        &-photo {
+            max-width: 9.2rem;
+            width: 100%;
+            margin-bottom: 1.3rem;
+
+            @media screen and (max-width:$large_tablet) {
+                margin-right: 2rem;
+                margin-bottom: 0;
+            }
+
+            >div {
+                position: relative;
+                padding-bottom: 100%;
+
+                img {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &-name {
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 21/18*1;
+            color: #333333;
+            text-align: left;
+            margin-bottom: 0.7rem;
+            text-transform: capitalize;
+
+            @media screen and (max-width:$large_tablet) {
+                max-width: 9rem;
+            }
+        }
+
+        &-date {
+            font-weight: normal;
+            font-size: 1.4rem;
+            line-height: 16/14*1;
+            color: #999999;
+        }
+    }
+
+    &__info {
+        width: calc(100% - 12.8rem);
+        padding-left: 1rem;
+
+        @media screen and (max-width:$large_tablet) {
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+
+    &__rate {
+        margin-bottom: 2rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__text {
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 25/14*1;
+        color: #333333;
+        text-align: left;
+    }
+
+    .swiper-button {
+        position: absolute;
+        width: 100%;
+        right: 0;
+        left: 0;
+        height: 5.2rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media screen and (max-width:$large_tablet) {
+            top: 4rem;
+            transform: translateY(0);
+            right: 1.5rem;
+            left: auto;
+            width: 5.2rem;
+            z-index: 1;
+        }
+
+
+        &-prev,
+        &-next {
+            width: 5.2rem;
+            height: 100%;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 61px rgba(0, 0, 0, 0.07);
+            border-radius: 50%;
+            top: 0;
+            margin-top: 0;
+
+            &:hover {
+                svg {
+                    fill: $green;
+                }
+            }
+
+            svg {
+                fill: $black;
+                width: 1.5rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all 0.5s;
+
+                @media screen and (max-width:$large_tablet) {
+                    fill: $white;
+
+                    &:hover {
+                        fill: $black;
+                    }
+                }
+            }
+
+
+
+            &::after {
+                content: "";
+            }
+        }
+
+        &-prev {
+            right: calc(100% + 2.7rem);
+            left: auto;
+
+            @media screen and (max-width:$large_tablet) {
+                display: none;
+            }
+
+        }
+
+        &-next {
+            left: calc(100% + 2.7rem);
+            right: auto;
+
+            @media screen and (max-width:$large_tablet) {
+                right: 0;
+                left: auto;
+                background-color: $green;
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+.map {
+    position: relative;
+    min-height: 70.4rem;
+    background-image: url('~img/map-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+    @media screen and (max-width:$large_tablet) {
+        min-height: 0;
+        background-image: none;
+    }
+
+    &__img {
+        width: 100%;
+        position: relative;
+        margin-bottom: 1.5rem;
+
+        &-wrap {
+            width: 100%;
+
+            >div {
+                position: relative;
+                padding-bottom: 40%;
+
+                @media screen and (max-width:$large_mobile) {
+                    padding-bottom: 74.66%;
+                }
+
+
+                img {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+    }
+
+    &__btn {
+        text-align: center;
+    }
+
+    &__info {
+        max-width: 45rem;
+        padding-top: 3.4rem;
+        padding-bottom: 3.4rem;
+        padding-left: 2.3rem;
+        padding-right: 8.3rem;
+        position: absolute;
+        z-index: 3;
+        background: $white;
+        border-radius: 0.6rem;
+        top: 31rem;
+        left: 15rem;
+
+        @media screen and (max-width:$large_tablet) {
+            position: relative;
+            top: 0;
+            left: 0;
+            padding: 3.2rem 15px;
+            margin: 0 auto;
+        }
+
+        &-row {
+            margin-bottom: 4rem;
+            padding-left: 3.3rem;
+            display: block;
+
+            @media screen and (max-width:$large_tablet) {
+                margin-bottom: 4.8rem;
+            }
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        &-title {
+            font-family: $fontO;
+            font-weight: bold;
+            font-size: 2rem;
+            line-height: 119.4%;
+            color: $black;
+            position: relative;
+            text-transform: uppercase;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url('~img/map-icon.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 2.4rem;
+                height: 2.4rem;
+                right: calc(100% + 1rem);
+            }
+        }
+
+        &-subtitle {
+            font-family: $fontP;
+            font-weight: normal;
+            font-size: 1.6rem;
+            line-height: 138.9%;
+            color: #464646;
+
+            @media screen and (max-width:$large_tablet) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

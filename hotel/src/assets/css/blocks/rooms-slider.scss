@@ -1,0 +1,52 @@
+.rooms-slider {
+    position: relative;
+    padding: 0 1.7rem;
+
+    .swiper-button {
+        svg {
+            fill: $white;
+            width: 1.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s;
+        }
+
+        &-prev,
+        &-next {
+            width: 5.2rem;
+            height: 5.2rem;
+            background: $green;
+            box-shadow: 0px 0px 61px rgba(0, 0, 0, 0.07);
+            border-radius: 50%;
+            top: 0;
+            margin-top: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+
+
+            &:hover {
+                svg {
+                    fill: $black;
+                }
+            }
+
+            &::after {
+                content: "";
+            }
+
+        }
+
+        &-prev {
+            right: calc(100% - 2.7rem - 1.7rem);
+            left: auto;
+        }
+
+        &-next {
+            left: calc(100% - 2.7rem - 1.7rem);
+            right: auto;
+        }
+    }
+}

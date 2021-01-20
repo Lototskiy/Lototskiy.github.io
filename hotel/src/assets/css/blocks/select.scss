@@ -1,0 +1,105 @@
+.select {
+    position: relative;
+    user-select: none;
+    display: inline-block;
+    padding-right: 1rem;
+    margin-right: 2.5rem;
+
+    &__title {
+        font-family: $fontP;
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 119.4%;
+        color: $black;
+        margin-bottom: 0.4rem;
+
+        @media screen and (max-width:$large_tablet) {
+            font-size: 1.4rem;
+            margin-bottom: 0.6rem;
+        }
+    }
+
+    &__down {
+        margin-right: 3.3rem;
+        fill: #4081FF;
+    }
+
+
+
+    &--active {
+        .select__variants {
+            display: flex;
+        }
+
+        .select__value::before {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__value {
+        background: #FFFFFF;
+        cursor: pointer;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        transition: all .5s;
+        position: relative;
+        width: 100%;
+
+        font-family: $fontM;
+
+        .inputs__select & {
+            padding: 0 1rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('~img/select__arrow.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 1rem;
+            height: 0.5rem;
+            left: calc(100% + 5px);
+            transition: all 0.5s;
+
+            .inputs__select & {
+                left: auto;
+                right: 0;
+            }
+        }
+
+        >div {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__variants {
+        background: #FFFFFF;
+        padding-top: 1rem;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        overflow: auto;
+        z-index: 2;
+        font-family: $fontM;
+        text-align: center;
+    }
+
+    &__variant {
+        padding: 0.5rem 0;
+        display: block;
+        cursor: pointer;
+        transition: all 0.5s;
+        position: relative;
+        width: 100%;
+
+        span {
+            color: #404040;
+            transition: all .5s;
+        }
+    }
+}

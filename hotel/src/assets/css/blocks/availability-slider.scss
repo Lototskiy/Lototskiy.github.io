@@ -1,0 +1,51 @@
+.availability-slider {
+    position: relative;
+
+    .swiper-button {
+        svg {
+            fill: $black;
+            width: 1.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s;
+        }
+
+        &-prev,
+        &-next {
+            width: 5.2rem;
+            height: 5.2rem;
+            background: $white;
+            box-shadow: 0px 0px 61px rgba(0, 0, 0, 0.07);
+            border-radius: 50%;
+            top: 0;
+            margin-top: 0;
+            top: 40%;
+            transform: translateY(-50%);
+            z-index: 1;
+
+
+            &:hover {
+                svg {
+                    fill: $green;
+                }
+            }
+
+            &::after {
+                content: "";
+            }
+
+        }
+
+        &-prev {
+            right: calc(100% - 2.7rem - 1.7rem);
+            left: auto;
+        }
+
+        &-next {
+            left: calc(100% - 2.7rem - 1.7rem);
+            right: auto;
+        }
+    }
+}

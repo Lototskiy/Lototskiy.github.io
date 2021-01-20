@@ -1,0 +1,46 @@
+ .btn {
+ 	border: 1px solid rgba($green, 0);
+ 	cursor: pointer;
+ 	text-decoration: none;
+ 	line-height: 4.6rem;
+ 	display: inline-block;
+ 	white-space: nowrap;
+ 	text-align: center;
+ 	background: $green;
+ 	text-transform: uppercase;
+ 	font-weight: bold;
+ 	color: $white;
+ 	padding: 0 2.6rem;
+ 	transition: all 0.5s;
+ 	font-size: 2.1rem;
+ 	font-family: $fontP;
+ 	position: relative;
+ 	transition: all 0.5s ease;
+
+ 	&:hover {
+ 		background-color: $white;
+ 		color: $green;
+ 		border: 1px solid rgba($green, 1);
+ 	}
+
+ 	&--yellow {
+ 		font-size: 1.6rem;
+ 		line-height: 3.7rem;
+ 		color: #000000;
+ 		border-radius: 3px;
+ 		text-transform: none;
+ 		background: #FFCA10;
+ 		border: 1px solid rgba(255, 202, 16, 0);
+
+ 		&:hover {
+ 			background-color: $white;
+ 			color: #FFCA10;
+ 			border: 1px solid rgba(255, 202, 16, 1);
+ 		}
+ 	}
+
+ 	@media screen and (max-width:$large_tablet) {
+ 		line-height: 3.9rem;
+ 		font-size: 1.6rem;
+ 	}
+ }
